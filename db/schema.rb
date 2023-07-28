@@ -10,9 +10,79 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_26_153207) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_28_165633) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "activities", force: :cascade do |t|
+    t.string "name"
+    t.string "geo_point"
+    t.string "category"
+    t.string "address"
+    t.string "actual_zipcode"
+    t.boolean "free_trial"
+    t.boolean "is_looking_for_volunteer"
+    t.string "subcategories"
+    t.string "recurrence"
+    t.string "subscription_link"
+    t.text "short_description"
+    t.text "full_description"
+    t.bigint "club_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["club_id"], name: "index_activities_on_club_id"
+  end
+
+  create_table "clubs", force: :cascade do |t|
+    t.string "name"
+    t.string "rna_number"
+    t.string "geo_point"
+    t.string "category"
+    t.string "address"
+    t.string "actual_zipcode"
+    t.string "subcategory"
+    t.string "nearbyStation"
+    t.string "website"
+    t.text "objet"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_clubs_on_user_id"
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.bigint "sub_group_id", null: false
+    t.string "day"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "time_slot_id"
+    t.index ["sub_group_id"], name: "index_schedules_on_sub_group_id"
+    t.index ["time_slot_id"], name: "index_schedules_on_time_slot_id"
+  end
+
+  create_table "sub_groups", force: :cascade do |t|
+    t.bigint "activity_id", null: false
+    t.string "name"
+    t.decimal "min_price"
+    t.decimal "max_price"
+    t.string "recurrence"
+    t.string "class_type"
+    t.text "short_description"
+    t.decimal "subscription_by_reccurence_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "tarifications", default: [], array: true
+    t.index ["activity_id"], name: "index_sub_groups_on_activity_id"
+  end
+
+  create_table "time_slots", force: :cascade do |t|
+    t.bigint "schedule_id"
+    t.string "start_time"
+    t.string "end_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["schedule_id"], name: "index_time_slots_on_schedule_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +96,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_26_153207) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "activities", "clubs"
+  add_foreign_key "clubs", "users"
+  add_foreign_key "schedules", "sub_groups"
+  add_foreign_key "schedules", "time_slots"
+  add_foreign_key "sub_groups", "activities"
+  add_foreign_key "time_slots", "schedules"
 end
