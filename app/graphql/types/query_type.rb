@@ -6,7 +6,6 @@ module Types
 
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
-
     field :activities, [Types::ActivityType], null: false, description: "Returns a list of activities in the database" do
       argument :zipcode, String, required: false
     end
