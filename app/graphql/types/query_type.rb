@@ -13,6 +13,10 @@ module Types
       argument :id, ID, required: true
     end
 
+    field :user_by_email, Types::UserType, null: true do
+      argument :email, String, required: true
+    end
+
     field :sub_groups, [Types::SubGroupType], null: true
 
     field :clubs, [Types::ClubType], null: true, description: "Returns a list of clubs in the database"
@@ -44,5 +48,10 @@ module Types
     def time_slots
       object.time_slots
     end
+
+    def user_by_email(email:)
+      User.find_by(email: email)
+    end
+    
   end
 end
