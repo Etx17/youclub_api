@@ -3,6 +3,8 @@ module Types
     field :id, ID, null: false
     field :email, String, null: true
     field :sub_id, String, null: true
+    field :role, String, null: true
+    field :club, Types::ClubType, null: true
     field :createdAt, GraphQL::Types::ISO8601DateTime, null: false, method: :created_at
     field :updatedAt, GraphQL::Types::ISO8601DateTime, null: false, method: :updated_at
   end

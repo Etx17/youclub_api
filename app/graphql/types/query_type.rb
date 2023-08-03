@@ -13,8 +13,9 @@ module Types
       argument :id, ID, required: true
     end
 
-    field :user_by_email, Types::UserType, null: true do
+    field :user_by_email_and_sub, Types::UserType, null: true do
       argument :email, String, required: true
+      argument :sub_id, String, required: true
     end
 
     field :sub_groups, [Types::SubGroupType], null: true
@@ -49,9 +50,9 @@ module Types
       object.time_slots
     end
 
-    def user_by_email(email:)
-      User.find_by(email: email)
+    def user_by_email_and_sub(email: nil, sub_id: nil)
+      User.find_by(email: email, sub_id: sub_id)
     end
-    
+
   end
 end
