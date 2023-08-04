@@ -26,6 +26,10 @@ module Types
 
     field :timeSlots, [Types::TimeSlotType], null: true, method: :time_slots, description: "Returns a list of time slots in the database"
 
+    field :club_by_user_id, Types::ClubType, null: true do
+      argument :user_id, ID, required: true
+    end
+
     def activity(id:)
       Activity.find(id)
     end
@@ -52,6 +56,10 @@ module Types
 
     def user_by_email_and_sub(email: nil, sub_id: nil)
       User.find_by(email: email, sub_id: sub_id)
+    end
+
+    def club_by_user_id(user_id:)
+      Club.find_by(user_id: user_id)
     end
 
   end

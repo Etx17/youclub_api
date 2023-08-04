@@ -11,4 +11,6 @@ class Types::ClubType < Types::BaseObject
   field :website, String, null: true
   field :objet, String, null: true
   field :userId, ID, null: false, method: :user_id
+  field :images, [String], null: true
+  field :activities, [Types::ActivityType], null: true
 end
