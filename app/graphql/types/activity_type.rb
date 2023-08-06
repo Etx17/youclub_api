@@ -13,8 +13,9 @@ class Types::ActivityType < Types::BaseObject
   field :shortDescription, String, null: true, method: :short_description
   field :fullDescription, String, null: true, method: :full_description
   field :club, Types::ClubType, null: false
-
+  field :images, [String], null: true
   field :subGroups, [Types::SubGroupType], null: false, method: :sub_groups
+  field :clubId, ID, null: false, method: :club_id
 
   def sub_groups
     object.sub_groups
