@@ -4,5 +4,6 @@ module Types
     field :create_activity, mutation: Mutations::CreateActivity
     field :update_activity, mutation: Mutations::UpdateActivity
     field :create_sub_group, mutation: Mutations::CreateSubGroup
+    field :update_sub_group, mutation: Mutations::UpdateSubGroup
   end
 end
