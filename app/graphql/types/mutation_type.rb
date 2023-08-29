@@ -8,5 +8,6 @@ module Types
     field :delete_sub_group, mutation: Mutations::DeleteSubGroup
     field :create_schedule, mutation: Mutations::CreateSchedule
     field :delete_schedule, mutation: Mutations::DeleteSchedule
+    field :delete_activity, mutation: Mutations::DeleteActivity
   end
 end
