@@ -72,7 +72,7 @@ activities.each do |activity|
     max_price_cents: Faker::Commerce.price(range: 50.0..100.0),
     recurrence: Faker::Lorem.word,
     short_description: Faker::Lorem.sentence,
-    subscription_by_recurrence_price: Faker::Commerce.price(range: 30.0..100.0),
+    subscription_by_reccurence_price_cents: Faker::Commerce.price(range: 30.0..100.0),
     tarifications: [Faker::Commerce.price, Faker::Commerce.price, Faker::Commerce.price].map { |price| "#{price}/mois" }
   )
 end
