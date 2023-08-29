@@ -14,6 +14,10 @@ users = []
     password: 'my_encrypted_password'
   )
 end
+users << User.create!(
+  email: 'etiennededianous@gmail.com',
+  password: 'my_encrypted_password'
+)
 selectedCategory = "Sports, activités de plein air";
 selectedSubCategory = "Aviron, canoë kayak (aviron, rafting, canoë kayak, joutes)"
 possibleTypeOfActivity= ['cours collectif', 'cours particulier', 'stage', 'atelier', 'session', 'évènement', 'autre'];
@@ -64,8 +68,8 @@ activities.each do |activity|
     activity: activity,
     class_type: possibleTypeOfActivity.sample,
     name: examplesOfSubGroupNames.sample,
-    min_price: Faker::Commerce.price(range: 5.0..50.0),
-    max_price: Faker::Commerce.price(range: 50.0..100.0),
+    min_price_cents: Faker::Commerce.price(range: 5.0..50.0),
+    max_price_cents: Faker::Commerce.price(range: 50.0..100.0),
     recurrence: Faker::Lorem.word,
     short_description: Faker::Lorem.sentence,
     subscription_by_reccurence_price: Faker::Commerce.price(range: 30.0..100.0),
