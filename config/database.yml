@@ -86,7 +86,4 @@ production:
   password: <%= ENV["YOUCLUB_API_DATABASE_PASSWORD"] %>
 
 staging:
-  <<: *default
-  database: youclubstaging_staging
-  username: youclubstaging
-  password: <%= ENV["YOUCLUBSTAGING_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL_STAGING"] %>
