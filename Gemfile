@@ -78,4 +78,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-gem "graphiql-rails"
+# graphiql for development and staging
+gem "graphiql-rails", group: [:development, :staging]
