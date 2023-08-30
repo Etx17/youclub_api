@@ -86,4 +86,4 @@ production:
   password: <%= ENV["YOUCLUB_API_DATABASE_PASSWORD"] %>
 
 staging:
-  url: <%= ENV["DATABASE_URL_STAGING"] %>
+  url: <%= ENV["DATABASE_URL"] %>
