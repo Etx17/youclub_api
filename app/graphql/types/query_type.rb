@@ -13,6 +13,10 @@ module Types
       argument :id, ID, required: true
     end
 
+    field :user_by_email, Types::UserType, null: true do
+      argument :email, String, required: true
+    end
+
     field :user_by_email_and_sub, Types::UserType, null: true do
       argument :email, String, required: true
       argument :sub_id, String, required: true
@@ -56,6 +60,10 @@ module Types
 
     def user_by_email_and_sub(email: nil, sub_id: nil)
       User.find_by(email: email, sub_id: sub_id)
+    end
+
+    def user_by_email(email:)
+      User.find_by(email: email)
     end
 
     def club_by_user_id(user_id:)
