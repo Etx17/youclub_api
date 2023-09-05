@@ -70,7 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_07_085401) do
     t.string "recurrence"
     t.string "class_type"
     t.text "short_description"
-    t.integer "subscription_by_reccurence_price_cents", comment: "Stored in cents"
+    t.integer "subscription_by_recurrence_price_cents", comment: "Stored in cents"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "tarifications", default: [], array: true
