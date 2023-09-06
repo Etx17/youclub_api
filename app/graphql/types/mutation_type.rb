@@ -9,5 +9,6 @@ module Types
     field :create_schedule, mutation: Mutations::CreateSchedule
     field :delete_schedule, mutation: Mutations::DeleteSchedule
     field :delete_activity, mutation: Mutations::DeleteActivity
+    field :create_user, mutation: Mutations::CreateUser
   end
 end
