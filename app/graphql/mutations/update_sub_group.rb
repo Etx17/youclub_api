@@ -10,7 +10,7 @@ module Mutations
 
     type Types::SubGroupType
 
-    def resolve(id:, name: nil, min_price: nil, class_type: nil, short_description: nil, subscription_by_reccurence_price: nil, tarifications: nil)
+    def resolve(id:, name: nil, min_price: nil, class_type: nil, short_description: nil, subscription_by_recurrence_price: nil, tarifications: nil)
       sub_group = SubGroup.find(id)
       sub_group.update!(
         name: name || sub_group.name,

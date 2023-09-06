@@ -11,8 +11,8 @@ class SubGroup < ApplicationRecord
     max_price_cents / 100.0
   end
 
-  def subscription_by_reccurence_price
-    subscription_by_reccurence_price_cents / 100.0
+  def subscription_by_recurrence_price
+    subscription_by_recurrence_price_cents / 100.0
   end
 
   def min_price=(value)
@@ -23,7 +23,7 @@ class SubGroup < ApplicationRecord
   #   self.max_price_cents = (value.to_f * 100).round
   # end
 
-  def subscription_by_reccurence_price=(value)
-    self.subscription_by_reccurence_price_cents = (value.to_f * 100).round
+  def subscription_by_recurrence_price=(value)
+    self.subscription_by_recurrence_price_cents = (value.to_f * 100).round
   end
 end

@@ -6,7 +6,7 @@ class Types::SubGroupType < Types::BaseObject
   field :recurrence, String, null: true
   field :classType, String, null: true, method: :class_type
   field :shortDescription, String, null: true, method: :short_description
-  field :subscriptionByReccurencePrice, Float, null: true, method: :subscription_by_reccurence_price
+  field :subscriptionByRecurrencePrice, Float, null: true, method: :subscription_by_recurrence_price
   field :schedules, [Types::ScheduleType], null: false
   field :tarifications, [String], null: true
 end
