@@ -12,7 +12,7 @@ module Mutations
 
     type Types::ScheduleType
 
-    def resolve(id:, timeslots:)
+    def resolve(id:, time_slots:)
       converted_time_slots = time_slots&.map do |time_slot_input|
         TimeSlot.new(
           start_time: time_slot_input[:start_time],
@@ -22,8 +22,10 @@ module Mutations
 
       schedule = Schedule.find(id)
       schedule.update!(
+        id: id,
         time_slots: converted_time_slots
       )
+      schedule
     end
   end
 end
