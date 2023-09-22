@@ -22,6 +22,10 @@ module Types
       argument :sub_id, String, required: true
     end
 
+    field :time_slots_by_schedule_id, [Types::TimeSlotType], null: true do
+      argument :schedule_id, ID, required: true
+    end
+
     field :sub_groups, [Types::SubGroupType], null: true
 
     field :clubs, [Types::ClubType], null: true, description: "Returns a list of clubs in the database"
@@ -34,9 +38,7 @@ module Types
       argument :user_id, ID, required: true
     end
 
-    field :time_slots_by_schedule_id, [Types::TimeSlotType], null: true do
-      argument :schedule_id, ID, required: true
-    end
+
 
     def activity(id:)
       Activity.find(id)
@@ -75,7 +77,7 @@ module Types
     end
 
     def time_slots_by_schedule_id(schedule_id:)
-      TimeSlot.where(schedule_id: schedule_id)
+      TimeSlot.where(schedule_id: schedule_id).to_a
     end
 
   end
