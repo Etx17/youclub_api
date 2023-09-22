@@ -34,6 +34,10 @@ module Types
       argument :user_id, ID, required: true
     end
 
+    field :time_slots_by_schedule_id, [Types::TimeSlotType], null: true do
+      argument :schedule_id, ID, required: true
+    end
+
     def activity(id:)
       Activity.find(id)
     end
@@ -68,6 +72,10 @@ module Types
 
     def club_by_user_id(user_id:)
       Club.find_by(user_id: user_id)
+    end
+
+    def time_slots_by_schedule_id(schedule_id:)
+      TimeSlot.where(schedule_id: schedule_id)
     end
 
   end
