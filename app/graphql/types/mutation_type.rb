@@ -10,6 +10,7 @@ module Types
     field :update_schedule, mutation: Mutations::UpdateSchedule
     field :delete_schedule, mutation: Mutations::DeleteSchedule
     field :delete_activity, mutation: Mutations::DeleteActivity
+    field :create_time_slot, mutation: Mutations::CreateTimeSlot
     field :delete_time_slot, mutation: Mutations::DeleteTimeSlot
     field :create_user, mutation: Mutations::CreateUser
   end
