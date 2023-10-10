@@ -9,14 +9,14 @@ User.destroy_all
 # # Seed users
 # users = []
 
-# users << User.create!(
+# User.create!(
 #   email: 'etiennededianous@gmail.com',
 #   password: 'my_encrypted_password',
 #   role: 'user',
 #   sub_id: '24ddf6e7-9d4e-4339-9bf3-ea395e32b089'
 # )
 
-# users << User.create!(
+# User.create!(
 #   email: 'youclubdev@gmail.com',
 #   password: 'my_encrypted_password',
 #   role: 'club',
@@ -29,7 +29,7 @@ possibleTypeOfActivity= ['cours collectif', 'cours particulier', 'stage', 'ateli
 examplesOfSubGroupNames= ['Débutant', 'Ados 12-15', 'Tout public', 'Confirmés', 'Ceinture Noire', 'Votre catégorie']
 
 p "Start seeding SPORTS CLUBS in Paris..."
-encoded_url = "https://journal-officiel-datadila.opendatasoft.com/api/records/1.0/search/?dataset=jo_associations&q=&rows=2000&sort=dateparution&facet=lieu_declaration_facette&facet=domaine_activite_categorise&facet=domaine_activite_libelle_categorise&refine.domaine_activite_libelle_categorise=Sports%2C+activit%C3%A9s+de+plein+air&refine.localisation_facette=%C3%8Ele-de-France%2FParis&exclude.objet=%22%22&exclude.domaine_activite_libelle_categorise=%22%22&"
+encoded_url = "https://journal-officiel-datadila.opendatasoft.com/api/records/1.0/search/?dataset=jo_associations&q=&rows=8000&sort=dateparution&facet=lieu_declaration_facette&facet=domaine_activite_categorise&facet=domaine_activite_libelle_categorise&refine.domaine_activite_libelle_categorise=Sports%2C+activit%C3%A9s+de+plein+air&refine.localisation_facette=%C3%8Ele-de-France%2FParis&exclude.objet=%22%22&exclude.domaine_activite_libelle_categorise=%22%22&"
 p "connecting with API..."
 conn = Faraday.new(url: encoded_url)
 p "getting the response ..."
