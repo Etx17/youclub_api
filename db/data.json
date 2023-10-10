@@ -1,0 +1,2731 @@
+{
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2005-09-15",
+  "numero_rna":null,
+  "titre":"UNION SPORTIVE DE TABERNACLE, US-TAB'.",
+  "titre_search":"UNION SPORTIVE DE TABERNACLE, US-TAB'. UNION SPORTIVE DE TABERNACLE, US-TAB",
+  "objet":"promotion et pratique des activités sportives des membres et amis de l'église du Tabernacle.",
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"UNION SPORTIVE DE TABERNACLE, US-TAB",
+  "adresse_actuelle":"163 bis, rue Belliard,",
+  "codepostal_actuel":"75018",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.895875, 2.331902"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2005-09-21",
+  "numero_rna":null,
+  "titre":"CLUB ALPIN FRANÇAIS ILE-DE-FRANCE MONTAGNE ET DEVELOPPEMENT (CAFIDFMD).",
+  "titre_search":"CLUB ALPIN FRANÇAIS ILE-DE-FRANCE MONTAGNE ET DEVELOPPEMENT (CAFIDFMD). CLUB ALPIN FRANÇAIS ILE-DE-FRANCE MONTAGNE ET DEVELOPPEMENT (CAFIDFMD)",
+  "objet":"aider le Club alpin français d'Ile-de-France à obtenir par l'acquisition ou par tout autre moyen la disposition d'équipements sportifs ayant un rapport avec les sports de nature et de montagne.",
+  "domaine_activite_categorise":[
+  "11000/",
+  "14000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/",
+  "amicales, groupements affinitaires, groupements d'entraide (hors défense de droits fondamentaux/"
+  ],
+  "titre_search_opti":"CLUB ALPIN FRANÇAIS ILE-DE-FRANCE MONTAGNE ET DEVELOPPEMENT (CAFIDFMD)",
+  "adresse_actuelle":"5, rue Campagne-Première,",
+  "codepostal_actuel":"75014",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.840143, 2.333229"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2005-09-13",
+  "numero_rna":null,
+  "titre":"AIKIDO OMOTE-SANDO.",
+  "titre_search":"AIKIDO OMOTE-SANDO. AIKIDO OMOTE-SANDO",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "14000/",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "amicales, groupements affinitaires, groupements d'entraide (hors défense de droits fondamentaux/",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"AIKIDO OMOTE-SANDO",
+  "adresse_actuelle":"64, rue de Wattignies,",
+  "codepostal_actuel":"75012",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.835062, 2.398903"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2005-09-22",
+  "numero_rna":null,
+  "titre":"PARIS IX AMICALE DE TENNIS DE TABLE - PARIS IX ATT.",
+  "titre_search":"PARIS IX AMICALE DE TENNIS DE TABLE - PARIS IX ATT. PARIS IX AMICALE DE TENNIS DE TABLE - PARIS IX ATT",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"PARIS IX AMICALE DE TENNIS DE TABLE - PARIS IX ATT",
+  "adresse_actuelle":"47, rue Maubeuge,",
+  "codepostal_actuel":"75009",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.879019, 2.346985"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2005-10-04",
+  "numero_rna":null,
+  "titre":"TOUZARZIMUT'CONCEPT.",
+  "titre_search":"TOUZARZIMUT'CONCEPT. TOUZARZIMUTCONCEPT",
+  "objet":"favoriser les échanges entre cultures et personnes autour de projets à caractère social, culturel sportif et de solidarité internationale.",
+  "domaine_activite_categorise":[
+  "6000/",
+  "15000/15045",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "culture, pratiques d’activités artistiques, culturelles/",
+  "éducation formation/établissement de formation professionnelle, formation continue",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"TOUZARZIMUTCONCEPT",
+  "adresse_actuelle":"59, rue de la Colonie,",
+  "codepostal_actuel":"75013",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.824001, 2.350426"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2005-10-05",
+  "numero_rna":null,
+  "titre":"REGATE DES GRANDES ECOLES.",
+  "titre_search":"REGATE DES GRANDES ECOLES. REGATE DES GRANDES ECOLES",
+  "objet":"organisation d'une régate entre des étudiants des grandes écoles sur des supports de voie légère.",
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "reference_avis_initial":null,
+  "siteweb":"http:/coupedesmines.free.fr",
+  "titre_search_opti":"REGATE DES GRANDES ECOLES",
+  "adresse_actuelle":"60, boulevard Saint-Michel,",
+  "codepostal_actuel":"75006",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.845632, 2.339672"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Rectificatif",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2005-09-14",
+  "numero_rna":null,
+  "titre":"AIR.O.GÈNE.",
+  "titre_search":"AIR.O.GÈNE. AIROGÈNE",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/",
+  "14000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/",
+  "amicales, groupements affinitaires, groupements d'entraide (hors défense de droits fondamentaux/"
+  ],
+  "titre_search_opti":"AIROGÈNE",
+  "adresse_actuelle":"",
+  "codepostal_actuel":null,
+  "commune_actuelle":null,
+  "geo_point":null
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2005-10-14",
+  "numero_rna":null,
+  "titre":"ASSOCIATION SPORTIVE DES ANCIENS (ASA).",
+  "titre_search":"ASSOCIATION SPORTIVE DES ANCIENS (ASA). ASSOCIATION SPORTIVE DES ANCIENS (ASA)",
+  "objet":"pratique du football.",
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"ASSOCIATION SPORTIVE DES ANCIENS (ASA)",
+  "adresse_actuelle":"14, rue Castagnary,",
+  "codepostal_actuel":"75015",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.835208, 2.30972"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2005-10-18",
+  "numero_rna":null,
+  "titre":"LA VOIE DU YOGA.",
+  "titre_search":"LA VOIE DU YOGA. LA VOIE DU YOGA",
+  "objet":"promouvoir la théorie et la pratique du yoga dans sa dimension posturale (exercices corporels destinés à obtenir un meilleur équilibre physique et psychique).",
+  "domaine_activite_categorise":[
+  "11000/",
+  "17000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/",
+  "santé/"
+  ],
+  "titre_search_opti":"LA VOIE DU YOGA",
+  "adresse_actuelle":"74, rue Fondary,",
+  "codepostal_actuel":"75015",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.846193, 2.297973"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2005-10-26",
+  "numero_rna":null,
+  "titre":"EXPED'IPAG.",
+  "titre_search":"EXPED'IPAG. EXPEDIPAG",
+  "objet":"faire participer des étudiants à un rallye annuel au Maroc.",
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"EXPEDIPAG",
+  "adresse_actuelle":"34, rue Alphonse-Bertillon,",
+  "codepostal_actuel":"75015",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.83376, 2.310058"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2005-10-27",
+  "numero_rna":null,
+  "titre":"ASSOCIATION POUR LA REOUVERTURE DE LA PISCINE LUTETIA.",
+  "titre_search":"ASSOCIATION POUR LA REOUVERTURE DE LA PISCINE LUTETIA. ASSOCIATION POUR LA REOUVERTURE DE LA PISCINE LUTETIA",
+  "objet":"rassembler tous les Parisiens, et notamment ceux des 6e et 7e arrondissements qui souhaitent voir rouvrir et remettre en eau la piscine Lutetia, qui fut en activité jusqu'à sa fermeture au début des années 70 ; organiser les manifestations publiques ou privées utiles à la réalisation de ses objectifs ; solliciter les concours de partenaires publics et privés.",
+  "domaine_activite_categorise":[
+  "6000/6105",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "culture, pratiques d’activités artistiques, culturelles/loisirs scientifiques et techniques",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"ASSOCIATION POUR LA REOUVERTURE DE LA PISCINE LUTETIA",
+  "adresse_actuelle":"117, rue Saint-Dominique,",
+  "codepostal_actuel":"75007",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.859037, 2.304547"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2005-10-26",
+  "numero_rna":null,
+  "titre":"HADES TEAM.",
+  "titre_search":"HADES TEAM. HADES TEAM",
+  "objet":"développer la pratique de l'éducation physique et des sports et, plus particulièrement, développer et favoriser par tous les moyens appropriés, sur le plan sportif et accessoirement artistique et scientifique, la pratique, l'enseignement et la promotion du jeu nommé paintball ; partager et faire connaitre les valeurs du sport selon l'éthique sportive, et veiller de ce fait à l'observation des règles déontologiques du sport définies par le Comité national olympique et sportif français (C.N.O.S.F.) ; contribuer au respect des lois et règlements ayant pour objet la conservation de la faune, de la flore, notamment en tenant ses adhérents informés des dispositions édictées à cette fin, ainsi que le respect des règles d'encadrement, d'hygiène et de sécurité applicables aux disciplines pratiquées par ses membres ; elle s'interdit toute discrimination illégale ; assurer la liberté d'opinion et le respect des droits de la défense ; organiser des compétitions et des manifestations relatives à la pratique du paintball.",
+  "domaine_activite_categorise":[
+  "11000/",
+  "14000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/",
+  "amicales, groupements affinitaires, groupements d'entraide (hors défense de droits fondamentaux/"
+  ],
+  "titre_search_opti":"HADES TEAM",
+  "adresse_actuelle":"1, rue de l'Université,",
+  "codepostal_actuel":"75007",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.85635, 2.331395"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2005-11-15",
+  "numero_rna":null,
+  "titre":"ARTS MARTIAUX CAVALON.",
+  "titre_search":"ARTS MARTIAUX CAVALON. ARTS MARTIAUX CAVALON",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/",
+  "14000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/",
+  "amicales, groupements affinitaires, groupements d'entraide (hors défense de droits fondamentaux/"
+  ],
+  "titre_search_opti":"ARTS MARTIAUX CAVALON",
+  "adresse_actuelle":"28, boulevard Exelmans,",
+  "codepostal_actuel":"75016",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.841173, 2.264822"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2005-08-03",
+  "numero_rna":null,
+  "titre":"TINSMAR.",
+  "titre_search":"TINSMAR. TINSMAR",
+  "objet":"rassembler les fonds nécessaires permettant d'apporter une aide humanitaire aux enfants marocains défavorisés tout en réalisant une aventure sportive.",
+  "domaine_activite_categorise":[
+  "11000/",
+  "15000/15045"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/",
+  "éducation formation/établissement de formation professionnelle, formation continue"
+  ],
+  "titre_search_opti":"TINSMAR",
+  "adresse_actuelle":"15, rue de Bourgogne,",
+  "codepostal_actuel":"75007",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.859085, 2.318046"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2005-08-10",
+  "numero_rna":null,
+  "titre":"ARTS ET MOUVEMENT D'AUJOURD'HUI.",
+  "titre_search":"ARTS ET MOUVEMENT D'AUJOURD'HUI. ARTS ET MOUVEMENT DAUJOURDHUI",
+  "objet":"diverses activités culturelles et physiques comme des expositions, des débats, des ateliers et autres actions en rapport avec la création artistique (arts plastiques, multimédia, cinéma, photo, chant, danse, yoga, musique, arts martiaux).",
+  "domaine_activite_categorise":[
+  "6000/",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "culture, pratiques d’activités artistiques, culturelles/",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"ARTS ET MOUVEMENT DAUJOURDHUI",
+  "adresse_actuelle":"10, avenue des Gobelins,",
+  "codepostal_actuel":"75005",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.837832, 2.350825"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2005-08-24",
+  "numero_rna":null,
+  "titre":null,
+  "titre_search":"ASSOCIATION SPORTS ET LOISIRS DU BCP (ASL BCP). ASSOCIATION SPORTS ET LOISIRS DU B2V (ASL-B2V). ASSOCIATION SPORTS ET LOISIRS DU BCP (ASL BCP) ASSOCIATION SPORTS ET LOISIRS DU B2V (ASL-B2V)",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "14000/",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "amicales, groupements affinitaires, groupements d'entraide (hors défense de droits fondamentaux/",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"ASSOCIATION SPORTS ET LOISIRS DU BCP (ASL BCP) ASSOCIATION SPORTS ET LOISIRS DU B2V (ASL-B2V)",
+  "adresse_actuelle":"13-15, rue Bachaumont,",
+  "codepostal_actuel":"75099",
+  "commune_actuelle":"Paris Cedex 2",
+  "geo_point":null
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2005-09-02",
+  "numero_rna":null,
+  "titre":"KTMA - KRONGSAK TEO MUAYTHAI ACADEMIE.",
+  "titre_search":"KTMA - KRONGSAK TEO MUAYTHAI ACADEMIE. KTMA - KRONGSAK TEO MUAYTHAI ACADEMIE",
+  "objet":"promotion, apprentissage, culture et esprit du muaythai (art martial traditionnel thailandais).",
+  "domaine_activite_categorise":[
+  "11000/",
+  "6000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/",
+  "culture, pratiques d’activités artistiques, culturelles/"
+  ],
+  "titre_search_opti":"KTMA - KRONGSAK TEO MUAYTHAI ACADEMIE",
+  "adresse_actuelle":"22, quai de Béthune,",
+  "codepostal_actuel":"75004",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.850607, 2.357684"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2005-09-07",
+  "numero_rna":null,
+  "titre":"ASSOCIATION CULTURELLE ET SPORTIVE ARUNODAYA.",
+  "titre_search":"ASSOCIATION CULTURELLE ET SPORTIVE ARUNODAYA. ASSOCIATION CULTURELLE ET SPORTIVE ARUNODAYA",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "6000/",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "culture, pratiques d’activités artistiques, culturelles/",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"ASSOCIATION CULTURELLE ET SPORTIVE ARUNODAYA",
+  "adresse_actuelle":"15, avenue du Bel-Air,",
+  "codepostal_actuel":"75012",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.846348, 2.397234"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-07-24",
+  "numero_rna":null,
+  "titre":"63/45 DU 29 EME ARR.",
+  "titre_search":"63/45 DU 29 EME ARR. 63/45 DU 29 EME ARR",
+  "objet":"organisation des activités sportives et culturelles, de soirées récréatives et dansantes, des voyages.",
+  "domaine_activite_categorise":[
+  "6000/",
+  "7000/",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "culture, pratiques d’activités artistiques, culturelles/",
+  "clubs de loisirs, relations/",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"63/45 DU 29 EME ARR",
+  "adresse_actuelle":"3e étage, 42, rue Pixerecourt,",
+  "codepostal_actuel":"75020",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.872652, 2.396053"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2008-07-15",
+  "numero_rna":null,
+  "titre":null,
+  "titre_search":"WELSCH ASSOCIATION ATELIERS STAGES SPORTIFS. WELSCH ASSOCIATION ATELIERS SPORTIFS. WELSCH ASSOCIATION ATELIERS STAGES SPORTIFS WELSCH ASSOCIATION ATELIERS SPORTIFS",
+  "objet":"sensibiliser à la pratique d'activités physiques et sportives les enfants scolarisés dans les écoles élémentaires de la ville de Paris ; proposer à différents publics des séjours à thème sport et loisirs ; proposer à différents comités entreprises des prestations de remise en forme et bien-être et techniques de coaching ; dispenser des formations de bien-être à partir de modules sportifs.",
+  "domaine_activite_categorise":[
+  "11000/11005"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/associations multisports locales"
+  ],
+  "titre_search_opti":"WELSCH ASSOCIATION ATELIERS STAGES SPORTIFS WELSCH ASSOCIATION ATELIERS SPORTIFS",
+  "transfert_nouvelle_adresse_adresse":"11, rue du Commerce,",
+  "adresse_actuelle":"11, rue du Commerce,",
+  "codepostal_actuel":"75015",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.848427, 2.297292"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-07-29",
+  "numero_rna":null,
+  "titre":"FOOTBALL CLUB DE MONTMARTRE (FCM).",
+  "titre_search":"FOOTBALL CLUB DE MONTMARTRE (FCM). FOOTBALL CLUB DE MONTMARTRE (FCM)",
+  "objet":"participer à un championnat de football ; entraînement de l'équipe et la compétition.",
+  "domaine_activite_categorise":[
+  "11000/11075"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Football (football, futsal)"
+  ],
+  "titre_search_opti":"FOOTBALL CLUB DE MONTMARTRE (FCM)",
+  "adresse_actuelle":"91, rue Caulaincourt,",
+  "codepostal_actuel":"75012",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.838438, 2.396378"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-03-20",
+  "numero_rna":null,
+  "titre":"RAID4AIDE.",
+  "titre_search":"RAID4AIDE. RAID4AIDE",
+  "objet":"participer au 4L Trophy 2005 et distribution du matériel scolaire dans les villages marocains.",
+  "domaine_activite_categorise":[
+  "11000/11160",
+  "20000/20020"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Sports mécaniques (sport automobile, moto, trial)",
+  "associations caritatives, humanitaires, aide au développement, développement du bénévolat/associations caritatives intervenant au plan international"
+  ],
+  "titre_search_opti":"RAID4AIDE",
+  "adresse_actuelle":"résidence des Haies, chambre 203, 72, rue des Haies,",
+  "codepostal_actuel":"75020",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.853988, 2.401756"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-03-21",
+  "numero_rna":null,
+  "titre":"LES ROSES ENSABLEES.",
+  "titre_search":"LES ROSES ENSABLEES. LES ROSES ENSABLEES",
+  "objet":"participer au 4L Trophy 2009 raid humanitaire entre la France et le Maroc.",
+  "domaine_activite_categorise":[
+  "15000/15065",
+  "11000/",
+  "20000/20020"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "éducation formation/associations d’étudiants, d’élèves",
+  "Sports, activités de plein air/",
+  "associations caritatives, humanitaires, aide au développement, développement du bénévolat/associations caritatives intervenant au plan international"
+  ],
+  "titre_search_opti":"LES ROSES ENSABLEES",
+  "adresse_actuelle":"17, rue Jouvenet,",
+  "codepostal_actuel":"75016",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.842171, 2.265712"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2007-12-07",
+  "numero_rna":null,
+  "titre":null,
+  "titre_search":"ASSOCIATION FRANCO ROUMAINE. INTERARTE PARIS. ASSOCIATION FRANCO ROUMAINE INTERARTE PARIS",
+  "objet":"promouvoir les échanges sportifs-culturels ; mettre en valeur les talents artistiques ; organiser dans ce cadre des compétitions sportives, des concerts-cénacles, des commémorations, la réalisation de publicité et de commentaires critiques par enregistrements faits au studio Interarte Paris, l'enseignement de cours de piano, des cours de chant ; acquisition et entretien d'immeubles ; expositions d'arts plastiques et d'artisanat ; mettre en valeur les traditions culturelles avec des images vidéo ; réorganiser des rencontres sportives (sport d'équipe et individuels), randonnées et loisirs ; élaborer la revue « Interarte Paris-Iasi » ; réaliser des films documentaires ; les fonds accumulés seront utilisés en but de bienfaisance pour distribuer : des médicaments et appareils médicaux, appareils ménagers, vêtements et articles alimentaires aux personnes âgées, aux malades, aux enfants orphelins et aux handicapés.",
+  "domaine_activite_categorise":[
+  "9000/9050",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "action socio-culturelle/jumelages, échanges culturels, organisation d'échanges linguistiques, échanges culturels au plan international",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"ASSOCIATION FRANCO ROUMAINE INTERARTE PARIS",
+  "transfert_nouvelle_adresse_adresse":"14, boulevard Gouvion-Saint-Cyr,",
+  "adresse_actuelle":"14, boulevard Gouvion-Saint-Cyr,",
+  "codepostal_actuel":"75017",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.884763, 2.289875"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-04-08",
+  "numero_rna":null,
+  "titre":"SAND SYSTEM ASSOCIATION.",
+  "titre_search":"SAND SYSTEM ASSOCIATION. SAND SYSTEM ASSOCIATION",
+  "objet":"pratique, promotion et développement du beach volley et des sports de plage.",
+  "domaine_activite_categorise":[
+  "11000/11085"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Volley ball (volley, beach volley)"
+  ],
+  "titre_search_opti":"SAND SYSTEM ASSOCIATION",
+  "adresse_actuelle":"5, rue l'Encheval,",
+  "codepostal_actuel":"75019",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.879176, 2.389124"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-08-13",
+  "numero_rna":null,
+  "titre":"13EME ROUND.",
+  "titre_search":"13EME ROUND. 13EME ROUND",
+  "objet":"promouvoir la pratique de la boxe française notamment par l'organisation de cours pour atteindre ses buts ; l'association est active dans les domaines suivants : cours, stages avec des groupes de tous niveaux, compétitions jeunes adultes ; collaboration avec les milieux sociaux éducatifs, stages pour les entreprises, démonstrations, organisation de compétitions et échanges internationaux.",
+  "domaine_activite_categorise":[
+  "11000/11145"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Sports de combat (boxe, kick box, boxe thaï, lutte)"
+  ],
+  "titre_search_opti":"13EME ROUND",
+  "adresse_actuelle":"8, avenue de Choisy,",
+  "codepostal_actuel":"75013",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.820713, 2.36445"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-08-19",
+  "numero_rna":null,
+  "titre":"LA VIE DU 37 CHATEAU DES RENTIERS.",
+  "titre_search":"LA VIE DU 37 CHATEAU DES RENTIERS. LA VIE DU 37 CHATEAU DES RENTIERS",
+  "objet":"former à la responsabilité, au civisme, à l'autonomie par la pratique d'activités physiques sportives et de pleine nature, d'activités socioculturelles dans le cadre d'un fonctionnement démocratique ; elle contribue à l'éducation globale des enfants ; affiliée à l'union sportive de l'enseignement du premier degré, elle participer aux rencontres épreuves organisées ou contribuées par l'USEP.",
+  "domaine_activite_categorise":[
+  "11000/11010"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/associations multisports scolaires ou universitaires"
+  ],
+  "titre_search_opti":"LA VIE DU 37 CHATEAU DES RENTIERS",
+  "adresse_actuelle":"37, rue du Château-des-Rentiers,",
+  "codepostal_actuel":"75013",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.824622, 2.369977"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-08-27",
+  "numero_rna":null,
+  "titre":"RECOT FULL CONTACT CLUB ASSOCIATION.",
+  "titre_search":"RECOT FULL CONTACT CLUB ASSOCIATION. RECOT FULL CONTACT CLUB ASSOCIATION",
+  "objet":"développer la pratique du full contact, sport de combat à percussions utilisant pieds et poings selon des règles codifiées, ce sport peut se pratiquer en plein air ou en salle couverte et nécessite des protections pour les participants (casque, gants de boxe, protège tibias et protège pieds).",
+  "domaine_activite_categorise":[
+  "11000/11150"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Autres arts martiaux (karaté, aïkido, taekwondo)"
+  ],
+  "titre_search_opti":"RECOT FULL CONTACT CLUB ASSOCIATION",
+  "adresse_actuelle":"bât. B, 4e étage, 16, rue de Javel,",
+  "codepostal_actuel":"75015",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.843356, 2.287277"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-05-05",
+  "numero_rna":null,
+  "titre":"EPA FRANCE.",
+  "titre_search":"EPA FRANCE. EPA FRANCE",
+  "objet":"pratique et promotion de l'aïkido traditionnel, dans le respect des enseignements de son fondateur, Morihei Veshiba au sein d'EPA France.",
+  "domaine_activite_categorise":[
+  "11000/11150"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Autres arts martiaux (karaté, aïkido, taekwondo)"
+  ],
+  "titre_search_opti":"EPA FRANCE",
+  "adresse_actuelle":"36, rue Claude-Decaen,",
+  "codepostal_actuel":"75012",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.835644, 2.400021"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-05-21",
+  "numero_rna":null,
+  "titre":"BLACKS SPIRIT.",
+  "titre_search":"BLACKS SPIRIT. BLACKS SPIRIT",
+  "objet":"organisation de manifestations et de voyages ayant un rapport avec la culture et le monde du rugby.",
+  "domaine_activite_categorise":[
+  "9000/",
+  "11000/11080"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "action socio-culturelle/",
+  "Sports, activités de plein air/Rugby (rugby à 13, à 15)"
+  ],
+  "titre_search_opti":"BLACKS SPIRIT",
+  "adresse_actuelle":"3, rue Dagorno,",
+  "codepostal_actuel":"75012",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.842471, 2.398819"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2008-02-25",
+  "numero_rna":null,
+  "titre":"DYNAMIQUE 75.",
+  "titre_search":"DYNAMIQUE 75. DYNAMIQUE 75",
+  "objet":"permettre la pratique de différentes disciplines sportives et culturelles au sein de diverses fédérations, dont notamment la fédération sportive et gymnique du travail, ou à l'intérieur de l'association, et réalisation d'événements festifs entre les membres ; l'association compte autant de sections que de disciplines sportives et culturelles pratiquées par les adhérents ; chaque section est régie par un règlement de section qui lui est propre.",
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"DYNAMIQUE 75",
+  "adresse_actuelle":"30, rue du Théâtre,",
+  "codepostal_actuel":"75015",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.849498, 2.286342"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Dissolution",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"dissolution",
+  "datedeclaration":"2008-02-27",
+  "numero_rna":null,
+  "titre":"ASSOCIATION PARIS RALLYE TEAM.",
+  "titre_search":"ASSOCIATION PARIS RALLYE TEAM. ASSOCIATION PARIS RALLYE TEAM",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"ASSOCIATION PARIS RALLYE TEAM",
+  "adresse_actuelle":"49, rue de Babylone,",
+  "codepostal_actuel":"75007",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.851659, 2.317987"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-01-30",
+  "numero_rna":null,
+  "titre":"TRINSPIRIT.",
+  "titre_search":"TRINSPIRIT. TRINSPIRIT",
+  "objet":"former un équipage dans le but de participer au Challenge Spi Dauphine.",
+  "domaine_activite_categorise":[
+  "11000/",
+  "11000/11190"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/",
+  "Sports, activités de plein air/gestion d'équipements sportifs, organisation de rencontres sportives, organisation de championnats, clubs de supporters"
+  ],
+  "titre_search_opti":"TRINSPIRIT",
+  "adresse_actuelle":"2e, 48, rue Saint-Placide,",
+  "codepostal_actuel":"75006",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.848543, 2.325564"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-02-01",
+  "numero_rna":null,
+  "titre":"FC INSOMNIE.",
+  "titre_search":"FC INSOMNIE. FC INSOMNIE",
+  "objet":"pratique du football en salle.",
+  "domaine_activite_categorise":[
+  "11000/11075"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Football (football, futsal)"
+  ],
+  "titre_search_opti":"FC INSOMNIE",
+  "adresse_actuelle":"15, rue Bouchardon,",
+  "codepostal_actuel":"75010",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.870498, 2.35756"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Dissolution",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"dissolution",
+  "datedeclaration":"2008-01-17",
+  "numero_rna":null,
+  "titre":"SOCIÉTÉ FRANCOPHONE DE CANCEROLOGIE.",
+  "titre_search":"SOCIÉTÉ FRANCOPHONE DE CANCEROLOGIE. SOCIÉTÉ FRANCOPHONE DE CANCEROLOGIE",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"SOCIÉTÉ FRANCOPHONE DE CANCEROLOGIE",
+  "adresse_actuelle":"20, rue de la Fédération,",
+  "codepostal_actuel":"75015",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.854503, 2.291214"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-02-11",
+  "numero_rna":null,
+  "titre":"LES AMIS DE PASSION.",
+  "titre_search":"LES AMIS DE PASSION. LES AMIS DE PASSION",
+  "objet":"l'association a pour objet de participer à différents régates avec ses membres et d'organiser des croisières.",
+  "domaine_activite_categorise":[
+  "11000/11025"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Aviron, canoë kayak (aviron, rafting, canoë kayak, joutes)"
+  ],
+  "titre_search_opti":"LES AMIS DE PASSION",
+  "adresse_actuelle":"7, rue l'Alboni,",
+  "codepostal_actuel":"75016",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.858213, 2.284926"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2008-02-07",
+  "numero_rna":null,
+  "titre":null,
+  "titre_search":"COMITE REGIONAL DE LA FEDERATION FRANÇAISE DE WUSHU ARTS ENERGETIQUES ET MARTIAUX CHINOIS FFWACNC REGION ILE-DE-FRANCE. COMITE REGIONAL L'ILE DE FRANCE - FEDERATION FRANÇAISE DE WUSHU ARTS ENERGETIQUES ET MARTIAUX CHINOIS (CRIDF - FFW). COMITE REGIONAL DE LA FEDERATION FRANÇAISE DE WUSHU ARTS ENERGETIQUES ET MARTIAUX CHINOIS FFWACNC REGION ILE-DE-FRANCE COMITE REGIONAL LILE DE FRANCE - FEDERATION FRANÇAISE DE WUSHU ARTS ENERGETIQUES ET MARTIAUX CHINOIS (CRIDF - FFW)",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/11150"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Autres arts martiaux (karaté, aïkido, taekwondo)"
+  ],
+  "titre_search_opti":"COMITE REGIONAL DE LA FEDERATION FRANÇAISE DE WUSHU ARTS ENERGETIQUES ET MARTIAUX CHINOIS FFWACNC REGION ILE-DE-FRANCE COMITE REGIONAL LILE DE FRANCE - FEDERATION FRANÇAISE DE WUSHU ARTS ENERGETIQUES ET MARTIAUX CHINOIS (CRIDF - FFW)",
+  "transfert_nouvelle_adresse_adresse":"11, rue Caillaux,",
+  "adresse_actuelle":"11, rue Caillaux,",
+  "codepostal_actuel":"75013",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.822633, 2.361318"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2008-02-08",
+  "numero_rna":null,
+  "titre":"ASSOCIATION SPORTIVE D'ARTS MARTIAUX TRADITIONNELS.",
+  "titre_search":"ASSOCIATION SPORTIVE D'ARTS MARTIAUX TRADITIONNELS. ASSOCIATION SPORTIVE DARTS MARTIAUX TRADITIONNELS",
+  "objet":"rassembler, promouvoir par le biais de l'enseignement et la pratique des arts martiaux dits traditionnels , sous forme de stages, séminaires, cours, manifestations sociaux culturelles et sportives.",
+  "domaine_activite_categorise":[
+  "11000/11150"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Autres arts martiaux (karaté, aïkido, taekwondo)"
+  ],
+  "titre_search_opti":"ASSOCIATION SPORTIVE DARTS MARTIAUX TRADITIONNELS",
+  "adresse_actuelle":"6, rue du Moulinet,",
+  "codepostal_actuel":"75013",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.827349, 2.356252"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2008-02-12",
+  "numero_rna":null,
+  "titre":null,
+  "titre_search":"RALLYE CORNEILLE. RALLYE CORNEILLE VERT. RALLYE CORNEILLE RALLYE CORNEILLE VERT",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/11160"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Sports mécaniques (sport automobile, moto, trial)"
+  ],
+  "titre_search_opti":"RALLYE CORNEILLE RALLYE CORNEILLE VERT",
+  "adresse_actuelle":"8, rue Duguay-Trouin,",
+  "codepostal_actuel":"75006",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.846442, 2.330096"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-02-19",
+  "numero_rna":null,
+  "titre":"CLUB SPORTIF DES CHEMINOTS DE PARIS - WADO-RYU (CSCP - WADO-RYU).",
+  "titre_search":"CLUB SPORTIF DES CHEMINOTS DE PARIS - WADO-RYU (CSCP - WADO-RYU). CLUB SPORTIF DES CHEMINOTS DE PARIS - WADO-RYU (CSCP - WADO-RYU)",
+  "objet":"favoriser la pratique du wado-ryu à la SNCF, et plus particulièrement au sein des familles des agents salariés ou retraités des directions centrales et services centraux de la SNCF, ainsi que parmi le personnel et leurs familles des comités d'établissements de ces directions.",
+  "domaine_activite_categorise":[
+  "11000/11150"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Autres arts martiaux (karaté, aïkido, taekwondo)"
+  ],
+  "titre_search_opti":"CLUB SPORTIF DES CHEMINOTS DE PARIS - WADO-RYU (CSCP - WADO-RYU)",
+  "adresse_actuelle":"10, place de Budapest,",
+  "codepostal_actuel":"75009",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.877514, 2.327405"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-02-19",
+  "numero_rna":null,
+  "titre":"CODEX.",
+  "titre_search":"CODEX. CODEX",
+  "objet":"apprentissage de multisports aux jeunes du quartier et de ses environs.",
+  "domaine_activite_categorise":[
+  "11000/11005"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/associations multisports locales"
+  ],
+  "titre_search_opti":"CODEX",
+  "adresse_actuelle":"BL2, 4, rue du Clos,",
+  "codepostal_actuel":"75020",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.865484, 2.387843"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-02-19",
+  "numero_rna":null,
+  "titre":"PARIS HOCKEY.",
+  "titre_search":"PARIS HOCKEY. PARIS HOCKEY",
+  "objet":"promouvoir, en général l'éducation physique et sportive pour tous, et en particulier le hockey sur gazon et le hockey en salle, avec organisation de toutes activités et tous séjours fondés sur la pratique du sport pour toutes et tous.",
+  "domaine_activite_categorise":[
+  "11000/11090"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Autres sports collectifs (baseball, hockey sur glace, football américain)"
+  ],
+  "reference_avis_initial":null,
+  "siteweb":"www.paris-hockey.org",
+  "titre_search_opti":"PARIS HOCKEY",
+  "adresse_actuelle":"323, rue de Vaugirard,",
+  "codepostal_actuel":"75015",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.83818, 2.298414"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-06-12",
+  "numero_rna":null,
+  "titre":"ASIAN PRODUCTION.",
+  "titre_search":"ASIAN PRODUCTION. ASIAN PRODUCTION",
+  "objet":"former les jeunes aux techniques de combat et aussi réaliser des documentaires et des films.",
+  "domaine_activite_categorise":[
+  "6000/6025",
+  "11000/11150",
+  "15000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "culture, pratiques d’activités artistiques, culturelles/photographie, cinéma (dont ciné-clubs)",
+  "Sports, activités de plein air/Autres arts martiaux (karaté, aïkido, taekwondo)",
+  "éducation formation/"
+  ],
+  "titre_search_opti":"ASIAN PRODUCTION",
+  "adresse_actuelle":"8, rue de Bièvre,",
+  "codepostal_actuel":"75005",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.850888, 2.350483"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-06-13",
+  "numero_rna":null,
+  "titre":"WATSU FRANCE.",
+  "titre_search":"WATSU FRANCE. WATSU FRANCE",
+  "objet":"favoriser, développer et promouvoir des actions et des activités dans un champ d'intervention artistique, culturel, éducatif et social lié au watsu, tantsu et aux autres formes de travail corporel, aquatique ou pas, ainsi qu'aux autres techniques de travail corporel reconnues par un programme de formation de la Worldwide Aquatic Bodywork Association (WABA) ; la formation des hommes et des femmes, leurs participations à la pratique culturelle, sportive (comme par exemple la danse et la danse aquatique, le stretching, le yoga et le yoga aquatique, ou le tai chi traditionnel, le tai chi aquatique) ou éducative, voire aussi la possibilité de leur insertion sociale et/ou professionnelle.",
+  "domaine_activite_categorise":[
+  "17000/",
+  "11000/11105"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "santé/",
+  "Sports, activités de plein air/Gymnastique (gymnastique, gymnastique d’entretien, éducation physique, yoga), aérobic"
+  ],
+  "titre_search_opti":"WATSU FRANCE",
+  "adresse_actuelle":"5ème étage, 5, rue des Patriarches,",
+  "codepostal_actuel":"75005",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.840886, 2.350687"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-06-16",
+  "numero_rna":null,
+  "titre":"ACEVIE-ART, CORPS ET VIE.",
+  "titre_search":"ACEVIE-ART, CORPS ET VIE. ACEVIE-ART, CORPS ET VIE",
+  "objet":"enseignement, formation, recherche, communication, promotion de la connaissance dans le domaine de l'énergie vitale (appelé « chi » dans la tradition chinoise et « prana » dans la tradition indienne) des disciplines qui s'y rapportent et privilégient la voie intérieure notamment l'art du chi, le tai ji quan, le qi gong et le yoga, et des pratiques affinitaires comme le massage.",
+  "domaine_activite_categorise":[
+  "11000/11105",
+  "15000/",
+  "16000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Gymnastique (gymnastique, gymnastique d’entretien, éducation physique, yoga), aérobic",
+  "éducation formation/",
+  "recherche/"
+  ],
+  "titre_search_opti":"ACEVIE-ART, CORPS ET VIE",
+  "adresse_actuelle":"64, rue des Prairies,",
+  "codepostal_actuel":"75020",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.863701, 2.401235"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Dissolution",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"dissolution",
+  "datedeclaration":"2008-06-17",
+  "numero_rna":null,
+  "titre":"PHILIPPINE NATIONAL BANK SPORTS CLUB.",
+  "titre_search":"PHILIPPINE NATIONAL BANK SPORTS CLUB. PHILIPPINE NATIONAL BANK SPORTS CLUB",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"PHILIPPINE NATIONAL BANK SPORTS CLUB",
+  "adresse_actuelle":"118, avenue des Champs-Elysées,",
+  "codepostal_actuel":"75008",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.87238, 2.300579"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-06-26",
+  "numero_rna":null,
+  "titre":"SCIENCESPO'LE POSITION.",
+  "titre_search":"SCIENCESPO'LE POSITION. SCIENCESPOLE POSITION",
+  "objet":"former une équipe de karting pour participer à des courses inter-universitaires.",
+  "domaine_activite_categorise":[
+  "11000/11160"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Sports mécaniques (sport automobile, moto, trial)"
+  ],
+  "titre_search_opti":"SCIENCESPOLE POSITION",
+  "adresse_actuelle":"7ème étage, 4, rue de Sèvres,",
+  "codepostal_actuel":"75006",
+  "commune_actuelle":"Paris",
+  "geo_point":null
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-06-26",
+  "numero_rna":null,
+  "titre":"LES XV COUILLONS.",
+  "titre_search":"LES XV COUILLONS. LES XV COUILLONS",
+  "objet":"rassembler des joueurs de rugby pour intégrer le championnat folklorique français ; promouvoir les valeurs essentielles de ce sport que sont la camaraderie, le beau jeu et le bon esprit.",
+  "domaine_activite_categorise":[
+  "11000/11080",
+  "6000/6045"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Rugby (rugby à 13, à 15)",
+  "culture, pratiques d’activités artistiques, culturelles/folklore"
+  ],
+  "titre_search_opti":"LES XV COUILLONS",
+  "adresse_actuelle":"1 e r étage fond de cour, 20, rue Ernest-Renan,",
+  "codepostal_actuel":"75015",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.844267, 2.309421"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2008-07-02",
+  "numero_rna":null,
+  "titre":"VOLONTAIRES 2007, GARDONS LE CONTACT.",
+  "titre_search":"VOLONTAIRES 2007, GARDONS LE CONTACT. VOLONTAIRES 2007, GARDONS LE CONTACT",
+  "objet":"organiser des manifestations pour garder le contact entre les différents volontaires ; s'investir auprès des événements sportifs nationaux et internationaux ; se mettre à disposition des fédérations internationales, nationales et des ligues et comités régionaux et nationaux ; fournir des informations à ses adhérents sur les manifestations sportives ; participer activement à la vie associative des clubs de sport ; développer des partenariats avec d'autres associations sportives de volontaires.",
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"VOLONTAIRES 2007, GARDONS LE CONTACT",
+  "adresse_actuelle":"16, rue Vernier,",
+  "codepostal_actuel":"75017",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.883519, 2.290932"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-02-21",
+  "numero_rna":"W751259954",
+  "titre":"HOCKEY CLUB DES FRANCAIS VOLANTS DE PARIS",
+  "titre_search":"HOCKEY CLUB DES FRANCAIS VOLANTS DE PARIS",
+  "objet":"pratique de l'éducation physique et des sports et plus particulièrement le hockey sur glace",
+  "domaine_activite_categorise":[
+  "11000/11092"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/hockey sur glace, sports de glace"
+  ],
+  "titre_search_opti":"HOCKEY CLUB DES FRANCAIS VOLANTS DE PARIS",
+  "adresse_actuelle":"8 boulevard de Bercy Patinoire de l'Accor Arena",
+  "codepostal_actuel":"75012",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.839223, 2.37777"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-02-24",
+  "numero_rna":"W751259993",
+  "titre":"ECOLE DE L'AUBE BLEUE",
+  "titre_search":"ECOLE DE L'AUBE BLEUE ECOLE DE LAUBE BLEUE",
+  "objet":"donner des cours de kung-fu, taï-chi, qi-gong",
+  "domaine_activite_categorise":[
+  "11000/11150"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Autres arts martiaux (karaté, aïkido, taekwondo)"
+  ],
+  "titre_search_opti":"ECOLE DE LAUBE BLEUE",
+  "adresse_actuelle":"14 rue Charles V",
+  "codepostal_actuel":"75004",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.853334, 2.362032"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-02-24",
+  "numero_rna":"W751259996",
+  "titre":"ACTIVE TON POTENTIEL PAR L'ESCRIME ATPE",
+  "titre_search":"ACTIVE TON POTENTIEL PAR L'ESCRIME ATPE ACTIVE TON POTENTIEL PAR LESCRIME ATPE",
+  "objet":"développer physiquement et mentalement des enfants et des adultes par la pratique de l'escrime, organisation de manifestations dans le domaine des entreprises pour aider au développement personnel des salariés, développer le protocole de réparation des victimes de violences sexuelles, être un organisme de formation, utiliser l'escrime pour conduire des projets pédagogiques personnels auprès d'enfants précoces, utiliser l'escrime pour conduire des projets personnels sport et santé auprès d'adultes",
+  "domaine_activite_categorise":[
+  "2000/2020",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "clubs, cercles de réflexion/organisation de conférences",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"ACTIVE TON POTENTIEL PAR LESCRIME ATPE",
+  "adresse_actuelle":"34-36 avenue Ledru-Rollin",
+  "codepostal_actuel":"75012",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.847325, 2.370583"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-03-03",
+  "numero_rna":"W751260067",
+  "titre":"MODERN CLOSE COMBAT",
+  "titre_search":"MODERN CLOSE COMBAT",
+  "objet":"uniformiser les clubs de close combat à Paris, en donnant un socle commun de connaissances, de compétences et de techniques de close combat de type Fairbairn depuis 1940 ou de CAC corps à corps jusqu'à 2002, sous la forme de fiches, excluant celles de Tior et de C4",
+  "domaine_activite_categorise":[
+  "11000/11145",
+  "11000/11005"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Sports de combat (boxe, kick box, boxe thaï, lutte)",
+  "Sports, activités de plein air/associations multisports locales"
+  ],
+  "titre_search_opti":"MODERN CLOSE COMBAT",
+  "adresse_actuelle":"52 rue de l'Université",
+  "codepostal_actuel":"75007",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.85806, 2.327218"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-03-04",
+  "numero_rna":"W751260077",
+  "titre":"ESTÉRIEURS",
+  "titre_search":"ESTÉRIEURS",
+  "objet":"promouvoir les activités de montagne et d'escalade du Grand Paris, favoriser les démarches de construction, de (re) mise en état de structures artificielles d'escalade (SAE) en extérieur sur cette zone géographique, participer à la mise en place de ces structures extérieures et à leur gestion, contribuer à la mise en commun de matériel collectif nécessaire aux activités de montagne et d'escalade, organiser des activités, manifestations et des animations sportives et culturelles, faire la promotion de « l'escalade pour toutes et tous », c'est-à-dire d'une pratique non-discriminante, et accessible à tout le monde ; Dans un esprit de convivialité et de solidarité, de favoriser et organiser, l'entraide et l'échange entre les personnes adhérentes, avec d'autres structures ou associations ayant des objets similaires ou complémentaires, rechercher l'implication de ses personnes adhérentes dans la vie associative et la prise de décision collective, l'innovation et l'auto-organisation, promouvoir le bénévolat, l'investissement des personnes adhérentes et le sport populaire ; Organiser des formations dans ces domaines ;",
+  "domaine_activite_categorise":[
+  "6000/",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "culture, pratiques d’activités artistiques, culturelles/",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"ESTÉRIEURS",
+  "adresse_actuelle":"70 rue Jean Pierre Timbaud",
+  "codepostal_actuel":"75011",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.867006, 2.375056"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Dissolution",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"dissolution",
+  "datedeclaration":"2021-03-02",
+  "numero_rna":"W751254492",
+  "titre":"BDSHARKS",
+  "titre_search":"BDSHARKS",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "15000/15065",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "éducation formation/associations d’étudiants, d’élèves",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"BDSHARKS",
+  "adresse_actuelle":"63 boulevard Exelmans",
+  "codepostal_actuel":"75016",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.842494, 2.260844"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-05-10",
+  "numero_rna":"W751260871",
+  "titre":"ASSOCIATION LES MERCENAIRES ALUMNI",
+  "titre_search":"ASSOCIATION LES MERCENAIRES ALUMNI",
+  "objet":"rassembler les anciens étudiants de l'Institut détudes Politiques de Paris, plus précisément de son équipe de football afin d'organiser des rencontres sportives, un réseau de partage et de solidarité ; Perpétuer le lien entre anciens et actuels étudiants et de créer un club de football affilié à la fédération compétente ;",
+  "domaine_activite_categorise":[
+  "11000/",
+  "7000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/",
+  "clubs de loisirs, relations/"
+  ],
+  "titre_search_opti":"ASSOCIATION LES MERCENAIRES ALUMNI",
+  "adresse_actuelle":"15 quai de la Gironde Appartement B 10e Etage 75019",
+  "codepostal_actuel":"75019",
+  "commune_actuelle":"Paris",
+  "geo_point":null
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Dissolution",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"dissolution",
+  "datedeclaration":"2021-04-29",
+  "numero_rna":"W751258058",
+  "titre":"LES BRICOLOS D'LA RENAULT (LBDR)",
+  "titre_search":"LES BRICOLOS D'LA RENAULT (LBDR) LES BRICOLOS DLA RENAULT (LBDR)",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/11160"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Sports mécaniques (sport automobile, moto, trial)"
+  ],
+  "titre_search_opti":"LES BRICOLOS DLA RENAULT (LBDR)",
+  "adresse_actuelle":"11 rue Mariotte 1er Etage",
+  "codepostal_actuel":"75017",
+  "commune_actuelle":"PARIS",
+  "geo_point":"48.884337, 2.321071"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-05-22",
+  "numero_rna":"W751261018",
+  "titre":"BE A PRO",
+  "titre_search":"BE A PRO",
+  "objet":"promouvoir et développer l'accès à la performance, et ceux quel que soit l'interprétation de la notion de performance, dans une démarche holistique : dans le respect de la notion de triple projet (sportif, professionnel et accomplissement personnel) ; ; ; en respectant la logique de développement à long terme de l'athlète et ceux quel que soit l'âge",
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"BE A PRO",
+  "adresse_actuelle":"91 rue du Faubourg Saint Honoré",
+  "codepostal_actuel":"75008",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.871981, 2.313036"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2021-05-16",
+  "numero_rna":"W932004495",
+  "titre":"HOZES",
+  "titre_search":"HOZES",
+  "objet":"accompagner les associations dans leurs gestions et leurs développements, proposer des formations pour les responsables associatifs ainsi que les membres des associations, proposer des formations d'apprentissage de la langue française, faciliter l' accès à la culture française, favoriser l'appropriation des valeurs républicaines et citoyennes, proposer des actions afin de faciliter le vivre et le faire ensemble",
+  "domaine_activite_categorise":[
+  "6000/",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "culture, pratiques d’activités artistiques, culturelles/",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"HOZES",
+  "transfert_nouvelle_adresse_adresse":"8 rue Lemercier",
+  "adresse_actuelle":"8 rue Lemercier",
+  "codepostal_actuel":"75017",
+  "commune_actuelle":"PARIS",
+  "geo_point":"48.885684, 2.324941"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-04-23",
+  "numero_rna":"W751260706",
+  "titre":"CORDÉE 13",
+  "titre_search":"CORDÉE 13",
+  "objet":"l'organisation, le développement, la promotion de l'escalade, des activités de montagne et des activités physiques, sportives et de pleine nature voisines ou qui s'y rattachent ; la contribution à l'animation sportive, culturelle et sociale du quartier environnant le gymnase glacière dans le 13ème arrondissement de Paris",
+  "domaine_activite_categorise":[
+  "11000/11055",
+  "9000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Escalade, montagne (escalade, spéléologie, via ferrata, canyonisme, alpinisme)",
+  "action socio-culturelle/"
+  ],
+  "titre_search_opti":"CORDÉE 13",
+  "adresse_actuelle":"11 rue Caillaux",
+  "codepostal_actuel":"75013",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.822633, 2.361318"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-05-06",
+  "numero_rna":"W751260822",
+  "titre":"L'ASSOCIATION FRANÇAISE ELITE DE TAEKWONDO ET DISCIPLINES ASSOCIEES",
+  "titre_search":"L'ASSOCIATION FRANÇAISE ELITE DE TAEKWONDO ET DISCIPLINES ASSOCIEES LASSOCIATION FRANÇAISE ELITE DE TAEKWONDO ET DISCIPLINES ASSOCIEES",
+  "objet":"enseigner et sensibiliser les arts de taekwando",
+  "domaine_activite_categorise":[
+  "11000/11150"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Autres arts martiaux (karaté, aïkido, taekwondo)"
+  ],
+  "titre_search_opti":"LASSOCIATION FRANÇAISE ELITE DE TAEKWONDO ET DISCIPLINES ASSOCIEES",
+  "adresse_actuelle":"5 rue des Suisses",
+  "codepostal_actuel":"75014",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.830736, 2.314483"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2021-04-21",
+  "numero_rna":"W751073536",
+  "titre":null,
+  "titre_search":"ASSOCIATION SOCIO CULTURELLE TORATENOU ASSOCIATION SOCIO-CULTURELLE TORATENOU - BEITH AVRAHAM",
+  "objet":"l'association a pour objet ; le développement culturel et sportif de ses adhérents ; l'association se propose d'atteindre ses objectifs en mettant en uvre les moyens suivants (liste non limitative) ; l'organisation d'évènements et de manifestations diverses, le cas échéant la mise en place de bulletins, mémoires, publications, débats, cours et conférences, bourses, concours, récompenses, représentations théâtrales et sportives, la mise en uvre de toute action judiciaire ou extrajudiciaire utile à l'accomplissement de son objet et plus généralement, tous moyens de communication et de promotion utiles et nécessaires à la réalisation de l'objet, ou susceptibles d'y contribuer ; aide aux nécessiteux",
+  "domaine_activite_categorise":[
+  "6000/",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "culture, pratiques d’activités artistiques, culturelles/",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"ASSOCIATION SOCIO CULTURELLE TORATENOU ASSOCIATION SOCIO-CULTURELLE TORATENOU - BEITH AVRAHAM",
+  "adresse_actuelle":"4 rue de Thionville",
+  "codepostal_actuel":"75019",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.887777, 2.380709"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Dissolution",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"dissolution",
+  "datedeclaration":"2021-04-25",
+  "numero_rna":"W751206997",
+  "titre":"NAPOLI CLUB PARIGI - PARIS SAN GENNAR",
+  "titre_search":"NAPOLI CLUB PARIGI - PARIS SAN GENNAR",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/11075",
+  "14000/14040"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Football (football, futsal)",
+  "amicales, groupements affinitaires, groupements d'entraide (hors défense de droits fondamentaux/amicale de personnes originaires d'un même pays (hors défense des droits des étrangers)"
+  ],
+  "titre_search_opti":"NAPOLI CLUB PARIGI - PARIS SAN GENNAR",
+  "adresse_actuelle":"4 rue de Copenhague",
+  "codepostal_actuel":"75008",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.880406, 2.320815"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-07-06",
+  "numero_rna":"W751261482",
+  "titre":"NADELIA",
+  "titre_search":"NADELIA",
+  "objet":"organiser des évènements sportifs; organiser des rencontres culturelles de rencontres sportives; organiser des camps de vacances; aider à l'insertion par l'emploi, par le sport et la culture former des personnes en situation d'échec personnel; aider à la réinsertion via cette association humanitaire",
+  "domaine_activite_categorise":[
+  "20000/",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "associations caritatives, humanitaires, aide au développement, développement du bénévolat/",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"NADELIA",
+  "adresse_actuelle":"60 rue Francois 1er",
+  "codepostal_actuel":"75008",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.869893, 2.30194"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-07-05",
+  "numero_rna":"W751261495",
+  "titre":"DEVELOPPER SUIVRE PERFORMER (D S P)",
+  "titre_search":"DEVELOPPER SUIVRE PERFORMER (D S P)",
+  "objet":"développer, suivre et performer les jeunes basketteurs afin d'atteindre l'excellence, et tous objets similaires, connexes ou complémentaires ou susceptibles d'en favoriser la réalisation ou le développement",
+  "domaine_activite_categorise":[
+  "11000/11090"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Autres sports collectifs (baseball, hockey sur glace, football américain)"
+  ],
+  "titre_search_opti":"DEVELOPPER SUIVRE PERFORMER (D S P)",
+  "adresse_actuelle":"13 rue de la Roquette",
+  "codepostal_actuel":"75011",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.854199, 2.371124"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-07-13",
+  "numero_rna":"W751261563",
+  "titre":"AUSTERSPORT",
+  "titre_search":"AUSTERSPORT",
+  "objet":"proposer des activités de remise en forme et de renforcement musculaire",
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"AUSTERSPORT",
+  "adresse_actuelle":"85 quai D Austerlitz Batiment Orleans",
+  "codepostal_actuel":"75013",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.842897, 2.366293"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-07-31",
+  "numero_rna":"W751261747",
+  "titre":"ALTERFOOTBALL",
+  "titre_search":"ALTERFOOTBALL",
+  "objet":"l'association vise à proposer un jeu de cartes venant rebattre les règles du football pour un faire une pratique mixte, inclusive, hors de tout esprit de compétition visant la victoire sur l'autre ; Sans prétendre renverser la tendance, ce jeu a vocation à être un outil de sensibilisation ; A destination d'un publique scolaire notamment, pour réfléchir au sein des classes sur l'égalité femme-homme, et s'amuser avec ce sport en le dédramatisant ; Un outil aussi, pourquoi pas, de formation, de cohésion entre adultes ;",
+  "domaine_activite_categorise":[
+  "11000/11075",
+  "3000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Football (football, futsal)",
+  "défense de droits fondamentaux, activités civiques/"
+  ],
+  "titre_search_opti":"ALTERFOOTBALL",
+  "adresse_actuelle":"44 rue Meslay",
+  "codepostal_actuel":"75003",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.868283, 2.357555"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-10-27",
+  "numero_rna":"W751262608",
+  "titre":"SANS LES ROULETTES (SLR)",
+  "titre_search":"SANS LES ROULETTES (SLR)",
+  "objet":"agir pour le développement de toutes les pratiques du vélo ; cela se traduit par l'organisation d'événements aux objectifs sportifs, touristiques, culturels et éducatifs suivants, ateliers de réparation solidaires, sorties à vélo communautaires, voyages à vélo, ateliers de prévention, création et diffusion de contenu éducatif et préventif liés à la pratique du vélo ; l'association s'engage aussi pour la défense de la pratique du vélo et des cyclistes en offrant des conseils en droit ; les activités économiques envisagées résident en la vente de produits dérivés et l'organisation d'ateliers de réparation ;",
+  "domaine_activite_categorise":[
+  "11000/11180"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Cyclisme (cyclisme, vélo, VTT, y c course d’orientation à vélo, cyclotourisme)"
+  ],
+  "reference_avis_initial":null,
+  "siteweb":"http://www.sanslesroulettes.fr",
+  "titre_search_opti":"SANS LES ROULETTES (SLR)",
+  "adresse_actuelle":"8 B rue Martel",
+  "codepostal_actuel":"75010",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.873938, 2.353064"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2021-10-20",
+  "numero_rna":"W751076886",
+  "titre":"ASSOCIATION NATIONALE DES SPORTS DU CREDIT AGRICOLE MUTUEL",
+  "titre_search":"ASSOCIATION NATIONALE DES SPORTS DU CREDIT AGRICOLE MUTUEL",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "reference_avis_initial":null,
+  "siteweb":"https://www.anscam.org",
+  "titre_search_opti":"ASSOCIATION NATIONALE DES SPORTS DU CREDIT AGRICOLE MUTUEL",
+  "transfert_nouvelle_adresse_adresse":"101 rue de Sèvres Lot 1674",
+  "adresse_actuelle":"101 rue de Sèvres Lot 1674",
+  "codepostal_actuel":"75006",
+  "commune_actuelle":"PARIS",
+  "geo_point":"48.84851, 2.32102"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2021-10-20",
+  "numero_rna":"W751100361",
+  "titre":"ASSOCIATION SPORTIVE SAINT-MARCEL",
+  "titre_search":"ASSOCIATION SPORTIVE SAINT-MARCEL",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/",
+  "18000/18015"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/",
+  "services et établissements médico-sociaux/établissements, services pour personnes handicapées (y compris les C.A.T)"
+  ],
+  "titre_search_opti":"ASSOCIATION SPORTIVE SAINT-MARCEL",
+  "transfert_nouvelle_adresse_adresse":"4 rue des Arènes Mvac Quartier Latin - Boîte 70",
+  "adresse_actuelle":"4 rue des Arènes Mvac Quartier Latin - Boîte 70",
+  "codepostal_actuel":"75005",
+  "commune_actuelle":"PARIS",
+  "geo_point":null
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-09-13",
+  "numero_rna":"W751262116",
+  "titre":"FRATERNITE NUMIDE",
+  "titre_search":"FRATERNITE NUMIDE",
+  "objet":"créer des liens entre les algériens résidents en France, les étudiants algériens et les travailleurs algériens, organiser, animer et promouvoir tous types d'événements sportifs, culturels, éducatives, ateliers à thème, sociale, aide à l'insertion",
+  "domaine_activite_categorise":[
+  "7000/",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "clubs de loisirs, relations/",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"FRATERNITE NUMIDE",
+  "adresse_actuelle":"221 rue Saint Maur",
+  "codepostal_actuel":"75010",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.87333, 2.370548"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2021-09-10",
+  "numero_rna":"W751261091",
+  "titre":"AUTEUIL ROUGE FOOTBALL TEAM",
+  "titre_search":"AUTEUIL ROUGE FOOTBALL TEAM",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/11075",
+  "11000/11190"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Football (football, futsal)",
+  "Sports, activités de plein air/gestion d'équipements sportifs, organisation de rencontres sportives, organisation de championnats, clubs de supporters"
+  ],
+  "titre_search_opti":"AUTEUIL ROUGE FOOTBALL TEAM",
+  "transfert_nouvelle_adresse_adresse":"194 rue d'Alésia Appartement 73 Bal 3 Batiment C",
+  "adresse_actuelle":"194 rue d'Alésia Appartement 73 Bal 3 Batiment C",
+  "codepostal_actuel":"75014",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.832715, 2.312265"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2021-09-14",
+  "numero_rna":"W921009665",
+  "titre":"WATT - WOMEN ARE TALENTED TOO",
+  "titre_search":"WATT - WOMEN ARE TALENTED TOO",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/11400"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/activités de plein air (dont saut à l’élastique)"
+  ],
+  "titre_search_opti":"WATT - WOMEN ARE TALENTED TOO",
+  "transfert_nouvelle_adresse_adresse":"47 rue des Tournelles",
+  "adresse_actuelle":"47 rue des Tournelles",
+  "codepostal_actuel":"75003",
+  "commune_actuelle":"PARIS",
+  "geo_point":"48.858421, 2.367037"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-09-03",
+  "numero_rna":null,
+  "titre":"FONDS DE DOTATION ELEOS PHILANTHROPIES",
+  "titre_search":"FONDS DE DOTATION ELEOS PHILANTHROPIES",
+  "objet":"soutenir et développer toute œuvre d'intérêt général à caractère social, éducatif, humanitaire, scientifique, environnemental et sportif, visant notamment à favoriser : l'éducation des adolescents et des jeunes pour encourager leur engagement dans leurs divers milieux d'insertion sociale et dans le monde ; la mise en œuvre d'une pédagogie au service des jeunes axées notamment sur des activités artistiques, sportives, de plein air, dans le domaine de la citoyenneté, de la protection de l'environnement et sur des échanges et une réflexion sur tous les domaines de la vie dans un esprit d'ouverture évangélique ; la formation et l'accompagnement dans la durée de responsables et animateurs de jeunes afin de leur donner les aptitudes à l’animation de groupes d'adolescents et de jeunes de 11 à 25 ans",
+  "domaine_activite_categorise":[
+  "24000/",
+  "11000/",
+  "20000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Environnement, cadre de vie/",
+  "Sports, activités de plein air/",
+  "associations caritatives, humanitaires, aide au développement, développement du bénévolat/"
+  ],
+  "titre_search_opti":"FONDS DE DOTATION ELEOS PHILANTHROPIES",
+  "adresse_actuelle":"47 rue Erlanger",
+  "codepostal_actuel":"75016",
+  "commune_actuelle":"PARIS",
+  "geo_point":"48.844941, 2.260361"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2021-09-19",
+  "numero_rna":"W943008404",
+  "titre":null,
+  "titre_search":"HUSTLE PARIS BASKET (HPB) HUSTLE PARIS - HP",
+  "objet":"son but est de promouvoir, coordonner et animer toutes les activités à caractère culturel, sportif et de loisirs décidées par les membres de l'association ; à travers la pratique des activités, l'association vise à l'épanouissement de ses membres, au développement des liens d'amitié et de solidarité propices au bien-vivre ensemble et privilégie les démarches éducatives fondées sur l'ouverture, le respect, l'autonomie, la responsabilité, la solidarité et le bénévolat ; pour atteindre son but, elle pourra mobiliser l'ensemble des moyens d'actions autorisés par la loi",
+  "domaine_activite_categorise":[
+  "11000/11065"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Basket-ball"
+  ],
+  "reference_avis_initial":null,
+  "siteweb":"http://hustle-paris.com",
+  "titre_search_opti":"HUSTLE PARIS BASKET (HPB) HUSTLE PARIS - HP",
+  "adresse_actuelle":"1 rue Sophie Germain 4 Etage",
+  "codepostal_actuel":"75014",
+  "commune_actuelle":"Paris 14e",
+  "geo_point":"48.830677, 2.331128"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-03-25",
+  "numero_rna":"W751260343",
+  "titre":"PLUS QU'UN CLUB",
+  "titre_search":"PLUS QU'UN CLUB PLUS QUUN CLUB",
+  "objet":"promouvoir la pratique et le développement du football",
+  "domaine_activite_categorise":[
+  "11000/11075"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Football (football, futsal)"
+  ],
+  "titre_search_opti":"PLUS QUUN CLUB",
+  "adresse_actuelle":"236 rue du Faubourg Saint Honore",
+  "codepostal_actuel":"75008",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.876233, 2.302599"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2021-03-23",
+  "numero_rna":"W751260098",
+  "titre":"BOULE JOYEUSE DU 20EME",
+  "titre_search":"BOULE JOYEUSE DU 20EME",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/11035",
+  "15000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Boules (pétanque, boules)",
+  "éducation formation/"
+  ],
+  "titre_search_opti":"BOULE JOYEUSE DU 20EME",
+  "transfert_nouvelle_adresse_adresse":"2 rue Louis Lumiere",
+  "adresse_actuelle":"2 rue Louis Lumiere",
+  "codepostal_actuel":"75020",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.857385, 2.411655"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-04-09",
+  "numero_rna":"W751260499",
+  "titre":"FORMATECH SPORT",
+  "titre_search":"FORMATECH SPORT",
+  "objet":"promouvoir l'activité physique par la mise en place d'entraînements, d'événements et de formations dans le domaine sportif",
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "reference_avis_initial":null,
+  "siteweb":"https://formatechsport.fr/",
+  "titre_search_opti":"FORMATECH SPORT",
+  "adresse_actuelle":"5 rue de Lancry",
+  "codepostal_actuel":"75010",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.869039, 2.360056"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2020-12-28",
+  "numero_rna":"W751259370",
+  "titre":"ECOLO'VELO",
+  "titre_search":"ECOLO'VELO ECOLOVELO",
+  "objet":"association qui a pour but d'apprendre à des adultes qui n'ont pas eu la chance d'avoir un vélo dans leur enfance à se tenir en selle et apprivoiser ce magnifique outil d'autonomie et de liberté. Elle peut également accompagner des personnes sachant faire du vélo mais peu à l'aise avec la pratique en milieu urbain; elle permettra à un large public d'acquérir les règles de la sécurité routière à vélo, ce qui semble indispensable en milieu urbain tant pour leur sécurité personnelle que pour tous les autres usagers de la voirie",
+  "domaine_activite_categorise":[
+  "11000/11180",
+  "15000/15100"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Cyclisme (cyclisme, vélo, VTT, y c course d’orientation à vélo, cyclotourisme)",
+  "éducation formation/apprentissage"
+  ],
+  "titre_search_opti":"ECOLOVELO",
+  "adresse_actuelle":"11 rue de Deauville",
+  "codepostal_actuel":"75018",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.888848, 2.358466"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2020-12-16",
+  "numero_rna":"W751259276",
+  "titre":"LYLI",
+  "titre_search":"LYLI",
+  "objet":"structurer et gérer une équipe cycliste féminine; conduire des opérations de sensibilisation à la pratique du cyclisme et au sport féminin; organiser d'évènements cyclistes en tout genre",
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"LYLI",
+  "adresse_actuelle":"1 villa Sainte Croix",
+  "codepostal_actuel":"75017",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.893653, 2.324238"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-01-11",
+  "numero_rna":"W751259504",
+  "titre":"AS LPO EDGAR QUINET",
+  "titre_search":"AS LPO EDGAR QUINET",
+  "objet":"elle a pour but : de faire pratiquer des activités physiques et sportives à des élèves volontaires en vue d'une intégration à leur formation du fait culturel que constitue le sport, par la connaissance de sa nature, de ses caractéristiques officiellement établies, de sa diversité d'expression et des conditions de sa pratique; de permettre un apprentissage de la vie associative par l'exercice de responsabilités et par l'engagement des élèves dans l'organisation des activités de l'association; de prolonger et compléter les apprentissages des élèves réalisés en éducation Physique et Sportive; en effet, elle relève d'un régime législatif et réglementaire spécifique : les activités volontaires qu'elle organise étant une composante de l'éducation physique et sportive (E ; P ; S ; ) délivrée aux élèves; elle représente l'établissement dans les compétitions sportives organisées par l'Union Nationale du Sport Scolaire; de plus, l'association sportive garantit en son sein la liberté d'opinion et s'interdit tout débat ou manifestation d'ordre politique ou confessionnel; l'association sportive s'interdit tout discrimination et s'engage à respecter les règles d'encadrement, d'hygiène et de sécurité applicables aux disciplines pratiquées par ses membres et définies par la Loi",
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"AS LPO EDGAR QUINET",
+  "adresse_actuelle":"63 rue des Martyrs",
+  "codepostal_actuel":"75009",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.881251, 2.339874"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-01-16",
+  "numero_rna":"W751259571",
+  "titre":"4L FURIOUS",
+  "titre_search":"4L FURIOUS",
+  "objet":"association à but humanitaire ; participation à des activités à but humanitaire (raid, rallye, voyage) ; levées de fonds à but humanitaire ;",
+  "domaine_activite_categorise":[
+  "11000/",
+  "20000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/",
+  "associations caritatives, humanitaires, aide au développement, développement du bénévolat/"
+  ],
+  "reference_avis_initial":null,
+  "siteweb":"https://4lfurious.umso.co/",
+  "titre_search_opti":"4L FURIOUS",
+  "adresse_actuelle":"20 rue du Débarcadère 4 Eme Etage",
+  "codepostal_actuel":"75017",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.878007, 2.285562"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-08-16",
+  "numero_rna":"W751261868",
+  "titre":"4L SOLIDAIRE",
+  "titre_search":"4L SOLIDAIRE",
+  "objet":"participer au raid automobile solidaire destiné aux jeunes de moins de 28 ans et couru exclusivement en Renault 4",
+  "domaine_activite_categorise":[
+  "11000/11160"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Sports mécaniques (sport automobile, moto, trial)"
+  ],
+  "titre_search_opti":"4L SOLIDAIRE",
+  "adresse_actuelle":"48 rue du Ranelagh",
+  "codepostal_actuel":"75016",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.854549, 2.274435"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-08-16",
+  "numero_rna":"W751261869",
+  "titre":"OBJECTIF SOMMET",
+  "titre_search":"OBJECTIF SOMMET",
+  "objet":"pratique et promotion des activités de montagne et d'escalade dans le respect du développement durable",
+  "domaine_activite_categorise":[
+  "11000/11055"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Escalade, montagne (escalade, spéléologie, via ferrata, canyonisme, alpinisme)"
+  ],
+  "titre_search_opti":"OBJECTIF SOMMET",
+  "adresse_actuelle":"18 rue Alexandre Dumas",
+  "codepostal_actuel":"75011",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.853114, 2.390787"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2021-07-08",
+  "numero_rna":"W751084303",
+  "titre":"PARIS JUDO 13",
+  "titre_search":"PARIS JUDO 13",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"PARIS JUDO 13",
+  "transfert_nouvelle_adresse_adresse":"57 rue de Tolbiac",
+  "adresse_actuelle":"57 rue de Tolbiac",
+  "codepostal_actuel":"75013",
+  "commune_actuelle":"PARIS",
+  "geo_point":"48.827389, 2.369988"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-08-30",
+  "numero_rna":"W751261992",
+  "titre":"SOLIDARITE MAHDIA",
+  "titre_search":"SOLIDARITE MAHDIA",
+  "objet":"cette association a pour objet de : soutenir les domaines de l'éducation, de la jeunesse, de la culture et des sports au sein du Gouvernorat de Madhia (en Tunisie), promouvoir la lecture des ouvrages français et francophones dans les écoles, collèges et lycées au sein du Gouvernorat de Mahdia, soutenir la construction ou l'entretien des infrastructures scolaires, éducatives et culturelles (bibliothèque, accès au numérique, fournitures scolaires, etc ; ) promouvoir l'égalité entre les filles et les garçons en apportant son soutien à l'éducation des filles, organiser des rencontres et des jumelages entre des établissements scolaires français et tunisiens",
+  "domaine_activite_categorise":[
+  "15000/",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "éducation formation/",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"SOLIDARITE MAHDIA",
+  "adresse_actuelle":"4 square D Aquitaine",
+  "codepostal_actuel":"75019",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.887141, 2.39495"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-09-08",
+  "numero_rna":"W751262086",
+  "titre":"CLOSE COMBAT FACTORY",
+  "titre_search":"CLOSE COMBAT FACTORY",
+  "objet":"l'association a pour objectif d'uniformiser les clubs de close combat, en donnant un socle commun de connaissances, de compétences et de techniques de close combat de type Fairbairn depuis 1940 ou de CAC corps à corps jusqu'à 2002, sous la forme de fiches, excluant celles de Tior et de C4",
+  "domaine_activite_categorise":[
+  "11000/11145"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Sports de combat (boxe, kick box, boxe thaï, lutte)"
+  ],
+  "titre_search_opti":"CLOSE COMBAT FACTORY",
+  "adresse_actuelle":"52 rue de l Universite",
+  "codepostal_actuel":"75007",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.85806, 2.327218"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Dissolution",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"dissolution",
+  "datedeclaration":"2021-01-20",
+  "numero_rna":"W751230471",
+  "titre":"PARIS FIGHT TEAM",
+  "titre_search":"PARIS FIGHT TEAM",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/11145",
+  "11000/11150"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Sports de combat (boxe, kick box, boxe thaï, lutte)",
+  "Sports, activités de plein air/Autres arts martiaux (karaté, aïkido, taekwondo)"
+  ],
+  "titre_search_opti":"PARIS FIGHT TEAM",
+  "adresse_actuelle":"12 rue Marie Andrée Lagroua Weill Hallée",
+  "codepostal_actuel":"75013",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.82827, 2.380671"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2021-02-04",
+  "numero_rna":"W751256705",
+  "titre":"WEAREESPORT",
+  "titre_search":"WEAREESPORT",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"WEAREESPORT",
+  "transfert_nouvelle_adresse_adresse":"22 rue de la Saïda Maison de la Vie Associative et Citoyenne du 15e",
+  "adresse_actuelle":"22 rue de la Saïda Maison de la Vie Associative et Citoyenne du 15e",
+  "codepostal_actuel":"75015",
+  "commune_actuelle":"Paris",
+  "geo_point":null
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-02-16",
+  "numero_rna":"W751259923",
+  "titre":"CHAMPIONSHIP EM",
+  "titre_search":"CHAMPIONSHIP EM",
+  "objet":"réalisation d'une course de karting avec 24 équipes de 5 pilotes durant 5 heures",
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"CHAMPIONSHIP EM",
+  "adresse_actuelle":"64 rue du Ranelagh",
+  "codepostal_actuel":"75016",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.854974, 2.27277"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2022-07-28",
+  "numero_rna":"W751266225",
+  "titre":"REPARATION VELO POUR TOUS",
+  "titre_search":"REPARATION VELO POUR TOUS",
+  "objet":"promotion de la pratique du vélo et de la réparation des vélo",
+  "domaine_activite_categorise":[
+  "11000/11180"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Cyclisme (cyclisme, vélo, VTT, y c course d’orientation à vélo, cyclotourisme)"
+  ],
+  "titre_search_opti":"REPARATION VELO POUR TOUS",
+  "adresse_actuelle":"7 rue Nicolas Houel",
+  "codepostal_actuel":"75005",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.842121, 2.361813"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2022-08-10",
+  "numero_rna":"W751244584",
+  "titre":"FEDERATION FRANCAISE DE FOOTBALL A 7",
+  "titre_search":"FEDERATION FRANCAISE DE FOOTBALL A 7",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/11075"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Football (football, futsal)"
+  ],
+  "titre_search_opti":"FEDERATION FRANCAISE DE FOOTBALL A 7",
+  "transfert_nouvelle_adresse_adresse":"22 rue Deparcieux",
+  "adresse_actuelle":"22 rue Deparcieux",
+  "codepostal_actuel":"75014",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.835592, 2.325821"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2022-08-13",
+  "numero_rna":"W751266419",
+  "titre":"TAI CHI NATURE PARIS",
+  "titre_search":"TAI CHI NATURE PARIS",
+  "objet":"proposer à toute personne intéressée, physique ou morale, des activités relatives au taï chi chuan et autres disciplines affinitaires orientées vers le bien-être, le développement personnel, etc sous quelque forme que ce soit ; cours, stages, ateliers, échanges, réunions, etc à l'exclusion de toute discussion ou ingérence politique ou religieuse",
+  "domaine_activite_categorise":[
+  "11000/11150"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Autres arts martiaux (karaté, aïkido, taekwondo)"
+  ],
+  "titre_search_opti":"TAI CHI NATURE PARIS",
+  "adresse_actuelle":"5 à 11 passage Bullourde",
+  "codepostal_actuel":"75011",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.854768, 2.376852"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2022-08-15",
+  "numero_rna":"W751266438",
+  "titre":"GWAO FC",
+  "titre_search":"GWAO FC",
+  "objet":"créer une structure favorisant laccès aux sports déquipe en compétition amateur en région parisienne pour ses adhérents ; le statut choisi pour l'association est : loi de 1901, a but non lucratif ;",
+  "domaine_activite_categorise":[
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"GWAO FC",
+  "adresse_actuelle":"58 rue de Dunkerque",
+  "codepostal_actuel":"75009",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.881805, 2.347535"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Modification",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"modification",
+  "datedeclaration":"2021-12-16",
+  "numero_rna":"W751147349",
+  "titre":null,
+  "titre_search":"ASSOCIATION DE JUDOKAS CONGOLAIS DE FRANCE AJUCOF ASSOCIATION DE JUDOKAS CONGOLAIS ET COMMUNAUTES DE FRANCE AJUCOF JUDO CLUB",
+  "objet":"répertorier et rassembler les judokas de France ; développer la solidarité entre les membres du club et toute personne le nécessitant, mobiliser les ressources financières, matérielles et humaines pour soutenir les projets de l'ajucof judo club, en améliorant entre autres le confort des compétiteurs et de leurs encadrants ; coopérer avec toutes institutions qui s'intéressent aux projets de développement individuel ou en partenariat ; promouvoir le développement du judo et le respect d'autrui au sein de la communauté ; aider et encadrer les membres du club et les personnes le nécessitant, dans la vie courante, financièrement moralement, administrativement et professionnellement ; organiser les rencontres, sorties,football,fancy fair kermesse, de promouvoir l'auto-défense et de sensibiliser les femmes à l'auto-défense en partenariat avec toutes institutions, structures commerciales, associatives et toute personne oeuvrant dans la lutte contre les violences faites aux femmes ; promouvoir l'apprentissage du judo auprès des professionnels de la sécurité privée",
+  "domaine_activite_categorise":[
+  "11000/11140",
+  "9000/9050"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Judo",
+  "action socio-culturelle/jumelages, échanges culturels, organisation d'échanges linguistiques, échanges culturels au plan international"
+  ],
+  "titre_search_opti":"ASSOCIATION DE JUDOKAS CONGOLAIS DE FRANCE AJUCOF ASSOCIATION DE JUDOKAS CONGOLAIS ET COMMUNAUTES DE FRANCE AJUCOF JUDO CLUB",
+  "transfert_nouvelle_adresse_adresse":"8 rue du Général Renault",
+  "adresse_actuelle":"8 rue du Général Renault",
+  "codepostal_actuel":"75011",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.861266, 2.378502"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Dissolution",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"dissolution",
+  "datedeclaration":"2021-12-15",
+  "numero_rna":"W751230168",
+  "titre":"CUU MON VIET VO DAO PARIS (CMVVDP)",
+  "titre_search":"CUU MON VIET VO DAO PARIS (CMVVDP)",
+  "objet":null,
+  "domaine_activite_categorise":[
+  "11000/11150"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Autres arts martiaux (karaté, aïkido, taekwondo)"
+  ],
+  "titre_search_opti":"CUU MON VIET VO DAO PARIS (CMVVDP)",
+  "adresse_actuelle":"66 avenue des Champs-Elysées",
+  "codepostal_actuel":"75008",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.870856, 2.305367"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2022-01-03",
+  "numero_rna":"W751263405",
+  "titre":"INFINITY SPORT ACADEMY (I.S ACADEMY)",
+  "titre_search":"INFINITY SPORT ACADEMY (I.S ACADEMY) INFINITY SPORT ACADEMY (IS ACADEMY)",
+  "objet":"développer la pratique du football en loisir ou en compétition, et tous objets similaires, connexes ou complémentaires ou susceptibles d'en favoriser la réalisation ou le développement",
+  "domaine_activite_categorise":[
+  "11000/11075"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Football (football, futsal)"
+  ],
+  "titre_search_opti":"INFINITY SPORT ACADEMY (IS ACADEMY)",
+  "adresse_actuelle":"4 square André Lichtenberger",
+  "codepostal_actuel":"75014",
+  "commune_actuelle":"Paris 14e",
+  "geo_point":"48.827376, 2.310345"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2022-01-06",
+  "numero_rna":"W751263436",
+  "titre":"L' INSTANT PRÉSENT",
+  "titre_search":"L' INSTANT PRÉSENT L INSTANT PRÉSENT",
+  "objet":"proposer, au travers de diverses manifestations culturelles et sportives, à tout public, une approche des arts énergétiques notamment chinois et asiatiques pour le qi gong, le tai chi chuan ou toutes autres pratiques s'appuyant sur la connaissance de diverses techniques favorisant l' harmonie et l'équilibre de la personne humaine en mettant en valeur les talents de chacun",
+  "domaine_activite_categorise":[
+  "6000/",
+  "11000/"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "culture, pratiques d’activités artistiques, culturelles/",
+  "Sports, activités de plein air/"
+  ],
+  "titre_search_opti":"L INSTANT PRÉSENT",
+  "adresse_actuelle":"42 rue Durantin",
+  "codepostal_actuel":"75018",
+  "commune_actuelle":"Paris 18e",
+  "geo_point":"48.886776, 2.335144"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2022-01-10",
+  "numero_rna":"W751263463",
+  "titre":"ROYALTEE",
+  "titre_search":"ROYALTEE",
+  "objet":"développer une pratique conviviale du golf entre ses membres, licenciés de la fédération française de golf ou d'une fédération étrangère reconnue ; rechercher les terrains accessibles aux non membres, y organiser des parties et des compétitions dans le respect des règles de la fédération ; rechercher auprès des professionnels du voyage les moyens de transport et de séjour appropriés permettant la pratique du golf tant dans l'ensemble du territoire français qu'à l'étranger ; organiser tous autres évènements poursuivant le même objet",
+  "domaine_activite_categorise":[
+  "11000/11100"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Golf"
+  ],
+  "titre_search_opti":"ROYALTEE",
+  "adresse_actuelle":"105 avenue du Maine",
+  "codepostal_actuel":"75014",
+  "commune_actuelle":"Paris 14e",
+  "geo_point":"48.836524, 2.323585"
+  },
+  {
+  "departement_code":"75",
+  "departement_libelle":"Paris",
+  "region_code":"10",
+  "region_libelle":"Île-de-France",
+  "localisation_facette":"Île-de-France/Paris",
+  "typeavis":"Création",
+  "etatavis":"Initial",
+  "internal_contenu_subnode":"creation",
+  "datedeclaration":"2021-11-13",
+  "numero_rna":"W751262822",
+  "titre":"LCSF LES CAROTTES SONT FIT (LCSF)",
+  "titre_search":"LCSF LES CAROTTES SONT FIT (LCSF)",
+  "objet":"cette association a pour objet l'enseignement et la pratique des activités gymniques de la force et de la forme, de la danse, du pilate et du yoga, l'ensemble des disciplines du fitness ; la formation continue et l'accompagnement de ses membres, de ses professeurs et de ses coachs, et tous objets similaires, connexes ou complémentaires ou susceptibles d'en favoriser la réalisation ou le développement",
+  "domaine_activite_categorise":[
+  "11000/11105"
+  ],
+  "domaine_activite_libelle_categorise":[
+  "Sports, activités de plein air/Gymnastique (gymnastique, gymnastique d’entretien, éducation physique, yoga), aérobic"
+  ],
+  "titre_search_opti":"LCSF LES CAROTTES SONT FIT (LCSF)",
+  "adresse_actuelle":"130 rue de Saussure",
+  "codepostal_actuel":"75017",
+  "commune_actuelle":"Paris",
+  "geo_point":"48.888822, 2.309063"
+  }
+}
