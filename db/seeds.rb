@@ -1,10 +1,10 @@
 # # Clear existing records (optional)
-Club.destroy_all
-Activity.destroy_all
-SubGroup.destroy_all
-Schedule.destroy_all
-TimeSlot.destroy_all
-User.destroy_all
+# Club.destroy_all
+# Activity.destroy_all
+# SubGroup.destroy_all
+# Schedule.destroy_all
+# TimeSlot.destroy_all
+# User.destroy_all
 
 # # Seed users
 # users = []
