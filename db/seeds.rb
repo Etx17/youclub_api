@@ -1,32 +1,47 @@
 # # Clear existing records (optional)
-# Club.destroy_all
-# Activity.destroy_all
-# SubGroup.destroy_all
-# Schedule.destroy_all
-# TimeSlot.destroy_all
-# User.destroy_all
+Club.destroy_all
+Activity.destroy_all
+SubGroup.destroy_all
+Schedule.destroy_all
+TimeSlot.destroy_all
+User.destroy_all
 
-# # Seed users
-# users = []
 
-# User.create!(
-#   email: 'etiennededianous@gmail.com',
-#   password: 'my_encrypted_password',
-#   role: 'user',
-#   sub_id: '24ddf6e7-9d4e-4339-9bf3-ea395e32b089'
+User.create!(
+  email: 'etiennededianous@gmail.com',
+  password: 'my_encrypted_password',
+  role: 'user',
+  sub_id: '24ddf6e7-9d4e-4339-9bf3-ea395e32b089'
+)
+
+User.create!(
+  email: 'youclubdev@gmail.com',
+  password: 'my_encrypted_password',
+  role: 'club',
+  sub_id: "0787a7d6-14fa-41de-94e2-7a8ead872675"
+)
+
+# clubs << Club.create(
+#   name: "KATAN'ART",
+#   rna_number: result["fields"]["numero_rna"],
+#   geo_point: result["fields"]["geo_point"],
+#   objet: result["fields"]["objet"],
+#   category_number: result["fields"]["domaine_activite_categorise"].split("/")[0].chomp("/"),
+#   subcategory_number: result["fields"]["domaine_activite_categorise"].split("/")[1].chomp("/"),
+#   category: result["fields"]["domaine_activite_libelle_categorise"].split("/")[0].chomp("/"),
+#   subcategory: result["fields"]["domaine_activite_libelle_categorise"].split("/")[1].chomp("/"),
+#   address: result["fields"]["adresse_actuelle"],
+#   actual_zipcode: result["fields"]["codepostal_actuel"],
+#   user: user,
+#   structure_type: 0,
 # )
 
-# User.create!(
-#   email: 'youclubdev@gmail.com',
-#   password: 'my_encrypted_password',
-#   role: 'club',
-#   sub_id: "0787a7d6-14fa-41de-94e2-7a8ead872675"
-# )
-
-selectedCategory = "Sports, activités de plein air";
-selectedSubCategory = "Aviron, canoë kayak (aviron, rafting, canoë kayak, joutes)"
-possibleTypeOfActivity= ['cours collectif', 'cours particulier', 'stage', 'atelier', 'session', 'évènement', 'autre'];
-examplesOfSubGroupNames= ['Débutant', 'Ados 12-15', 'Tout public', 'Confirmés', 'Ceinture Noire', 'Votre catégorie']
+# TODO
+# ASTRODOJO CLUB SEED : user, club, activity, sub_group, schedule, time_slot
+# SKARBOWSKI CLUB SEED : user, club, activity, sub_group, schedule, time_slot
+# SIVANANDA YOGA CLUB SEED : user, club, activity, sub_group, schedule, time_slot
+# DANCENTER CLUB SEED : user, club, activity, sub_group, schedule, time_slot
+# FITNESSPARK CLUB SEED : user, club, activity, sub_group, schedule, time_slot
 
 p "Start seeding SPORTS CLUBS in Paris..."
 encoded_url = "https://journal-officiel-datadila.opendatasoft.com/api/records/1.0/search/?dataset=jo_associations&q=&rows=8000&sort=dateparution&facet=lieu_declaration_facette&facet=domaine_activite_categorise&facet=domaine_activite_libelle_categorise&refine.domaine_activite_libelle_categorise=Sports%2C+activit%C3%A9s+de+plein+air&refine.localisation_facette=%C3%8Ele-de-France%2FParis&exclude.objet=%22%22&exclude.domaine_activite_libelle_categorise=%22%22&"
@@ -54,10 +69,10 @@ filtered_results.each do |result|
   )
 
   Club.create!(
-    name: result["fields"]["titre"],
+    name: result["fields"]["titre"].gsub(/\(.*?\)/, '').strip,
     rna_number: result["fields"]["numero_rna"],
     geo_point: result["fields"]["geo_point"],
-    objet: result["fields"]["objet"].capitalize,
+    objet: result["fields"]["objet"],
     category_number: result["fields"]["domaine_activite_categorise"].split("/")[0].chomp("/"),
     subcategory_number: result["fields"]["domaine_activite_categorise"].split("/")[1].chomp("/"),
     category: result["fields"]["domaine_activite_libelle_categorise"].split("/")[0].chomp("/"),
@@ -69,21 +84,7 @@ filtered_results.each do |result|
   )
 end
 p "done!"
-# 2.times do |i|
-#   clubs << Club.create!(
-#     name: "Club #{i + 1}",
-#     rna_number: Faker::Alphanumeric.alphanumeric(number: 8),
-#     geo_point: "#{Faker::Address.longitude}, #{Faker::Address.latitude}",
-#     category: selectedCategory,
-#     subcategory: selectedSubCategory,
-#     address: Faker::Address.full_address,
-#     actual_zipcode: "75017",
-#     nearbyStation: Faker::Company.name,
-#     website: Faker::Internet.url,
-#     objet: Faker::Company.catch_phrase,
-#     user: users.sample
-#   )
-# end
+
 
 # Seed activities
 # activities = []

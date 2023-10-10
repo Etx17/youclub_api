@@ -38,6 +38,10 @@ module Types
       argument :user_id, ID, required: true
     end
 
+    field :clubs_by_zipcode, [Types::ClubType], null: true do
+      argument :actual_zipcode, String, required: true
+    end
+
 
 
     def activity(id:)
@@ -78,6 +82,11 @@ module Types
 
     def time_slots_by_schedule_id(schedule_id:)
       TimeSlot.where(schedule_id: schedule_id).to_a
+    end
+
+    def clubs_by_zipcode(actual_zipcode:)
+      # Club.where(actual_zipcode: actual_zipcode).order("RANDOM()").to_a
+      Club.where(actual_zipcode: actual_zipcode).to_a
     end
 
   end

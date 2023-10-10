@@ -13,4 +13,6 @@ class Types::ClubType < Types::BaseObject
   field :userId, ID, null: false, method: :user_id
   field :images, [String], null: true
   field :activities, [Types::ActivityType], null: true
+  field :categoryNumber, String, null: true, method: :category_number
+  field :subcategoryNumber, String, null: true, method: :subcategory_number
 end
