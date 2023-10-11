@@ -38,6 +38,10 @@ module Types
       argument :user_id, ID, required: true
     end
 
+    field :activities_by_club_id, [Types::ActivityType], null: true do
+      argument :club_id, ID, required: true
+    end
+
     field :clubs_by_zipcode, [Types::ClubType], null: true do
       argument :actual_zipcode, String, required: true
     end
@@ -89,5 +93,8 @@ module Types
       Club.where(actual_zipcode: actual_zipcode).to_a
     end
 
+    def activities_by_club_id(club_id:)
+      Activity.where(club_id: club_id).to_a
+    end
   end
 end
