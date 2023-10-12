@@ -1,9 +1,9 @@
-# p 'Clearing existing records...'
-# Club.destroy_all
-# Activity.destroy_all
-# SubGroup.destroy_all
-# Schedule.destroy_all
-# TimeSlot.destroy_all
+p 'Clearing existing records...'
+Club.destroy_all
+Activity.destroy_all
+SubGroup.destroy_all
+Schedule.destroy_all
+TimeSlot.destroy_all
 User.destroy_all
 
 p "Seeding real clubs sivananda, dancenter, skarbowski, astrodojo"
@@ -42,7 +42,7 @@ etienne3 = User.create!(
   sub_id: "5a9d1655-b54d-4670-a5eb-e3e954c9ec4f"
 )
 
-# ASTRODOJO CLUB SEED : user, club, activity, sub_group, schedule, time_slot
+# ASTRODOJO CLUB SEED : user, club
 astrodojo = Club.create(
   name: "KATAN'ART",
   geo_point: "48.8856124, 2.3233836",
@@ -57,7 +57,7 @@ astrodojo = Club.create(
   structure_type: 1,
 )
 
-# SKARBOWSKI CLUB SEED : user, club, activity, sub_group, schedule, time_slot
+# SKARBOWSKI CLUB SEED : user, club
 
 skarbowski = Club.create(
   name: "Skarbowski",
@@ -73,6 +73,8 @@ skarbowski = Club.create(
   structure_type: 1,
 )
 
+# DANCENTER CLUB SEED : user, club
+
 dancenter = Club.create(
   name: "Dancenter",
   geo_point: "48.8825359, 2.3155488",
@@ -86,6 +88,8 @@ dancenter = Club.create(
   user: etienne2,
   structure_type: 1,
 )
+
+# SIVANANDA CLUB SEED : user, club
 
 sivananda = Club.create(
   name: "Centre de Yoga Sivananda Paris",
