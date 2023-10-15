@@ -6,26 +6,11 @@ Schedule.destroy_all
 TimeSlot.destroy_all
 User.destroy_all
 
-p "Seeding real clubs sivananda, dancenter, skarbowski, astrodojo"
 etienne = User.create!(
   email: 'etiennededianous@gmail.com',
   password: 'my_encrypted_password',
   role: 'user',
   sub_id: '24ddf6e7-9d4e-4339-9bf3-ea395e32b089'
-)
-
-youclubdev = User.create!(
-  email: 'youclubdev@gmail.com',
-  password: 'my_encrypted_password',
-  role: 'club',
-  sub_id: "0787a7d6-14fa-41de-94e2-7a8ead872675"
-)
-
-etienne1 = User.create!(
-  email: 'etiennededianous+1@gmail.com',
-  password: 'my_encrypted_password',
-  role: 'club',
-  sub_id: "3d871b5a-3826-4009-8b5e-f29941d1e363"
 )
 
 etienne2 = User.create!(
@@ -42,36 +27,9 @@ etienne3 = User.create!(
   sub_id: "5a9d1655-b54d-4670-a5eb-e3e954c9ec4f"
 )
 
-# ASTRODOJO CLUB SEED : user, club
-astrodojo = Club.create(
-  name: "KATAN'ART",
-  geo_point: "48.8856124, 2.3233836",
-  objet: "Cours de différents arts martiaux dans une ambiance et une communauté soudée. Organisation de cercles de paroles et autres activités complémentaires.",
-  category_number: "11000",
-  subcategory_number: "11145",
-  category: "Sports, activités de plein air",
-  subcategory: "Sports de combat (boxe, kick box, boxe thaï, lutte)",
-  address: "19 rue Nollet",
-  actual_zipcode: "75017",
-  user: youclubdev,
-  structure_type: 1,
-)
-
+# Executer les fichier dans ./seeds/astrodojo.rb
 # SKARBOWSKI CLUB SEED : user, club
 
-skarbowski = Club.create(
-  name: "Skarbowski",
-  geo_point: "48.8911534, 2.328426",
-  objet: "Boxe Thailandaise enseignée par le champion du monde de la discipline. Cours pour tous les niveaux tous les jours",
-  category_number: "11000",
-  subcategory_number: "11150",
-  category: "Sports, activités de plein air",
-  subcategory: "Sports de combat (boxe, kick box, boxe thaï, lutte)",
-  address: "135 rue Lamarck",
-  actual_zipcode: "75018",
-  user: etienne1,
-  structure_type: 1,
-)
 
 # DANCENTER CLUB SEED : user, club
 
