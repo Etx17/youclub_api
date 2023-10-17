@@ -107,7 +107,7 @@ TimeSlot.create(schedule_id: g.id, start_time: "2023-10-14T14:00:00.000Z", end_t
 enfants_minus_8_subgroup = SubGroup.create(
   activity_id: muay_thai.id,
   name: "Enfants (-8 ans)",
-  min_price_cents: 110,
+  min_price_cents: 1100,
   max_price_cents: nil,
   recurrence: nil,
   class_type: "Cours collectif",
@@ -123,7 +123,7 @@ TimeSlot.create(schedule_id: f.id, start_time: "2023-10-14T13:00:00.000Z", end_t
 enfants_12_subgroup = SubGroup.create(
   activity_id: muay_thai.id,
   name: "Enfants (8-12 ans)",
-  min_price_cents: 110,
+  min_price_cents: 1100,
   max_price_cents: nil,
   recurrence: nil,
   class_type: "Cours collectif",
