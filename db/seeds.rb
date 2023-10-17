@@ -20,12 +20,7 @@ etienne2 = User.create!(
   sub_id: "480ab15b-01f0-41c8-b344-f803614fea9c"
 )
 
-etienne3 = User.create!(
-  email: 'etiennededianous+3@gmail.com',
-  password: 'my_encrypted_password',
-  role: 'club',
-  sub_id: "5a9d1655-b54d-4670-a5eb-e3e954c9ec4f"
-)
+
 
 # Executer les fichier dans ./seeds/astrodojo.rb
 # SKARBOWSKI CLUB SEED : user, club
@@ -49,19 +44,7 @@ dancenter = Club.create(
 
 # SIVANANDA CLUB SEED : user, club
 
-sivananda = Club.create(
-  name: "Centre de Yoga Sivananda Paris",
-  geo_point: "48.8748532, 2.3591712",
-  objet: "Le centre de Yoga Sivananda offre de nombreuses possibilités pour approfondir sa pratique des postures et des exercises de respiration et pour découvrir de nouveaux aspects du Yoga.",
-  category_number: "11000",
-  subcategory_number: "11105",
-  category: "Sports, activités de plein air",
-  subcategory: "Gymnastique (gymnastique, gymnastique d’entretien, éducation physique, yoga), aérobic",
-  address: "140 Rue du Faubourg Saint-Martin",
-  actual_zipcode: "75010",
-  user: etienne3,
-  structure_type: 1,
-)
+
 p "Seeded real clubs sivananda, dancenter, skarbowski, astrodojo"
 
 

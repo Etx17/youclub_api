@@ -31,7 +31,7 @@ muay_thai = Activity.create(
   actual_zipcode: "75018",
   free_trial: false,
   is_looking_for_volunteer: nil,
-  subcategories: "Muay Thai",
+  subcategories: "Sports de combat (boxe, kick box, boxe thaï, lutte)",
   recurrence: nil,
   subscription_link: nil,
   short_description: "TO DO remove work in progress",
