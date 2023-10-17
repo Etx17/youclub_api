@@ -1,3 +1,6 @@
+Club.find_by(name: "Skarbowski")&.destroy
+User.find_by(email: 'etiennededianous+1@gmail.com')&.destroy
+
 etienne1 = User.create!(
   email: 'etiennededianous+1@gmail.com',
   password: 'my_encrypted_password',

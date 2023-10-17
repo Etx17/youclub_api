@@ -1,3 +1,6 @@
+Club.find_by(name: "Centre de Yoga Sivananda Paris")&.destroy
+User.find_by(email: 'etiennededianous+3@gmail.com')&.destroy
+
 etienne3 = User.create!(
   email: 'etiennededianous+3@gmail.com',
   password: 'my_encrypted_password',
@@ -22,11 +25,9 @@ sivananda = Club.create(
 yoga = Activity.create(
   name: "Yoga",
   category: "Sports, activités de plein air",
-  subcategory: "Gymnastique (gymnastique, gymnastique d’entretien, éducation physique, yoga), aérobic",
   category_number: "11000",
   subcategory_number: "11105",
   club: sivananda,
-  description:
   geo_point: "48.8748532, 2.3591712",
   address: "135 rue Lamarck",
   actual_zipcode: "75010",
@@ -37,11 +38,10 @@ yoga = Activity.create(
   subscription_link: nil,
   short_description: "TO DO remove work in progress",
   full_description: "Le yoga est une discipline qui regroupe l'ensemble des pratiques ou disciplines corporelles et mentales ayant pour but l'unification de l'être humain dans ses aspects physique, psychique et spirituel.",
-  club_id: skarbowski.id,
 )
 
 intermediate_subgroup = SubGroup.create(
-  activity_id: sivananda_yoga.id,
+  activity_id: yoga.id,
   name: "Pratique Intermédiaire",
   min_price_cents: 1900,
   max_price_cents: nil,
@@ -93,7 +93,7 @@ TimeSlot.create(schedule_id: b.id, start_time: "2023-10-14T20:00:00.000Z", end_t
 
 
 very_gentle_subgroup = SubGroup.create(
-  activity_id: sivananda_yoga.id,
+  activity_id: yoga.id,
   name: "Pratique très douce",
   min_price_cents: 1900,
   max_price_cents: nil,
@@ -117,7 +117,7 @@ TimeSlot.create(schedule_id: f.id, start_time: "2023-10-14T16:00:00.000Z", end_t
 TimeSlot.create(schedule_id: g.id, start_time: "2023-10-14T16:00:00.000Z", end_time: "2023-10-14T17:30:00.000Z")
 
 pregnant_women_subgroup = SubGroup.create(
-  activity_id: sivananda_yoga.id,
+  activity_id: yoga.id,
   name: "Femmes Enceintes",
   min_price_cents: 1900,
   max_price_cents: nil,
@@ -132,7 +132,7 @@ TimeSlot.create(schedule_id: f.id, start_time: "2023-10-14T11:00:00.000Z", end_t
 
 
 beginner_trial_subgroup = SubGroup.create(
-  activity_id: sivananda_yoga.id,
+  activity_id: yoga.id,
   name: "Cours d'essai pour débutants",
   min_price_cents: 0000,
   max_price_cents: nil,
@@ -144,7 +144,7 @@ beginner_trial_subgroup = SubGroup.create(
 )
 
 # gentle_subgroup = SubGroup.create(
-#   activity_id: sivananda_yoga.id,
+#   activity_id: yoga.id,
 #   name: "Pratique Douce",
 #   min_price_cents: 1900,
 #   max_price_cents: nil,
@@ -156,7 +156,7 @@ beginner_trial_subgroup = SubGroup.create(
 # )
 
 # advanced_subgroup = SubGroup.create(
-#   activity_id: sivananda_yoga.id,
+#   activity_id: yoga.id,
 #   name: "Pratique Avancée",
 #   min_price_cents: 1900,
 #   max_price_cents: nil,
@@ -168,7 +168,7 @@ beginner_trial_subgroup = SubGroup.create(
 # )
 
 # integral_subgroup = SubGroup.create(
-#   activity_id: sivananda_yoga.id,
+#   activity_id: yoga.id,
 #   name: "Pratique Intégrale",
 #   min_price_cents: 1900,
 #   max_price_cents: nil,
@@ -180,7 +180,7 @@ beginner_trial_subgroup = SubGroup.create(
 # )
 
 # theme_class_subgroup = SubGroup.create(
-#   activity_id: sivananda_yoga.id,
+#   activity_id: yoga.id,
 #   name: "Cours a Theme",
 #   min_price_cents: 1900,
 #   max_price_cents: nil,

@@ -1,3 +1,5 @@
+Club.find_by(name: "KATAN'ART")&.destroy
+User.find_by(email: 'youclubdev@gmail.com')&.destroy
 # ASTRODOJO CLUB SEED : user, club
 youclubdev = User.create!(
   email: 'youclubdev@gmail.com',
