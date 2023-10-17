@@ -13,12 +13,7 @@ etienne = User.create!(
   sub_id: '24ddf6e7-9d4e-4339-9bf3-ea395e32b089'
 )
 
-etienne2 = User.create!(
-  email: 'etiennededianous+2@gmail.com',
-  password: 'my_encrypted_password',
-  role: 'club',
-  sub_id: "480ab15b-01f0-41c8-b344-f803614fea9c"
-)
+
 
 
 
@@ -28,19 +23,7 @@ etienne2 = User.create!(
 
 # DANCENTER CLUB SEED : user, club
 
-dancenter = Club.create(
-  name: "Dancenter",
-  geo_point: "48.8825359, 2.3155488",
-  objet: "Le Dancenter Paris, école de danse dans le 17e arrondissement, vous propose des cours de danse : salsa, rock, zumba, tango, lindy hop, bachata, valse...",
-  category_number: "11000",
-  subcategory_number: "11045",
-  category: "Sports, activités de plein air",
-  subcategory: "Danse sportive (danse sportive, hip hop, claquettes)",
-  address: "6 impasse de Lévis",
-  actual_zipcode: "75017",
-  user: etienne2,
-  structure_type: 1,
-)
+
 
 # SIVANANDA CLUB SEED : user, club
 
