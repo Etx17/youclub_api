@@ -36,7 +36,7 @@ yoga = Activity.create(
   subcategories: "Gymnastique (gymnastique, gymnastique d’entretien, éducation physique, yoga), aérobic",
   recurrence: nil,
   subscription_link: nil,
-  short_description: "TO DO remove work in progress",
+  short_description: "Venez essayer gratuitement",
   full_description: "Le yoga est une discipline qui regroupe l'ensemble des pratiques ou disciplines corporelles et mentales ayant pour but l'unification de l'être humain dans ses aspects physique, psychique et spirituel.",
 )
 

@@ -37,7 +37,7 @@ muay_thai = Activity.create(
   subcategories: "Sports de combat (boxe, kick box, boxe thaï, lutte)",
   recurrence: nil,
   subscription_link: nil,
-  short_description: "TO DO remove work in progress",
+  short_description: "Le club fondé par J.B Skarbowski en personne",
   full_description: "Cours dispensés par des professeurs formés par le champion de la discipline. Entraînement libre tout au long de la journée dans la salle. 30 euros de frais d'inscriptions pour tout nouvel adhérent.",
   club_id: skarbowski.id,
 )

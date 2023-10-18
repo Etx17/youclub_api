@@ -20,6 +20,7 @@ astrodojo = Club.create(
   actual_zipcode: "75017",
   user: youclubdev,
   structure_type: 1,
+  images: ["judo.jpeg"]
 )
 
 judo_jujitsu = Activity.create(
@@ -33,7 +34,7 @@ judo_jujitsu = Activity.create(
   subcategories: "Judo",
   recurrence: nil,
   subscription_link: nil,
-  short_description: "TO DO remove work in progress",
+  short_description: "'Meilleur club d'arts martiaux de Paris' - Le Figaro",
   full_description: "Judo pour tous âges et tous niveaux, plusieurs créneaux dans la semaine en fonction des niveaux de chacun.\n\nInscription annuelle pour un cours par semaine. Pour ajouter avoir un deuxième cours dans la semaine, ajouter 200e au prix initial.",
   club_id: astrodojo.id,
 )

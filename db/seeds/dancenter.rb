@@ -30,7 +30,9 @@ salsa = Activity.create(
   actual_zipcode: "75017",
   full_description: "Cours de différents niveaux de salsa du lundi au samedi. Les cours sont maintenus à partir de 6 personnes. Les changements de niveau se font avec l'accord du professeur. Les cours durent 55 minutes.",
   free_trial: true,
+  short_description: "Apprenez la salsa dans une ambiance chaleureuse"
   is_looking_for_volunteer: false,
+  images: ["salsa.jpeg"]
 )
 
 free_trial_subgroup = SubGroup.create(
