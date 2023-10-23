@@ -1,3 +1,8 @@
+# Import categoryImages.json in assets
+file = File.read('app/assets/data/categoryImages.json')
+images_hash = JSON.parse(file)
+
+
 p "Start seeding SPORTS CLUBS in PARIS..."
 encoded_url = "https://journal-officiel-datadila.opendatasoft.com/api/records/1.0/search/?dataset=jo_associations&q=&rows=9000&sort=dateparution&facet=lieu_declaration_facette&facet=domaine_activite_categorise&facet=domaine_activite_libelle_categorise&refine.domaine_activite_libelle_categorise=Sports%2C+activit%C3%A9s+de+plein+air&refine.localisation_facette=%C3%8Ele-de-France%2FParis&exclude.objet=%22%22&exclude.domaine_activite_libelle_categorise=%22%22&exclude.domaine_activite_categorise=11000%2F11160&exclude.domaine_activite_categorise=11000%2F11004&exclude.domaine_activite_categorise=11000%2F11015&exclude.domaine_activite_categorise=11000%2F11005&exclude.domaine_activite_categorise=11000%2F11190"
 p "connecting with API..."
@@ -22,6 +27,12 @@ filtered_results.each do |result|
     password: 'my_encrypted_password',
     role: 'club',
   )
+  category = result["fields"]["domaine_activite_libelle_categorise"].split("/")[0].chomp("/").capitalize
+  subcategory = result["fields"]["domaine_activite_libelle_categorise"].split("/")[1].chomp("/").capitalize
+  keyword = images_hash[category][subcategory].sample
+  image = "https://source.unsplash.com/random/?#{keyword}"
+
+
 
   Club.create!(
     name: result["fields"]["titre"].gsub(/\(.*?\)/, '').strip,
@@ -30,12 +41,13 @@ filtered_results.each do |result|
     objet: result["fields"]["objet"],
     category_number: result["fields"]["domaine_activite_categorise"].split("/")[0].chomp("/"),
     subcategory_number: result["fields"]["domaine_activite_categorise"].split("/")[1].chomp("/"),
-    category: result["fields"]["domaine_activite_libelle_categorise"].split("/")[0].chomp("/"),
-    subcategory: result["fields"]["domaine_activite_libelle_categorise"].split("/")[1].chomp("/").capitalize,
+    category: category,
+    subcategory: subcategory,
     address: result["fields"]["adresse_actuelle"],
     actual_zipcode: result["fields"]["codepostal_actuel"],
     user: user,
     structure_type: 0,
+    images: [image]
   )
 end
 p "done!"

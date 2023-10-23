@@ -1,7 +1,7 @@
 {
   "Sports, activités de plein air": {
       "Sports mécaniques (sport automobile, moto, trial)": ["driving", "car", "circuit"],
-      "Football (football, futsal)": ["soccer", "football", "indoor"],
+      "Football (football, futsal)": ["soccer", "football", "futsal", "balloon"],
       "Gymnastique (gymnastique, gymnastique d’entretien, éducation physique, yoga), aérobic": ["gymnastics", "fitness", "yoga"],
       "Autres arts martiaux (karaté, aïkido, taekwondo)": ["judo", "karate", "taekwondo"],
       "Equitation (équitation, hippisme, course camarguaise, landaise)": ["horse", "riding", "equestrian"],
