@@ -29,8 +29,9 @@ filtered_results.each do |result|
   )
   category = result["fields"]["domaine_activite_libelle_categorise"].split("/")[0].chomp("/").capitalize
   subcategory = result["fields"]["domaine_activite_libelle_categorise"].split("/")[1].chomp("/").capitalize
-  keyword = images_hash[category][subcategory].sample
-  image = "https://source.unsplash.com/random/?#{keyword}"
+  keyword = images_hash[category][subcategory]&.sample
+  image = "https://source.unsplash.com/random/?#{keyword}/300/200"
+
 
 
 
