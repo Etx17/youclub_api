@@ -20,6 +20,7 @@ sivananda = Club.create(
   actual_zipcode: "75010",
   user: etienne3,
   structure_type: 1,
+  phone_number: '0140267749'
 )
 
 yoga = Activity.create(

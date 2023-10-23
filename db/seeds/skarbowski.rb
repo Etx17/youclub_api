@@ -23,7 +23,8 @@ skarbowski = Club.create(
   images: [],
   category_number: "11000",
   subcategory_number: "11150",
-  structure_type: "club"
+  structure_type: "club",
+  phone_number: "0984504881"
 )
 
 muay_thai = Activity.create(

@@ -20,7 +20,8 @@ astrodojo = Club.create(
   actual_zipcode: "75017",
   user: youclubdev,
   structure_type: 1,
-  images: ["judo.jpeg"]
+  images: ["judo.jpeg"],
+  phone_number: "0145224523"
 )
 
 judo_jujitsu = Activity.create(
