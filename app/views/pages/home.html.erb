@@ -1,17 +1,28 @@
-<div class="d-flex justify-content-center border flex-column align-items-center text-center">
+<div class="d-flex justify-content-center border flex-column align-items-center text-center bg-white">
 
-  <h1 style="font-size: 60px;">Trouvez votre activité</h1>
+  <h1 class="gradient-text">Trouvez votre activité</h1>
 
   <h3 class="text-secondary">Obtenez un accès en avant-première </h3>
 
-  <%= simple_form_for(Lead.new) do |f| %>
-    <div class="input-group mb-3">
-      <%= f.input :email, label: false, placeholder: "Votre adresse email", class: 'form-control shadow', input_html: {style: "border-top-left-radius: 20px; border-bottom-left-radius: 20px",}%>
-      <div class="input-group-append">
-      <%= f.button :submit, 'Envoyer', class: 'btn btn-dark shadow', style: 'border-top-right-radius: 20px; border-bottom-right-radius: 20px;' %>
-      </div>
+<%= simple_form_for(Lead.new) do |f| %>
+  <div class="input-group m-3">
+    <%= f.input :email,
+      label: false,
+      placeholder: "Votre adresse email",
+      class: 'form-control shadow',
+      input_html: {style:"font-size: 1.5em; padding: 0.75em; border-top-left-radius: 40px; border-bottom-left-radius: 40px;"}
+      %>
+    <div class="input-group-append">
+      <%= f.button :submit, 'Envoyer', class: 'btn btn-dark shadow large-button gradient-button' %>
     </div>
-  <% end %>
+  </div>
+<% end %>
 
-
+<%# Importer l'image section1 dans app/assets/images %>
+<%= image_tag(
+  "section1.png",
+  alt: "section1",
+  class: "img-fluid",
+  style: "max-width: 100%; height: auto;"
+) %>
 </div>

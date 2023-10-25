@@ -1,1 +1,26 @@
 // Specific CSS for your home-page
+.gradient-text {
+  font-size: 4em;
+  background-image: linear-gradient(to right, #9f8225, #181605, #7b651d); /* Adjust the color values as needed */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bangers-font {
+  font-family: 'Bangers', cursive;
+  font-size: 1.75em;
+}
+
+.large-button {
+  font-size: 1.5em;
+  padding: 0.75em;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.gradient-button {
+  background: linear-gradient(to right, #000000, #66500a);
+  border: none;
+  color: #ffffff;
+}

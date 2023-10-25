@@ -16,23 +16,58 @@ dancenter = Club.create(
   actual_zipcode: "75017",
   user: etienne2,
   structure_type: 1,
+  images: ["salsa.jpeg"]
 )
 
 salsa = Activity.create(
   name: "Salsa",
   geo_point: "48.8825359, 2.3155488",
-  objet: "Le Dancenter Paris, école de danse dans le 17e arrondissement, vous propose des cours de danse : salsa, rock, zumba, tango, lindy hop, bachata, valse...",
   category_number: "11000",
   subcategory_number: "11045",
   category: "Sports, activités de plein air",
-  subcategory: "Danse sportive (danse sportive, hip hop, claquettes)",
+  subcategories: "Danse sportive (danse sportive, hip hop, claquettes)",
   address: "6 impasse de Lévis",
   actual_zipcode: "75017",
   full_description: "Cours de différents niveaux de salsa du lundi au samedi. Les cours sont maintenus à partir de 6 personnes. Les changements de niveau se font avec l'accord du professeur. Les cours durent 55 minutes.",
   free_trial: true,
-  short_description: "Apprenez la salsa dans une ambiance chaleureuse"
+  short_description: "Apprenez la salsa dans une ambiance chaleureuse",
   is_looking_for_volunteer: false,
   images: ["salsa.jpeg"]
+  club_id: dancenter.id
+)
+
+rock = Activity.create(
+  name: "Rock",
+  geo_point: "48.8825359, 2.3155488",
+  category_number: "11000",
+  subcategory_number: "11045",
+  category: "Sports, activités de plein air",
+  subcategories: "Danse sportive (danse sportive, hip hop, claquettes)",
+  address: "6 impasse de Lévis",
+  actual_zipcode: "75017",
+  full_description: "Cours de différents niveaux de rock du lundi au samedi. Les cours sont maintenus à partir de 6 personnes. Les changements de niveau se font avec l'accord du professeur. Les cours durent 55 minutes.",
+  free_trial: true,
+  short_description: "Apprenez le rock dans une ambiance chaleureuse",
+  is_looking_for_volunteer: false,
+  images: ["salsa.jpeg"],
+  club_id: dancenter.id
+)
+
+bachata = Activity.create(
+  name: "Bachata",
+  geo_point: "48.8825359, 2.3155488",
+  category_number: "11000",
+  subcategory_number: "11045",
+  category: "Sports, activités de plein air",
+  subcategories: "Danse sportive (danse sportive, hip hop, claquettes)",
+  address: "6 impasse de Lévis",
+  actual_zipcode: "75017",
+  full_description: "Cours de différents niveaux de Bachata du lundi au samedi. Les cours sont maintenus à partir de 6 personnes. Les changements de niveau se font avec l'accord du professeur. Les cours durent 55 minutes.",
+  free_trial: true,
+  short_description: "Apprenez la Bachata dans une ambiance chaleureuse",
+  is_looking_for_volunteer: false,
+  images: ["salsa.jpeg"],
+  club_id: dancenter.id
 )
 
 free_trial_subgroup = SubGroup.create(
