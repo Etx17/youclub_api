@@ -1,2 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="d-flex justify-content-center border flex-column align-items-center text-center">
+
+  <h1 style="font-size: 60px;">Trouvez votre activité</h1>
+
+  <h3 class="text-secondary">Obtenez un accès en avant-première </h3>
+
+  <%= simple_form_for(Lead.new) do |f| %>
+    <div class="input-group mb-3">
+      <%= f.input :email, label: false, placeholder: "Votre adresse email", class: 'form-control shadow', input_html: {style: "border-top-left-radius: 20px; border-bottom-left-radius: 20px",}%>
+      <div class="input-group-append">
+      <%= f.button :submit, 'Envoyer', class: 'btn btn-dark shadow', style: 'border-top-right-radius: 20px; border-bottom-right-radius: 20px;' %>
+      </div>
+    </div>
+  <% end %>
+
+
+</div>
