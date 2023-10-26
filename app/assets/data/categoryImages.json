@@ -1,5 +1,6 @@
 {
   "Sports, activités de plein air": {
+      "Badminton (badminton, squash, pelote basque)": ["shuttlecock", "squash", "racket"],
       "Sports mécaniques (sport automobile, moto, trial)": ["driving", "car", "circuit"],
       "Football (football, futsal)": ["soccer", "football", "futsal", "balloon"],
       "Gymnastique (gymnastique, gymnastique d’entretien, éducation physique, yoga), aérobic": ["gymnastics", "fitness", "yoga"],
