@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_25_092645) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_26_095032) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,6 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_25_092645) do
     t.string "images", default: [], array: true
     t.string "category_number"
     t.string "subcategory_number"
+    t.string "phone_number"
     t.index ["club_id"], name: "index_activities_on_club_id"
   end
 

@@ -16,6 +16,7 @@ class Types::ActivityType < Types::BaseObject
   field :images, [String], null: true
   field :subGroups, [Types::SubGroupType], null: false, method: :sub_groups
   field :clubId, ID, null: false, method: :club_id
+  field :phoneNumber, String, null: true, method: :phone_number
 
   def sub_groups
     object.sub_groups
