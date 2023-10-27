@@ -1,19 +1,14 @@
 <div class="navbar navbar-expand-sm  navbar-lewagon">
-  <div class="container-fluid my-0">
+  <div class="container-fluid my-0 justify-content-between">
     <%= link_to "#", class: "navbar-brand" do %>
       <span class="bangers-font">Youclub</span>
     <% end %>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <% if Lead.count < 200 %>
+     <h5 class="ms-3" style="color: #DDDDDD;"> <span class="text-success"><%= 200 - Lead.count %></span> places restantes </h5>
+    <% end %>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <%= link_to "Login", '#', class: "nav-link" %>
-        </li>
-      </ul>
+    <%= link_to "Login", '#', class: "nav-link" %>
     </div>
   </div>
 </div>
