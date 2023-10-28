@@ -10,7 +10,7 @@
       label: false,
       placeholder: "Votre adresse email",
       class: 'form-control shadow',
-      input_html: {style:"font-size: 1.5em; padding: 0.75em; border-top-left-radius: 40px; border-bottom-left-radius: 40px;"}
+      input_html: {style:"font-size: 1.2em; padding: 0.60em; border-top-left-radius: 40px; border-bottom-left-radius: 40px;"}
       %>
     <div class="input-group-append">
       <%= f.button :submit, 'Envoyer', class: 'btn btn-dark shadow large-button gradient-button' %>
@@ -23,7 +23,8 @@
   "section1.png",
   alt: "section1",
   class: "img-fluid",
-  style: "max-width: 100%; height: auto;"
+  style: "max-width: 100%; height: auto;",
+  loading: "lazy"
 ) %>
 
 <h1 class="gradient-text mt-5">Un Annuaire Dynamique</h1>
@@ -32,7 +33,8 @@
   "multi.png",
   alt: "multi",
   class: "img-fluid",
-  style: "max-width: 50%; height: auto;"
+  style: "max-width: 50%; height: auto;",
+  loading: "lazy"
 ) %>
 
 
@@ -51,7 +53,8 @@
   "activities_salsa.png",
   alt: "activities_salsa",
   class: "img-fluid",
-  style: "max-width: 50%; height: auto;"
+  style: "max-width: 50%; height: auto;",
+  loading: "lazy"
 ) %>
 
 <%# Part en Z %>
