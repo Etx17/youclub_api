@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'update_zipcode', to: 'clubs#update_zipcode'
+  resource :activities
+  resources :clubs
   get 'leads/create'
   if Rails.env.development?
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"

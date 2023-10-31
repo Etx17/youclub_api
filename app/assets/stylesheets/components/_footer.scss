@@ -1,0 +1,15 @@
+.footer {
+  background-color: #f8f9fa; /* You can change the color */
+  border-top: 1px solid #e7e7e7;
+  width: 100%;
+}
+
+/* Making the footer sticky */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  flex: 1;
+}

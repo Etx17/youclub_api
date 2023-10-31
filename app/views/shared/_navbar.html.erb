@@ -1,14 +1,29 @@
-<div class="navbar navbar-expand-sm  navbar-lewagon">
-  <div class="container-fluid my-0 justify-content-between">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <span class="bangers-font">Youclub</span>
-    <% end %>
+<div class=" px-3 d-flex justify-content-between align-items-center" style="height: 60px">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <span class="bangers-font">Y.</span>
+  <% end %>
 
-    <% if Lead.count < 200 %>
-     <h5 class="ms-3" style="color: #DDDDDD;"> <span class="text-success"><%= 200 - Lead.count %></span> places restantes </h5>
-    <% end %>
+  <div class="dropdown">
+    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      <%= controller_name.humanize %>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <% if controller_name != 'activities' %>
+        <%= link_to 'Activités', activities_path, class: 'dropdown-item' %>
+      <% end %>
+      <% if controller_name != 'clubs' %>
+        <%= link_to 'Clubs', clubs_path, class: 'dropdown-item' %>
+      <% end %>
+    </ul>
+  </div>
 
-    <%= link_to "Login", '#', class: "nav-link" %>
-    </div>
+  <div class="d-flex">
+    <p><%= session[:zipcode] %></p>
+    <%= link_to '#', data: { bs_toggle: "modal", bs_target: "#locationModal" } do %>
+      <i class="fas fa-map-marker mx-3"></i>
+    <% end %>
+    <%= link_to '#', class: "ml-2" do %>
+      <i class="fas fa-bars"></i>
+    <% end %>
   </div>
 </div>

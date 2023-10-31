@@ -15,9 +15,11 @@
 
   </head>
 
-  <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
-
+  <body>
+    <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
     <%= yield %>
+    <%= render "shared/footer" %>
+    <%= render "shared/location_modal" %>
   </body>
 </html>

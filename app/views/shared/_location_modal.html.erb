@@ -1,0 +1,19 @@
+<div class="modal fade" id="locationModal" tabindex="-1" role="dialog" aria-labelledby="locationModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="locationModalLabel">Entrez un code postal</h5>
+        <button type="button" class="btn btn-light" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Add your map component here -->
+        <%= form_tag update_zipcode_path, method: :get do %>
+        <%= text_field_tag :zipcode, nil%>
+        <%= submit_tag "Ok", class: "w-50" %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
