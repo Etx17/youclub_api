@@ -2,7 +2,7 @@
     <!-- Row for your content -->
     <div class="row">
 
-      <div class="d-none d-sm-block col-sm-2 col-md-3 shadow">
+      <div class="d-none d-sm-block col-sm-2 col-md-3  shadow">
           <!-- Content for left side column -->
       </div>
 
@@ -11,10 +11,12 @@
         <div class="d-flex justify-content-around border">
           <h1>picker 1</h1>
           <h1>picker 2</h1>
+
+
         </div>
 
 
-      <div id="clubs"></div>
+      <div class="align-self-center"id="clubs"></div>
         <%= turbo_frame_tag "pagination", src: clubs_path(format: :turbo_stream), loading: :lazy %>
       </div>
 
