@@ -17,6 +17,8 @@
     </ul>
   </div>
 
+  <p><%= session[:category] %></p>
+
   <div class="d-flex">
     <p><%= session[:zipcode] %></p>
     <%= link_to '#', data: { bs_toggle: "modal", bs_target: "#locationModal" } do %>

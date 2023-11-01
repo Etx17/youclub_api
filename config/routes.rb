@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'update_zipcode', to: 'clubs#update_zipcode'
+  get 'update_category', to: 'clubs#update_category'
   resource :activities
   resources :clubs do
     collection do
