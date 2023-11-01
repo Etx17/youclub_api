@@ -20,10 +20,10 @@
   <div class="d-flex">
     <p><%= session[:zipcode] %></p>
     <%= link_to '#', data: { bs_toggle: "modal", bs_target: "#locationModal" } do %>
-      <i class="fas fa-map-marker mx-3"></i>
+      <i class="fas fa-map-marker mx-3 text-secondary"></i>
     <% end %>
     <%= link_to '#', class: "ml-2" do %>
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars text-secondary"></i>
     <% end %>
   </div>
 </div>
