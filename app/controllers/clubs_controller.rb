@@ -16,6 +16,12 @@ class ClubsController < ApplicationController
     redirect_to clubs_path
   end
 
+  def update_subcategory
+    subcategory = params[:subcategory]["subcategory"]
+    session[:subcategory] = subcategory
+    redirect_to clubs_path
+  end
+
   def update_zipcode
     zipcode = params[:zipcode]
     if zipcode =~ /^\d{5}$/
@@ -46,6 +52,14 @@ class ClubsController < ApplicationController
       session[:category] = params[:category]
     else
       session[:category] ||= 'Sports, activités de plein air'
+    end
+  end
+
+  def set_subcategory
+    if params[:subcategory] # If the subcategory is provided as a parameter, use it
+      session[:subcategory] = params[:subcategory]
+    else
+      session[:subcategory] ||= 'Sports, activités de plein air'
     end
   end
 end

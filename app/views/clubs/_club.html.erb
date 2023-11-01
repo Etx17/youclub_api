@@ -20,7 +20,11 @@
       </div>
 
       <div class="d-flex justify-content-between small pt-2">
-        <p><%= link_to club.address, "https://www.google.fr/maps/place/#{club.address.gsub(' ', '+')},+#{club.actual_zipcode}", target: "_blank", class:"text-info" %></p>
+        <p>
+          <%= link_to "https://www.google.fr/maps/place/#{club.address.gsub(' ', '+')},+#{club.actual_zipcode}", target: "_blank", class:"text-info" do %>
+            <i class="fas fa-map-marker-alt"></i> <%= club.address %>
+          <% end %>
+        </p>
         <p><%= club.actual_zipcode %></p>
       </div>
 

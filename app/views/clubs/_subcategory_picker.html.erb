@@ -1,0 +1,11 @@
+<%= simple_form_for :subcategory, url: update_subcategory_path, method: :get, html: { id: 'subcategory_form' } do |f| %>
+  <%= f.input :subcategory,
+    collection: mapped_subcategories,
+    selected: session[:subcategory],
+    label: false,
+    input_html: {
+      class: 'form-select w-100 overflow-hidden',
+      onchange: 'this.form.submit()'
+    }
+  %>
+<% end %>

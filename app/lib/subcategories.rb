@@ -1,6 +1,6 @@
-
-subcategories = {
-  "Sports, activités de plein air": [
+module Subcategories
+  SUBCATEGORIES = {
+    "Sports, activités de plein air": [
       { label: "⚽ Football (football, futsal)", value: "Football (football, futsal)" },
       { label: "🤸 Gymnastique (gymnastique, gymnastique d’entretien, éducation physique, yoga), aérobic", value: "Gymnastique (gymnastique, gymnastique d’entretien, éducation physique, yoga), aérobic" },
       { label: "🥋 Autres arts martiaux (karaté, aïkido, taekwondo)", value: "Autres arts martiaux (karaté, aïkido, taekwondo)" },
@@ -39,20 +39,21 @@ subcategories = {
       { label: "🚣 Aviron, canoë kayak (aviron, rafting, canoë kayak, joutes)", value: "Aviron, canoë kayak (aviron, rafting, canoë kayak, joutes)" },
       { label: "🤺 Escrime", value: "Escrime" },
       { label: "🏒 Hockey sur glace, sports de glace", value: "hockey sur glace, sports de glace" }
-  ],
-  "culture, pratiques d’activités artistiques, culturelles": [
-      { label: "🎤 Chant choral et musique", value: "chant choral, musique" },
-      { label: "🎨 Promotion de l’art et des artistes", value: "promotion de l’art et des artistes" },
-      { label: "🎭 Théâtre, marionnettes, cirque, spectacles de variété", value: "théâtre, marionnettes, cirque, spectacles de variété" },
-      { label: "💃 Danse", value: "danse" },
-      { label: "🧪 Loisirs scientifiques et techniques", value: "loisirs scientifiques et techniques" },
-      { label: "🧶 Artisanat, travaux manuels, bricolage et expositions", value: "artisanat, travaux manuels, bricolage, expositions" },
-      { label: "🎥 Photographie, cinéma (dont ciné-clubs)", value: "photographie, cinéma (dont ciné-clubs)" },
-      { label: "📝 Expression écrite, littérature, poésie", value: "expression écrite, littérature, poésie" },
-      { label: "🎨 Arts graphiques, bande dessinée, peinture, sculpture, architecture", value: "arts graphiques, bande dessinée, peinture, sculpture, architecture" },
-      { label: "🌍 Folklore", value: "folklore" },
-      { label: "🗣️ Langues, dialectes et patois", value: "langues, dialectes, patois" },
-      { label: "📚 Bibliothèques, ludothèques, discothèques et vidéothèques", value: "bibliothèques, ludothèques, discothèques, vidéothèques" },
-      { label: "🎨 Arts de la rue", value: "arts de la rue" }
-  ],
-};
+    ],
+    "culture, pratiques d’activités artistiques, culturelles": [
+        { label: "🎤 Chant choral et musique", value: "chant choral, musique" },
+        { label: "🎨 Promotion de l’art et des artistes", value: "promotion de l’art et des artistes" },
+        { label: "🎭 Théâtre, marionnettes, cirque, spectacles de variété", value: "théâtre, marionnettes, cirque, spectacles de variété" },
+        { label: "💃 Danse", value: "danse" },
+        { label: "🧪 Loisirs scientifiques et techniques", value: "loisirs scientifiques et techniques" },
+        { label: "🧶 Artisanat, travaux manuels, bricolage et expositions", value: "artisanat, travaux manuels, bricolage, expositions" },
+        { label: "🎥 Photographie, cinéma (dont ciné-clubs)", value: "photographie, cinéma (dont ciné-clubs)" },
+        { label: "📝 Expression écrite, littérature, poésie", value: "expression écrite, littérature, poésie" },
+        { label: "🎨 Arts graphiques, bande dessinée, peinture, sculpture, architecture", value: "arts graphiques, bande dessinée, peinture, sculpture, architecture" },
+        { label: "🌍 Folklore", value: "folklore" },
+        { label: "🗣️ Langues, dialectes et patois", value: "langues, dialectes, patois" },
+        { label: "📚 Bibliothèques, ludothèques, discothèques et vidéothèques", value: "bibliothèques, ludothèques, discothèques, vidéothèques" },
+        { label: "🎨 Arts de la rue", value: "arts de la rue" }
+    ],
+  }
+end
