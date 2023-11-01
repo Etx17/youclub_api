@@ -2,7 +2,7 @@ class ClubsController < ApplicationController
   before_action :set_zipcode, only: [:index]
 
   def index
-      @pagy, @clubs = pagy_countless(Club.where(actual_zipcode: session[:zipcode]), items: 3)
+      @pagy, @clubs = pagy_countless(Club.where(actual_zipcode: session[:zipcode]), items: 5)
       respond_to do |format|
         format.html
         format.turbo_stream

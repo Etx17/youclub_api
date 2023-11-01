@@ -2,29 +2,25 @@
     <!-- Row for your content -->
     <div class="row">
 
-        <div class="d-none d-sm-block col-sm-2 col-md-3">
-            <!-- Content for left side column -->
+      <div class="d-none d-sm-block col-sm-2 col-md-3 shadow">
+          <!-- Content for left side column -->
+      </div>
+
+      <!-- Main Container -->
+      <div class="col-12 col-sm-8 col-md-6 d-flex flex-column justify-content-center">
+        <div class="d-flex justify-content-around border">
+          <h1>picker 1</h1>
+          <h1>picker 2</h1>
         </div>
 
-        <!-- Main Container -->
-        <div class="col-12 col-sm-8 col-md-6 d-flex flex-column justify-content-center">
-          <div class="d-flex justify-content-around border">
-            <h1>picker 1</h1>
-            <h1>picker 2</h1>
-          </div>
 
+      <div id="clubs"></div>
+        <%= turbo_frame_tag "pagination", src: clubs_path(format: :turbo_stream), loading: :lazy %>
+      </div>
 
-            <div id="clubs"></div>
-            <%= turbo_frame_tag "pagination", src: clubs_path(format: :turbo_stream), loading: :lazy %>
-
-           <div id="next_link">
-              <%= button_to "next", pagy_url_for(@pagy, @pagy.next) %>
-            </div>
-        </div>
-
-        <div class="d-none d-sm-block col-sm-2 col-md-3">
-            <!-- Content for right side column -->
-        </div>
+      <div class="d-none d-sm-block col-sm-2 col-md-3 shadow">
+          <!-- Content for right side column -->
+      </div>
 
     </div>
 </div>
