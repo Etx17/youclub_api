@@ -1,13 +1,20 @@
 class ClubsController < ApplicationController
   before_action :set_zipcode, only: [:index]
   before_action :set_category, only: [:index]
+  before_action :set_subcategory, only: [:index]
 
   def index
-      @pagy, @clubs = pagy_countless(Club.where(actual_zipcode: session[:zipcode], category: session[:category]), items: 5)
-      respond_to do |format|
-        format.html
-        format.turbo_stream
-      end
+    clubs = Club.where( actual_zipcode: session[:zipcode], category: session[:category])
+
+    if session[:subcategory] != "Tous"
+      clubs = clubs.where(subcategory: session[:subcategory])
+    end
+
+    @pagy, @clubs = pagy_countless(clubs, items: 5)
+    respond_to do |format|
+      format.html
+      format.turbo_stream
+    end
   end
 
   def update_category
@@ -59,7 +66,7 @@ class ClubsController < ApplicationController
     if params[:subcategory] # If the subcategory is provided as a parameter, use it
       session[:subcategory] = params[:subcategory]
     else
-      session[:subcategory] ||= 'Sports, activités de plein air'
+      session[:subcategory] ||= 'Tous'
     end
   end
 end
