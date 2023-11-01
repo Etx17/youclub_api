@@ -1,9 +1,8 @@
 <%= turbo_stream.append "clubs" do %>
-  <%= render partial: "club", collection: @clubs %>
-<% end %>
-
-<%= turbo_stream.update "next_link" do %>
-  <% if @pagy.next.present? %>
-    <%= button_to "next", pagy_url_for(@pagy, @pagy.next) %>
+   <%= render partial: "clubs/club", collection: @clubs %>
+ <% end %>
+<% if @pagy.next.present? %>
+  <%= turbo_stream.replace "pagination" do %>
+    <%= turbo_frame_tag "pagination", src: clubs_path(page: @pagy.next, format: :turbo_stream), loading: :lazy %>
   <% end %>
 <% end %>

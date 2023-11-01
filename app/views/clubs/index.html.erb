@@ -14,13 +14,8 @@
           </div>
 
 
-            <div id="clubs">
-              <% if @clubs.present? %>
-                <%= render @clubs %>
-              <% else %>
-                <p class="text-center">C'est bien vide ici 🥲</p>
-              <% end %>
-            </div>
+            <div id="clubs"></div>
+            <%= turbo_frame_tag "pagination", src: clubs_path(format: :turbo_stream), loading: :lazy %>
 
            <div id="next_link">
               <%= button_to "next", pagy_url_for(@pagy, @pagy.next) %>
