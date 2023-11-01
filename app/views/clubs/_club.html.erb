@@ -1,10 +1,10 @@
 
 <div class="card-container d-flex flex-grow-1 my-3 shadow" style="max-width: 600px; border-radius: 10px; background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 60%), url('https://source.unsplash.com/random/?horse/300/200'); background-size: fit; background-position: center;">
-  <div class="d-flex shadow flex-column justify-content-between" style="border-radius: 10px; height: 80vh;">
+  <div class="d-flex shadow flex-column justify-content-between p-2  w-100" style="border-radius: 10px; height: 80vh;">
     <p></p>
-    <div class="d-flex flex-column px-2" style="color: #AAAAAA">
+    <div class="d-flex flex-column px-2 border" style="color: #AAAAAA; border-radius: 10px;">
 
-      <div class="d-flex justify-content-between align-items-start text-white">
+      <div class="d-flex justify-content-between align-items-start text-white w-100">
         <h2 style="max-width: 75%;"><%= club.name %></h2>
         <div class="btn btn-info d-block d-sm-none" style="border-radius: 30px">i</div>
         <div class="btn btn-info d-none d-sm-block" style="border-radius: 30px"><span class='small'>En savoir +</span></div>
@@ -19,12 +19,16 @@
         <% end %>
       </div>
 
-      <div class="d-flex justify-content-between small">
-        <p>code postal</p>
-        <p>102 bd des batignolles Paris zoeunuon</p>
-        <p>3km</p>
+      <div class="d-flex justify-content-between small pt-2">
+        <p><%= link_to club.address, "https://www.google.fr/maps/place/#{club.address.gsub(' ', '+')},+#{club.actual_zipcode}", target: "_blank", class:"text-info" %></p>
+        <p><%= club.actual_zipcode %></p>
       </div>
-      <p class="small">Short description should only span 2 lines if small viewport, and can span 2 lines as well if large. </p>
+
+      <% if club.objet.length > 300 %>
+        <p class="small text-light"><%= club.objet[0..296] %>…<span class="voir-plus">voir plus</span></p>
+      <% else %>
+        <p class="small text-light"><%= club.objet %></p>
+      <% end %>
 
     </div>
   </div>

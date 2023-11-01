@@ -13,8 +13,8 @@ etienne = User.create!(
   sub_id: '24ddf6e7-9d4e-4339-9bf3-ea395e32b089'
 )
 
-p "seeding all parisian sports clubs from api datagouv "
-require_relative 'seeds/assos_sport_paris'
+# p "seeding all parisian sports clubs from api datagouv "
+# require_relative 'seeds/assos_sport_paris'
 
 p "seeding sivananda"
 require_relative 'seeds/sivananda'
