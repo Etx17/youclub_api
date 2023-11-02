@@ -2,6 +2,7 @@ class SubGroup < ApplicationRecord
   belongs_to :activity
   has_many :schedules, dependent: :destroy
   attribute :tarifications, array: true
+  has_many :tarifications, dependent: :destroy
 
   def min_price
     min_price_cents / 100.0

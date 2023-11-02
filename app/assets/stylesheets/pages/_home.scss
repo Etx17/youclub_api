@@ -1,6 +1,13 @@
 // Specific CSS for your home-page
-.gradient-text {
+.gradient-title {
   font-size: 4em;
+  background-image: linear-gradient(to right, #9f8225, #181605, #7b651d); /* Adjust the color values as needed */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-text {
   background-image: linear-gradient(to right, #9f8225, #181605, #7b651d); /* Adjust the color values as needed */
   -webkit-background-clip: text;
   background-clip: text;

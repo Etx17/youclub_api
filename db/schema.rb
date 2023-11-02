@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_26_095032) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_02_144616) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -90,6 +90,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_26_095032) do
     t.index ["activity_id"], name: "index_sub_groups_on_activity_id"
   end
 
+  create_table "tarifications", force: :cascade do |t|
+    t.integer "amount"
+    t.string "recurrence"
+    t.string "label"
+    t.string "description"
+    t.bigint "sub_group_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sub_group_id"], name: "index_tarifications_on_sub_group_id"
+  end
+
   create_table "time_slots", force: :cascade do |t|
     t.bigint "schedule_id"
     t.string "start_time"
@@ -118,5 +129,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_26_095032) do
   add_foreign_key "schedules", "sub_groups"
   add_foreign_key "schedules", "time_slots"
   add_foreign_key "sub_groups", "activities"
+  add_foreign_key "tarifications", "sub_groups"
   add_foreign_key "time_slots", "schedules"
 end

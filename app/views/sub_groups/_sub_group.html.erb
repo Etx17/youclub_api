@@ -1,1 +1,19 @@
-<p>coucou</p>
+<% sub_group = locals[:sub_group] %>
+<div class="d-flex p-3 shadow rounded m-2 flex-column border" style="border-radius: 20px">
+  <h3 class="text-dark align-self-center"><%= sub_group.name %> </h3>
+  <span class="align-self-center text-secondary"><%= sub_group&.class_type %> </span>
+  <small class="align-self-center text-secondary position-relative" style="top: 20px;">À partir de </small>
+  <div class="align-self-center mt-0"><span class="gradient-title"><%= sub_group&.min_price_cents/100 %></span>€</div>
+
+  <div class="d-flex flex-wrap gap-2 justify-content-center mb-2">
+    <% sub_group.tarifications&.each do |tarification|  %>
+      <div class=" py-0 pill bg-light btn-outline-secondary shadow-sm d-flex align-items-center">
+        <span style="font-size: 1.5em;"><%= tarification.amount %></span>
+        <small class="text-secondary">€/<%= tarification.recurrence %></small>
+      </div>
+    <% end %>
+  </div>
+
+  <p><%= sub_group.short_description %></p>
+  
+</div>

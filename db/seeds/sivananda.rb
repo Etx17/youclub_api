@@ -50,7 +50,6 @@ intermediate_subgroup = SubGroup.create(
   class_type: "Cours collectif",
   short_description: "Cours pour intermédiaires. Approfondissez votre pratique du Yoga dans une ambiance chaleureuse.",
   subscription_by_recurrence_price_cents: 0,
-  tarifications: ["19/cours", "158/10 cours", "63/semaine illimitée", "158/mois illimité", "410/3 mois illimités", "1208/an illimité"],
 )
 
 a=Schedule.create(sub_group_id: intermediate_subgroup.id, day: "lundi")
@@ -102,7 +101,6 @@ very_gentle_subgroup = SubGroup.create(
   class_type: "Cours collectif",
   short_description: "Cours pour intermédiaires. Approfondissez votre pratique du Yoga dans une ambiance chaleureuse.",
   subscription_by_recurrence_price_cents: 0,
-  tarifications: ["19/cours", "158/10 cours", "63/semaine illimitée", "158/mois illimité", "410/3 mois illimités", "1208/an illimité"],
 )
 
 a=Schedule.create(sub_group_id: very_gentle_subgroup.id, day: "lundi")
@@ -126,11 +124,36 @@ pregnant_women_subgroup = SubGroup.create(
   class_type: "Cours collectif",
   short_description: "Cours de yoga adapté pour femmes enceintes",
   subscription_by_recurrence_price_cents: 0,
-  tarifications: ["19/cours", "158/10 cours", "63/semaine illimitée", "158/mois illimité", "410/3 mois illimités", "1208/an illimité"],
 )
 f=Schedule.create(sub_group_id: very_gentle_subgroup.id, day: "samedi")
 TimeSlot.create(schedule_id: f.id, start_time: "2023-10-14T11:00:00.000Z", end_time: "2023-10-14T12:30:00.000Z")
 
+[pregnant_women_subgroup, very_gentle_subgroup, intermediate_subgroup].each do |subgroup|
+  Tarification.create(
+    amount: 19,
+    recurrence: "cours",
+  )
+  Tarification.create(
+    amount: 158,
+    recurrence: "10 cours",
+  )
+  Tarification.create(
+    amount: 63,
+    recurrence: "semaine illimitée",
+  )
+  Tarification.create(
+    amount: 158,
+    recurrence: "mois illimité",
+  )
+  Tarification.create(
+    amount: 410,
+    recurrence: "3 mois illimités",
+  )
+  Tarification.create(
+    amount: 1208,
+    recurrence: "an illimité",
+  )
+end
 
 beginner_trial_subgroup = SubGroup.create(
   activity_id: yoga.id,
@@ -141,7 +164,11 @@ beginner_trial_subgroup = SubGroup.create(
   class_type: "Cours collectif",
   short_description: "Cours gratuit pour découvrir le yoga dans une ambiance chaleureuse.",
   subscription_by_recurrence_price_cents: 0,
-  tarifications: ["0/cours d'essai"],
+)
+Tarification.create(
+  amount: 0,
+  recurrence: "cours d'essai",
+  sub_group: beginner_trial_subgroup
 )
 
 # gentle_subgroup = SubGroup.create(

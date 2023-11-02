@@ -52,7 +52,6 @@ adult_debutant_subgroup = SubGroup.create(
   class_type: "Cours collectif",
   short_description: "Cours pour adultes débutants. Apprenez les bases du Muay Thai dans une ambiance chaleureuse.",
   subscription_by_recurrence_price_cents: 0,
-  tarifications: ["20/jour", "84/mois", "180/trimestre", "312/semestre", "495/an"],
 )
 
 a=Schedule.create(sub_group_id: adult_debutant_subgroup.id, day: "lundi")
@@ -82,7 +81,6 @@ adult_tous_niveaux_subgroup = SubGroup.create(
   class_type: "Cours collectif",
   short_description: "Cours pour adultes tous niveaux. Apprenez les bases du Muay Thai dans une ambiance chaleureuse.",
   subscription_by_recurrence_price_cents: 0,
-  tarifications: ["20/jour", "84/mois", "180/trimestre", "312/semestre", "495/an"],
 )
 
 a=Schedule.create(sub_group_id: adult_tous_niveaux_subgroup.id, day: "lundi")
@@ -113,8 +111,7 @@ enfants_minus_8_subgroup = SubGroup.create(
   recurrence: nil,
   class_type: "Cours collectif",
   short_description: "Cours pour enfants de moins de 8 ans. Apprenez les bases du Muay Thai dans une ambiance chaleureuse.",
-  subscription_by_recurrence_price_cents: 0,
-  tarifications: ["110/trimestre", "300/an"],
+  subscription_by_recurrence_price_cents: 0
 )
 e=Schedule.create(sub_group_id: adult_tous_niveaux_subgroup.id, day: "mercredi")
 f=Schedule.create(sub_group_id: adult_tous_niveaux_subgroup.id, day: "samedi")
@@ -129,8 +126,7 @@ enfants_12_subgroup = SubGroup.create(
   recurrence: nil,
   class_type: "Cours collectif",
   short_description: "Cours pour enfants",
-  subscription_by_recurrence_price_cents: 0,
-  tarifications: ["110/trimestre", "300/an"],
+  subscription_by_recurrence_price_cents: 0
 )
 
 d=Schedule.create(sub_group_id: adult_tous_niveaux_subgroup.id, day: "mercredi")
@@ -140,3 +136,45 @@ f=Schedule.create(sub_group_id: adult_tous_niveaux_subgroup.id, day: "samedi")
 TimeSlot.create(schedule_id: d.id, start_time: "2023-10-14T14:00:00.000Z", end_time: "2023-10-14T15:00:00.000Z")
 TimeSlot.create(schedule_id: e.id, start_time: "2023-10-14T18:00:00.000Z", end_time: "2023-10-14T19:00:00.000Z")
 TimeSlot.create(schedule_id: f.id, start_time: "2023-10-14T14:00:00.000Z", end_time: "2023-10-14T15:00:00.000Z")
+
+[enfants_12_subgroup, enfants_minus_8_subgroup ].each do |subgroup|
+  Tarification.create(
+    amount: 110,
+    recurrence: "trimestre",
+    sub_group: subgroup
+  )
+  Tarification.create(
+    amount: 300,
+    recurrence: "an",
+    sub_group: subgroup
+  )
+end
+
+[adult_debutant_subgroup, adult_tous_niveaux_subgroup ].each do |subgroup|
+  Tarification.create(
+    amount: 20,
+    recurrence: "jour",
+    sub_group: subgroup
+  )
+  Tarification.create(
+    amount: 84,
+    recurrence: "mois",
+    sub_group: subgroup
+  )
+  Tarification.create(
+    amount: 180,
+    recurrence: "trimestre",
+    sub_group: subgroup
+  )
+  Tarification.create(
+    amount: 312,
+    recurrence: "semestre",
+    sub_group: subgroup
+  )
+  Tarification.create(
+    amount: 495,
+    recurrence: "an",
+    sub_group: subgroup
+  )
+end
+
