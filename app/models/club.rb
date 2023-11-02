@@ -35,6 +35,6 @@ class Club < ApplicationRecord
       distance = earth_radius_km * c
     end
 
-    haversine(club_latitude, club_longitude, latitude, longitude) + 'km'
+    haversine(club_latitude, club_longitude, latitude, longitude)
   end
 end
