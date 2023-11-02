@@ -43,7 +43,7 @@ module CategoriesHelper
         { label: "🤺 Escrime", value: "Escrime" },
         { label: "🏒 Hockey sur glace, sports de glace", value: "hockey sur glace, sports de glace" }
       ],
-      "culture, pratiques d’activités artistiques, culturelles": [
+      "Culture, pratiques d’activités artistiques, culturelles": [
           { label: "🎤 Chant choral et musique", value: "chant choral, musique" },
           { label: "🎨 Promotion de l’art et des artistes", value: "promotion de l’art et des artistes" },
           { label: "🎭 Théâtre, marionnettes, cirque, spectacles de variété", value: "théâtre, marionnettes, cirque, spectacles de variété" },
@@ -62,7 +62,7 @@ module CategoriesHelper
   end
 
   def mapped_subcategories
-    subcategories[session[:category].to_sym].map do |subcategory|
+    subcategories[session[:category].to_sym]&.map do |subcategory|
       [subcategory[:label], subcategory[:value]]
     end
   end
