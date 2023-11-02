@@ -1,8 +1,11 @@
 <div class=" px-3 d-flex justify-content-between align-items-center" style="height: 60px">
   <%= link_to "#", class: "navbar-brand" do %>
-    <span class="bangers-font">Y.</span>
+    <span class="bangers-font">YOUCLUB.</span>
   <% end %>
 
+  <% if controller_name == 'pages' %>
+    <p class="text-secondary"><span class="text-success"><%= 200 - Lead.count %></span> places restantes</p>
+  <% end %>
   <!--<div class="dropdown">
     <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
       <%= controller_name.humanize %>
