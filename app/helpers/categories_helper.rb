@@ -61,8 +61,8 @@ module CategoriesHelper
     }
   end
 
-  def mapped_subcategories
-    subcategories[session[:category].to_sym]&.map do |subcategory|
+  def mapped_subcategories(category)
+    subcategories[category.to_sym]&.map do |subcategory|
       [subcategory[:label], subcategory[:value]]
     end
   end

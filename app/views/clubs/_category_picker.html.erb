@@ -1,6 +1,6 @@
 <%= form_tag update_category_path, method: :get, id: 'category_form' do %>
   <%= select_tag :category,
-    options_for_select(['🏸 Sports, activités de plein air','Culture, pratiques d’activités artistiques, culturelles'],
+    options_for_select(['🏸 Sports, activités de plein air','🏸 Culture, pratiques d’activités artistiques, culturelles'],
     selected: session[:category]),
     class: 'form-select w-100 overflow-hidden',
     onchange: 'this.form.submit()' %>

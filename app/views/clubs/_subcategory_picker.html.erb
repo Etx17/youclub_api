@@ -1,6 +1,6 @@
 <%= simple_form_for :subcategory, url: update_subcategory_path, method: :get, html: { id: 'subcategory_form' } do |f| %>
   <%= f.input :subcategory,
-    collection: mapped_subcategories,
+    collection: mapped_subcategories(session[:category].slice(2, session[:category].length - 2).to_sym),
     selected: session[:subcategory],
     label: false,
     input_html: {
