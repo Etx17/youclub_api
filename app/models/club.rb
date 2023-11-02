@@ -11,7 +11,7 @@ class Club < ApplicationRecord
     # user_coords_string = "48.8566,2.3522"
     latitude = user_coords_string.split(',')[0].to_f
     longitude = user_coords_string.split(',')[1].to_f
-    
+
     club_latitude = self.geo_point.split(', ')[0].to_f
     club_longitude = self.geo_point.split(', ')[1].to_f
 
@@ -35,6 +35,6 @@ class Club < ApplicationRecord
       distance = earth_radius_km * c
     end
 
-    haversine(club_latitude, club_longitude, latitude, longitude)
+    haversine(club_latitude, club_longitude, latitude, longitude) + 'km'
   end
 end
