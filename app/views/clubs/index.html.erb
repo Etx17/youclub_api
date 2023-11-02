@@ -5,6 +5,7 @@
       <div class="d-none d-sm-block col-sm-2 col-md-3 ">
           <!-- Content for left side column -->
         <%= request.location.data if Rails.env.development? %>
+        <%= session[:coords] %> is session[:coords]
         <%= request.location.data["loc"] unless Rails.env.development?%>
       </div>
 

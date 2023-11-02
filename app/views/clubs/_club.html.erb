@@ -14,8 +14,7 @@
         <div class="btn btn-info py-0 px-1" style="border-radius: 30px"><span class='small'><i class="fas fa-eye small"></i>Détails</span></div>
       </div>
 
-      <%# <%= club.distance_from(request.location.loc, "club lat, club lon") %>
-
+      <%= club.distance_from(session[:coords])%>
       <div class="d-flex flex-wrap gap-2 text-dark align-items-center small">
         <% club.activities&.first(3)&.each do |activity| %>
           <div class="btn btn-outline-info pill"><%= activity.name %></div>

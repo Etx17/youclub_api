@@ -44,13 +44,22 @@ class ClubsController < ApplicationController
 
   def set_zipcode
 
-     if session[:zipcode].nil?
+    if session[:zipcode].nil?
       p 'session[:zipcode] is nil so we do request user location zipcode'
       if request.location && !request.location.data['bogon']
         session[:zipcode] = request.location.postal_code
+
       else
         p 'so we use or 75018'
         session[:zipcode] = '75018'
+      end
+    end
+
+    if session[:coords].nil?
+      if request.location && !request.location.data['bogon']
+        session[:coords] = request.location.data["loc"] unless Rails.env.development?
+      else
+        session[:coords] = "48.8856124,2.3233836" # default location in 75017
       end
     end
   end
