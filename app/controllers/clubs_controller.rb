@@ -44,11 +44,14 @@ class ClubsController < ApplicationController
 
   def set_zipcode
     if params[:zipcode] # If the zipcode is provided as a parameter, use it
+      p 'zipcode provided as params'
       session[:zipcode] = params[:zipcode]
     else
+      p 'zipcode NOT provided as params'
       if request.location && !request.location.data['bogon']
         session[:zipcode] = request.location.postal_code
       else
+        p 'so we use the previous session[:zipcode] or 75018'
         session[:zipcode] ||= '75018'
       end
     end
