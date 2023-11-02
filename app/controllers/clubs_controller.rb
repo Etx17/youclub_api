@@ -62,7 +62,7 @@ class ClubsController < ApplicationController
     if params[:category] # If the category is provided as a parameter, use it
       session[:category] = params[:category]
     else
-      session[:category] = 'Sports, activités de plein air'
+      session[:category] ||= 'Sports, activités de plein air'
     end
   end
 
