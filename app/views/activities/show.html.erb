@@ -1,1 +1,42 @@
+<div class="container-fluid">
+    <!-- Row for your content -->
+    <div class="row">
 
+      <div class="d-none d-sm-block col-sm-2 col-md-3 ">
+          <!-- Content for left side column -->
+      </div>
+
+      <!-- Main Container -->
+      <div class="col-12 col-sm-8 col-md-6" style="height: 100vh;">
+        <%# Image carrée %>
+        <div class="d-flex flex-column justify-content-start bg-light shadow">
+
+          <%= image_tag "https://source.unsplash.com/random/?horse", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; " %>
+
+          <%= @activity.name %>
+
+          <div>DIVISIONS:</div>
+
+          <% @activity.sub_groups.each do |sub_group| %>
+            <div class="btn btn-outline-info pill"><%= sub_group.name %></div>
+          <% end %>
+
+          <%= @activity.full_description %>
+
+          <%= render "sub_groups/sub_group"
+            # ,locals: { sub_group: sub_group }
+           %>
+          <% @activity.sub_groups.each do |sub_group| %>
+          <% end %>
+          <%# Sous groupes cartes (partiale, du modele sous groupe) %>
+        </div>
+
+
+      </div>
+
+      <div class="d-none d-sm-block col-sm-2 col-md-3 ">
+          <!-- Content for right side column -->
+      </div>
+
+    </div>
+</div>

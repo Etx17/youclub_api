@@ -16,7 +16,7 @@
 
       <div class="d-flex flex-wrap gap-2 text-dark align-items-center small">
         <% club.activities&.first(3)&.each do |activity| %>
-          <%= link_to activity.name, activities_path(activity.id), class: "btn btn-outline-info pill"  %>
+          <%= link_to activity.name, activity_path(activity.id), class: "btn btn-outline-info pill"  %>
         <% end %>
         <% if club.activities.count > 3 %>
             <%= link_to "et #{club.activities.count - 3} autres ...", club_path(club.id), class: "btn text-info pill"  %>
