@@ -57,7 +57,7 @@ class ClubsController < ApplicationController
 
 
     if request.location && !request.location.data['bogon']
-      session[:coords] ||= request.location.data["loc"] unless Rails.env.development?
+      session[:coords] = request.location.data["loc"] unless Rails.env.development?
     else
       session[:coords] = "48.8856124,2.3233836" # default location in 75017
     end
