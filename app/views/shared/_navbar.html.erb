@@ -20,8 +20,8 @@
     </ul>
   </div> -->
   <% if controller_name != 'pages' %>
-  <div class="d-flex">
-    <p><%= session[:zipcode] %></p>
+  <div class="d-flex align-items-center">
+    <span><%= session[:zipcode] %></span>
     <%= link_to '#', data: { bs_toggle: "modal", bs_target: "#locationModal" } do %>
       <i class="fas fa-map-marker mx-3 text-secondary"></i>
     <% end %>

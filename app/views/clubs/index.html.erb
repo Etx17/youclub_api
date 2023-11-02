@@ -6,12 +6,12 @@
           <!-- Content for left side column -->
           <%= session[:zipcode] %>,
           <%= session[:category] %>,
-          <%= session[:subcategory] %>, 
+          <%= session[:subcategory] %>,
       </div>
 
       <!-- Main Container -->
       <div class="col-12 col-sm-8 col-md-6 d-flex flex-column justify-content-center">
-        <div class="d-flex justify-content-around border">
+        <div class="d-flex" style="height: 40px">
           <div class= 'w-50'>
             <%= render "category_picker" %>
           </div>
@@ -19,9 +19,6 @@
           <div class= 'w-50'>
             <%= render "subcategory_picker" %>
           </div>
-
-
-
         </div>
 
 
