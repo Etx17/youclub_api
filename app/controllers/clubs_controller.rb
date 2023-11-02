@@ -58,6 +58,7 @@ class ClubsController < ApplicationController
   end
 
   def set_category
+
     if params[:category] # If the category is provided as a parameter, use it
       session[:category] = params[:category]
     else
