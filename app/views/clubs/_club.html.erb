@@ -16,10 +16,10 @@
 
       <div class="d-flex flex-wrap gap-2 text-dark align-items-center small">
         <% club.activities&.first(3)&.each do |activity| %>
-          <div class="btn btn-outline-info pill"><%= activity.name %></div>
+          <%= link_to activity.name, activities_path(activity.id), class: "btn btn-outline-info pill"  %>
         <% end %>
         <% if club.activities.count > 3 %>
-        <div class="text-info">et <%= club.activities.count - 3 %> autres...</div>
+            <%= link_to "et #{club.activities.count - 3} autres ...", club_path(club.id), class: "btn text-info pill"  %>
         <% end %>
       </div>
 
@@ -27,7 +27,10 @@
         <%= link_to "https://www.google.fr/maps/place/#{club.address.gsub(' ', '+')},+#{club.actual_zipcode}", target: "_blank", class:"text-info" do %>
           <i class="fas fa-map-marker-alt"></i> <%= club.address %>
         <% end %>
-        <h4 class="text-white"><%= club.distance_from(session[:coords]).to_s.first(3)%> km</h4>
+
+        <% if session[:coords].present? %>
+          <h4 class="text-white"><%= club.distance_from(session[:coords]).to_s.first(4)%> km</h4>
+        <% end %>
 
         <%= club.actual_zipcode %>
       </div>
