@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   end
   post "/graphql", to: "graphql#execute"
   root to: 'pages#home'
+  get 'pages/legal'
   resources :leads, only: [:create]
 end

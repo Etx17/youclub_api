@@ -2,12 +2,16 @@
 <div class="card-container d-flex flex-grow-1 my-3 shadow" style="max-width: 600px; border-radius: 10px; background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 60%), url('https://source.unsplash.com/random/?horse/300/200'); background-size: fit; background-position: center;">
   <div class="d-flex shadow flex-column justify-content-between p-2  w-100" style="border-radius: 10px; height: 80vh;">
     <p></p>
-    <div class="d-flex flex-column px-2 border" style="color: #AAAAAA; border-radius: 10px;">
+    <div class="d-flex flex-column px-2" style="color: #AAAAAA; border-radius: 10px;">
 
       <div class="d-flex justify-content-between align-items-start text-white w-100">
-        <h2 style="max-width: 75%;"><%= club.name %></h2>
-        <div class="btn btn-info d-block d-sm-none" style="border-radius: 30px">i</div>
-        <div class="btn btn-info d-none d-sm-block" style="border-radius: 30px"><span class='small'>En savoir +</span></div>
+        <% if club.name.length > 30 %>
+          <h4 style="max-width: 74%;"><%= club.name %></h4>
+        <% else %>
+          <h2 style="max-width: 74%;"><%= club.name %></h2>
+        <% end %>
+        <%# <div class="btn btn-info d-block d-sm-none" style="border-radius: 30px">i</div> %>
+        <div class="btn btn-info py-0 px-1" style="border-radius: 30px"><span class='small'><i class="fas fa-eye small"></i>Détails</span></div>
       </div>
 
       <div class="d-flex flex-wrap gap-2 text-dark align-items-center small">
