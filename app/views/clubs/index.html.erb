@@ -4,7 +4,8 @@
 
       <div class="d-none d-sm-block col-sm-2 col-md-3 ">
           <!-- Content for left side column -->
-          <%= request.location.data %> <br>, <%= request.location.city %><br>, <%= request.location.country %>, <%= request.location.postal_code %><br>, <%= request.location.region %><br>      </div>
+          <%= request.location[:loc] if request.location.data.key?(:loc) %>
+        </div>
 
       <!-- Main Container -->
       <div class="col-12 col-sm-8 col-md-6 d-flex flex-column justify-content-center">
