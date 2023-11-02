@@ -43,6 +43,7 @@ class ClubsController < ApplicationController
   private
 
   def set_zipcode
+    p params[:zipcode]
     if params[:zipcode] # If the zipcode is provided as a parameter, use it
       p 'zipcode provided as params'
       session[:zipcode] = params[:zipcode]
