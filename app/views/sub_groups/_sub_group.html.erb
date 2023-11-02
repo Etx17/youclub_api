@@ -15,5 +15,21 @@
   </div>
 
   <p><%= sub_group.short_description %></p>
-  
+
+
+  <div class="d-flex flex-wrap gap-2 justify-content-center mb-2">
+     <% sub_group.schedules.each do |sched| %>
+      <div class="d-flex flex-column shadow-sm pill bg-light p-2">
+        <h4><%= sched.day %></h4>
+        <div class="d-flex flex-column align-items-center">
+          <% sched.time_slots.each do |time_slot| %>
+            <div style="font-size: 0.8em">
+            <%= DateTime.parse(time_slot.start_time).strftime("%H:%M") %> - <%= DateTime.parse(time_slot.end_time).strftime("%H:%M") %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
 </div>
