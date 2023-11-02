@@ -4,8 +4,8 @@
 
       <div class="d-none d-sm-block col-sm-2 col-md-3 ">
           <!-- Content for left side column -->
-        <%= request.location %>
-        <%= request.location.data.loc if request.location.data.key?(:loc) %>
+        <%= request.location.data %>
+        <%= request.location.data.loc if Rails.env.staging? %>
       </div>
 
       <!-- Main Container -->
