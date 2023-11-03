@@ -1,5 +1,5 @@
 <% sub_group = locals[:sub_group] %>
-<div class="d-flex p-3 shadow rounded m-2 flex-column border" style="border-radius: 20px">
+<div class="d-flex p-3 rounded m-2 flex-column px-2 bg-light-white" style="border-radius: 20px">
   <h3 class="text-dark align-self-center"><%= sub_group.name %> </h3>
   <span class="align-self-center text-secondary"><%= sub_group&.class_type %> </span>
   <small class="align-self-center text-secondary position-relative" style="top: 20px;">À partir de </small>
@@ -19,7 +19,7 @@
 
   <div class="d-flex flex-wrap gap-2 justify-content-center mb-2">
      <% sub_group.schedules.each do |sched| %>
-      <div class="d-flex flex-column shadow-sm pill bg-light p-2">
+      <div class="d-flex flex-column border p-2 " style="border-radius: 4px">
         <h4><%= sched.day %></h4>
         <div class="d-flex flex-column align-items-center">
           <% sched.time_slots.each do |time_slot| %>
