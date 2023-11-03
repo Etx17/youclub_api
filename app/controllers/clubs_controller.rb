@@ -17,6 +17,10 @@ class ClubsController < ApplicationController
     end
   end
 
+  def show
+    @club = Club.find(params[:id])
+  end
+
   def update_category
     category = params[:category]
     session[:category] = category

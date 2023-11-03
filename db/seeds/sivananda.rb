@@ -41,6 +41,24 @@ yoga = Activity.create(
   full_description: "Le yoga est une discipline qui regroupe l'ensemble des pratiques ou disciplines corporelles et mentales ayant pour but l'unification de l'être humain dans ses aspects physique, psychique et spirituel.",
 )
 
+meditation = Activity.create(
+  name: "Méditation",
+  category: "Sports, activités de plein air",
+  category_number: "11000",
+  subcategory_number: "11105",
+  club: sivananda,
+  geo_point: "48.8748532, 2.3591712",
+  address: "135 rue Lamarck",
+  actual_zipcode: "75010",
+  free_trial: true,
+  is_looking_for_volunteer: true,
+  subcategories: "Gymnastique (gymnastique, gymnastique d’entretien, éducation physique, yoga), aérobic",
+  recurrence: nil,
+  subscription_link: nil,
+  short_description: "Venez essayer gratuitement",
+  full_description: "La méditation est une discipline qui regroupe l'ensemble des pratiques ou disciplines corporelles et mentales ayant pour but l'unification de l'être humain dans ses aspects physique, psychique et spirituel.",
+)
+
 intermediate_subgroup = SubGroup.create(
   activity_id: yoga.id,
   name: "Pratique Intermédiaire",
