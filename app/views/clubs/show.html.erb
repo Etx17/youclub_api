@@ -11,41 +11,60 @@
 
         <div class="d-flex flex-column justify-content-start shadow bg-white " style="border-radius: 15px;">
 
-         <div class="position-relative" style="display: block;"> <!-- Positioning context for the button -->
-            <%= image_tag "https://source.unsplash.com/random/?horse/300/200", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; ", loading: 'lazy' %>
+         <div class="position-relative" style="display: block; border-radius: 15px;"> <!-- Positioning context for the button -->
+            <%= image_tag "https://source.unsplash.com/random/?horse/300/200", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; border-top-left-radius: 15px;  border-top-right-radius: 15px;", loading: 'lazy' %>
 
             <div class="d-flex justify-content-end align-items-center text-light w-100 px-2" style="position: absolute; bottom: 10px; "> <!-- Positioning the button relative to the image -->
-                <div class="btn py-2 px-4 gradient-button d-flex align-items-center gap-2" style="border-radius: 8px">
+                <div class="btn py-2 px-4 gradient-button d-flex align-items-center gap-2" style="border-radius: 8px;">
                     <i class="fas fa-edit "></i>
                     <span class=""> S'inscrire</span>
                 </div>
             </div>
         </div>
         <%= @club.name.length > 12 ?
-            content_tag(:h1, @club.name, class: 'gradient-text px-2') :
-            content_tag(:h1, @club.name, class: 'gradient-title px-2')
+            content_tag(:h1, @club.name, class: 'text-dark px-2 mt-4') :
+            content_tag(:h1, @club.name, class: 'text-dark px-2 mt-4')
         %>
 
         <div class="d-flex flex-wrap gap-2 p-2 pb-3 border-bottom">
           <% @club.activities.each do |activity| %>
             <%= link_to activity_path(activity), class: "flex-grow-1 btn bg-light-white" do %>
-              <span class="gradient-text" style="font-size: 2em" ><%= activity.name %><i class=" px-3 fas fa-chevron-right" style="color: #EEEEEE; font-size: 0.8em;"></i></span>
+              <span class="gradient-text" style="font-size: 1.5em" ><%= activity.name %><i class=" px-3 fas fa-chevron-right" style="color: #EEEEEE; font-size: 0.8em;"></i></span>
 
             <% end %>
           <% end %>
         </div>
 
-        <div class="px-3 my-3">
+        <div class="px-3 my-3 d-flex flex-column gap-3">
           <%= link_to "https://www.google.fr/maps/place/#{@club.address.gsub(' ', '+')},+#{@club.actual_zipcode}", target: "_blank", class:"text-secondary text-decoration-none nav-link" do %>
             <i class="fas fa-map-marker-alt"></i> <%= @club.address %>
           <% end %>
+
           <p class="mt-3 text-dark"><%= @club.objet %> </p>
 
-          <%# Adhérence: <%= @club.adherence %>
+           <% if @club.adherence_fee.present? %>
             <div class="d-flex flex-column align-items-center bg-light-white ">
               <small class="text-secondary">Frais d'adhérence</small>
-              <div class="gradient-text text-large" style="font-size: 2em">30€<div>
+              <div class="text-secondary" style="font-size: 2em"><%= @club.adherence_fee %>€</div>
             </div>
+          <% end %>
+
+          <% if @club.website.present? %>
+            <%= link_to @club.website, class: "text-decoration-none", target: "_blank" do  %>
+              <div class="d-flex flex-column align-items-center bg-light-white ">
+                <small class="text-secondary">Site web</small>
+                <div class="gradient-text" style="font-size: 1em"><%= @club.website %></div>
+              </div>
+            <% end %>
+          <% end %>
+
+          <% if @club.phone_number.present? %>
+            <div class="d-flex flex-column align-items-center bg-light-white ">
+              <small class="text-secondary">Nous joindre</small>
+              <div class="text-secondary" style="font-size: 1em"><%= @club.phone_number %></div>
+            </div>
+           <% end %>
+
         </div>
       </div>
 
