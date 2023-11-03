@@ -21,7 +21,10 @@ astrodojo = Club.create(
   user: youclubdev,
   structure_type: 1,
   images: ["judo.jpeg"],
-  phone_number: "0145224523"
+  phone_number: "0145224523",
+  website: "https://www.katan-art.com/",
+  adherence_fee: 30,
+  is_premium: true,
 )
 
 judo_jujitsu = Activity.create(

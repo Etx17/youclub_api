@@ -21,7 +21,9 @@ sivananda = Club.create(
   user: etienne3,
   structure_type: 1,
   phone_number: '0140267749',
-  website: "https://sivanandaparis.org/"
+  website: "https://sivanandaparis.org/",
+  adherence_fee: 20,
+  is_premium: true
 )
 
 yoga = Activity.create(
