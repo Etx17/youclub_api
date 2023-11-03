@@ -4,7 +4,7 @@
   <span class="align-self-center text-secondary"><%= sub_group&.class_type %> </span>
   <small class="align-self-center text-secondary position-relative" style="top: 20px;">À partir de </small>
   <div class="align-self-center mt-0"><span class="gradient-title"><%= sub_group&.min_price_cents/100 %></span>€</div>
-
+   <p class="align-self-center" ><%= sub_group.short_description %></p>
   <div class="d-flex flex-wrap gap-2 justify-content-center mb-2">
     <% sub_group.tarifications&.each do |tarification|  %>
       <div class=" py-0 pill bg-light btn-outline-secondary shadow-sm d-flex align-items-center">
@@ -14,7 +14,7 @@
     <% end %>
   </div>
 
-  <p><%= sub_group.short_description %></p>
+
 
 
   <div class="d-flex flex-wrap gap-2 justify-content-center mb-2">
