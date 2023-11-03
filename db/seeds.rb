@@ -22,6 +22,6 @@ require_relative 'seeds/sivananda'
 # require_relative 'seeds/katanart'
 p "seeding skarbowski"
 require_relative 'seeds/skarbowski'
-# p "seeding assos from pass sport paris"
-# require_relative 'seeds/assos_pass_sport_paris'
+p "seeding assos from pass sport paris"
+require_relative 'seeds/assos_pass_sport_paris'
 p "all good!"

@@ -74,7 +74,6 @@ teen_subgroup = SubGroup.create(
   class_type: "Cours collectif",
   short_description: "Groupe pandas le mardi, salamandres le mercredi et scarabées le jeudi. En fonction des places disponibles",
   subscription_by_recurrence_price_cents: 0,
-  tarifications: ["480/An"],
 )
 
 a = Schedule.create(sub_group_id: teen_subgroup.id, day: "mardi")
@@ -95,8 +94,11 @@ adult_subgroup = SubGroup.create(
   class_type: "Cours collectifs",
   short_description: "Le jujitsu aborde à la fois le karaté, le judo et le combat au sol. Tous les cours incluent de la méditation, du QI gong et des techniques de développement personnel et relationnel permettant l’exploration de soi à travers la progression martiale",
   subscription_by_recurrence_price_cents: 0,
-  tarifications: ["480/An"]
 )
+
+[adult_subgroup, teen_subgroup, child_subgroup].each do |sub_group|
+  Tarification.create(amount: 48000, recurrence: "an", label: "Tarif normal", description: "Tarif normal", sub_group_id: sub_group.id)
+end
 
 
 a = Schedule.create(sub_group_id: adult_subgroup.id, day: "mardi")
