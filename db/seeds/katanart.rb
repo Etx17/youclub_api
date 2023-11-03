@@ -96,7 +96,7 @@ adult_subgroup = SubGroup.create(
 )
 
 [adult_subgroup, teen_subgroup, child_subgroup].each do |sub_group|
-  Tarification.create(amount: 48000, recurrence: "an", label: "Tarif normal", description: "Tarif normal", sub_group_id: sub_group.id)
+  Tarification.create(amount: 480, recurrence: "an", label: "Tarif normal", description: "Tarif normal", sub_group_id: sub_group.id)
 end
 
 
