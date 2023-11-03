@@ -18,8 +18,8 @@
 
 p "seeding sivananda"
 require_relative 'seeds/sivananda'
-# p "seeding katanart"
-# require_relative 'seeds/katanart'
+p "seeding katanart"
+require_relative 'seeds/katanart'
 p "seeding skarbowski"
 require_relative 'seeds/skarbowski'
 p "seeding assos from pass sport paris"
