@@ -52,7 +52,6 @@ child_subgroup = SubGroup.create(
   class_type: "Cours collectif",
   short_description: "Mélange de judo et de jujitsu. Pour un deuxième cours par semaine, ajouter 200e/an.\n+ abonnement vidéo pédagogiques: 20e/mois",
   subscription_by_recurrence_price_cents: 0,
-  tarifications: ["480/An"],
 )
 
 a = Schedule.create(sub_group_id: child_subgroup.id, day: "mercredi", )
