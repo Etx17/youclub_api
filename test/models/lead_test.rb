@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: leads
+#
+#  id         :bigint           not null, primary key
+#  email      :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 require "test_helper"
 
 class LeadTest < ActiveSupport::TestCase

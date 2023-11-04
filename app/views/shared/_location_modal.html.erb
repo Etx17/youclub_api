@@ -8,11 +8,22 @@
         </button>
       </div>
       <div class="modal-body">
-        <!-- Add your map component here -->
-        <%= form_tag update_zipcode_path, method: :get do %>
-          <%= text_field_tag :zipcode, nil%>
-          <%= submit_tag "Ok", class: "w-50" %>
-        <% end %>
+        <!-- Map container -->
+        <div data-controller="places">
+          <p>Vous devez être connectés pour pouvoir choisir une location depuis la carte.</p>
+          <p>Connectez-vous ou entrez un code postal</p>
+          <% if false # add the auth condition later.%>
+          <div class="row">
+            <div data-places-target="map" style="height: 400px; width: 100%;" class="rounded-lg"></div>
+          </div>
+          <% end %>
+
+          <!-- Form for zipcode -->
+          <%= form_tag update_zipcode_path, method: :get do %>
+            <%= text_field_tag :zipcode, nil, data: { places_target: "zipcode" } %>
+            <%= submit_tag "Ok", class: "w-50" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

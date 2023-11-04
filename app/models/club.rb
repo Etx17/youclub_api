@@ -1,3 +1,29 @@
+# == Schema Information
+#
+# Table name: clubs
+#
+#  id                 :bigint           not null, primary key
+#  name               :string
+#  rna_number         :string
+#  geo_point          :string
+#  category           :string
+#  address            :string
+#  actual_zipcode     :string
+#  subcategory        :string
+#  nearbyStation      :string
+#  website            :string
+#  objet              :text
+#  user_id            :bigint           not null
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  images             :string           default([]), is an Array
+#  category_number    :string
+#  subcategory_number :string
+#  structure_type     :integer
+#  phone_number       :string
+#  adherence_fee      :integer
+#  is_premium         :boolean          default(FALSE)
+#
 class Club < ApplicationRecord
   belongs_to :user
   has_many :activities, dependent: :destroy

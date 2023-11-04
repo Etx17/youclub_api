@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: sub_groups
+#
+#  id                                     :bigint           not null, primary key
+#  activity_id                            :bigint           not null
+#  name                                   :string
+#  min_price_cents                        :integer
+#  max_price_cents                        :integer
+#  recurrence                             :string
+#  class_type                             :string
+#  short_description                      :text
+#  subscription_by_recurrence_price_cents :integer
+#  created_at                             :datetime         not null
+#  updated_at                             :datetime         not null
+#  tarifications                          :text             default([]), is an Array
+#
 class SubGroup < ApplicationRecord
   belongs_to :activity
   has_many :schedules, dependent: :destroy
