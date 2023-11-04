@@ -10,18 +10,23 @@ export default class extends Controller {
 
   connect() {
     if (typeof(google) !== 'undefined') {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            this.initMap(position.coords.latitude, position.coords.longitude);
-          },
-          () => {
-            this.initMap(); // Fallback to default if user denies geolocation
-          }
-        );
+      // Check if the user has already visited and submitted their location
+      if (!localStorage.getItem('locationSubmitted')) {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              this.reverseGeocodeAndSubmit(position.coords.latitude, position.coords.longitude);
+            },
+            () => {
+              this.initMap(); // Fallback to default if user denies geolocation
+            }
+          );
+        } else {
+          // Geolocation is not supported by this browser, use default location
+          this.initMap();
+        }
       } else {
-        // Geolocation is not supported by this browser, use default location
-        this.initMap();
+        this.initMap(); // Initialize the map normally if location has already been submitted
       }
     }
   }
@@ -31,9 +36,16 @@ export default class extends Controller {
 
     const mapOptions = {
       center: new google.maps.LatLng(lat, lng),
-      zoom: 15,
+      zoom: 12,
       styles: [
-        // ... your styles here ...
+        {
+          featureType: "poi",
+          stylers: [{ visibility: "off" }]  // Hides points of interest
+        },
+        {
+          featureType: "transit",
+          stylers: [{ visibility: "off" }]  // Hides transit lines and stations
+        },
       ]
     };
 
@@ -49,6 +61,48 @@ export default class extends Controller {
     this.map.addListener('click', (event) => {
       this.geocodeLatLng(event.latLng);
     });
+  }
+
+  reverseGeocodeAndSubmit(lat, lng) {
+    const geocoder = new google.maps.Geocoder();
+    geocoder.geocode({ 'location': { lat: lat, lng: lng } }, (results, status) => {
+      if (status === 'OK') {
+        if (results[0]) {
+          let postalCode = this.extractPostalCode(results);
+          if (postalCode) {
+            this.setZipcodeAndFlag(postalCode);
+          } else {
+            console.error('No postal code found');
+          }
+        } else {
+          console.error('No results found');
+        }
+      } else {
+        console.error('Geocoder failed due to: ' + status);
+      }
+    });
+  }
+
+  extractPostalCode(results) {
+    for (const component of results[0].address_components) {
+      if (component.types.includes('postal_code')) {
+        return component.long_name;
+      }
+    }
+    return null;
+  }
+
+  setZipcodeAndFlag(postalCode) {
+    this.zipcodeTarget.value = postalCode;
+    localStorage.setItem('locationSubmitted', 'true');
+    this.submitForm();
+  }
+
+  submitForm() {
+    const form = this.zipcodeTarget.closest('form');
+    if (form) {
+      form.submit();
+    }
   }
 
   geocodeLatLng(latLng) {
