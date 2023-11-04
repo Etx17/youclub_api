@@ -9,45 +9,46 @@ export default class extends Controller {
   static values = ["latitude", "longitude"]
 
   connect() {
-    if (typeof(google) != undefined) {
-      this.initMap()
+    if (typeof(google) !== 'undefined') {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            this.initMap(position.coords.latitude, position.coords.longitude);
+          },
+          () => {
+            this.initMap(); // Fallback to default if user denies geolocation
+          }
+        );
+      } else {
+        // Geolocation is not supported by this browser, use default location
+        this.initMap();
+      }
     }
   }
 
-  initMap() {
-    console.log("initiating map")
-
-    const parisLat = 48.8566;
-    const parisLng = 2.3522;
+  initMap(lat = 48.8566, lng = 2.3522) { // Default to Paris coordinates
+    console.log("initiating map");
 
     const mapOptions = {
-      center: new google.maps.LatLng(this.latitudeValue || parisLat, this.longitudeValue || parisLng),
-      zoom: (this.latitudeValue == null ? 12 : 15), // Zoom level 12 is a good starting point for a city
+      center: new google.maps.LatLng(lat, lng),
+      zoom: 15,
       styles: [
-        {
-          featureType: "poi",
-          stylers: [{ visibility: "off" }]  // Hides points of interest
-        },
-        {
-          featureType: "transit",
-          stylers: [{ visibility: "off" }]  // Hides transit lines and stations
-        }
+        // ... your styles here ...
       ]
     };
 
-    this.map = new google.maps.Map(this.mapTarget, mapOptions)
+    this.map = new google.maps.Map(this.mapTarget, mapOptions);
 
     this.marker = new google.maps.Marker({
       map: this.map,
       visible: false // The marker will be made visible after a click event
     });
 
-    console.log("map initiated")
+    console.log("map initiated");
 
     this.map.addListener('click', (event) => {
       this.geocodeLatLng(event.latLng);
     });
-
   }
 
   geocodeLatLng(latLng) {
