@@ -17,17 +17,20 @@ export default class extends Controller {
   initMap() {
     console.log("initiating map")
 
+    const parisLat = 48.8566;
+    const parisLng = 2.3522;
+
     const mapOptions = {
-      center: new google.maps.LatLng(this.data.get("latitude") || 46.71, this.data.get("longitude") || 1.71),
-      zoom: (this.data.get("latitude") == null ? 6 : 15),
+      center: new google.maps.LatLng(this.latitudeValue || parisLat, this.longitudeValue || parisLng),
+      zoom: (this.latitudeValue == null ? 12 : 15), // Zoom level 12 is a good starting point for a city
       styles: [
         {
           featureType: "poi",
-          stylers: [{ visibility: "off" }]  // This line hides points of interest
+          stylers: [{ visibility: "off" }]  // Hides points of interest
         },
         {
           featureType: "transit",
-          stylers: [{ visibility: "off" }]  // This line hides transit lines and stations
+          stylers: [{ visibility: "off" }]  // Hides transit lines and stations
         }
       ]
     };
@@ -63,7 +66,7 @@ export default class extends Controller {
           if (postalCode) {
             console.log('Postal Code:', postalCode);
             this.zipcodeTarget.textContent = postalCode; // Assuming you want to display the postal code in a div or span
-
+            this.zipcodeTarget.value = postalCode;
             // Set the marker position and make it visible
             this.marker.setPosition(latLng);
             this.marker.setVisible(true);

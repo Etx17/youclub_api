@@ -8,11 +8,22 @@
         </button>
       </div>
       <div class="modal-body">
-        <!-- Add your map component here -->
-        <%= form_tag update_zipcode_path, method: :get do %>
-          <%= text_field_tag :zipcode, nil%>
-          <%= submit_tag "Ok", class: "w-50" %>
-        <% end %>
+        <!-- Map container -->
+        <div data-controller="places">
+          <% if true # add the auth condition later.%>
+          <div class="row">
+            <div class="col-lg-7">
+              <div data-places-target="map" style="height: 400px; width: 100%;" class="rounded-lg"></div>
+            </div>
+          </div>
+          <% end %>
+
+          <!-- Form for zipcode -->
+          <%= form_tag update_zipcode_path, method: :get do %>
+            <%= text_field_tag :zipcode, nil, data: { places_target: "zipcode" } %>
+            <%= submit_tag "Ok", class: "w-50" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
