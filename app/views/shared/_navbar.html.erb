@@ -1,6 +1,6 @@
 <div class=" px-3 d-flex justify-content-between align-items-center" style="height: 60px">
   <%= link_to "#", class: "navbar-brand" do %>
-    <span class="bangers-font">YOUCLUB.</span>
+    <span class="bangers-font">Youclub.</span>
   <% end %>
 
   <% if controller_name == 'pages' %>
@@ -19,9 +19,14 @@
       <% end %>
     </ul>
   </div> -->
+
   <% if controller_name != 'pages' %>
+  <%= form_tag update_zipcode_path, method: :get, class:"d-flex border justify-content-center gap-2", style: "max-width: 40%;" do %>
+      <%= text_field_tag :zipcode, session[:zipcode] || nil, style: "width: 50%" %>
+      <%= submit_tag "Ok", class: "btn gradient-button shadow-sm w-50" %>
+    <% end %>
+
   <div class="d-flex align-items-center">
-    <span><%= session[:zipcode] %></span>
     <%= link_to '#', data: { bs_toggle: "modal", bs_target: "#locationModal" } do %>
       <i class="fas fa-map-marker mx-3 text-secondary"></i>
     <% end %>

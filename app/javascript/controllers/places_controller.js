@@ -140,45 +140,4 @@ export default class extends Controller {
       }
     });
   }
-
-
-  // placeChanged() {
-  //   let place = this.autocomplete.getPlace()
-
-  //   if (!place.geometry) {
-  //     window.alert(`No details available for input: ${place.name}`)
-  //     return
-  //   }
-
-  //   if (place.geometry.viewport) {
-  //     this.map.fitBounds(place.geometry.viewport)
-  //   } else {
-  //     this.map.setCenter(place.geometry.location)
-  //     this.map.setZoom(15)
-  //   }
-
-  //   this.marker.setPosition(place.geometry.location)
-  //   this.marker.setVisible(true)
-
-  //   this.latitudeTarget.value = place.geometry.location.lat()
-  //   this.longitudeTarget.value = place.geometry.location.lng()
-  //   this.fieldTarget.value = place.name
-  //   for (let component of place.address_components) {
-  //     if (component.types[0] == "postal_code") {
-  //       this.zipcodeTarget.value = component.long_name;
-  //     }
-  //     if (component.types[0] == "locality") {
-  //       this.cityTarget.value = component.long_name;
-  //     }
-  //     if (component.types[0] == "country") {
-  //       this.countryTarget.value = component.long_name;
-  //     }
-  //   }
-  // }
-
-  // keydown(event) {
-  //   if (event.key == "Enter") {
-  //     event.preventDefault()
-  //   }
-  // }
 }

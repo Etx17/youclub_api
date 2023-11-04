@@ -10,7 +10,9 @@
       <div class="modal-body">
         <!-- Map container -->
         <div data-controller="places">
-          <% if true # add the auth condition later.%>
+          <p>Vous devez être connectés pour pouvoir choisir une location depuis la carte.</p>
+          <p>Connectez-vous ou entrez un code postal</p>
+          <% if false # add the auth condition later.%>
           <div class="row">
             <div data-places-target="map" style="height: 400px; width: 100%;" class="rounded-lg"></div>
           </div>

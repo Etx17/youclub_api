@@ -2,6 +2,6 @@
   <%= select_tag :category,
     options_for_select(['Sports, activités de plein air','Culture, pratiques d’activités artistiques, culturelles'],
     selected: session[:category]),
-    class: 'form-select w-100 overflow-hidden',
+    class: 'form-select w-100 overflow-hidden bg-light',
     onchange: 'this.form.submit()' %>
 <% end %>
