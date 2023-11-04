@@ -1,37 +1,27 @@
-<div class=" px-3 d-flex justify-content-between align-items-center" style="height: 60px">
+<div class=" px-3 d-flex justify-content-around align-items-center" style="height: 60px">
   <%= link_to "#", class: "navbar-brand" do %>
-    <span class="bangers-font">Youclub.</span>
+    <span class="bangers-font d-none d-sm-inline">Youclub.</span>
+    <span class="bangers-font d-inline d-sm-none">YCLB.</span>
   <% end %>
 
   <% if controller_name == 'pages' %>
     <p class="text-secondary"><span class="text-success"><%= 200 - Lead.count %></span> places restantes</p>
   <% end %>
-  <!--<div class="dropdown">
-    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-      <%= controller_name.humanize %>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <% if controller_name != 'activities' %>
-        <%= link_to 'Activités', activities_path, class: 'dropdown-item' %>
-      <% end %>
-      <% if controller_name != 'clubs' %>
-        <%= link_to 'Clubs', clubs_path, class: 'dropdown-item' %>
-      <% end %>
-    </ul>
-  </div> -->
 
   <% if controller_name != 'pages' %>
-  <%= form_tag update_zipcode_path, method: :get, class:"d-flex border justify-content-center gap-2", style: "max-width: 40%;" do %>
-      <%= text_field_tag :zipcode, session[:zipcode] || nil, style: "width: 50%" %>
-      <%= submit_tag "Ok", class: "btn gradient-button shadow-sm w-50" %>
+    <%= form_tag update_zipcode_path, method: :get, class: "d-flex justify-content-center gap-2", style: "max-width: 40%;" do %>
+        <%= text_field_tag :zipcode, session[:zipcode] || nil, class: "", style: "border-width: 1.5px; width: 50%; border-radius: 6px; text-align: center; min-width: 50px;" %>
+        <%= button_tag(type: 'submit', class: "btn btn-dark border w-50", style: "width: 50%; border: 0px; border-radius: 6px;") do %>
+          <i class="fa fa-search"></i>
+        <% end %>
     <% end %>
 
   <div class="d-flex align-items-center">
     <%= link_to '#', data: { bs_toggle: "modal", bs_target: "#locationModal" } do %>
-      <i class="fas fa-map-marker mx-3 text-secondary"></i>
+      <i class="fas fa-map-marker mx-3 text-dark"></i>
     <% end %>
     <%= link_to '#', class: "ml-2" do %>
-      <i class="fas fa-bars text-secondary"></i>
+      <i class="fas fa-bars text-dark"></i>
     <% end %>
   </div>
   <% end %>
