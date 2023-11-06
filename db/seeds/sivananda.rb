@@ -26,12 +26,6 @@ sivananda = Club.create(
   is_premium: true
 )
 
-sivananda.photos.attach(
-  io: File.open(Rails.root.join('app', 'assets', 'images', 'yoga.jpeg')),
-  filename: 'yoga.jpeg',
-  content_type: 'image/jpg'
-)
-
 photo_files = [
   Rails.root.join('app', 'assets', 'images', 'yoga.webp'),
 ]
