@@ -17,4 +17,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'pages/legal'
   resources :leads, only: [:create]
+
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+    sessions: 'users/sessions',
+    omniauth_callbacks: 'users/omniauth_callbacks'
+   }
 end
