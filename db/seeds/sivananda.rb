@@ -33,14 +33,13 @@ sivananda.photos.attach(
 )
 
 photo_files = [
-  Rails.root.join('app', 'assets', 'images', 'yoga.jpeg'),
-  Rails.root.join('app', 'assets', 'images', 'yoga.jpeg'),
+  Rails.root.join('app', 'assets', 'images', 'yoga.webp'),
 ]
 photo_files.each do |photo_path|
   sivananda.photos.attach(
     io: File.open(photo_path),
     filename: File.basename(photo_path),
-    content_type: 'image/jpeg'
+    content_type: 'image/webp'
   )
 end
 

@@ -1,9 +1,10 @@
 
 
-<div class="card-container d-flex flex-grow-1 my-3 shadow"
-    style="max-width: 600px; border-radius: 10px; background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 60%), url('
-    <%= club.photos.present? ? cl_image_path club.photos.first.key : 'https://source.unsplash.com/random/?horse/300/200' %>
-  '); background-size: fit; background-position: center;">
+<% if club.photos.present? %>
+  <div class="card-container d-flex flex-grow-1 my-3 shadow" style="max-width: 600px; border-radius: 10px; background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 60%), url('<%= cl_image_path club.photos&.first.key, width: 'auto', crop: 'scale', responsive: true, quality: 'auto', fetch_format: 'auto' %>') ;background-size: cover; background-position: center;">
+<% else %>
+  <div class="card-container d-flex flex-grow-1 my-3 shadow" style="max-width: 600px; border-radius: 10px; background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 60%), url('https://source.unsplash.com/random/?horse/300/200'); background-size: cover; background-position: center;">
+<% end %>
   <div class="d-flex shadow flex-column justify-content-between p-2  w-100" style="border-radius: 10px; height: 80vh;">
     <p></p>
     <div class="d-flex flex-column px-2" style="color: #AAAAAA; border-radius: 10px;">
