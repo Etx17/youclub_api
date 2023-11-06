@@ -84,7 +84,4 @@ class ClubsController < ApplicationController
     end
   end
 
-  def club_params
-    params.require(:club).permit(:title, :body, photos: [])
-
 end
