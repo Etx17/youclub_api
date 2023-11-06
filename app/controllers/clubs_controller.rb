@@ -83,4 +83,8 @@ class ClubsController < ApplicationController
       session[:subcategory] ||= 'Tous'
     end
   end
+
+  def club_params
+    params.require(:club).permit(:title, :body, photos: [])
+
 end

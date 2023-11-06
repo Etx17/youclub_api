@@ -26,6 +26,12 @@ sivananda = Club.create(
   is_premium: true
 )
 
+club.photos.attach(
+  io: File.open(Rails.root.join('app', 'assets', 'images', 'sivananda', 'yoga.jpeg')),
+  filename: 'yoga.jpeg',
+  content_type: 'image/jpg'
+)
+
 yoga = Activity.create(
   name: "Yoga",
   category: "Sports, activités de plein air",

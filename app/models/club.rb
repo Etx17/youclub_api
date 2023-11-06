@@ -1,7 +1,4 @@
-# == Schema Information
-#
 # Table name: clubs
-#
 #  id                 :bigint           not null, primary key
 #  name               :string
 #  rna_number         :string
@@ -27,7 +24,7 @@
 class Club < ApplicationRecord
   belongs_to :user
   has_many :activities, dependent: :destroy
-
+  has_many_attached :photos
   enum structure_type: {
     association: 0,
     club: 1,
