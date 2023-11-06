@@ -1,61 +1,71 @@
-<div class="d-flex justify-content-center border flex-column align-items-center text-center bg-white">
-
-  <h1 class="gradient-title mt-2">Trouvez votre activité</h1>
-
-  <h3 class="text-secondary">Obtenez un accès en avant-première </h3>
-
-<%= simple_form_for(Lead.new) do |f| %>
-  <div class="input-group m-3">
-    <%= f.input :email,
-      label: false,
-      placeholder: "Votre adresse email",
-      class: 'form-control shadow',
-      input_html: {style:"font-size: 1.2em; padding: 0.60em; border-top-left-radius: 40px; border-bottom-left-radius: 40px;"}
-      %>
-    <div class="input-group-append">
-      <%= f.button :submit, 'Envoyer', class: 'btn btn-dark shadow large-button gradient-button' %>
-    </div>
-  </div>
+<% if current_user %>
+  <h2><%= current_user.email %></h2>
+  <%= image_tag(current_user.avatar_url) if current_user.avatar_url.present? %>
+  <%= link_to "Edit accoud", edit_user_registration_path %>
+  <%= button_to "Logout", destroy_user_session_path, data: {turbo: "false"}, method: :delete %>
+<% else %>
+  <%= link_to "Login", new_user_session_path %>
+  <%= link_to "Create account", new_user_registration_path %>
 <% end %>
+  <div class="d-flex justify-content-center border flex-column align-items-center text-center bg-white">
 
-<%# Importer l'image section1 dans app/assets/images %>
-<%= image_tag(
-  "section1.png",
-  alt: "section1",
-  class: "img-fluid",
-  style: "max-width: 100%; height: auto;",
-  loading: "lazy"
-) %>
+    <h1 class="gradient-title mt-2">Trouvez votre activité</h1>
 
-<h1 class="gradient-title mt-5">Un Annuaire Dynamique</h1>
-<h3 class='text-secondary w-50 text-center mb-5'>Parcourez la liste des clubs et des activités autour de vous</h3>
-<%= image_tag(
-  "multi.png",
-  alt: "multi",
-  class: "img-fluid",
-  style: "max-width: 50%; height: auto;",
-  loading: "lazy"
-) %>
+    <h3 class="text-secondary">Obtenez un accès en avant-première </h3>
+
+  <%= simple_form_for(Lead.new) do |f| %>
+    <div class="input-group m-3">
+      <%= f.input :email,
+        label: false,
+        placeholder: "Votre adresse email",
+        class: 'form-control shadow',
+        input_html: {style:"font-size: 1.2em; padding: 0.60em; border-top-left-radius: 40px; border-bottom-left-radius: 40px;"}
+        %>
+      <div class="input-group-append">
+        <%= f.button :submit, 'Envoyer', class: 'btn btn-dark shadow large-button gradient-button' %>
+      </div>
+    </div>
+  <% end %>
 
 
-<h1 class="gradient-title mt-5">Allez à l’essentiel</h1>
-<h3 class='text-secondary w-50 text-center mb-5'>Le prix, les horaires et la distance en premier.</h3>
-<%= image_tag(
-  "horaires.png",
-  alt: "horaires",
-  class: "img-fluid",
-  style: "max-width: 50%; height: auto;"
-) %>
+  <%# Importer l'image section1 dans app/assets/images %>
+  <%= image_tag(
+    "section1.png",
+    alt: "section1",
+    class: "img-fluid",
+    style: "max-width: 100%; height: auto;",
+    loading: "lazy"
+  ) %>
 
-<h1 class="gradient-title mt-5">Soyez curieux(ses)</h1>
-<h3 class='text-secondary w-50 text-center mb-5'>Et si vous essayiez gratuitement la salsa ou le judo en bas de chez vous ?</h3>
-<%= image_tag(
-  "activities_salsa.png",
-  alt: "activities_salsa",
-  class: "img-fluid",
-  style: "max-width: 50%; height: auto;",
-  loading: "lazy"
-) %>
+  <h1 class="gradient-title mt-5">Un Annuaire Dynamique</h1>
+  <h3 class='text-secondary w-50 text-center mb-5'>Parcourez la liste des clubs et des activités autour de vous</h3>
+  <%= image_tag(
+    "multi.png",
+    alt: "multi",
+    class: "img-fluid",
+    style: "max-width: 50%; height: auto;",
+    loading: "lazy"
+  ) %>
 
-<%# Part en Z %>
-</div>
+
+  <h1 class="gradient-title mt-5">Allez à l’essentiel</h1>
+  <h3 class='text-secondary w-50 text-center mb-5'>Le prix, les horaires et la distance en premier.</h3>
+  <%= image_tag(
+    "horaires.png",
+    alt: "horaires",
+    class: "img-fluid",
+    style: "max-width: 50%; height: auto;"
+  ) %>
+
+  <h1 class="gradient-title mt-5">Soyez curieux(ses)</h1>
+  <h3 class='text-secondary w-50 text-center mb-5'>Et si vous essayiez gratuitement la salsa ou le judo en bas de chez vous ?</h3>
+  <%= image_tag(
+    "activities_salsa.png",
+    alt: "activities_salsa",
+    class: "img-fluid",
+    style: "max-width: 50%; height: auto;",
+    loading: "lazy"
+  ) %>
+
+  <%# Part en Z %>
+  </div>

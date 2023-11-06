@@ -22,7 +22,7 @@ class User < ApplicationRecord
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email # assuming the user model has an email
-      # user.avatar_url = auth.info.image # assuming the user model has an image
+      user.avatar_url = auth.info.image # assuming the user model has an image
       user.password = Devise.friendly_token[0, 20] # assuming the user model has a password
       # user.skip_confirmation!
     end
