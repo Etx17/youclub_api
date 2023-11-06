@@ -26,11 +26,23 @@ sivananda = Club.create(
   is_premium: true
 )
 
-club.photos.attach(
-  io: File.open(Rails.root.join('app', 'assets', 'images', 'sivananda', 'yoga.jpeg')),
+sivananda.photos.attach(
+  io: File.open(Rails.root.join('app', 'assets', 'images', 'yoga.jpeg')),
   filename: 'yoga.jpeg',
   content_type: 'image/jpg'
 )
+
+photo_files = [
+  Rails.root.join('app', 'assets', 'images', 'yoga.jpeg'),
+  Rails.root.join('app', 'assets', 'images', 'yoga.jpeg'),
+]
+photo_files.each do |photo_path|
+  sivananda.photos.attach(
+    io: File.open(photo_path),
+    filename: File.basename(photo_path),
+    content_type: 'image/jpeg'
+  )
+end
 
 yoga = Activity.create(
   name: "Yoga",
