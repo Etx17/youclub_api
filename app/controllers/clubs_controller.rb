@@ -52,7 +52,7 @@ class ClubsController < ApplicationController
       p 'session[:zipcode] is nil so we do request user location zipcode'
       if request.location && !request.location.data['bogon']
         session[:zipcode] = request.location.postal_code
-
+        session[:zipcode] == '75000' ? session[:zipcode] = '75018' : session[:zipcode]
       else
         p 'so we use or 75018'
         session[:zipcode] = '75018'
@@ -83,4 +83,5 @@ class ClubsController < ApplicationController
       session[:subcategory] ||= 'Tous'
     end
   end
+
 end

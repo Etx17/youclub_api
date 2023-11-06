@@ -26,6 +26,17 @@ sivananda = Club.create(
   is_premium: true
 )
 
+photo_files = [
+  Rails.root.join('app', 'assets', 'images', 'yoga.webp'),
+]
+photo_files.each do |photo_path|
+  sivananda.photos.attach(
+    io: File.open(photo_path),
+    filename: File.basename(photo_path),
+    content_type: 'image/webp'
+  )
+end
+
 yoga = Activity.create(
   name: "Yoga",
   category: "Sports, activités de plein air",

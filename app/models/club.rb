@@ -1,7 +1,4 @@
-# == Schema Information
-#
 # Table name: clubs
-#
 #  id                 :bigint           not null, primary key
 #  name               :string
 #  rna_number         :string
@@ -27,7 +24,7 @@
 class Club < ApplicationRecord
   belongs_to :user
   has_many :activities, dependent: :destroy
-
+  has_many_attached :photos
   enum structure_type: {
     association: 0,
     club: 1,
@@ -62,5 +59,74 @@ class Club < ApplicationRecord
     end
 
     haversine(club_latitude, club_longitude, latitude, longitude)
+  end
+
+  def category_images
+    {
+      "Sports, activités de plein air": {
+          "Non categorisé": ["olympics", "sport", "exercise"],
+          "Badminton (badminton, squash, pelote basque)": ["shuttlecock", "badminton"],
+          "Sports mécaniques (sport automobile, moto, trial)": ["driving", "car", "circuit"],
+          "Football (football, futsal)": ["soccer", "football", "futsal", "balloon"],
+          "Gymnastique (gymnastique, gymnastique d’entretien, éducation physique, yoga), aérobic": ["gymnastics", "fitness", "yoga"],
+          "Autres arts martiaux (karaté, aïkido, taekwondo)": ["judo", "karate", "taekwondo"],
+          "Equitation (équitation, hippisme, course camarguaise, landaise)": ["horse", "riding", "equestrian"],
+          "Associations multisports locales": ["sports", "community", "club"],
+          "Sports de combat (boxe, kick box, boxe thaï, lutte)": ["boxing", "kickboxing", "wrestling"],
+          "Cyclisme (cyclisme, vélo, VTT, y c course d’orientation à vélo, cyclotourisme)": ["cycling", "biking", "mountain"],
+          "Marche sportive (randonnée pédestre, raid, trekking, course orientation)": ["hiking", "trekking", "trail"],
+          "Boules (pétanque, boules)": ["boules", "petanque", "bocce"],
+          "Associations pour la promotion du sport, médailles, mérite sportif": ["Podium", "Champion", "winner"],
+          "Activités de plein air (dont saut à l’élastique)": ["outdoor", "adventure", "extreme"],
+          "Tir (tir à l’arc, tir à balle, ball trap), javelot": ["archery", "shooting", "javelin"],
+          "Associations multisports scolaires ou universitaires": ["school", "college", "university"],
+          "Rugby (rugby à 13, à 15)": ["rugby", "football", "melee"],
+          "Danse sportive (danse sportive, hip hop, claquettes)": ["dancing", "hip hop", "tap"],
+          "Tennis (tennis, longue paume)": ["tennis", "racquet", "court"],
+          "Athlétisme (triathlon, pentathlon, footing, jogging)": ["athletics", "jump", "footing"],
+          "Gestion d'équipements sportifs, organisation de rencontres sportives, organisation de championnats, clubs de supporters": ["stadium", "management", "supporters"],
+          "Basket-ball": ["basketball", "hoops", "court"],
+          "Nautisme, glisse sur eau (ski nautique, surf, char à voile)": ["sailing", "water", "surfing"],
+          "Voile (voile, dériveur, planche à voile)": ["sailing", "sailboat", "windsurfing"],
+          "Natation - baignade (natation, plongée)": ["swimming", "diving", "pool"],
+          "Judo": ["judo", "martial", "defense"],
+          "Sports de neige (ski alpin, ski de fond, snowboard), montagne": ["skiing", "snowboarding", "mountains"],
+          "Handball": ["handball", "team", "indoor"],
+          "Handisport": ["disability", "wheelchair", "inclusivity"],
+          "Roller, skate": ["skateboard", "rollerblade", "derby"],
+          "Tennis de table (tennis de table, ping-pong)": ["tennis", "ping", "paddle"],
+          "Golf": ["golf", "putting", "driving range"],
+          "Associations multisports d'entreprise": ["corporate", "sports", "company"],
+          "Volley ball (volley, beach volley)": ["volleyball", "beach volleyball", "spike"],
+          "Autres sports collectifs (baseball, hockey sur glace, football américain)": ["team", "baseball", "hockey"],
+          "Escalade, montagne (escalade, spéléologie, via ferrata, canyonisme, alpinisme)": ["climbing", "mountain", "canyon"],
+          "Sports aériens (avion, planeur, ULM, parachutisme)": ["parachute", "boeing", "aircraft"],
+          "Musculation (culturisme, musculation)": ["bodybuilding", "weightlifting", "fitness"],
+          "Aviron, canoë kayak (aviron, rafting, canoë kayak, joutes)": ["rowing", "canoeing", "rafting"],
+          "Escrime": ["fencing", "sword", "foil"],
+          "Hockey sur glace, sports de glace": ["hockey", "skating", "ice"],
+          "Haltérophilie": ["weightlifting", "powerlifting", "strength"],
+          "Non catégorisé": ["nature", "sport", "fun"]
+      },
+      "Culture, pratiques d’activités artistiques, culturelles": {
+          "Chant choral, musique": ["choir", "music", "performance"],
+          "Promotion de l’art et des artistes": ["promotion", "art", "artist"],
+          "Théâtre, marionnettes, cirque, spectacles de variété": ["theater", "puppetry", "circus"],
+          "Danse": ["dance", "salsa", "ballet"],
+          "Loisirs scientifiques et techniques": ["science", "technology", "hobby"],
+          "Artisanat, travaux manuels, bricolage, expositions": ["crafts", "handiwork", "exhibitions"],
+          "Photographie, cinéma (dont ciné-clubs)": ["photography", "cinema", "film clubs"],
+          "Expression écrite, littérature, poésie": ["literature", "writing", "poetry"],
+          "Arts graphiques, bande dessinée, peinture, sculpture, architecture": ["art", "graphics", "sculpture"],
+          "Folklore": ["folklore", "tradition", "heritage"],
+          "Langues, dialectes, patois": ["language", "dialects", "vernacular"],
+          "Bibliothèques, ludothèques, discothèques, vidéothèques": ["library", "games", "media"],
+          "Arts de la rue": ["artist", "juggler", "performance"]
+      }
+    }
+  end
+
+  def default_image_keyword
+    category_images[self.category.to_sym][self.subcategory.to_sym].sample
   end
 end
