@@ -29,10 +29,8 @@ class ClubsController < ApplicationController
   def update
     @club = Club.find(params[:id])
     if @club.update(club_params)
-      # Redirect with success message
       redirect_to edit_club_path(@club), notice: 'Club was successfully updated.'
     else
-      # Re-render the form with error messages
       render :edit
     end
   end
