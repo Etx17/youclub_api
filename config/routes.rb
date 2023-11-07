@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     collection do
       post :index
     end
+    member do
+      delete :remove_image
+    end
   end
 
   get 'leads/create'

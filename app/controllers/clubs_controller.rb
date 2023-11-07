@@ -19,6 +19,22 @@ class ClubsController < ApplicationController
 
   def show
     @club = Club.find(params[:id])
+    @reviews = fetch_google_reviews(@club.google_place_id) if @club.google_place_id.present?
+  end
+
+  def edit
+    @club = Club.find(params[:id])
+  end
+
+  def update
+    @club = Club.find(params[:id])
+    if @club.update(club_params)
+      # Redirect with success message
+      redirect_to edit_club_path(@club), notice: 'Club was successfully updated.'
+    else
+      # Re-render the form with error messages
+      render :edit
+    end
   end
 
   def update_category
@@ -84,4 +100,31 @@ class ClubsController < ApplicationController
     end
   end
 
+  def remove_image
+    @club = Club.find(params[:id])
+    if @club.photos.attached?
+      @club.photos.first.purge
+      redirect_to edit_club_path(@club), notice: 'Image was successfully removed.'
+    else
+      redirect_to edit_club_path(@club), alert: 'No image to remove.'
+    end
+  end
+
+  def fetch_google_reviews(place_id)
+    # Construct the API URL
+    url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=#{place_id}&fields=name,rating,reviews&key=#{ENV['GOOGLE_API_KEY']}"
+
+    # Make the HTTP request and parse the response
+    response = HTTParty.get(url)
+    return JSON.parse(response.body) if response.success?
+  end
+
+  def club_params
+    params.require(:club).permit(
+      :name, :rna_number, :geo_point, :category, :address, :actual_zipcode,
+      :subcategory, :nearbyStation, :website, :objet, :category_number,
+      :subcategory_number, :structure_type, :phone_number, :adherence_fee,
+      :is_premium, :photos # Permit the images array
+    )
+  end
 end

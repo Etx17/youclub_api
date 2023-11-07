@@ -1,0 +1,32 @@
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <%= simple_form_for(@club, method: :put) do |f| %>
+      <small class="text-secondary">En progression, les champs d'adresse seront bientôt modifiables</p>
+      <%= f.input :name %>
+      <%= f.input :website %>
+      <%= f.input :objet, as: :text %>
+      <%= f.input :structure_type, collection: Club.structure_types.keys, include_blank: false %>
+      <%= f.input :phone_number %>
+      <%= f.input :adherence_fee %>
+
+      <!-- For images, you might want to handle them separately, especially if it's an array of images -->
+      <% if @club.photos.attached? %>
+        <div class="form-group">
+          <label>Current Image</label>
+          <%= image_tag(cl_image_path(@club.photos.first.key), class: "card", style: "height: 300px; width: 200px; border-radius: 10px; background-size: cover; background-position: center;") %>
+          <%= button_to 'Delete Image', remove_image_club_path(@club), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        </div>
+      <% else %>
+        <%= f.input :photos, as: :file, multiple: false %>
+      <% end %>
+
+
+      <%= f.button :submit, "Update Club", class: "btn btn-primary" %>
+    <% end %>
+
+    <h1>Modifier les activités du club</h1>
+    <% @club.activities.each do |activity| %>
+      <%= link_to edit_activity_path(activity) %>
+    <% end %>
+  </div>
+</div>
