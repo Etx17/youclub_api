@@ -1,7 +1,7 @@
 <div class=" px-3 d-flex justify-content-around align-items-center" style="height: 60px">
 
   <%# Logo %>
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to clubs_path, class: "navbar-brand" do %>
     <span class="bangers-font d-none d-sm-inline">Youclub.</span>
     <span class="bangers-font d-inline d-sm-none">YCLB.</span>
   <% end %>
@@ -39,9 +39,9 @@
             <li class="d-flex justify-content-center">
               <%= link_to "Modifier mon compte", edit_user_registration_path, class: 'dropdown-item' %>
             </li>
-            <% if user.club? %>
+            <% if current_user && current_user.club? %>
             <li class="d-flex justify-content-center">
-              <%= link_to "Tableau de bord", user_path, class: 'dropdown-item' %>
+              <%= link_to "Tableau de bord", pages_dashboard_path, class: 'dropdown-item' %>
             </li>
             <% end %>
             <li>

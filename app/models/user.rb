@@ -14,7 +14,7 @@
 #  role                   :integer          default("user")
 #
 class User < ApplicationRecord
-  has_one :club
+  has_many :clubs
   devise :database_authenticatable, :registerable,
           :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
   enum role: { user: 0, club: 1, admin: 2 }

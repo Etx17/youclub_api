@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post "/graphql", to: "graphql#execute"
   root to: 'pages#home'
   get 'pages/legal'
+  get 'pages/dashboard'
   resources :leads, only: [:create]
 
   devise_for :users, controllers: {

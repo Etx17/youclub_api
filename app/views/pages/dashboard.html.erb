@@ -1,6 +1,27 @@
-<h1>WElcome on your dashboard</h1>
-<% @user.clubs.each do |club| %>
-  <%# Div verticale de display des clubs en mode carte %>
-  
-  <%= club.name %>
-<% end %>
+<div class="row justify-content-center">
+  <div class="col-sm-8 border m-3 d-flex flex-column">
+    <%# Titre %>
+    <h1 class='align-self-center'>Tableau de bord</h1>
+
+    <%# Section premium %>
+    <h3>Passer premium</h3>
+    <p>Cette fonctionalité est bientôt disponible</p>
+
+    <%# Clubs list %>
+    <h3>Vos clubs</h3>
+    <% if @user.clubs.any? %>
+      <% @user.clubs.each do |club| %>
+        <%# Div verticale de display des clubs en mode carte %>
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">
+                <%= club.name %>
+            </h5>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <p>Votre club n'apparait pas ? merci de contacter le support à youclubdev@gmail.com</p>
+    <% end %>
+  </div>
+</div>
