@@ -1,0 +1,6 @@
+<h1>WElcome on your dashboard</h1>
+<% @user.clubs.each do |club| %>
+  <%# Div verticale de display des clubs en mode carte %>
+  
+  <%= club.name %>
+<% end %>

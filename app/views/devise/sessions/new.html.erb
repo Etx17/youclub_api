@@ -1,20 +1,33 @@
-<h2>Log in</h2>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4 d-flex flex-column m-3 p-3 shadow ">
+    <h2>Connexion</h2>
+      <%- if devise_mapping.omniauthable? %>
+        <%- resource_class.omniauth_providers.each do |provider| %>
+          <%= form_for "Login", url: omniauth_authorize_path(resource_name, provider), method: :post, data: { turbo: false } do |f| %>
+            <%= f.submit "Login", type: "image", src: url_for("/assets/web_light_rd_ctn@1x.png") %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" } %>
+        <%= f.input :password,
+                    required: false,
+                    label: "Mot de passe",
+                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :remember_me, as: :boolean, label: "Se souvenir de moi" if devise_mapping.rememberable? %>
+      </div>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      <div class="form-actions d-flex flex-column justify-content-center my-3">
+        <%= f.button :submit, "Me connecter", class: 'btn btn-dark text-light align-self-center' %>
+      </div>
+    <% end %>
+    <%= render "devise/shared/links" %>
+
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <div class="col-sm-4"></div>
+</div>
