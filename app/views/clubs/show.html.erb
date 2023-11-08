@@ -63,8 +63,14 @@
               <small class="text-secondary">Nous joindre</small>
               <div class="text-secondary" style="font-size: 1em"><%= @club.phone_number %></div>
             </div>
-           <% end %>
+          <% end %>
 
+          <% if @club.user.nil? && current_user.present? %>
+            <div class="d-flex flex-column align-items-center bg-light-white ">
+              <small class="text-secondary">C'est votre club ?</small>
+              <div class="text-secondary" style="font-size: 1em"><%= link_to "Récupérer votre profil", new_claims_path(club_id: @club.id)%></div>
+            </div>
+          <% end %>
         </div>
       </div>
 

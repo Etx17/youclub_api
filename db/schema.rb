@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_08_104056) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_08_110859) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -65,6 +65,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_08_104056) do
     t.index ["club_id"], name: "index_activities_on_club_id"
   end
 
+  create_table "claims", force: :cascade do |t|
+    t.string "full_name"
+    t.string "contact_email"
+    t.string "phone_number"
+    t.bigint "user_id", null: false
+    t.bigint "club_id", null: false
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["club_id"], name: "index_claims_on_club_id"
+    t.index ["user_id"], name: "index_claims_on_user_id"
+  end
+
   create_table "clubs", force: :cascade do |t|
     t.string "name"
     t.string "rna_number"
@@ -76,7 +89,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_08_104056) do
     t.string "nearbyStation"
     t.string "website"
     t.text "objet"
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "images", default: [], array: true
@@ -161,6 +174,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_08_104056) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "activities", "clubs"
+  add_foreign_key "claims", "clubs"
+  add_foreign_key "claims", "users"
   add_foreign_key "clubs", "users"
   add_foreign_key "schedules", "sub_groups"
   add_foreign_key "schedules", "time_slots"

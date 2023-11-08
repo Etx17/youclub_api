@@ -22,7 +22,8 @@
 #  is_premium         :boolean          default(FALSE)
 #
 class Club < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
+  has_one :claim, dependent: :destroy
   has_many :activities, dependent: :destroy
   has_many_attached :photos
   enum structure_type: {

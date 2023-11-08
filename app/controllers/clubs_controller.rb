@@ -19,7 +19,6 @@ class ClubsController < ApplicationController
 
   def show
     @club = Club.find(params[:id])
-    @reviews = fetch_google_reviews(@club.google_place_id) if @club.google_place_id.present?
   end
 
   def edit
@@ -57,6 +56,7 @@ class ClubsController < ApplicationController
       redirect_to clubs_path
     end
   end
+
 
   private
 

@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get 'update_category', to: 'clubs#update_category'
   get 'update_subcategory', to: 'clubs#update_subcategory'
   resources :activities
+  resource :claims
   resources :clubs do
+    resources :claims, only: [:new, :create]
     collection do
       post :index
     end
