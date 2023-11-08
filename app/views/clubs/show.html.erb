@@ -68,7 +68,7 @@
           <% if @club.user.nil? && current_user.present? %>
             <div class="d-flex flex-column align-items-center bg-light-white ">
               <small class="text-secondary">C'est votre club ?</small>
-              <div class="text-secondary" style="font-size: 1em"><%= link_to "Récupérer votre profil", new_claims_path(club_id: @club.id)%></div>
+              <div class="text-secondary" style="font-size: 1em"><%= link_to "Récupérer votre profil", new_claims_path(club_id: @club.id, name: @club.name)%></div>
             </div>
           <% end %>
         </div>
