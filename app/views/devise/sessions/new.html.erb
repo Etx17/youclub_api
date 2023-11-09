@@ -2,7 +2,7 @@
   <div class="col-sm-4"></div>
   <div class="col-sm-4 d-flex flex-column m-3 p-3 shadow ">
     <h2>Connexion</h2>
-      <%- if devise_mapping.omniauthable? %>
+      <%- if devise_mapping.omniauthable? && Rails.env.development?%>
         <%- resource_class.omniauth_providers.each do |provider| %>
           <%= form_for "Login", url: omniauth_authorize_path(resource_name, provider), method: :post, data: { turbo: false } do |f| %>
             <%= f.submit "Login", type: "image", src: url_for("/assets/web_light_rd_ctn@1x.png") %>

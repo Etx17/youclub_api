@@ -18,7 +18,7 @@ class User < ApplicationRecord
   has_many :notifications, as: :recipient, dependent: :destroy
   devise :database_authenticatable, :registerable,
           :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
-  enum role: { user: 0, club: 1, admin: 2 }
+  enum role: { user: 0, club: 1}
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
