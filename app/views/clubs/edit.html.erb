@@ -1,19 +1,21 @@
 <div class="row justify-content-center">
   <div class="col-md-6 p-3">
     <!-- For images, you might want to handle them separately, especially if it's an array of images -->
-      <% if @club.photos.attached? %>
-            <label>Current Image</label>
-         <div class="form-group position-relative">
-            <%= image_tag(cl_image_path(@club.photos.first.key), class: "img-fluid", style: "height: 300px; width: 200px; border-radius: 10px; object-fit: cover;") %>
-            <%= button_to remove_image_club_path(@club), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-dark text-light rounded-circle position-absolute', style: "left: 0px; top: 0px" do %>
-              <i class="fas fa-times"></i>
-            <% end %>
-          </div>
-      <% else %>
-        <%= f.input :photos, as: :file, multiple: false %>
-      <% end %>
 
     <%= simple_form_for(@club, method: :put) do |f| %>
+
+      <% if @club.photos.attached? %>
+        <label>Current Image</label>
+        <div class="form-group position-relative">
+          <%= image_tag(cl_image_path(@club.photos.first.key), class: "img-fluid", style: "height: 300px; width: 200px; border-radius: 10px; object-fit: cover;") %>
+          <%= button_to remove_image_club_path(@club), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-dark text-light rounded-circle position-absolute', style: "left: 0px; top: 0px" do %>
+            <i class="fas fa-times"></i>
+          <% end %>
+        </div>
+      <% else %>
+          <%= f.input :photos, as: :file, multiple: false %>
+      <% end %>
+
       <%= f.input :name, label: "Nom" %>
       <%= f.input :website, label: "Site web" %>
       <%= f.input :objet, as: :text, label: "Description" %>
