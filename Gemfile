@@ -74,6 +74,8 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'annotate'
+  gem "letter_opener"
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -90,3 +92,5 @@ end
 gem "graphiql-rails", group: :development
 
 gem "pagy", "~> 6.1"
+
+gem "noticed", "~> 1.6"

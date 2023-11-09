@@ -1,10 +1,21 @@
-<h1>New Claim</h1>
+
+
 <div class="row d-flex justify-content-center">
 <div class="col-10 col-md-6 col-md-offset-3">
+
   <h4 class="text-secondary">Récupération du profil de: <span class="text-dark"><%= params[:name] %></span></h4>
-  <%= simple_form_for @claim do |f| %>
+  <% if @claim.errors.any? %>
+    <div id="error_explanation" class="p-3 border">
+      <ul>
+        <% @claim.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= simple_form_for(@claim) do |f| %>
     <%= f.input :full_name, required: true, label: "Prénom et NOM DE FAMILLE" %>
-    <%= f.input :contact_email, as: :email, input_html: { value: current_user.email}, required: true %>
+    <%= f.input :contact_email, as: :email, input_html: { value: current_user.email, readonly: true} %>
     <%= f.input :phone_number, as: :string, required: true, label: 'Numéro de téléphone' %>
 
     <%= f.input :verification_document, as: :file, label: "Procès verbal de la dernière assemblée générale ou extrait du KBIS" %>

@@ -7,12 +7,11 @@ class ClaimsController < ApplicationController
   end
 
   def create
-    @club = Club.find(params[:club_id])
-    @claim = @club.build_claim(claim_params.merge(user: current_user))
-
+    @club = Club.find(params[:claim][:club_id])
+    # @claim = @club.build_claim(claim_params.merge(user: current_user))
+    @claim = Claim.new(claim_params)
     if @claim.save
-      # Handle successful claim creation
-      redirect_to @club, notice: 'Claim was successfully submitted.'
+      redirect_to club_path(@club), notice: 'Réclamation soumise avec succès. Vous serez contactés prochainement par email.'
     else
       render :new
     end
@@ -21,6 +20,6 @@ class ClaimsController < ApplicationController
   private
 
   def claim_params
-    params.require(:claim).permit(:full_name, :contact_email, :phone_number, :verification_document)
+    params.require(:claim).permit(:full_name, :contact_email, :phone_number, :verification_document, :user_id, :club_id)
   end
 end
