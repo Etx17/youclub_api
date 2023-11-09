@@ -1,6 +1,6 @@
 
 
-<% if club.photos.present? %>
+<% if club.photos.any? %>
   <div class="card-container d-flex flex-grow-1 my-3 shadow" style="max-width: 600px; border-radius: 10px; background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 60%), url('<%= cl_image_path club.photos&.first.key, width: 'auto', crop: 'scale', responsive: true, quality: 'auto', fetch_format: 'auto' %>') ;background-size: cover; background-position: center;">
 <% else %>
   <div class="card-container d-flex flex-grow-1 my-3 shadow" style="max-width: 600px; border-radius: 10px; background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 60%), url('https://source.unsplash.com/random/?<%= club.default_image_keyword %>/300/200'); background-size: cover; background-position: center;">
