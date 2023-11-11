@@ -17,7 +17,7 @@ class Claim < ApplicationRecord
   end
 
   def send_notifications
-    ClaimNotification.with(claim: self).deliver_later("youclubdev@gmail.com")
+    ClaimNotification.with(claim: self).deliver_later("etiennededianous@gmail.com")
   end
 
 end
