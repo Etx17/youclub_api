@@ -2,7 +2,13 @@ Rails.application.routes.draw do
   get 'update_zipcode', to: 'clubs#update_zipcode'
   get 'update_category', to: 'clubs#update_category'
   get 'update_subcategory', to: 'clubs#update_subcategory'
-  resources :activities
+
+  resources :activities do
+    member do
+      delete :remove_image
+    end
+  end
+
   resource :claims
   resources :clubs do
     resources :claims, only: [:new, :create]

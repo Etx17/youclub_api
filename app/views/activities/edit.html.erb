@@ -3,18 +3,18 @@
     <%= simple_form_for(@activity, method: :put) do |f| %>
 
       <!-- Assuming you handle images similarly to @club -->
-      <% if @activity.images.present? %>
+      <% if @activity.photos.attached? %>
         <label>Current Image</label>
         <div class="form-group position-relative">
           <!-- Display the first image -->
           <%# You need to adjust this part based on how you store and display images %>
-          <%= image_tag(@activity.images.first, class: "img-fluid", style: "height: 300px; width: 200px; border-radius: 10px; object-fit: cover;") %>
+          <%= image_tag(cl_image_path(@activity.photos.first.key), class: "img-fluid", style: "height: 300px; width: 200px; border-radius: 10px; object-fit: cover;") %>
           <%= button_to remove_image_activity_path(@activity), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-dark text-light rounded-circle position-absolute', style: "left: 0px; top: 0px" do %>
             <i class="fas fa-times"></i>
           <% end %>
         </div>
       <% else %>
-          <%= f.input :images, as: :file, multiple: false %>
+          <%= f.input :photos, as: :file, multiple: false %>
       <% end %>
 
       <%= f.input :name, label: "Nom de l'activité" %>
