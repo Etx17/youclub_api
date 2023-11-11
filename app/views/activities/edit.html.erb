@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+  <div class="col-md-6 p-3">
+    <%= simple_form_for(@activity, method: :put) do |f| %>
+
+      <!-- Assuming you handle images similarly to @club -->
+      <% if @activity.images.present? %>
+        <label>Current Image</label>
+        <div class="form-group position-relative">
+          <!-- Display the first image -->
+          <%# You need to adjust this part based on how you store and display images %>
+          <%= image_tag(@activity.images.first, class: "img-fluid", style: "height: 300px; width: 200px; border-radius: 10px; object-fit: cover;") %>
+          <%= button_to remove_image_activity_path(@activity), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-dark text-light rounded-circle position-absolute', style: "left: 0px; top: 0px" do %>
+            <i class="fas fa-times"></i>
+          <% end %>
+        </div>
+      <% else %>
+          <%= f.input :images, as: :file, multiple: false %>
+      <% end %>
+
+      <%= f.input :name, label: "Nom de l'activité" %>
+      <%= f.input :category, label: "Catégorie" %>
+      <%= f.input :address, label: "Adresse" %>
+      <%= f.input :actual_zipcode, label: "Code Postal" %>
+      <%= f.input :free_trial, as: :boolean, label: "Essai gratuit" %>
+      <%# <%= f.input :is_looking_for_volunteer, as: :boolean, label: "Recherche des volontaires" %>
+      <%# <%= f.input :subcategories, label: "Sous-catégories" %>
+      <%# <%= f.input :recurrence, label: "Récurrence" %>
+      <%# <%= f.input :subscription_link, label: "Lien d'abonnement" %>
+      <%= f.input :short_description, as: :text, label: "Description courte" %>
+      <%= f.input :full_description, as: :text, label: "Description complète" %>
+      <%= f.input :phone_number, label: "Numéro de téléphone" %>
+
+      <div class="d-flex justify-content-center w-100">
+        <%= f.button :submit, "Enregistrer les modifications", class: "btn btn-dark mt-3 w-50" %>
+      </div>
+    <% end %>
+  </div>
+</div>
