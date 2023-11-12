@@ -20,7 +20,7 @@
             <h1 class="gradient-title " style="max-width: 74%;"><%= @activity.name %></h1>
             <% if current_user && @activity.club.user == current_user %>
               <%= link_to edit_activity_path(@activity) do %>
-                <div class="btn py-2 px-4 gradient-button d-flex align-items-center gap-2" style="border-radius: 8px">
+                <div class="btn py-2 px-4 btn-dark d-flex align-items-center gap-2" style="border-radius: 4px">
                   <i class="fas fa-edit "></i>
                   <span class=""> Modifier</span>
                 </div>
@@ -36,6 +36,11 @@
           <div class="d-flex flex-wrap gap-2 p-2 pb-3 border-bottom">
             <% @activity.sub_groups.each do |sub_group| %>
               <div class="btn bg-light-white "><span class="gradient-text text-large" ><%= sub_group.name %></span></div>
+            <% end %>
+            <% if current_user && current_user.owns?(@activity.club.id) %>
+              <%= link_to new_activity_sub_group_path(@activity), class: "btn btn-dark rounded" do %>
+                <i class="fas fa-plus"></i>Ajouter
+              <% end %>
             <% end %>
           </div>
 

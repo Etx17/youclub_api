@@ -3,11 +3,11 @@
 
   <% if current_user && current_user.owns?(@activity.club.id) %>
     <div class="d-flex justify-content-end gap-2">
-      <%= link_to edit_sub_group_path(sub_group), class: 'btn btn-dark' do %>
+     <%= link_to edit_activity_sub_group_path(@activity, sub_group), class: 'btn btn-dark' do %>
         <i class="fas fa-edit"></i>
       <% end %>
 
-      <%= link_to sub_group_path(sub_group), data: { "turbo-method": :delete, turbo_confirm: "Êtes vous sûr?" }, class: 'btn btn-dark' do %>
+      <%= link_to activity_sub_group_path(@activity, sub_group), data: { "turbo-method": :delete, turbo_confirm: "Êtes vous sûr?" }, class: 'btn btn-dark' do %>
         <i class="fas fa-times"></i>
       <% end %>
     </div>

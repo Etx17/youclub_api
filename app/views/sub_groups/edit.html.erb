@@ -1,0 +1,68 @@
+<div class="row justify-content-center">
+  <div class="col-md-6 p-3">
+    <h1>Éditer une tarification</h1>
+    <%= simple_form_for([@activity, @sub_group], html: { class: 'form-horizontal', data: { controller: "tarifications" } }) do |f| %>
+      <%= f.input :name, label: "Nom" %>
+      <%= f.input :min_price_cents, label: "Prix Minimum (cents)" %>
+      <%= f.input :max_price_cents, label: "Prix Maximum (cents)" %>
+      <%= f.input :recurrence, label: "Récurrence" %>
+      <%= f.input :class_type, label: "Type de Classe" %>
+      <%= f.input :short_description, label: "Description Courte" %>
+      <%= f.input :subscription_by_recurrence_price_cents, label: "Abonnement par Prix de Récurrence (cents)" %>
+
+      <h3>Tarifications</h3>
+      <div data-tarifications-target="container">
+        <%= f.simple_fields_for :tarifications do |tarif_form| %>
+          <div class="tarification-fields">
+            <div class="p-3 border">
+              <div class="d-flex p-3 border align-items-center justify-content-between">
+                <h5>Tarification <%= tarif_form.object.persisted? ? 'existante' : 'nouvelle' %></h5>
+                <% if tarif_form.object.persisted? %>
+                  <%= tarif_form.input :_destroy, as: :hidden, input_html: { value: tarif_form.object.marked_for_destruction? ? 1 : 0 } %>
+                  <button type="button" class="btn btn-secondary" data-action="click->tarifications#toggleDestroy">
+                    <i class="fas fa-times"></i>
+                  </button>
+                <% else %>
+                  <button type="button" class="btn btn-secondary" data-action="click->tarifications#removeTarification">
+                    <i class="fas fa-times"></i>
+                  </button>
+                <% end %>
+              </div>
+              <%= tarif_form.input :amount, label: "Montant" %>
+              <%= tarif_form.input :recurrence, label: "Récurrence" %>
+              <%= tarif_form.input :label, label: "Libellé" %>
+              <%= tarif_form.input :description, label: "Description" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <template data-tarifications-target="template">
+        <div class="tarification-fields">
+          <div class="p-3 border">
+            <div class="d-flex p-3 border align-items-center justify-content-between">
+              <h5>Nouvelle tarification</h5>
+              <button type="button" class="btn btn-secondary" data-action="click->tarifications#removeTarification">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <%= f.simple_fields_for :tarifications, Tarification.new, child_index: "NEW_RECORD" do |tarif_form| %>
+              <%= tarif_form.input :amount, label: "Montant" %>
+              <%= tarif_form.input :recurrence, label: "Récurrence" %>
+              <%= tarif_form.input :label, label: "Libellé" %>
+              <%= tarif_form.input :description, label: "Description" %>
+            <% end %>
+          </div>
+        </div>
+      </template>
+
+      <div class="d-flex flex-column gap-2">
+        <button data-action="click->tarifications#addTarification" class="btn btn-secondary w-50">
+          Ajouter une autre tarification
+        </button>
+        <%= f.button :submit, "Enregistrer", class: "btn btn-dark p-3" %>
+      </div>
+    <% end %>
+
+  </div>
+</div>

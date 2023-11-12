@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+  <div class="col-10 col-md-6 p-3">
+    <h1>Nouveau sous-groupe</h1>
+    <%= simple_form_for([@activity, @sub_group], html: { class: 'form-horizontal', data: { controller: "tarifications" } }) do |f| %>
+      <%= f.input :name, label: "Nom" %>
+      <%= f.input :min_price_cents, label: "Prix Minimum (cents)" %>
+      <%= f.input :class_type, label: "Type de Classe" %>
+      <%= f.input :short_description, label: "Description Courte" %>
+
+      <h3>Tarifications</h3>
+      <div data-tarifications-target="container">
+        <!-- Placeholder for tarification fields -->
+        <%= f.simple_fields_for :tarifications, @sub_group.tarifications.build do |tarif_form| %>
+          <%= tarif_form.input :amount, label: "Montant" %>
+          <%= tarif_form.input :recurrence, label: "Récurrence", hint: 'an, mois, jour, carnet de 10, cours, séance, etc... à vous de choisir' %>
+          <%= tarif_form.input :label, label: "Libellé", hint: "ex: Forfait bleu" %>
+          <%= tarif_form.input :description, label: "Description", hint: "ex: Carnet de 10 cours valable pendant 1 mois, non remboursable" %>
+        <% end %>
+      </div>
+
+      <template data-tarifications-target="template">
+        <div class="tarification-fields">
+          <%= f.simple_fields_for :tarifications, Tarification.new, child_index: "NEW_RECORD" do |tarif_form| %>
+            <div class="p-3 border">
+              <div class="d-flex p-3 border align-items-center justify-content-between">
+                <h5>Nouvelle tarification</h5>
+                <button data-action="click->tarifications#removeTarification" class="btn btn-secondary"><i class="fas fa-times"></i></button>
+              </div>
+              <%= tarif_form.input :amount, label: "Montant" %>
+              <%= tarif_form.input :recurrence, label: "Récurrence" %>
+              <%= tarif_form.input :label, label: "Libellé" %>
+              <%= tarif_form.input :description, label: "Description" %>
+            </div>
+          <% end %>
+
+        </div>
+      </template>
+
+
+      <div class="d-flex flex-column gap-2">
+      <button data-action="click->tarifications#addTarification" class="btn btn-secondary w-50">Ajouter une autre tarification</button>
+
+      <%= f.button :submit, "Enregistrer", class: "btn btn-dark p-3" %>
+      </div>
+    <% end %>
+  </div>
+</div>

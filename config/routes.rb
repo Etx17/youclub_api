@@ -7,9 +7,10 @@ Rails.application.routes.draw do
     member do
       delete :remove_image
     end
+    resources :sub_groups, only: [:new, :create, :edit, :update, :destroy]
   end
 
-  resources :sub_groups
+
   resources :time_slots
   resources :schedules
 
