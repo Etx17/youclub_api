@@ -58,10 +58,10 @@ a = Schedule.create(sub_group_id: child_subgroup.id, day: "mercredi", )
 b = Schedule.create(sub_group_id: child_subgroup.id, day: "mercredi", )
 c = Schedule.create(sub_group_id: child_subgroup.id, day: "mercredi", )
 
-TimeSlot.create( schedule_id: a.id, start_time: "2023-10-14T12:00:00.000Z", end_time: "2023-10-14T13:00:00.000Z")
-TimeSlot.create( schedule_id: a.id, start_time: "2023-10-14T09:00:00.000Z", end_time: "2023-10-14T10:00:00.000Z")
-TimeSlot.create( schedule_id: b.id, start_time: "2023-10-14T15:00:00.000Z", end_time: "2023-10-14T16:00:00.000Z")
-TimeSlot.create( schedule_id: c.id, start_time: "2023-10-14T08:00:00.000Z", end_time: "2023-10-14T09:00:00.000Z")
+TimeSlot.create( schedule_id: a.id, start_time: DateTime.parse("2023-10-14T12:00:00.000Z"), end_time: DateTime.parse("2023-10-14T13:00:00.000Z"))
+TimeSlot.create( schedule_id: a.id, start_time: DateTime.parse("2023-10-14T09:00:00.000Z"), end_time: DateTime.parse("2023-10-14T10:00:00.000Z"))
+TimeSlot.create( schedule_id: b.id, start_time: DateTime.parse("2023-10-14T15:00:00.000Z"), end_time: DateTime.parse("2023-10-14T16:00:00.000Z"))
+TimeSlot.create( schedule_id: c.id, start_time: DateTime.parse("2023-10-14T08:00:00.000Z"), end_time: DateTime.parse("2023-10-14T09:00:00.000Z"))
 
 
 teen_subgroup = SubGroup.create(
@@ -79,9 +79,9 @@ a = Schedule.create(sub_group_id: teen_subgroup.id, day: "mardi")
 b = Schedule.create(sub_group_id: teen_subgroup.id, day: "mercredi")
 c = Schedule.create(sub_group_id: teen_subgroup.id, day: "jeudi")
 
-TimeSlot.create( schedule_id: a.id, start_time: "2023-10-15T16:00:00.000Z", end_time: "2023-10-15T17:00:00.000Z")
-TimeSlot.create( schedule_id: b.id, start_time: "2023-10-15T16:00:00.000Z", end_time: "2023-10-15T17:00:00.000Z")
-TimeSlot.create( schedule_id: c.id, start_time: "2023-10-15T17:00:00.000Z", end_time: "2023-10-15T18:00:00.000Z")
+TimeSlot.create( schedule_id: a.id, start_time: DateTime.parse("2023-10-15T16:00:00.000Z"), end_time: DateTime.parse("2023-10-15T17:00:00.000Z"))
+TimeSlot.create( schedule_id: b.id, start_time: DateTime.parse("2023-10-15T16:00:00.000Z"), end_time: DateTime.parse("2023-10-15T17:00:00.000Z"))
+TimeSlot.create( schedule_id: c.id, start_time: DateTime.parse("2023-10-15T17:00:00.000Z"), end_time: DateTime.parse("2023-10-15T18:00:00.000Z"))
 
 
 adult_subgroup = SubGroup.create(
@@ -104,6 +104,6 @@ a = Schedule.create(sub_group_id: adult_subgroup.id, day: "mardi")
 b = Schedule.create(sub_group_id: adult_subgroup.id, day: "mercredi")
 c = Schedule.create(sub_group_id: adult_subgroup.id, day: "jeudi")
 
-TimeSlot.create( schedule_id: a.id, start_time: "2023-10-15T18:00:00.000Z", end_time: "2023-10-15T19:30:00.000Z")
-TimeSlot.create( schedule_id: b.id, start_time: "2023-10-15T18:00:00.000Z", end_time: "2023-10-15T19:30:00.000Z")
-TimeSlot.create( schedule_id: c.id, start_time: "2023-10-15T18:00:00.000Z", end_time: "2023-10-15T19:30:00.000Z")
+TimeSlot.create( schedule_id: a.id, start_time: DateTime.parse("2023-10-15T18:00:00.000Z"), end_time: DateTime.parse("2023-10-15T19:30:00.000Z"))
+TimeSlot.create( schedule_id: b.id, start_time: DateTime.parse("2023-10-15T18:00:00.000Z"), end_time: DateTime.parse("2023-10-15T19:30:00.000Z"))
+TimeSlot.create( schedule_id: c.id, start_time: DateTime.parse("2023-10-15T18:00:00.000Z"), end_time: DateTime.parse("2023-10-15T19:30:00.000Z"))

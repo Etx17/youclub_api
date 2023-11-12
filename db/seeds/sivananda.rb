@@ -93,32 +93,32 @@ f=Schedule.create(sub_group_id: intermediate_subgroup.id, day: "samedi")
 g=Schedule.create(sub_group_id: intermediate_subgroup.id, day: "dimanche")
 
 [a, b, c, d, e].each do |s|
-  TimeSlot.create(schedule_id: s.id, start_time: "2023-10-14T11:00:00.000Z", end_time: "2023-10-14T12:30:00.000Z")
-  TimeSlot.create(schedule_id: s.id, start_time: "2023-10-14T11:00:00.000Z", end_time: "2023-10-14T12:30:00.000Z")
+  TimeSlot.create(schedule_id: s.id, start_time: DateTime.parse("2023-10-14T11:00:00.000Z"), end_time: DateTime.parse("2023-10-14T12:30:00.000Z"))
+  TimeSlot.create(schedule_id: s.id, start_time: DateTime.parse("2023-10-14T11:00:00.000Z"), end_time: DateTime.parse("2023-10-14T12:30:00.000Z"))
 end
 
 [b, c, d, e].each do |s|
-  TimeSlot.create(schedule_id: s.id, start_time: "2023-10-14T12:30:00.000Z", end_time: "2023-10-14T14:00:00.000Z")
-  TimeSlot.create(schedule_id: s.id, start_time: "2023-10-14T17:00:00.000Z", end_time: "2023-10-14T18:30:00.000Z")
+  TimeSlot.create(schedule_id: s.id, start_time: DateTime.parse("2023-10-14T12:30:00.000Z"), end_time: DateTime.parse("2023-10-14T14:00:00.000Z"))
+  TimeSlot.create(schedule_id: s.id, start_time: DateTime.parse("2023-10-14T17:00:00.000Z"), end_time: DateTime.parse("2023-10-14T18:30:00.000Z"))
 end
 
-TimeSlot.create(schedule_id: f.id, start_time: "2023-10-14T11:00:00.000Z", end_time: "2023-10-14T12:30:00.000Z")
-TimeSlot.create(schedule_id: a.id, start_time: "2023-10-14T12:30:00.000Z", end_time: "2023-10-14T14:00:00.000Z")
+TimeSlot.create(schedule_id: f.id, start_time: DateTime.parse("2023-10-14T11:00:00.000Z"), end_time: DateTime.parse("2023-10-14T12:30:00.000Z"))
+TimeSlot.create(schedule_id: a.id, start_time: DateTime.parse("2023-10-14T12:30:00.000Z"), end_time: DateTime.parse("2023-10-14T14:00:00.000Z"))
 
 [a, b, c].each do |s|
-  TimeSlot.create(schedule_id: s.id, start_time: "2023-10-14T15:00:00.000Z", end_time: "2023-10-14T16:30:00.000Z")
+  TimeSlot.create(schedule_id: s.id, start_time: DateTime.parse("2023-10-14T15:00:00.000Z"), end_time: DateTime.parse("2023-10-14T16:30:00.000Z"))
 end
 
 [b, c, d, e].each do |s|
-  TimeSlot.create(schedule_id: s.id, start_time: "2023-10-14T17:00:00.000Z", end_time: "2023-10-14T18:30:00.000Z")
+  TimeSlot.create(schedule_id: s.id, start_time: DateTime.parse("2023-10-14T17:00:00.000Z"), end_time: DateTime.parse("2023-10-14T18:30:00.000Z"))
 end
-TimeSlot.create(schedule_id: f.id, start_time: "2023-10-14T16:00:00.000Z", end_time: "2023-10-14T17:30:00.000Z")
-TimeSlot.create(schedule_id: g.id, start_time: "2023-10-14T16:00:00.000Z", end_time: "2023-10-14T17:30:00.000Z")
-TimeSlot.create(schedule_id: a.id, start_time: "2023-10-14T18:30:00.000Z", end_time: "2023-10-14T20:00:00.000Z")
-TimeSlot.create(schedule_id: b.id, start_time: "2023-10-14T18:30:00.000Z", end_time: "2023-10-14T20:00:00.000Z")
-TimeSlot.create(schedule_id: c.id, start_time: "2023-10-14T18:30:00.000Z", end_time: "2023-10-14T20:00:00.000Z")
-TimeSlot.create(schedule_id: a.id, start_time: "2023-10-14T20:00:00.000Z", end_time: "2023-10-14T21:30:00.000Z")
-TimeSlot.create(schedule_id: b.id, start_time: "2023-10-14T20:00:00.000Z", end_time: "2023-10-14T21:30:00.000Z")
+TimeSlot.create(schedule_id: f.id, start_time: DateTime.parse("2023-10-14T16:00:00.000Z"), end_time: DateTime.parse("2023-10-14T17:30:00.000Z"))
+TimeSlot.create(schedule_id: g.id, start_time: DateTime.parse("2023-10-14T16:00:00.000Z"), end_time: DateTime.parse("2023-10-14T17:30:00.000Z"))
+TimeSlot.create(schedule_id: a.id, start_time: DateTime.parse("2023-10-14T18:30:00.000Z"), end_time: DateTime.parse("2023-10-14T20:00:00.000Z"))
+TimeSlot.create(schedule_id: b.id, start_time: DateTime.parse("2023-10-14T18:30:00.000Z"), end_time: DateTime.parse("2023-10-14T20:00:00.000Z"))
+TimeSlot.create(schedule_id: c.id, start_time: DateTime.parse("2023-10-14T18:30:00.000Z"), end_time: DateTime.parse("2023-10-14T20:00:00.000Z"))
+TimeSlot.create(schedule_id: a.id, start_time: DateTime.parse("2023-10-14T20:00:00.000Z"), end_time: DateTime.parse("2023-10-14T21:30:00.000Z"))
+TimeSlot.create(schedule_id: b.id, start_time: DateTime.parse("2023-10-14T20:00:00.000Z"), end_time: DateTime.parse("2023-10-14T21:30:00.000Z"))
 
 
 
@@ -141,11 +141,11 @@ d=Schedule.create(sub_group_id: very_gentle_subgroup.id, day: "jeudi")
 f=Schedule.create(sub_group_id: very_gentle_subgroup.id, day: "samedi")
 g=Schedule.create(sub_group_id: very_gentle_subgroup.id, day: "dimanche")
 
-TimeSlot.create(schedule_id: a.id, start_time: "2023-10-14T11:00:00.000Z", end_time: "2023-10-14T12:30:00.000Z")
-TimeSlot.create(schedule_id: c.id, start_time: "2023-10-14T18:30:00.000Z", end_time: "2023-10-14T20:00:00.000Z")
-TimeSlot.create(schedule_id: d.id, start_time: "2023-10-14T18:30:00.000Z", end_time: "2023-10-14T20:00:00.000Z")
-TimeSlot.create(schedule_id: f.id, start_time: "2023-10-14T16:00:00.000Z", end_time: "2023-10-14T17:30:00.000Z")
-TimeSlot.create(schedule_id: g.id, start_time: "2023-10-14T16:00:00.000Z", end_time: "2023-10-14T17:30:00.000Z")
+TimeSlot.create(schedule_id: a.id, start_time: DateTime.parse("2023-10-14T11:00:00.000Z"), end_time: DateTime.parse("2023-10-14T12:30:00.000Z"))
+TimeSlot.create(schedule_id: c.id, start_time: DateTime.parse("2023-10-14T18:30:00.000Z"), end_time: DateTime.parse("2023-10-14T20:00:00.000Z"))
+TimeSlot.create(schedule_id: d.id, start_time: DateTime.parse("2023-10-14T18:30:00.000Z"), end_time: DateTime.parse("2023-10-14T20:00:00.000Z"))
+TimeSlot.create(schedule_id: f.id, start_time: DateTime.parse("2023-10-14T16:00:00.000Z"), end_time: DateTime.parse("2023-10-14T17:30:00.000Z"))
+TimeSlot.create(schedule_id: g.id, start_time: DateTime.parse("2023-10-14T16:00:00.000Z"), end_time: DateTime.parse("2023-10-14T17:30:00.000Z"))
 
 pregnant_women_subgroup = SubGroup.create(
   activity_id: yoga.id,
@@ -158,7 +158,7 @@ pregnant_women_subgroup = SubGroup.create(
   subscription_by_recurrence_price_cents: 0,
 )
 f=Schedule.create(sub_group_id: very_gentle_subgroup.id, day: "samedi")
-TimeSlot.create(schedule_id: f.id, start_time: "2023-10-14T11:00:00.000Z", end_time: "2023-10-14T12:30:00.000Z")
+TimeSlot.create(schedule_id: f.id, start_time: DateTime.parse("2023-10-14T11:00:00.000Z"), end_time: DateTime.parse("2023-10-14T12:30:00.000Z"))
 
 [pregnant_women_subgroup, very_gentle_subgroup, intermediate_subgroup].each do |subgroup|
   Tarification.create(

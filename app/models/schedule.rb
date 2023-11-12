@@ -12,4 +12,5 @@
 class Schedule < ApplicationRecord
   belongs_to :sub_group
   has_many :time_slots, dependent: :destroy
+  accepts_nested_attributes_for :time_slots, allow_destroy: true
 end

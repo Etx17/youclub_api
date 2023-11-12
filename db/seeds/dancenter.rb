@@ -84,8 +84,8 @@ free_trial_subgroup = SubGroup.create(
 a=Schedule.create(sub_group_id: free_trial_subgroup.id, day: "lundi")
 b=Schedule.create(sub_group_id: free_trial_subgroup.id, day: "mardi")
 
-TimeSlot.create(schedule_id: a.id, start_time: "2023-10-14T19:00:00.000Z", end_time: "2023-10-14T19:30:00.000Z")
-TimeSlot.create(schedule_id: b.id, start_time: "2023-10-14T20:00:00.000Z", end_time: "2023-10-14T20:30:00.000Z")
+TimeSlot.create(schedule_id: a.id, start_time: DateTime.parse("2023-10-14T19:00:00.000Z"), end_time: DateTime.parse("2023-10-14T19:30:00.000Z"))
+TimeSlot.create(schedule_id: b.id, start_time: DateTime.parse("2023-10-14T20:00:00.000Z"), end_time: DateTime.parse("2023-10-14T20:30:00.000Z"))
 
 
 initiation_subgroup = SubGroup.create(
@@ -102,9 +102,9 @@ initiation_subgroup = SubGroup.create(
 a=Schedule.create(sub_group_id: adult_debutant_subgroup.id, day: "lundi")
 b=Schedule.create(sub_group_id: adult_debutant_subgroup.id, day: "mardi")
 f=Schedule.create(sub_group_id: adult_debutant_subgroup.id, day: "samedi")
-TimeSlot.create(schedule_id: a.id, start_time: "2023-10-14T19:30:00.000Z", end_time: "2023-10-14T20:25:00.000Z")
-TimeSlot.create(schedule_id: b.id, start_time: "2023-10-14T20:30:00.000Z", end_time: "2023-10-14T21:25:00.000Z")
-TimeSlot.create(schedule_id: f.id, start_time: "2023-10-14T15:00:00.000Z", end_time: "2023-10-14T15:55:00.000Z")
+TimeSlot.create(schedule_id: a.id, start_time: DateTime.parse("2023-10-14T19:30:00.000Z"), end_time: DateTime.parse("2023-10-14T20:25:00.000Z"))
+TimeSlot.create(schedule_id: b.id, start_time: DateTime.parse("2023-10-14T20:30:00.000Z"), end_time: DateTime.parse("2023-10-14T21:25:00.000Z"))
+TimeSlot.create(schedule_id: f.id, start_time: DateTime.parse("2023-10-14T15:00:00.000Z"), end_time: DateTime.parse("2023-10-14T15:55:00.000Z"))
 
 
 
@@ -124,9 +124,9 @@ b=Schedule.create(sub_group_id: adult_debutant_subgroup.id, day: "mardi")
 c=Schedule.create(sub_group_id: adult_debutant_subgroup.id, day: "mercredi")
 f=Schedule.create(sub_group_id: adult_debutant_subgroup.id, day: "samedi")
 
-TimeSlot.create(schedule_id: b.id, start_time: "2023-10-14T21:30:00.000Z", end_time: "2023-10-14T22:25:00.000Z")
-TimeSlot.create(schedule_id: c.id, start_time: "2023-10-14T19:30:00.000Z", end_time: "2023-10-14T20:25:00.000Z")
-TimeSlot.create(schedule_id: f.id, start_time: "2023-10-14T16:00:00.000Z", end_time: "2023-10-14T16:55:00.000Z")
+TimeSlot.create(schedule_id: b.id, start_time: DateTime.parse("2023-10-14T21:30:00.000Z"), end_time: DateTime.parse("2023-10-14T22:25:00.000Z"))
+TimeSlot.create(schedule_id: c.id, start_time: DateTime.parse("2023-10-14T19:30:00.000Z"), end_time: DateTime.parse("2023-10-14T20:25:00.000Z"))
+TimeSlot.create(schedule_id: f.id, start_time: DateTime.parse("2023-10-14T16:00:00.000Z"), end_time: DateTime.parse("2023-10-14T16:55:00.000Z"))
 
 
 intermediate = SubGroup.create(
@@ -144,9 +144,9 @@ c=Schedule.create(sub_group_id: intermediate.id, day: "mercredi")
 d=Schedule.create(sub_group_id: intermediate.id, day: "jeudi")
 f=Schedule.create(sub_group_id: adult_debutant_subgroup.id, day: "samedi")
 
-TimeSlot.create(schedule_id: c.id, start_time: "2023-10-14T21:30:00.000Z", end_time: "2023-10-14T22:25:00.000Z")
-TimeSlot.create(schedule_id: d.id, start_time: "2023-10-14T19:30:00.000Z", end_time: "2023-10-14T20:25:00.000Z")
-TimeSlot.create(schedule_id: f.id, start_time: "2023-10-14T17:00:00.000Z", end_time: "2023-10-14T17:55:00.000Z")
+TimeSlot.create(schedule_id: c.id, start_time: DateTime.parse("2023-10-14T21:30:00.000Z"), end_time: DateTime.parse("2023-10-14T22:25:00.000Z"))
+TimeSlot.create(schedule_id: d.id, start_time: DateTime.parse("2023-10-14T19:30:00.000Z"), end_time: DateTime.parse("2023-10-14T20:25:00.000Z"))
+TimeSlot.create(schedule_id: f.id, start_time: DateTime.parse("2023-10-14T17:00:00.000Z"), end_time: DateTime.parse("2023-10-14T17:55:00.000Z"))
 
 advanced = SubGroup.create(
   activity_id: salsa.id,
@@ -161,8 +161,8 @@ advanced = SubGroup.create(
 d=Schedule.create(sub_group_id: advanced.id, day: "jeudi")
 f=Schedule.create(sub_group_id: advanced.id, day: "samedi")
 
-TimeSlot.create(schedule_id: d.id, start_time: "2023-10-14T20:30:00.000Z", end_time: "2023-10-14T21:25:00.000Z")
-TimeSlot.create(schedule_id: f.id, start_time: "2023-10-14T18:00:00.000Z", end_time: "2023-10-14T18:55:00.000Z")
+TimeSlot.create(schedule_id: d.id, start_time: DateTime.parse("2023-10-14T20:30:00.000Z"), end_time: DateTime.parse("2023-10-14T21:25:00.000Z"))
+TimeSlot.create(schedule_id: f.id, start_time: DateTime.parse("2023-10-14T18:00:00.000Z"), end_time: DateTime.parse("2023-10-14T18:55:00.000Z"))
 
 soirees = SubGroup.create(
   activity_id: salsa.id,
@@ -173,4 +173,4 @@ soirees = SubGroup.create(
   tarifications: ["10/soirée", "90/carte 10 soirées"]
 )
 f=Schedule.create(sub_group_id: soirees.id, day: "samedi")
-TimeSlot.create(schedule_id: f.id, start_time: "2023-10-14T19:00:00.000Z", end_time: "2023-10-14T22:30:00.000Z")
+TimeSlot.create(schedule_id: f.id, start_time: DateTime.parse("2023-10-14T19:00:00.000Z"), end_time: DateTime.parse("2023-10-14T22:30:00.000Z"))
