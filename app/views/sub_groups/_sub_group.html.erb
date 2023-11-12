@@ -33,6 +33,17 @@
   <div class="d-flex flex-wrap gap-2 justify-content-center mb-2">
      <% sub_group.schedules.each do |sched| %>
       <div class="d-flex flex-column border p-2 " style="border-radius: 4px">
+        <% if current_user && current_user.owns?(@activity.club.id) %>
+          <div class="d-flex justify-content-between w-100">
+             <%= link_to edit_activity_sub_group_path(@activity, sub_group), class: 'btn btn-dark' do %>
+              <i class="fas fa-edit"></i>
+            <% end %>
+
+            <%= link_to activity_sub_group_schedule_path(@activity, sub_group, sched), data: { "turbo-method": :delete, turbo_confirm: "Êtes vous sûr?" }, class: 'btn' do %>
+              <i class="fas fa-times"></i>
+            <% end %>
+          </div>
+        <% end %>
         <h4><%= sched.day %></h4>
         <div class="d-flex flex-column align-items-center">
           <% sched.time_slots.each do |time_slot| %>
