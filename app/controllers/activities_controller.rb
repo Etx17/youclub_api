@@ -20,6 +20,12 @@ class ActivitiesController < ApplicationController
 
   def update
     @activity = Activity.find(params[:id])
+
+    if params[:activity][:photos].present?
+      @activity.photos.first.purge
+      @activity.photos.attach(params[:activity][:photos])
+    end
+
     if @activity.update(activity_params)
       redirect_to activity_path(@activity), notice: 'Activity was successfully updated.'
     else
