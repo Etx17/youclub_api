@@ -9,6 +9,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :sub_groups
+  resources :time_slots
+  resources :schedules
+
   resource :claims
   resources :clubs do
     resources :claims, only: [:new, :create]
