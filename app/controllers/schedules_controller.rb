@@ -18,7 +18,6 @@ class SchedulesController < ApplicationController
     @activity = Activity.find(params[:activity_id])
     @sub_group = @activity.sub_groups.find(params[:sub_group_id])
     @schedule = @sub_group.schedules.find(params[:id])
-
     if @schedule.update(schedule_params)
       # Redirect to the show page or wherever appropriate
       redirect_to activity_path(@activity), notice: 'Schedule was successfully updated.'

@@ -27,10 +27,8 @@ class SubGroupsController < ApplicationController
   def update
     @sub_group = SubGroup.find(params[:id])
     if @sub_group.update(sub_group_params)
-      # Handle success
       redirect_to activity_path(@sub_group.activity), notice: 'SubGroup updated successfully.'
     else
-      # Handle failure
       render :edit
     end
   end
