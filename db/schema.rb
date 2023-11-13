@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_12_152607) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_13_111344) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -85,7 +85,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_12_152607) do
     t.string "category"
     t.string "address"
     t.string "actual_zipcode"
-    t.string "subcategory"
+    t.string "subcategories", default: [], array: true
     t.string "nearbyStation"
     t.string "website"
     t.text "objet"
@@ -94,7 +94,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_12_152607) do
     t.datetime "updated_at", null: false
     t.string "images", default: [], array: true
     t.string "category_number"
-    t.string "subcategory_number"
+    t.string "subcategories_number", default: [], array: true
     t.integer "structure_type"
     t.string "phone_number"
     t.integer "adherence_fee"

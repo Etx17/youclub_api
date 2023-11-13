@@ -35,7 +35,7 @@ muay_thai = Activity.create(
   actual_zipcode: "75018",
   free_trial: false,
   is_looking_for_volunteer: nil,
-  subcategories: "Sports de combat (boxe, kick box, boxe thaï, lutte)",
+  subcategories: ["Sports de combat (boxe, kick box, boxe thaï, lutte)"],
   recurrence: nil,
   subscription_link: nil,
   short_description: "Le club fondé par J.B Skarbowski en personne",

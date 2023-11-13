@@ -35,7 +35,7 @@ judo_jujitsu = Activity.create(
   actual_zipcode: "75017",
   free_trial: true,
   is_looking_for_volunteer: nil,
-  subcategories: "Judo",
+  subcategories: ["Judo"],
   recurrence: nil,
   subscription_link: nil,
   short_description: "'Meilleur club d'arts martiaux de Paris' - Le Figaro",

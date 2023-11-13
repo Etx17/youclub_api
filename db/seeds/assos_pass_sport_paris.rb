@@ -56,7 +56,7 @@ limit = 100
         geo_point: result["geoloc_finale"]["lat"].to_s + ", " + result["geoloc_finale"]["lon"].to_s,
         category_number: "11000",
         category: "Sports, activités de plein air",
-        subcategories: "Non categorisé",
+        subcategories: ["Non categorisé"],
         phone_number: result["telephone"],
         subcategory_number: "0",
         address: result["adresse"],
@@ -128,6 +128,8 @@ subcategory_mapping = {
   "Roller artistique" => "Roller, skate",
   "Roller de vitesse" => "Roller, skate",
   "Rugby" => "Rugby (rugby à 13, à 15)",
+  "Rock" => "Danse sportive (danse sportive, hip hop, claquettes)",
+  "Salsa" => "Danse sportive (danse sportive, hip hop, claquettes)",
   "Rugby à XIII" => "Rugby (rugby à 13, à 15)",
   "Sambo" => "Sports de combat (boxe, kick box, boxe thaï, lutte)",
   "Sauvetage" => "Non catégorisé",
@@ -148,6 +150,10 @@ subcategory_mapping = {
   "Yoga" => "Gymnastique (gymnastique, gymnastique d’entretien, éducation physique, yoga), aérobic"
 }
 p "now assigning categories to a club depending on the mapping array"
-# Activity.all.each do |club|
-#   #
-# end
+Club.all.each do |club|
+  subcategories = []
+  club.activities.each do |activity|
+    subcategories << subcategory_mapping[activity.name]
+  end
+  club.update(subcategories: subcategories.uniq.compact)
+end
