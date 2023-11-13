@@ -8,14 +8,9 @@
         <label>Current Image</label>
         <div class="form-group position-relative">
           <%= image_tag(cl_image_path(@club.photos.first.key), class: "img-fluid", style: "height: 300px; width: 200px; border-radius: 10px; object-fit: cover;") %>
-          <%= button_to remove_image_club_path(@club), method: :delete, data: { confirm: 'Êtes vous sûr?' }, class: 'btn btn-dark text-light rounded-circle position-absolute', style: "left: 0px; top: 0px" do %>
-            <i class="fas fa-times"></i>
-          <% end %>
         </div>
-      <% else %>
-          <%= f.input :photos, as: :file, multiple: false %>
       <% end %>
-
+      <%= f.input  :photos, as: :file, multiple: false, label: "Chargez une nouvelle image si vous souhaitez remplacer l'actuelle" %>
       <%= f.input :name, label: "Nom" %>
       <%= f.input :website, label: "Site web" %>
       <%= f.input :objet, as: :text, label: "Description" %>
