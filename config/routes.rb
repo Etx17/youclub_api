@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'update_zipcode', to: 'clubs#update_zipcode'
   get 'update_category', to: 'clubs#update_category'
-  get 'update_subcategory', to: 'clubs#update_subcategory'
+  get 'update_subcategories', to: 'clubs#update_subcategories'
 
   resources :activities do
     member do

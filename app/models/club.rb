@@ -65,7 +65,7 @@ class Club < ApplicationRecord
   def category_images
     {
       "Sports, activités de plein air": {
-          "Non categorisé": ["olympics", "sport", "exercise"],
+          "Non catégorisé": ["olympics", "sport", "exercise"],
           "Badminton (badminton, squash, pelote basque)": ["shuttlecock", "badminton"],
           "Sports mécaniques (sport automobile, moto, trial)": ["driving", "car", "circuit"],
           "Football (football, futsal)": ["soccer", "football", "futsal", "balloon"],
@@ -128,6 +128,6 @@ class Club < ApplicationRecord
   end
 
   def default_image_keyword
-    category_images[self.category.to_sym][self.subcategory.to_sym].sample
+    category_images[self.category.to_sym][self.subcategories.first.to_sym].sample
   end
 end

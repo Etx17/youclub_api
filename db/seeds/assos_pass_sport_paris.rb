@@ -44,8 +44,8 @@ limit = 100
       geo_point: result["geoloc_finale"]["lat"].to_s + ", " + result["geoloc_finale"]["lon"].to_s,
       category_number: "11000",
       category: "Sports, activités de plein air",
-      subcategory: "Non categorisé",
-      subcategory_number: "0",
+      subcategories: ["Non catégorisé"],
+      subcategories_number: ["0"],
       structure_type: 1,
       objet: "#{result["nom"]} vous propose: #{result["activites"].join(", ")}"
     )
@@ -56,7 +56,7 @@ limit = 100
         geo_point: result["geoloc_finale"]["lat"].to_s + ", " + result["geoloc_finale"]["lon"].to_s,
         category_number: "11000",
         category: "Sports, activités de plein air",
-        subcategories: ["Non categorisé"],
+        subcategories: ["Non catégorisé"],
         phone_number: result["telephone"],
         subcategory_number: "0",
         address: result["adresse"],

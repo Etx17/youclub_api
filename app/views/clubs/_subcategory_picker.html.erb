@@ -1,7 +1,7 @@
-<%= simple_form_for :subcategory, url: update_subcategory_path, method: :get, html: { id: 'subcategory_form' } do |f| %>
-  <%= f.input :subcategory,
+<%= simple_form_for :subcategories, url: update_subcategories_path, method: :get, html: { id: 'subcategories_form' } do |f| %>
+  <%= f.input :subcategories,
     collection: mapped_subcategories(session[:category]),
-    selected: session[:subcategory],
+    selected: session[:subcategories],
     label: false,
     input_html: {
       class: ' w-100 overflow-hidden bg-white-light shadow-sm',

@@ -1,15 +1,14 @@
 class ClubsController < ApplicationController
   before_action :set_zipcode, only: [:index]
   before_action :set_category, only: [:index]
-  before_action :set_subcategory, only: [:index]
+  before_action :set_subcategories, only: [:index]
 
   def index
-    clubs = Club.where( actual_zipcode: session[:zipcode], category: session[:category])
+      clubs = Club.where( actual_zipcode: session[:zipcode], category: session[:category])
 
-    if session[:subcategory] != "Tous"
-      clubs = clubs.where(subcategory: session[:subcategory])
+    if session[:subcategories] != "Tous"
+      clubs = clubs.where("? = ANY(subcategories)", session[:subcategories])
     end
-
     @pagy, @clubs = pagy_countless(clubs, items: 5)
     respond_to do |format|
       format.html
@@ -40,9 +39,9 @@ class ClubsController < ApplicationController
     redirect_to clubs_path
   end
 
-  def update_subcategory
-    subcategory = params[:subcategory]["subcategory"]
-    session[:subcategory] = subcategory
+  def update_subcategories
+    subcategories = params[:subcategories]["subcategories"]
+    session[:subcategories] = subcategories
     redirect_to clubs_path
   end
 
@@ -90,11 +89,11 @@ class ClubsController < ApplicationController
     end
   end
 
-  def set_subcategory
-    if params[:subcategory] # If the subcategory is provided as a parameter, use it
-      session[:subcategory] = params[:subcategory]
+  def set_subcategories
+    if params[:subcategories] # If the subcategories is provided as a parameter, use it
+      session[:subcategories] = params[:subcategories]
     else
-      session[:subcategory] ||= 'Tous'
+      session[:subcategories] ||= 'Tous'
     end
   end
 
@@ -120,8 +119,8 @@ class ClubsController < ApplicationController
   def club_params
     params.require(:club).permit(
       :name, :rna_number, :geo_point, :category, :address, :actual_zipcode,
-      :subcategory, :nearbyStation, :website, :objet, :category_number,
-      :subcategory_number, :structure_type, :phone_number, :adherence_fee,
+      :subcategories, :nearbyStation, :website, :objet, :category_number,
+      :subcategories_number, :structure_type, :phone_number, :adherence_fee,
       :is_premium, :photos # Permit the images array
     )
   end
