@@ -1,47 +1,45 @@
 <div class="row justify-content-center">
   <div class="col-10 col-md-6 p-3">
     <%= simple_form_for([@activity, @sub_group, @schedule], html: { data: { controller: "timeslots" } }) do |f| %>
-      <%= f.input :day, label: "Jour" %>
-
+      <%= f.input :day, label:"Jour", collection: ["Lundi", 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'] %>
       <h3>Créneaux Horaires</h3>
       <div data-timeslots-target="container">
         <% @schedule.time_slots.each do |time_slot| %>
           <%= f.simple_fields_for :time_slots, time_slot do |time_slot_form| %>
-            <div class="time-slot-fields d-flex">
+            <div class="time-slot-fields d-flex justify-content-center p-1 my-1 align-items-center">
               <% if time_slot_form.object.persisted? %>
                 <%= time_slot_form.input :_destroy, as: :hidden, input_html: { value: time_slot_form.object.marked_for_destruction? ? 1 : 0 } %>
-                <button type="button" class="btn btn-secondary" data-action="click->timeslots#toggleDestroy">
-                  <i class="fas fa-times"></i>
-                </button>
-              <% else %>
-                <button type="button" class="btn btn-secondary" data-action="click->timeslots#removeTimeSlot">
+                <button type="button" class="btn rounded-circle border h-50" data-action="click->timeslots#toggleDestroy">
                   <i class="fas fa-times"></i>
                 </button>
               <% end %>
-              <%= time_slot_form.input :start_time, as: :time %>
-              <%= time_slot_form.input :end_time, as: :time %>
+                <%= time_slot_form.input :start_time, as: :time, label: "De", input_html: { style: 'background-image: none; padding-right: 10px; width: auto;'} %>
+                <%= time_slot_form.input :end_time, as: :time, label: "à", input_html: { style: 'background-image: none; padding-right: 10px; width: auto;'} %>
             </div>
           <% end %>
         <% end %>
       </div>
 
       <template data-timeslots-target="template">
-        <div class="time-slot-fields d-flex border p-3" data-new-record="true">
+        <div class="time-slot-fields d-flex p-3 justify-content-center" data-new-record="true">
+          <button type="button" data-action="click->timeslots#removeTimeSlot" class="btn h-50 border rounded-circle shadow-sm">
+            <i class="fas fa-times"></i>
+          </button>
           <%= f.simple_fields_for :time_slots, TimeSlot.new, child_index: "NEW_RECORD" do |time_slot_form| %>
-            <%= time_slot_form.input :start_time, as: :time %>
-            <%= time_slot_form.input :end_time, as: :time %>
-            <button type="button" data-action="click->timeslots#removeTimeSlot" class="btn btn-danger">
-              Supprimer
-            </button>
+            <%= time_slot_form.input :start_time, as: :time, label: false  %>
+            <%= time_slot_form.input :end_time, as: :time, label: false %>
+
           <% end %>
         </div>
       </template>
 
-      <button type="button" data-action="click->timeslots#addTimeSlot" class="btn btn-secondary">
+      <div class="d-flex flex-column gap-2">
+      <button type="button" data-action="click->timeslots#addTimeSlot" class="btn btn-outline-dark w-50">
         Ajouter un Créneau Horaire
       </button>
 
-      <%= f.button :submit, "Enregistrer les Changements", class: "btn btn-primary mt-3" %>
+      <%= f.button :submit, "Enregistrer les Changements", class: "btn btn-dark  mt-3" %>
+      </div>
     <% end %>
   </div>
 </div>
