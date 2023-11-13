@@ -22,7 +22,7 @@ class ActivitiesController < ApplicationController
     @activity = Activity.find(params[:id])
 
     if params[:activity][:photos].present?
-      @activity.photos.first.purge
+      @activity.photos.first.purge if @activity.photos.any?
       @activity.photos.attach(params[:activity][:photos])
     end
 
