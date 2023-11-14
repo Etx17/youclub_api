@@ -1,12 +1,20 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="toggle"
 export default class extends Controller {
-  static targets = ["toggleable"]
+  static targets = ["toggleable", "checkbox"]
+
+  connect() {
+    this.updateVisibility();
+  }
 
   toggle() {
+    this.updateVisibility();
+  }
+
+  updateVisibility() {
+    const isChecked = this.checkboxTarget.checked;
     this.toggleableTargets.forEach((el) => {
-      el.classList.toggle('d-none', this.element.checked);
+      el.classList.toggle('d-none', isChecked);
     });
   }
 }
