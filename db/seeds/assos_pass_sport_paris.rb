@@ -68,13 +68,36 @@ limit = 100
       )
     end
   end
-
   p "done seeding club!"
-
-
 end
 
+# ile_de_france_url = "https://sports-sgsocialgouv.opendatasoft.com/api/explore/v2.1/catalog/datasets/passsports-asso_volontaires/records?limit=100&refine=epci_name%3A%22M%C3%A9tropole%20du%20Grand%20Paris%22&refine=reg_name%3A%22%C3%8Ele-de-France%22&%22"
+# conn = Faraday.new(url: ile_de_france_url)
+
+# response = conn.get
+
+# items = JSON.parse(response.body)
+
+# results = items["results"]
+
+
 subcategory_mapping = {
+  "Aéronautique" => "Sports aériens (avion, planeur, ULM, parachutisme)",
+  "Apnée" => "Natation - baignade (natation, plongée)",
+  "Attelage canin" => "Non catégorisé",
+  "Autres activités d'expression et de forme" => "Non catégorisé",
+  "Autres activités de force" => "Non catégorisé",
+  "Autres activités nautiques" => "nautisme, glisse sur eau (ski nautique, surf, char à voile)",
+  "Autres sports" => "Non catégorisé",
+  "Autres sports aériens" => "Sports aériens (avion, planeur, ULM, parachutisme)",
+  "Autres sports collectifs" => "Autres sports collectifs (baseball, hockey sur glace, football américain)",
+  "Autres sports de glace" => "hockey sur glace, sports de glace",
+  "Autres sports de nature (ex : canyonisme" => "Escalade, montagne (escalade, spéléologie, via ferrata, canyonisme, alpinisme)",
+  "Autres sports de précision" => "Tir (tir à l’arc, tir à balle, ball trap), javelot",
+  "Autres sports de raquettes" => "Tennis de table (tennis de table, ping-pong)",
+  "Aviron" => "Aviron, canoë kayak (aviron, rafting, canoë kayak, joutes)",
+  "Ball-trap" => "Tir (tir à l’arc, tir à balle, ball trap), javelot",
+  "Billard" => "Non catégorisé",
   "Aïkido" => "Autres arts martiaux (karaté, aïkido, taekwondo)",
   "Arts énergétiques et martiaux chinois" => "Autres arts martiaux (karaté, aïkido, taekwondo)",
   "Athlétisme" => "Athlétisme (triathlon, pentathlon, footing, jogging)",
