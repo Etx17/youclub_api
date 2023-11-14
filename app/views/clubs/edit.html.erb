@@ -17,8 +17,17 @@
       <%= f.input :structure_type, collection: Club.structure_types.keys, include_blank: false, label: 'Type de structure' %>
       <%= f.input :phone_number, label: 'Numéro de téléphone' %>
       <%= f.input :adherence_fee, label: "Frais d'adhésion " %>
-
-
+      <div data-controller="toggle">
+      <%= f.input :inscription_open_all_year,
+              label: "Inscriptions possibles toute l'année?",
+              input_html: {
+                'data-action': 'change->toggle#toggle'
+              } %>
+      <div data-toggle-target="toggleable" class="d-none">
+        <%= f.input :inscription_start_date, label: "Période de début d'inscription" %>
+        <%= f.input :inscription_end_date, label: "Période de fin d'inscription" %>
+      </div>
+      </div>
       <div class="d-flex justify-content-center w-100">
         <%= f.button :submit, "Enregistrer les modifications", class: "btn btn-dark mt-3 w-50" %>
       </div>
