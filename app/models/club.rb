@@ -128,6 +128,6 @@ class Club < ApplicationRecord
   end
 
   def default_image_keyword
-    category_images[self.category.to_sym][self.subcategories.first.to_sym].sample
+    category_images[self.category.to_sym][self.subcategories.first.to_sym]&.sample || "sports"
   end
 end
