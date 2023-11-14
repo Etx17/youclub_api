@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_14_105822) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_14_153952) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -101,6 +101,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_14_105822) do
     t.integer "adherence_fee"
     t.boolean "is_premium", default: false
     t.string "google_review_client_id"
+    t.boolean "inscription_open_all_year", default: true
+    t.date "inscription_start_date"
+    t.date "inscription_end_date"
     t.index ["user_id"], name: "index_clubs_on_user_id"
   end
 
