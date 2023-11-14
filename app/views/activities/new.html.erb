@@ -1,0 +1,21 @@
+<div class="row justify-content-center">
+  <div class="col-md-6 p-3 " data-controller="subcategory">
+
+    <%= simple_form_for(@activity) do |f| %>
+      <%= f.input  :photos, as: :file, multiple: false, label: "Chargez une nouvelle image si vous souhaitez remplacer l'actuelle" %>
+      <%= f.input :name, label: "Nom de l'activité" %>
+      <%= f.select :category, @category_options, {}, data: { subcategory_target: "category", action: "change->subcategory#updateSubcategories" } %>
+      <%= f.select :subcategories, [], {}, data: { subcategory_target: "subcategories" } %>
+      <%= f.input :address, label: "Adresse" %>
+      <%= f.input :actual_zipcode, label: "Code Postal" %>
+      <%= f.input :free_trial, as: :boolean, label: "Essai gratuit" %>
+      <%= f.input :short_description, as: :text, label: "Description courte" %>
+      <%= f.input :full_description, as: :text, label: "Description complète" %>
+      <%= f.input :phone_number, label: "Numéro de téléphone" %>
+
+      <div class="d-flex justify-content-center w-100">
+        <%= f.button :submit, "Enregistrer", class: "btn btn-dark mt-3 w-50" %>
+      </div>
+    <% end %>
+  </div>
+</div>

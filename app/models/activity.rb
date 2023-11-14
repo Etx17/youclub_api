@@ -33,7 +33,6 @@ class Activity < ApplicationRecord
 
   # callback
   def add_subcategory_to_club
-    p self.subcategories
     unless club.subcategories.include?(self.subcategories)
       new_subcategories = club.subcategories + [self.subcategories]
       club.update(subcategories: new_subcategories)

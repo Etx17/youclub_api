@@ -4,6 +4,10 @@ class ActivitiesController < ApplicationController
 
   def new
     @activity = Activity.new()
+    @category_options = [
+      ['Sports, activités de plein air', 'Sports, activités de plein air'],
+      ['Culture, pratiques d’activités artistiques, culturelles', 'Culture, pratiques d’activités artistiques, culturelles'],
+    ]
   end
 
   def show
