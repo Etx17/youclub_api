@@ -5,7 +5,6 @@ class ClubsController < ApplicationController
 
   def index
       clubs = Club.where( actual_zipcode: session[:zipcode], category: session[:category])
-
     if session[:subcategories] != "Tous"
       clubs = clubs.where("? = ANY(subcategories)", session[:subcategories])
     end

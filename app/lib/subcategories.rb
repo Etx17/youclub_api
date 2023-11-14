@@ -22,7 +22,7 @@ module Subcategories
       { label: "🏀 Basket-ball", value: "Basket-ball" },
       { label: "🌊 Nautisme, glisse sur eau (ski nautique, surf, char à voile)", value: "nautisme, glisse sur eau (ski nautique, surf, char à voile)" },
       { label: "⛵ Voile (voile, dériveur, planche à voile)", value: "Voile (voile, dériveur, planche à voile)" },
-      { label: "🏊 Natation - Baignade (natation, plongée)", value: "Natation - Baignade (natation, plongée)" },
+      { label: "🏊 Natation - baignade (natation, plongée)", value: "Natation - baignade (natation, plongée)" },
       { label: "🛩️ Sports aériens (avion, planeur, ULM, parachutisme)", value: "Sports aériens (avion, planeur, ULM, parachutisme)" },
       { label: "🥋 Judo", value: "Judo" },
       { label: "🏂 Sports de neige (ski alpin, ski de fond, snowboard), montagne", value: "Sports de neige (ski alpin, ski de fond, snowboard), montagne" },
