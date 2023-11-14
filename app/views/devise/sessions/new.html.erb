@@ -9,7 +9,7 @@
           <% end %>
         <% end %>
       <% end %>
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>
       <div class="form-inputs">
         <%= f.input :email,
                     required: false,
@@ -27,7 +27,7 @@
       </div>
     <% end %>
     <%= render "devise/shared/links" %>
-
+    <div class="text-info">Rafraîchissez la page si vous n'êtes pas redirigés automatiquement après vous être connectés</div>
   </div>
   <div class="col-sm-4"></div>
 </div>
