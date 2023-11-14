@@ -39,7 +39,7 @@
             <% end %>
             <% if current_user && current_user.owns?(@activity.club.id) %>
               <%= link_to new_activity_sub_group_path(@activity), class: "btn btn-dark rounded" do %>
-                <i class="fas fa-plus"></i>Ajouter
+                <i class="fas fa-plus"></i>Ajouter un sous-groupe
               <% end %>
             <% end %>
           </div>

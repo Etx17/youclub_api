@@ -1,11 +1,12 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["category", "subcategories"];
+  static targets = ["category", "subcategories", "otherSubcategory"];
 
   connect() {
     this.subcategoryMapping = {
       "Sports, activités de plein air": {
+        "Autre": "Autre",
         "Aïkido": "Autres arts martiaux (karaté, aïkido, taekwondo)",
         "Arts énergétiques et martiaux chinois": "Autres arts martiaux (karaté, aïkido, taekwondo)",
         "Athlétisme": "Athlétisme (triathlon, pentathlon, footing, jogging)",
@@ -16,7 +17,7 @@ export default class extends Controller {
         "Bowling et sports de quilles": "Non catégorisé",
         "Boxe": "Sports de combat (boxe, kick box, boxe thaï, lutte)",
         "Canoë-Kayak": "Aviron, canoë kayak (aviron, rafting, canoë kayak, joutes)",
-        "Cross training": "Non catégorisé",
+        "Cross training": "Musculation (culturisme, musculation)",
         "Cyclisme sur piste": "Cyclisme (cyclisme, vélo, VTT, y c course d’orientation à vélo, cyclotourisme)",
         "Cyclisme sur route": "Cyclisme (cyclisme, vélo, VTT, y c course d’orientation à vélo, cyclotourisme)",
         "Danse": "Danse sportive (danse sportive, hip hop, claquettes)",
@@ -50,7 +51,7 @@ export default class extends Controller {
         "Natation synchronisée": "Natation - baignade (natation, plongée)",
         "Nage avec palmes": "Natation - baignade (natation, plongée)",
         "Parachutisme": "Sports aériens (avion, planeur, ULM, parachutisme)",
-        "Parkour": "Non catégorisé",
+        "Parkour": "Activités de plein air (dont saut à l’élastique)",
         "Pétanque et jeu provencal": "Boules (pétanque, boules)",
         "Plongée": "Natation - baignade (natation, plongée)",
         "Plongeon": "Natation - baignade (natation, plongée)",
@@ -91,10 +92,31 @@ export default class extends Controller {
     const selectedCategory = this.categoryTarget.value || "Sports, activités de plein air";
     const subcategories = this.subcategoryMapping[selectedCategory] || {};
     this.subcategoriesTarget.innerHTML = this.optionsForSelect(subcategories);
+    this.toggleOtherSubcategoryInput();
+  }
+
+  toggleOtherSubcategoryInput() {
+    console.log('coucou haha')
+    const isOtherSelected = this.subcategoriesTarget.value === "Autre";
+    const otherInput = this.otherSubcategoryInput();
+
+    if (isOtherSelected) {
+      this.otherSubcategoryTarget.classList.remove("d-none");
+      otherInput.disabled = false;
+    } else {
+      this.otherSubcategoryTarget.classList.add("d-block");
+      this.otherSubcategoryTarget.classList.add("d-none");
+      otherInput.disabled = true;
+      otherInput.value = '';
+    }
+  }
+
+  otherSubcategoryInput() {
+    return this.otherSubcategoryTarget.querySelector('input');
   }
 
   optionsForSelect(subcategories) {
-    console.log(Object.keys(subcategories))
+    console.log(subcategories, 'subcategories')
     return Object.keys(subcategories).map(key =>
       `<option value="${subcategories[key]}">${key}</option>`
     ).join('');

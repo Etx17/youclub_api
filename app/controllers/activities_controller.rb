@@ -4,10 +4,7 @@ class ActivitiesController < ApplicationController
 
   def new
     @activity = Activity.new()
-    @category_options = [
-      ['Sports, activités de plein air', 'Sports, activités de plein air'],
-      ['Culture, pratiques d’activités artistiques, culturelles', 'Culture, pratiques d’activités artistiques, culturelles'],
-    ]
+    @category_options = ['Sports, activités de plein air','Culture, pratiques d’activités artistiques, culturelles']
   end
 
   def show
@@ -16,10 +13,22 @@ class ActivitiesController < ApplicationController
   end
 
   def create
+
+    @activity = Activity.new(activity_params)
+    @activity.subcategories = "Non catégorisé" if @activity.subcategories == 'Autre'
+    @activity.club = Club.find(params[:activity][:club_id])
+
+    if @activity.save
+      redirect_to activity_path(@activity)
+    else
+      render :new
+    end
   end
 
   def edit
     @activity = Activity.find(params[:id])
+    @category_options = ['Sports, activités de plein air','Culture, pratiques d’activités artistiques, culturelles']
+
   end
 
   def update
@@ -52,6 +61,7 @@ class ActivitiesController < ApplicationController
       :free_trial,
       :is_looking_for_volunteer,
       :subcategories,
+      :other_subcategory,
       :recurrence,
       :subscription_link,
       :short_description,

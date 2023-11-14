@@ -20,12 +20,12 @@
   <span class="align-self-center text-secondary"><%= sub_group&.class_type %> </span>
   <small class="align-self-center text-secondary position-relative" style="top: 20px;">À partir de </small>
   <div class="align-self-center mt-0"><span class="gradient-title"><%= sub_group&.min_price_cents/100 %></span>€</div>
-  <small class="text-secondary">Description</small>
-  <p class="align-self-center border-top" ><%= sub_group.short_description %></p>
+  <small class="text-secondary border-top">Description</small>
+  <p class="align-self-center " ><%= sub_group.short_description %></p>
 
   <% if sub_group.tarifications.any? %>
-  <small class="text-secondary">Tarifs</small>
-  <div class="d-flex flex-wrap gap-2 justify-content-center mb-2 border-top border-bottom py-3">
+  <small class="text-secondary border-top">Tarifs</small>
+  <div class="d-flex flex-wrap gap-2 justify-content-center mb-2 py-3">
     <% sub_group.tarifications&.each do |tarification|  %>
       <div class=" py-0 pill bg-light btn-outline-secondary shadow-sm d-flex align-items-center">
         <span style="font-size: 1.5em;"><%= tarification.amount %></span>
@@ -35,7 +35,7 @@
   </div>
   <% end %>
 
-  <small class="text-secondary">Horaires</small>
+  <small class="text-secondary border-top">Horaires</small>
   <div class="d-flex flex-wrap gap-2 justify-content-center mb-2">
     <% if sub_group.schedules.empty? %>
     <p>Ce club n'a pas encore renseigné ses horaires</p>

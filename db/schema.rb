@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_13_111344) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_14_105822) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -62,6 +62,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_13_111344) do
     t.string "category_number"
     t.string "subcategory_number"
     t.string "phone_number"
+    t.string "other_subcategory"
     t.index ["club_id"], name: "index_activities_on_club_id"
   end
 
