@@ -51,7 +51,15 @@
       <% else %>
         <p class="small text-secondary"><%= club.objet %></p>
       <% end %>
+        <div class="d-flex gap-2 justify-content-between">
+          <% if club.inscription_open_all_year %>
+            <div><i class="fas fa-check text-success "></i> <small>Inscriptions toute l'année</small></div>
+          <% end %>
 
+          <% if club.activities.any?{|activity| activity.free_trial} %>
+            <div><i class="fas fa-check text-success "></i> <small>Cours d'essai gratuit</small></div>
+          <% end %>
+      </div>
     </div>
   </div>
 </div>
