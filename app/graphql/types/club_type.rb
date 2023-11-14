@@ -14,6 +14,6 @@ class Types::ClubType < Types::BaseObject
   field :images, [String], null: true
   field :activities, [Types::ActivityType], null: true
   field :categoryNumber, String, null: true, method: :category_number
-  field :subcategoryNumber, String, null: true, method: :subcategory_number
+  field :subcategoryNumber, String, null: true, method: :subcategories_number
   field :phoneNumber, String, null: true, method: :phone_number
 end

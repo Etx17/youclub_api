@@ -15,7 +15,7 @@
 #  updated_at         :datetime         not null
 #  images             :string           default([]), is an Array
 #  category_number    :string
-#  subcategory_number :string
+#  subcategories_number :array
 #  structure_type     :integer
 #  phone_number       :string
 #  adherence_fee      :integer

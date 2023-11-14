@@ -15,14 +15,14 @@ skarbowski = Club.create(
   category: "Sports, activités de plein air",
   address: "135 rue Lamarck",
   actual_zipcode: "75018",
-  subcategory: "Sports de combat (boxe, kick box, boxe thaï, lutte)",
+  subcategories: ["Sports de combat (boxe, kick box, boxe thaï, lutte)"],
   nearbyStation: nil,
   website: nil,
   objet: "Boxe Thailandaise enseignée par le champion du monde de la discipline. Cours pour tous les niveaux tous les jours",
   user: etienne1,
   images: [],
   category_number: "11000",
-  subcategory_number: "11150",
+  subcategories_number: ["11150"],
   structure_type: "club",
   phone_number: "0984504881"
 )

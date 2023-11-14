@@ -13,7 +13,7 @@ sivananda = Club.create(
   geo_point: "48.8748532, 2.3591712",
   objet: "Le centre de Yoga Sivananda offre de nombreuses possibilités pour approfondir sa pratique des postures et des exercises de respiration et pour découvrir de nouveaux aspects du Yoga.",
   category_number: "11000",
-  subcategory_number: "11105",
+  subcategories_number: ["11105"],
   category: "Sports, activités de plein air",
   subcategories: ["Gymnastique (gymnastique, gymnastique d’entretien, éducation physique, yoga), aérobic"],
   address: "140 Rue du Faubourg Saint-Martin",
