@@ -66,7 +66,7 @@
   </div>
 
 
-  <% if sub_group.schedules.count < 7 %>
+  <% if sub_group.schedules.count < 7 && current_user&.owns?(@activity.club_id) %>
     <%= link_to new_activity_sub_group_schedule_path(@activity, sub_group), class: 'btn btn-dark' do %>
       <i class="fas fa-plus"></i>Ajouter un jour
     <% end %>
