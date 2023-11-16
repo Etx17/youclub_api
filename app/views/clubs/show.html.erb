@@ -94,7 +94,7 @@
                   <div data-inline-edit-target="display">
                     <!-- Display Content -->
                     <div class="text-secondary d-flex justify-content-between gap-3 align-items-center" style="font-size: 0.8em">
-                      <small><%= comment.user.email %>, le <%= comment.created_at.strftime("%Y-%m-%d") %></small>
+                      <small><%= comment.user.email.split('@').first %>, le <%= comment.created_at.strftime("%Y-%m-%d") %></small>
                       <% if user_signed_in? && comment.user == current_user %>
                         <%= link_to '#', class: '', data: { action: "click->inline-edit#toggleEdit" } do %>
                           <i class="fas fa-edit text-dark"></i>
