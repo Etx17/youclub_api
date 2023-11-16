@@ -74,6 +74,36 @@
               <div class="text-secondary" style="font-size: 1em"><%= link_to "Récupérer votre profil", new_claims_path(club_id: @club.id, name: @club.name)%></div>
             </div>
           <% end %>
+
+          <% if @club.comments.any? %>
+            <div class="d-flex flex-column align-items-start bg-light-white px-3">
+              <small class="text-secondary align-self-center">Commentaires</small>
+              <% @club.comments.each do |comment| %>
+                <div id="comment-<%= comment.id %>">
+                  <div class="comment-display">
+                    <div class="text-secondary" style="font-size: 0.8em">
+                      <%= comment.user.email %>, le <%= comment.created_at.strftime("%Y-%m-%d") %>
+                      <% if user_signed_in? && comment.user == current_user %>
+                        <%= link_to 'Edit', '#', class: 'btn btn-secondary btn-sm', onclick: "toggleCommentEdit(#{comment.id})" %>
+                        <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+                      <% end %>
+                    </div>
+                    <div class="text-dark" style="font-size: 1em"><%= comment.content %></div>
+                  </div>
+                  <div class="comment-edit" style="display: none;">
+                    <%= form_with(model: [comment], method: :patch, local: true) do |form| %>
+                      <div class="form-group">
+                        <%= form.text_area :content, class: 'form-control' %>
+                      </div>
+                      <%= form.submit 'Update Comment', class: 'btn btn-primary' %>
+                      <%= link_to 'Cancel', '#', class: 'btn btn-secondary', onclick: "toggleCommentEdit(#{comment.id})" %>
+                    <% end %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
         </div>
       </div>
 
@@ -86,3 +116,29 @@
 
     </div>
 </div>
+<%# JavaScript for toggling comment edit form %>
+<script>
+  function toggleCommentEdit(commentId) {
+    var displayDiv = document.getElementById('comment-' + commentId).getElementsByClassName('comment-display')[0];
+    var editDiv = document.getElementById('comment-' + commentId).getElementsByClassName('comment-edit')[0];
+
+    if (displayDiv.style.display === 'none') {
+      displayDiv.style.display = 'block';
+      editDiv.style.display = 'none';
+    } else {
+      displayDiv.style.display = 'none';
+      editDiv.style.display = 'block';
+    }
+  }
+</script>
+
+<%# Form for adding a new comment, shown only if the user hasn't commented yet %>
+<% if user_signed_in? && @club.comments.none? { |comment| comment.user == current_user } %>
+  <%= form_with(model: [@club, Comment.new], local: true) do |form| %>
+    <div class="form-group">
+      <%= form.label :content, 'Votre commentaire' %>
+      <%= form.text_area :content, class: 'form-control' %>
+    </div>
+    <%= form.submit 'Ajouter un commentaire', class: 'btn btn-primary' %>
+  <% end %>
+<% end %>

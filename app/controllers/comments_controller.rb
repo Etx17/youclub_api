@@ -30,16 +30,15 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
 
-    redirect_to comments_url, notice: "Comment was successfully destroyed."
+    redirect_to club_url(@comment.club), notice: "Comment was successfully destroyed."
   end
 
   private
-  
+
   def set_comment
     @comment = Comment.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def comment_params
     params.require(:comment).permit(:user_id, :club_id, :content, :feeling)
   end

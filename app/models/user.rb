@@ -20,7 +20,13 @@ class User < ApplicationRecord
           :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
   enum role: { user: 0, club: 1}
   has_one :comment
+  enum feeling: {
+    neutre: 0,
+    satisfait: 1,
+    insatisfait: 2
+  }
 
+  validates :user_id, uniqueness: { scope: :club_id }
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email # assuming the user model has an email
