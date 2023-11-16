@@ -32,7 +32,7 @@ class Activity < ApplicationRecord
   before_destroy :remove_subcategory_from_club
   after_update :update_club_score
 
-  # callback
+  # callback ok?
   def add_subcategory_to_club
     unless club.subcategories.include?(self.subcategories)
       new_subcategories = club.subcategories + [self.subcategories]
