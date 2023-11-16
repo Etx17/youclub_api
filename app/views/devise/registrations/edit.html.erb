@@ -1,7 +1,6 @@
 <div class="row justify-content-center align-items-center">
 <div class="col-8 col-sm-6 shadow p-3">
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
+<h2>Modifier mes informations de compte</h2>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
@@ -13,27 +12,31 @@
     <% end %>
 
     <%= f.input :password,
-                hint: "leave it blank if you don't want to change it",
+                label: "Nouveau mot de passe",
+                hint: "Laissez ce champ vide si vous ne souhaitez pas modifier votre mot de passe",
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
+                label: "Confirmation du nouveau mot de passe",
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
+    <%= f.input :first_name, label: "Prénom (optionel)", required: false, hint: "Ajoutez votre prénom afin de remplacer l'affichage de votre email si vous laissez un avis" %>
     <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
+                label: "Mot de passe actuel",
+                hint: "Nous avons besoin de votre mot de passe actuel pour confirmer les modifications",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
+
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <%= f.button :submit, "Mettre à jour", class:" btn btn-dark" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Êtes vous sûr?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+<div>Vous souhaitez nous quitter? <%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Êtes vous sûr?", turbo_confirm: "Are you sure?" }, method: :delete, class:"small border" %></div>
 
-<%= link_to "Back", :back %>
+<%= link_to "retour", :back, class: "btn btn-outline-dark mt-3" %>
 </div>
 </div>
