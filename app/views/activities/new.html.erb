@@ -1,12 +1,18 @@
 <div class="row justify-content-center">
   <div class="col-md-6 p-3 " data-controller="subcategory">
     <%= simple_form_for(@activity) do |f| %>
-      <%= f.input  :photos, as: :file, multiple: false, label: "Chargez une nouvelle image si vous souhaitez remplacer l'actuelle" %>
+      <%= f.input  :photos, as: :file, multiple: false, label: "Chargez une image" %>
       <%= f.input :name, label: "Nom de l'activité" %>
-      <%= f.select :category, @category_options, {}, data: { subcategory_target: "category", action: "change->subcategory#updateSubcategories" } %>
-      <%= f.select :subcategories, [], {}, data: { subcategory_target: "subcategories", action: "change->subcategory#toggleOtherSubcategoryInput" } %>
-      <div id="other_subcategory" data-subcategory-target="otherSubcategory">
-        <%= f.text_field :other_subcategory, placeholder: "Enter your subcategory" %>
+      <div class="d-flex align-items-center gap-2 ">
+        <div>Catégorie</div>
+        <%= f.select :category, @category_options, {}, data: { subcategory_target: "category", action: "change->subcategory#updateSubcategories" }, class:"w-50 p-2" %>
+      </div>
+      <div class="d-flex flex-column justify-content-center gap-2 my-3 border-top border-bottom py-2">
+        <div>Sous-Catégorie</div>
+        <%= f.select :subcategories, [], {}, data: { subcategory_target: "subcategories", action: "change->subcategory#toggleOtherSubcategoryInput" }, class:"w-100 p-2" %>
+        <div id="other_subcategory" data-subcategory-target="otherSubcategory" class="w-100">
+          <%= f.text_field :other_subcategory, placeholder: "Entrez votre sous-catégorie", class: "p-1" %>
+        </div>
       </div>
       <%= f.hidden_field :club_id, value: params[:club] %>
       <%= f.input :address, label: "Adresse" %>

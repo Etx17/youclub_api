@@ -50,6 +50,7 @@ export default class extends Controller {
         "Natation": "Natation - baignade (natation, plongée)",
         "Natation synchronisée": "Natation - baignade (natation, plongée)",
         "Nage avec palmes": "Natation - baignade (natation, plongée)",
+        "Paddle (sport de raquettes)": "Non catégorisé",
         "Parachutisme": "Sports aériens (avion, planeur, ULM, parachutisme)",
         "Parkour": "Activités de plein air (dont saut à l’élastique)",
         "Pétanque et jeu provencal": "Boules (pétanque, boules)",
