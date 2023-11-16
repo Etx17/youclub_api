@@ -26,10 +26,11 @@ class CommentsController < ApplicationController
     end
   end
 
+  def delete
+  end
   # DELETE /comments/1 or /comments/1.json
   def destroy
     @comment.destroy
-
     redirect_to club_url(@comment.club), notice: "Comment was successfully destroyed."
   end
 
