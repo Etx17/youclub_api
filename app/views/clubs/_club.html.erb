@@ -54,8 +54,12 @@
         <div class="d-flex gap-2 justify-content-between">
           <% if club.inscription_open_all_year %>
             <div><i class="fas fa-check text-success "></i> <small>Inscriptions toute l'année</small></div>
+          <% else %>
+            <div><i class="fas fa-exclamation text-warning "></i> <small>Inscriptions sur période</small></div>
           <% end %>
-
+          <% if club.comments.any? %>
+            <div><i class="fas fa-comment text-secondary "></i> <small><%= club.comments.count %> commentaires</small></div>
+          <% end %>
           <% if club.activities.any?{|activity| activity.free_trial} %>
             <div><i class="fas fa-check text-success "></i> <small>Cours d'essai gratuit</small></div>
           <% end %>

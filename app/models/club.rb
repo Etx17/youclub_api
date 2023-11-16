@@ -30,6 +30,7 @@ class Club < ApplicationRecord
     association: 0,
     club: 1,
   }
+  has_many :comments, dependent: :destroy
 
   def distance_from(user_coords_string)
     # user_coords_string = "48.8566,2.3522"

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   get 'update_zipcode', to: 'clubs#update_zipcode'
   get 'update_category', to: 'clubs#update_category'
   get 'update_subcategories', to: 'clubs#update_subcategories'

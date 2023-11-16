@@ -4,10 +4,11 @@ class ClubsController < ApplicationController
   before_action :set_subcategories, only: [:index]
 
   def index
-      clubs = Club.where( actual_zipcode: session[:zipcode], category: session[:category])
+    clubs = Club.where( actual_zipcode: session[:zipcode], category: session[:category])
     if session[:subcategories] != "Tous"
       clubs = clubs.where("? = ANY(subcategories)", session[:subcategories])
     end
+    
     @pagy, @clubs = pagy_countless(clubs, items: 5)
     respond_to do |format|
       format.html

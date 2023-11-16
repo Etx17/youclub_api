@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_14_163231) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_16_084645) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -108,6 +108,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_14_163231) do
     t.index ["user_id"], name: "index_clubs_on_user_id"
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "club_id", null: false
+    t.text "content"
+    t.integer "feeling"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["club_id"], name: "index_comments_on_club_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
   create_table "leads", force: :cascade do |t|
     t.string "email"
     t.datetime "created_at", null: false
@@ -194,6 +205,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_14_163231) do
   add_foreign_key "claims", "clubs"
   add_foreign_key "claims", "users"
   add_foreign_key "clubs", "users"
+  add_foreign_key "comments", "clubs"
+  add_foreign_key "comments", "users"
   add_foreign_key "schedules", "sub_groups"
   add_foreign_key "schedules", "time_slots"
   add_foreign_key "sub_groups", "activities"
