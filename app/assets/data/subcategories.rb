@@ -50,9 +50,6 @@ subcategories = {
       { label: "🎥 Photographie, cinéma (dont ciné-clubs)", value: "photographie, cinéma (dont ciné-clubs)" },
       { label: "📝 Expression écrite, littérature, poésie", value: "expression écrite, littérature, poésie" },
       { label: "🎨 Arts graphiques, bande dessinée, peinture, sculpture, architecture", value: "arts graphiques, bande dessinée, peinture, sculpture, architecture" },
-      { label: "🌍 Folklore", value: "folklore" },
-      { label: "🗣️ Langues, dialectes et patois", value: "langues, dialectes, patois" },
-      { label: "📚 Bibliothèques, ludothèques, discothèques et vidéothèques", value: "bibliothèques, ludothèques, discothèques, vidéothèques" },
       { label: "🎨 Arts de la rue", value: "arts de la rue" }
   ],
 };
