@@ -46,7 +46,7 @@
       </div>
 
       <div class="d-flex justify-content-between align-items-center small pt-0">
-        <%= link_to "https://www.google.fr/maps/place/#{club.address.gsub(' ', '+')},+#{club.actual_zipcode}", target: "_blank", class:"text-info" do %>
+        <%= link_to "https://www.google.fr/maps/place/#{club.address.gsub(' ', '+')},+#{club.actual_zipcode}", target: "_blank", class:"text-light text-decoration-none" do %>
           <i class="fas fa-map-marker-alt"></i> <%= club.address %>
         <% end %>
 
@@ -69,10 +69,12 @@
             <div><i class="fas fa-exclamation text-warning "></i> <small>Inscriptions sur période</small></div>
           <% end %>
           <% if club.comments.any? %>
-            <div><i class="fas fa-comment text-secondary "></i> <small><%= club.comments.count %> commentaires</small></div>
+            <%= link_to club_path(club), class:"text-decoration-none text-secondary" do %>
+              <div><i class="fas fa-comment text-secondary "></i> <small><%= club.comments.count %> </small></div>
+            <% end %>
           <% end %>
           <% if club.activities.any?{|activity| activity.free_trial} %>
-            <div><i class="fas fa-check text-success "></i> <small>Cours d'essai gratuit</small></div>
+            <div><i class="fas fa-check text-success "></i> <small>Cours d'essai</small></div>
           <% end %>
       </div>
     </div>
