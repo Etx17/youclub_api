@@ -31,6 +31,26 @@ class Club < ApplicationRecord
     club: 1,
   }
   has_many :comments, dependent: :destroy
+  after_update :calculate_score
+
+  def calculate_score
+    new_score = 0
+
+    # Critères de calcul
+    new_score += 10000 if is_premium
+    new_score += comments.count * 10
+    new_score += photos.count * 50 # Remplacer 'photos' par la relation appropriée
+    new_score += 10 unless activities.empty?
+
+    activities.first do |activity|
+      new_score += 50 if activity.description.present?
+      new_score += 50 if activity.sub_groups.any?
+      new_score += 50 if activity.sub_groups.first.schedules.any?
+    end
+
+    # Mettre à jour le score
+    update_column(:score, new_score)
+  end
 
   def distance_from(user_coords_string)
     # user_coords_string = "48.8566,2.3522"

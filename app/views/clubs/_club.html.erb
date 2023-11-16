@@ -1,10 +1,10 @@
 
 
-<% if club.photos.any? %>
-  <div class="card-container d-flex flex-grow-1 my-3 shadow" style="min-width: 280px; max-width: 600px; border-radius: 10px; background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 60%), url('<%= cl_image_path club.photos&.first.key, width: 'auto', crop: 'scale', responsive: true, quality: 'auto', fetch_format: 'auto' %>') ;background-size: cover; background-position: center;">
-<% else %>
-  <div class="card-container d-flex flex-grow-1 my-3 shadow" style="min-width: 280px; max-width: 600px; border-radius: 10px; background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 60%), url('https://source.unsplash.com/random/?<%= club.default_image_keyword %>/300/200'); background-size: cover; background-position: center;">
-<% end %>
+<% premium_style = club.is_premium ? "box-shadow: 0 0 25px 10px rgba(218, 165, 32, 0.7);" : "box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);" %>
+<% background_image = club.photos.any? ? cl_image_path(club.photos.first.key, width: 'auto', crop: 'scale', responsive: true, quality: 'auto', fetch_format: 'auto') : "https://source.unsplash.com/random/?#{club.default_image_keyword}/300/200" %>
+
+<div class="card-container d-flex flex-grow-1 my-4" style="min-width: 280px; max-width: 600px; border-radius: 10px; background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 60%), url('<%= background_image %>'); background-size: cover; background-position: center; <%= premium_style %>">
+
   <div class="d-flex shadow flex-column justify-content-between p-2  w-100" style="border-radius: 10px; height: 80vh;">
     <p></p>
     <div class="d-flex flex-column px-2" style="color: #AAAAAA; border-radius: 10px;">
@@ -13,14 +13,14 @@
         <% if club.name.length > 30 %>
           <h4 style="max-width: 74%;">
             <%= link_to club.name, club_path(club), class:"text-decoration-none text-light" %>
-            <% if club.retrieved? %>
+            <% if club.is_premium %>
               <i class="fas fa-circle-check text-info ms-2"></i>
             <% end %>
           </h4>
         <% else %>
           <h2 style="max-width: 74%;">
             <%= link_to club.name, club_path(club), class:"text-decoration-none text-light" %>
-            <% if club.retrieved? %>
+            <% if club.is_premium %>
               <i class="fas fa-circle-check text-info ms-2" style="font-size: 0.7em;"></i>
             <% end %>
           </h2>

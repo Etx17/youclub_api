@@ -30,6 +30,7 @@ class Activity < ApplicationRecord
   has_many_attached :photos
   after_create :add_subcategory_to_club
   before_destroy :remove_subcategory_from_club
+  after_update :update_club_score
 
   # callback
   def add_subcategory_to_club
@@ -50,5 +51,11 @@ class Activity < ApplicationRecord
       updated_subcategories = club.subcategories - [self.subcategories]
       club.update(subcategories: updated_subcategories)
     end
+  end
+
+  private
+
+  def update_club_score
+    club.calculate_score
   end
 end

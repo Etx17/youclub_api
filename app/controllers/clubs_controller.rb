@@ -8,7 +8,9 @@ class ClubsController < ApplicationController
     if session[:subcategories] != "Tous"
       clubs = clubs.where("? = ANY(subcategories)", session[:subcategories])
     end
-    
+
+    clubs = clubs.order(score: :desc)
+
     @pagy, @clubs = pagy_countless(clubs, items: 5)
     respond_to do |format|
       format.html
