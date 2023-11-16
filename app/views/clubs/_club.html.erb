@@ -11,10 +11,21 @@
 
       <div class="d-flex justify-content-between align-items-start  w-100">
         <% if club.name.length > 30 %>
-          <h4 style="max-width: 74%;"><%= link_to club.name, club_path(club), class:"text-decoration-none text-light" %></h4>
+          <h4 style="max-width: 74%;">
+            <%= link_to club.name, club_path(club), class:"text-decoration-none text-light" %>
+            <% if club.retrieved? %>
+              <i class="fas fa-circle-check text-info ms-2"></i>
+            <% end %>
+          </h4>
         <% else %>
-          <h2 style="max-width: 74%;"><%= link_to club.name, club_path(club), class:"text-decoration-none text-light" %></h2>
+          <h2 style="max-width: 74%;">
+            <%= link_to club.name, club_path(club), class:"text-decoration-none text-light" %>
+            <% if club.retrieved? %>
+              <i class="fas fa-circle-check text-info ms-2" style="font-size: 0.7em;"></i>
+            <% end %>
+          </h2>
         <% end %>
+
 
         <%= link_to club_path(club), class: "text-decoration-none" do %>
           <div class="btn btn-info py-0 px-1" style="border-radius: 30px">
