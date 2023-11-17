@@ -30,6 +30,13 @@ class Club < ApplicationRecord
     association: 0,
     club: 1,
   }
+
+  enum status: {
+    standard: 0,
+    premium: 1,
+    pro: 2,
+  }
+
   has_many :comments, dependent: :destroy
   after_update :calculate_score
 
@@ -37,7 +44,7 @@ class Club < ApplicationRecord
     new_score = 0
 
     # Critères de calcul
-    new_score += 10000 if is_premium
+    new_score += 10000 if premium?
     new_score += comments.count * 10
     new_score += photos.count * 50 # Remplacer 'photos' par la relation appropriée
     new_score += 10 unless activities.empty?

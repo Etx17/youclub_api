@@ -23,7 +23,7 @@ sivananda = Club.create(
   phone_number: '0140267749',
   website: "https://sivanandaparis.org/",
   adherence_fee: 20,
-  is_premium: true
+  status: 1
 )
 
 photo_files = [

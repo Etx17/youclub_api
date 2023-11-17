@@ -1,6 +1,6 @@
 
 
-<% premium_style = club.is_premium ? "box-shadow: 0 0 25px 10px rgba(218, 165, 32, 0.7);" : "box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);" %>
+<% premium_style = club.premium? ? "box-shadow: 0 0 25px 10px rgba(218, 165, 32, 0.7);" : "box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);" %>
 <% background_image = club.photos.any? ? cl_image_path(club.photos.first.key, width: 'auto', crop: 'scale', responsive: true, quality: 'auto', fetch_format: 'auto') : "https://source.unsplash.com/random/?#{club.default_image_keyword}/300/200" %>
 
 <div class="card-container d-flex flex-grow-1 my-4" style="min-width: 280px; max-width: 600px; border-radius: 10px; background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 60%), url('<%= background_image %>'); background-size: cover; background-position: center; <%= premium_style %>">
@@ -20,7 +20,7 @@
         <% else %>
           <h2 style="max-width: 74%;">
             <%= link_to club.name, club_path(club), class:"text-decoration-none text-light" %>
-            <% if club.is_premium %>
+            <% if club.premium? %>
               <i class="fas fa-circle-check text-info ms-2" style="font-size: 0.7em;"></i>
             <% end %>
           </h2>

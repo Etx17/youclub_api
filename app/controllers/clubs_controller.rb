@@ -124,7 +124,7 @@ class ClubsController < ApplicationController
       :subcategories, :nearbyStation, :website, :objet, :category_number,
       :subcategories_number, :structure_type, :phone_number, :adherence_fee,
       :inscription_open_all_year, :inscription_start_date, :inscription_end_date,
-      :is_premium, :photos # Permit the images array
+      :status, :photos # Permit the images array
     )
   end
 end

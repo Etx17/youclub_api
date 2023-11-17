@@ -24,7 +24,7 @@ astrodojo = Club.create(
   phone_number: "0145224523",
   website: "https://www.katan-art.com/",
   adherence_fee: 30,
-  is_premium: true,
+  status: 1,
 )
 
 judo_jujitsu = Activity.create(

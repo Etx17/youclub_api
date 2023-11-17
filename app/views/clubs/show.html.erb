@@ -52,7 +52,7 @@
             </div>
           <% end %>
 
-          <% if @club.website.present? && @club.is_premium %>
+          <% if @club.website.present? && @club.premium? %>
             <%= link_to @club.website, class: "text-decoration-none", target: "_blank" do  %>
               <div class="d-flex flex-column align-items-center bg-light-white ">
                 <small class="text-secondary">Site web</small>
