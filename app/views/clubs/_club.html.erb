@@ -13,7 +13,7 @@
         <% if club.name.length > 30 %>
           <h4 style="max-width: 74%;">
             <%= link_to club.name, club_path(club), class:"text-decoration-none text-light" %>
-            <% if club.is_premium %>
+            <% if club.premium? %>
               <i class="fas fa-circle-check text-info ms-2"></i>
             <% end %>
           </h4>
