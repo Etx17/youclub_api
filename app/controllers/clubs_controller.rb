@@ -58,6 +58,21 @@ class ClubsController < ApplicationController
     end
   end
 
+  def mark_as_called
+    club = Club.find(params[:id])
+    club.update(called: !club.called)
+    redirect_to admin_dashboard_path, notice: "Club status updated."
+  end
+
+  def update_comment
+    club = Club.find(params[:id])
+    if club.update(club_params)
+      redirect_to admin_dashboard_path, notice: 'Note updated successfully.'
+    else
+      redirect_to admin_dashboard_path, alert: 'Unable to update note.'
+    end
+  end
+
 
   private
 
@@ -124,6 +139,7 @@ class ClubsController < ApplicationController
       :subcategories, :nearbyStation, :website, :objet, :category_number,
       :subcategories_number, :structure_type, :phone_number, :adherence_fee,
       :inscription_open_all_year, :inscription_start_date, :inscription_end_date,
+      :comment,
       :status, :photos # Permit the images array
     )
   end
