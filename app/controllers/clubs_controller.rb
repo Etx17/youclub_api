@@ -11,7 +11,7 @@ class ClubsController < ApplicationController
 
     clubs = clubs.order(score: :desc)
 
-    @pagy, @clubs = pagy_countless(clubs, items: 5)
+    @pagy, @clubs = pagy_countless(clubs, items: 6)
     respond_to do |format|
       format.html
       format.turbo_stream
