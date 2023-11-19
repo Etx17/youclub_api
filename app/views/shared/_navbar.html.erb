@@ -7,21 +7,21 @@
   <% end %>
 
 
-  <% if controller_name != 'pages' %>
-    <%= form_tag update_zipcode_path, method: :get, class: "d-flex justify-content-center gap-2", style: "max-width: 40%;" do %>
-        <%= text_field_tag :zipcode, session[:zipcode] || nil, class: "", style: "border-width: 1.5px; width: 50%; border-radius: 6px; text-align: center; min-width: 50px;" %>
-        <%= button_tag(type: 'submit', class: "btn btn-dark border w-50", style: "width: 50%; border: 0px; border-radius: 6px;") do %>
-          <i class="fa fa-search"></i>
-        <% end %>
+<% unless controller_name == 'pages' || (controller_name == 'clubs' && action_name == 'new') %>
+  <%= form_tag update_zipcode_path, method: :get, class: "d-flex justify-content-center gap-2", style: "max-width: 40%;" do %>
+    <%= text_field_tag :zipcode, session[:zipcode] || nil, class: "", style: "border-width: 1.5px; width: 50%; border-radius: 6px; text-align: center; min-width: 50px;" %>
+      <%= button_tag(type: 'submit', class: "btn btn-dark border w-50", style: "width: 50%; border: 0px; border-radius: 6px;") do %>
+        <i class="fa fa-search"></i>
+      <% end %>
     <% end %>
   <% end %>
 
   <div class="d-flex align-items-center">
-    <!-- Map Marker and User Dropdown in the same div -->
+    <!-- Map Marker and User Dropdown in the same div
 
     <%= link_to '#', data: { bs_toggle: "modal", bs_target: "#locationModal" } do %>
       <i class="fas fa-map-marker mx-3 text-dark"></i>
-    <% end %>
+    <% end %>-->
 
     <!-- User dropdown -->
     <% if current_user %>
@@ -44,6 +44,13 @@
               <%= link_to "Tableau de bord", pages_dashboard_path, class: 'dropdown-item' %>
             </li>
             <% end %>
+
+             <% if current_user && !current_user.club? %>
+            <li class="d-flex justify-content-center">
+              <%= link_to "Vous avez un club?", new_club_path, class: 'dropdown-item' %>
+            </li>
+            <% end %>
+
             <li>
               <%= button_to "Se déconnecter", destroy_user_session_path, data: { turbo: "false" }, method: :delete, class: 'dropdown-item' %>
             </li>

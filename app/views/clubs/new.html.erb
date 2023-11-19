@@ -1,0 +1,39 @@
+<div class="container bg-light d-flex flex-column">
+  <h1>Inscrire mon club sur youclub</h1>
+  <small>Vous êtes le président d'un club et vous souhaitez inscrire votre club sur youclub ?</small>
+  <small>Remplissez le formulaire ci-dessous et nous vous contacterons pour vérifier vos informations.</small>
+  <br>
+</div>
+
+<div class="container form-container bg-light d-flex flex-column">
+
+  <%= simple_form_for(@club, data: { turbo: false }) do |f| %>
+    <h1>Vos informations</h1>
+    <% if current_user.nil? %>
+      <%= f.simple_fields_for :user, @user do |user_fields| %>
+        <%= user_fields.input :first_name, label: 'Prénom' %>
+        <%= user_fields.input :last_name, label: 'Nom' %>
+        <%= user_fields.input :email, label: 'Email' %>
+        <%= user_fields.input :phone_number, label: 'Téléphone', required: true %>
+        <%= user_fields.input :password, label: 'Mot de passe' %>
+        <%= user_fields.input :password_confirmation, label: 'Confirmation du mot de passe' %>
+      <% end %>
+    <% else %>
+      <%= f.simple_fields_for :user_attributes, current_user do |user_fields| %>
+        <%= user_fields.input :first_name, label: 'Prénom', input_html: { value: current_user.first_name }, required: true %>
+        <%= user_fields.input :last_name, label: 'Nom', input_html: { value: current_user.last_name }, required: true %>
+        <%= user_fields.input :phone_number, label: 'Téléphone', input_html: { value: current_user.phone_number }, required: true %>
+      <% end %>
+    <% end %>
+
+    <h1>Informations du club</h1>
+    <%= f.input :name, label: 'Nom du club', required: true %>
+    <%= f.input :actual_zipcode, label: 'Code postal du club', required: true %>
+    <%= f.input :website, label: 'Site web du club si existant', required: false %>
+    <%= f.input :structure_type, label: 'Association ou club privé?', required: true, collection: ['association', 'club'] %>
+
+
+
+    <%= f.button :submit, 'Envoyer', class:"btn btn-dark" %>
+  <% end %>
+</div>

@@ -26,9 +26,6 @@ Rails.application.routes.draw do
   resource :claims
   resources :clubs do
     resources :claims, only: [:new, :create]
-    collection do
-      post :index
-    end
     member do
       delete :remove_image
     end
@@ -39,7 +36,7 @@ Rails.application.routes.draw do
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
   post "/graphql", to: "graphql#execute"
-  root to: 'pages#home'
+  root to: 'clubs#index'
   get 'pages/legal'
   get 'pages/dashboard'
   resources :leads, only: [:create]

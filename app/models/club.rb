@@ -29,6 +29,15 @@ class Club < ApplicationRecord
   has_many :activities, dependent: :destroy
   has_many :trainers, through: :activities
 
+  accepts_nested_attributes_for :user
+  has_one_attached :kbis_document
+
+  validates :name, presence: true
+  validates :actual_zipcode, presence: true
+  validates :structure_type, presence: true
+
+  # validates actual_zipcode: zipcode: { country_code: :fr }
+
   enum structure_type: {
     association: 0,
     club: 1,

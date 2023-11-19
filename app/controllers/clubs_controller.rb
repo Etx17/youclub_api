@@ -18,6 +18,39 @@ class ClubsController < ApplicationController
     end
   end
 
+  def new
+    @club = Club.new
+    @club.build_user unless current_user
+  end
+
+  def create
+    @club = Club.new(club_params.merge(status: :inactive))
+
+    if current_user
+      @club.user = current_user
+      current_user.update(first_name: params[:club][:user_attributes][:first_name]) if params[:club][:user_attributes].present?
+      current_user.update(last_name: params[:club][:user_attributes][:last_name]) if params[:club][:user_attributes].present?
+      current_user.update(phone_number: params[:club][:user_attributes][:phone_number]) if params[:club][:user_attributes].present?
+    else
+      user = User.create!(
+        first_name: params[:club][:user_attributes][:first_name],
+        last_name: params[:club][:user_attributes][:last_name],
+        phone_number: params[:club][:user_attributes][:phone_number],
+        email: params[:club][:user_attributes][:email],
+        password: params[:club][:user_attributes][:password],
+        password_confirmation: params[:club][:user_attributes][:password_confirmation]
+      )
+      @club.user = user
+    end
+
+    if @club.save
+      redirect_to pages_dashboard_path, notice: 'Votre reqûete a bien été prise en compte, vous serez contactés prochainement par un membre de Youclub' if current_user
+      redirect_to new_user_session_path, notice: 'Votre reqûete a bien été prise en compte, vous serez contactés prochainement par un membre de Youclub' unless current_user
+    else
+      render :new
+    end
+  end
+
   def show
     @club = Club.find(params[:id])
   end
@@ -141,7 +174,12 @@ class ClubsController < ApplicationController
       :inscription_open_all_year, :inscription_start_date, :inscription_end_date,
       :comment,
       :logo,
-      :status, :photos # Permit the images array
+      :status, :photos, :google_review_client_id, :retrieved, :called,
+      user_attributes: [:first_name, :last_name, :phone_number, :email, :password, :password_confirmation]
     )
+  end
+
+  def user_params
+    params.require(:user).permit(:email, :first_name, :last_name, :phone_number, :password, :password_confirmation)
   end
 end
