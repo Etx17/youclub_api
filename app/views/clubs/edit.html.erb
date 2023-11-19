@@ -12,14 +12,15 @@
       <% end %>
       <%= f.input  :photos, as: :file, multiple: false, label: "Chargez une nouvelle image si vous souhaitez remplacer l'actuelle" %>
 
+      <small>Logo</small>
+      <div class="d-flex align-items-center gap-3 border-bottom border-top">
         <% if @club.logo.attached? %>
-          <label>Logo actuel</label>
           <div class="form-group position-relative">
-            <%= image_tag(cl_image_path(@club.logo.key), class: "img-fluid", style: "height: 200px; width: 200px; border-radius: 10px; object-fit: cover;") %>
+            <%= cl_image_tag(@club.logo.key, class: "rounded-circle", width: 80, height: 80, radius: "max") %>
           </div>
         <% end %>
       <%= f.input  :logo, as: :file, label: "Chargez une nouveau logo si vous souhaitez remplacer l'actuel" %>
-
+      </div>
       <%= f.input :name, label: "Nom" %>
       <%= f.input :website, label: "Site web" %>
       <%= f.input :objet, as: :text, label: "Description" %>
