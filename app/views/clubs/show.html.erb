@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="d-flex align-items-center">
-        <%= cl_image_tag(@club.logo&.key, width: 70, height: 70, crop: 'thumb', radius: 'max') %>
+        <%= cl_image_tag(@club.logo&.key, width: 70, height: 70, crop: 'thumb', radius: 'max') if @club.logo.present?%>
         <%= @club.name.length > 12 ?
             content_tag(:h1, @club.name, class: 'text-dark px-2 mt-4') :
             content_tag(:h1, @club.name, class: 'text-dark px-2 mt-4')
