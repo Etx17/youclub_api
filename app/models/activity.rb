@@ -26,11 +26,15 @@
 class Activity < ApplicationRecord
   belongs_to :club
   has_many :sub_groups, dependent: :destroy
-  scope :by_zipcode, -> (zipcode) { where(actual_zipcode: zipcode) }
+  has_many :trainers, dependent: :destroy
   has_many_attached :photos
+
+  scope :by_zipcode, -> (zipcode) { where(actual_zipcode: zipcode) }
   after_create :add_subcategory_to_club
   before_destroy :remove_subcategory_from_club
   after_update :update_club_score
+
+  accepts_nested_attributes_for :trainers, allow_destroy: true
 
   # callback ok?
   def add_subcategory_to_club

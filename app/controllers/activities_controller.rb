@@ -28,7 +28,7 @@ class ActivitiesController < ApplicationController
   def edit
     @activity = Activity.find(params[:id])
     @category_options = ['Sports, activités de plein air','Culture, pratiques d’activités artistiques, culturelles']
-
+    @activity.trainers.build if @activity.trainers.empty?
   end
 
   def update
@@ -71,7 +71,8 @@ class ActivitiesController < ApplicationController
       :category_number,
       :subcategory_number,
       :phone_number,
-      :photos
+      :photos,
+      trainers_attributes: [:id, :_destroy, :name, :bio, :photo],
     )
   end
 

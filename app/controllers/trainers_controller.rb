@@ -1,14 +1,6 @@
 class TrainersController < ApplicationController
-  before_action :set_trainer, only: %i[ show edit update destroy ]
+  before_action :set_trainer, only: %i[ edit update destroy ]
 
-  # GET /trainers or /trainers.json
-  def index
-    @trainers = Trainer.all
-  end
-
-  # GET /trainers/1 or /trainers/1.json
-  def show
-  end
 
   # GET /trainers/new
   def new
@@ -44,12 +36,11 @@ class TrainersController < ApplicationController
   end
 
   # DELETE /trainers/1 or /trainers/1.json
-  def destroy
-    @trainer.destroy
 
-    respond_to do |format|
-      format.html { redirect_to trainers_url, notice: "Trainer was successfully destroyed." }
-    end
+  def destroy
+    @trainer = Trainer.find(params[:id])
+    @trainer.destroy
+    redirect_to edit_activity_path(@trainer.activity), notice: 'Trainer was successfully removed.'
   end
 
   private
@@ -60,6 +51,6 @@ class TrainersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def trainer_params
-      params.fetch(:trainer, {})
+      params.require(:trainer).permit(:name, :bio, :photo)
     end
 end

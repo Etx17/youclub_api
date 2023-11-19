@@ -24,8 +24,10 @@
 class Club < ApplicationRecord
   belongs_to :user, optional: true
   has_one :claim, dependent: :destroy
-  has_many :activities, dependent: :destroy
   has_many_attached :photos
+  has_many :activities, dependent: :destroy
+  has_many :trainers, through: :activities
+
   enum structure_type: {
     association: 0,
     club: 1,

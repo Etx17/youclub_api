@@ -14,13 +14,28 @@
       <%= f.input :address, label: "Adresse" %>
       <%= f.input :actual_zipcode, label: "Code Postal" %>
       <%= f.input :free_trial, as: :boolean, label: "Essai gratuit" %>
-      <%# <%= f.input :is_looking_for_volunteer, as: :boolean, label: "Recherche des volontaires" %>
-      <%# <%= f.input :subcategories, label: "Sous-catégories" %>
-      <%# <%= f.input :recurrence, label: "Récurrence" %>
-      <%# <%= f.input :subscription_link, label: "Lien d'abonnement" %>
       <%= f.input :short_description, as: :text, label: "Description courte" %>
       <%= f.input :full_description, as: :text, label: "Description complète" %>
       <%= f.input :phone_number, label: "Numéro de téléphone" %>
+
+      <div data-controller="trainers">
+        <div data-trainers-target="container">
+          <h3>Entraîneurs/animateurs</h3>
+          <% @activity.trainers.each do |trainer| %>
+            <%= f.simple_fields_for :trainers, trainer do |trainer_form| %>
+              <%= render 'trainer_fields', f: trainer_form, trainer: trainer %>
+            <% end %>
+          <% end %>
+        </div>
+
+        <template id="trainer-form-template" data-trainers-target="template">
+          <%= f.simple_fields_for :trainers, Trainer.new, child_index: "NEW_RECORD" do |trainer_form| %>
+            <%= render 'trainer_fields', f: trainer_form %>
+          <% end %>
+        </template>
+
+        <div class="btn btn-outline-dark my-3" data-action="click->trainers#addTrainer">Ajouter un entraîneur</button>
+      </div>
 
       <div class="d-flex justify-content-center w-100">
         <%= f.button :submit, "Enregistrer les modifications", class: "btn btn-dark mt-3 w-50" %>
