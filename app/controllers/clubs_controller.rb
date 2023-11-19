@@ -4,7 +4,7 @@ class ClubsController < ApplicationController
   before_action :set_subcategories, only: [:index]
 
   def index
-    clubs = Club.where( actual_zipcode: session[:zipcode], category: session[:category])
+    clubs = Club.where( actual_zipcode: session[:zipcode], category: session[:category]).where.not(status: 3)
     if session[:subcategories] != "Tous"
       clubs = clubs.where("? = ANY(subcategories)", session[:subcategories])
     end

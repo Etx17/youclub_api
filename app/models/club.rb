@@ -38,6 +38,7 @@ class Club < ApplicationRecord
     standard: 0,
     premium: 1,
     pro: 2,
+    inactive: 3
   }
 
   has_many :comments, dependent: :destroy
