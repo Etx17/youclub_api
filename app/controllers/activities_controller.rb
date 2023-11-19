@@ -32,6 +32,7 @@ class ActivitiesController < ApplicationController
   end
 
   def update
+
     @activity = Activity.find(params[:id])
 
     if params[:activity][:photos].present?

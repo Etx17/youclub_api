@@ -21,11 +21,11 @@
       <div data-controller="trainers">
         <div data-trainers-target="container">
           <h3>Entraîneurs/animateurs</h3>
-          <% @activity.trainers.each do |trainer| %>
+          <!--<% @activity.trainers.each do |trainer| %>
             <%= f.simple_fields_for :trainers, trainer do |trainer_form| %>
               <%= render 'trainer_fields', f: trainer_form, trainer: trainer %>
             <% end %>
-          <% end %>
+          <% end %> -->
         </div>
 
         <template id="trainer-form-template" data-trainers-target="template">

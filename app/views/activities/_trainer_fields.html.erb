@@ -3,19 +3,32 @@
     <% if f.object.new_record? %>
       <div class="btn btn-dark" data-action="click->trainers#removeTrainer">X</div>
     <% end %>
-
   </div>
-    <div class="d-flex gap-2 my-2">
-      <% if f.object.photo.attached? %>
-        <%= image_tag(cl_image_path(trainer.photo.key, width: 100, height: 100, crop: "fill", crop: 'thumb', gravity: 'face', radius: 'max', border: '1px_solid_black' )) %>
-      <% end %>
-      <%= f.input :photo, as: :file, label: "Photo", input_html: { class: "form-control" }, hint: 'remplacez la photo actuelle en chargeant une nouvelle photo ici' %>
-    </div>
+
+
+
+  <div class="d-flex gap-2 my-2">
+    <% if f.object.photo.attached? %>
+      <%= image_tag(cl_image_path(trainer.photo.key, width: 100, height: 100, crop: "fill", crop: 'thumb', gravity: 'face', radius: 'max', border: '1px_solid_black' )) %>
+    <% end %>
+    <%= f.input :photo, as: :file, label: "Photo", input_html: { class: "form-control" }, hint: 'remplacez la photo actuelle en chargeant une nouvelle photo ici' %>
+    <% if f.object.errors["photo"].present? %>
+      <div class="error-message">
+        <%= f.object.errors["photo"].join(", ") %>
+      </div>
+    <% end %>
+  </div>
+
   <%= f.input :name,label: "Nom", input_html: { class: "form-control" } %>
+  <% if f.object.errors["name"].present? %>
+    <div class="error-message">
+      <%= f.object.errors["name"].join(", ") %>
+    </div>
+  <% end %>
   <%= f.input :bio, label: "Bio", as: :text, input_html: { class: "form-control" } %>
 
   <% if f.object.persisted? %>
-       <%= f.input :_destroy, as: :boolean, label: 'Supprimer',
+      <%= f.input :_destroy, as: :boolean, label: 'Supprimer',
       input_html: { onchange: "if (confirm('Êtes-vous sûr de vouloir supprimer cet entraîneur ?')) { this.form.submit(); }" },
       wrapper: false %>
   <% end %>

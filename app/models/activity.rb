@@ -36,6 +36,7 @@ class Activity < ApplicationRecord
 
   accepts_nested_attributes_for :trainers, allow_destroy: true
 
+
   # callback ok?
   def add_subcategory_to_club
     unless club.subcategories.include?(self.subcategories)
