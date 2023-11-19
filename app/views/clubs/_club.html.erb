@@ -14,8 +14,10 @@
     <div class="d-flex flex-column px-2" style="color: #AAAAAA; border-radius: 10px;">
 
       <div class="d-flex justify-content-between align-items-start  w-100">
+
         <% if club.name.length > 30 %>
           <h4 style="max-width: 74%;">
+            <%= cl_image_tag(club.logo.key, width: 70, height: 70, crop: 'thumb', radius: 'max') if club.logo.present? %>
             <%= link_to club.name, club_path(club), class:"text-decoration-none text-light" %>
             <% if club.premium? %>
               <i class="fas fa-circle-check text-info ms-2"></i>
@@ -23,6 +25,7 @@
           </h4>
         <% else %>
           <h2 style="max-width: 74%;">
+            <%= cl_image_tag(club.logo.key, class:"rounded-circle", width: 50, height: 50, crop: 'thumb', radius: 'max') if club.logo.present? %>
             <%= link_to club.name, club_path(club), class:"text-decoration-none text-light" %>
             <% if club.premium? %>
               <i class="fas fa-circle-check text-info ms-2" style="font-size: 0.7em;"></i>

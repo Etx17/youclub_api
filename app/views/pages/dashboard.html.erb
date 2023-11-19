@@ -4,15 +4,34 @@
     <h1 class='align-self-center'>Tableau de bord</h1>
 
     <%# Section premium %>
-    <h3>Passer premium</h3>
-    <p>Cette fonctionalité est bientôt disponible</p>
 
     <%# Clubs list %>
     <h3>Vos clubs</h3>
     <% if @user.clubs.any? %>
       <% @user.clubs.each do |club| %>
-        <%# Div verticale de display des clubs en mode carte %>
-        <%= link_to club.name, edit_club_path(club), class: "text-decoration-none btn btn-outline-dark" %>
+        <%= link_to edit_club_path(club), class: "text-decoration-none" do %>
+          <div class="d-flex align-items-center shadow gap-3 p-2">
+            <!-- Image -->
+            <%= cl_image_tag(club.photos.first.key, class: "rounded-circle", width: 100, height: 100, crop: 'thumb', radius: 'max') %>
+            <div class="d-flex flex-column justify-content-center w-100">
+
+              <!-- Club Name -->
+              <h1 class="btn btn-dark"><%= club.name %></h1>
+
+              <!-- Activities Links -->
+              <div>
+                <% club.activities.each do |activity| %>
+                  <%= link_to activity.name, activity_path(activity), class: "btn btn-outline-dark" %>
+                <% end %>
+              </div>
+            </div>
+
+            <!--Upgrade Button -->
+                <div class="text-secondary border p-1 text-center"> <i class="fas fa-lock px-2"></i>Passer premium</div>
+              <% if club.standard? %>
+              <% end %>
+          </div>
+        <% end %>
       <% end %>
     <% else %>
       <p>Votre club n'apparait pas ? merci de contacter le support à youclubdev@gmail.com</p>
