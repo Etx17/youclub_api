@@ -8,12 +8,13 @@
 <table>
   <tr class="border border px-2">
     <th class="border px-2" style="width: 100px">Club</th>
-    <th class="border px-2">Appelé?</th>
-    <th class="border px-2">Téléphone</th>
-    <th class="border px-2">Email</th>
-    <th class="border px-2">Commentaire</th>
-    <th class="border px-2">Arr</th>
-    <th class="border px-2">Activités</th>
+    <th class="border px-2" style="width: 100px">Appelé?</th>
+    <th class="border px-2" style="width: 100px">Téléphone</th>
+    <th class="border px-2" style="width: 100px">Email</th>
+    <th class="border px-2" >Commentaire</th>
+    <th class="border px-2" style="width: 100px">Arr</th>
+    <th class="border px-2" style="width: 100px">Activités</th>
+    <th class="border px-2" style="width: 100px">Envoyer identifiants onboarding</th>
 
   </tr>
   <% @clubs.each do |club| %>
@@ -38,6 +39,7 @@
       </td>
       <td class="border px-2"><%= club.actual_zipcode %></td>
       <td class="border px-2"><%= club.activities.pluck(:name) %></td>
+      <td class="border px-2">Bouton d'envoi</td>
     </tr>
   <% end %>
 </table>
