@@ -1,7 +1,10 @@
 <div class="row justify-content-center">
   <div class="col-md-6 p-3">
     <!-- For images, you might want to handle them separately, especially if it's an array of images -->
-<%= link_to 'Retour', :back, class: 'btn btn-dark' %>
+    <div class="d-flex justify-content-between w-100">
+      <%= link_to 'Retour', :back, class: 'btn btn-dark' %>
+      <%= link_to 'Aperçu', club_path(@club.id), class: 'btn btn-dark' %>
+    </div>
     <%= simple_form_for(@club, method: :put) do |f| %>
 
       <% if @club.photos.attached? %>
