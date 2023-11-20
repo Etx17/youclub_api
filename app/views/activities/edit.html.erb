@@ -1,6 +1,6 @@
 <div class="row justify-content-center">
   <div class="col-md-6 p-3 " data-controller="subcategory">
-
+    <h1>Modifier <%= @activity.name %></h1>
     <%= simple_form_for(@activity, method: :put) do |f| %>
       <% if @activity.photos.attached? %>
         <label>Image actuelle</label>
