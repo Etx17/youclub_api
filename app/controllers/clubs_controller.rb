@@ -31,6 +31,7 @@ class ClubsController < ApplicationController
       current_user.update(first_name: params[:club][:user_attributes][:first_name]) if params[:club][:user_attributes].present?
       current_user.update(last_name: params[:club][:user_attributes][:last_name]) if params[:club][:user_attributes].present?
       current_user.update(phone_number: params[:club][:user_attributes][:phone_number]) if params[:club][:user_attributes].present?
+      current_user.club!
     else
       user = User.create!(
         first_name: params[:club][:user_attributes][:first_name],
@@ -38,7 +39,8 @@ class ClubsController < ApplicationController
         phone_number: params[:club][:user_attributes][:phone_number],
         email: params[:club][:user_attributes][:email],
         password: params[:club][:user_attributes][:password],
-        password_confirmation: params[:club][:user_attributes][:password_confirmation]
+        password_confirmation: params[:club][:user_attributes][:password_confirmation],
+        role: :club
       )
       @club.user = user
     end

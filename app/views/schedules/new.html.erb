@@ -3,7 +3,7 @@
     <%= simple_form_for([@activity, @sub_group, @schedule], html: { data: { controller: "timeslots" } }) do |f| %>
       <%= f.input :day, label: "Jour", collection: ["Lundi", 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'] %>
 
-      <h3>Créneaux Horaires</h3>
+      <p>Créneaux Horaires</p>
       <div data-timeslots-target="container">
         <!-- No existing time slots iteration for new schedule -->
       </div>
@@ -14,8 +14,12 @@
             <button type="button" data-action="click->timeslots#removeTimeSlot" class="btn h-50 border rounded-circle shadow-sm">
               <i class="fas fa-times"></i>
             </button>
+            <div class="d-flex align-items-center gap-2">
+            <p class="ms-1">De:  </p>
             <%= time_slot_form.input :start_time, as: :time, label: false, input_html: { style: 'background-image: none; padding-right: 10px; width: auto;'} %>
+            <p>à:  </p>
             <%= time_slot_form.input :end_time, as: :time, label: false, input_html: { style: 'background-image: none; padding-right: 10px; width: auto;'} %>
+            </div>
           <% end %>
         </div>
       </template>

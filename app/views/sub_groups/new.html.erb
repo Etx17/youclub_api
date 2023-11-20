@@ -1,20 +1,25 @@
 <div class="row justify-content-center">
   <div class="col-10 col-md-6 p-3">
     <h1>Nouveau sous-groupe</h1>
+    <div class="bg-light rounded border text-muted p-3">
+      <small class="info"><i class="fas fa-info-circle text-secondary pe-3"></i>Un sous groupe représente une classe, une section de votre activité définie par l'âge ou le niveau en général. Par exemple, si vous proposez du judo, vous pouvez créer un sous-groupe "Ceinture Blanche à Vertes" pour représenter une classe d'élèves de ceinture blanche,jaune, vertes, ou un sous groupe "Enfant 6-12" plus général, ou encore "Adulte confirmés". Tout ce qui représente une tranche pour votre classe</small>
+    </div>
     <%= simple_form_for([@activity, @sub_group], html: { class: 'form-horizontal', data: { controller: "tarifications" } }) do |f| %>
-      <%= f.input :name, label: "Nom" %>
-      <%= f.input :min_price_cents, label: "Prix Minimum (cents)" %>
-      <%= f.input :class_type, label: "Type de Classe" %>
+      <%= f.input :name, label: "Nom", hint: "ex: Débutant Adultes, Confirmés, Ados 13-16, Ceinture Blanche, Raquette Jaune etc..." %>
+      <%= f.input :min_price_cents, label: "Prix Minimum", hint: "Prix de l'offre la moins chère (arrondir à l'euro près). Ex: cours d'essai a 10e" %>
+      <%= f.input :class_type, label: "Type de Classe", collection: ["Cours collectif", "Cours en petit groupe", "Stage", "Evènement"  ] %>
       <%= f.input :short_description, label: "Description Courte" %>
 
       <h3>Tarifications</h3>
       <div data-tarifications-target="container">
         <!-- Placeholder for tarification fields -->
         <%= f.simple_fields_for :tarifications, @sub_group.tarifications.build do |tarif_form| %>
+        <div class="shadow-sm p-3 my-1">
           <%= tarif_form.input :amount, label: "Montant" %>
           <%= tarif_form.input :recurrence, label: "Récurrence", hint: 'an, mois, jour, carnet de 10, cours, séance, etc... à vous de choisir' %>
           <%= tarif_form.input :label, label: "Libellé", hint: "ex: Forfait bleu" %>
           <%= tarif_form.input :description, label: "Description", hint: "ex: Carnet de 10 cours valable pendant 1 mois, non remboursable" %>
+        </div>
         <% end %>
       </div>
 
@@ -28,7 +33,7 @@
               </div>
               <%= tarif_form.input :amount, label: "Montant" %>
               <%= tarif_form.input :recurrence, label: "Récurrence" %>
-              <%= tarif_form.input :label, label: "Libellé" %>
+              <%= tarif_form.input :label, label: "Libellé", hint: '(Facultatif)' %>
               <%= tarif_form.input :description, label: "Description" %>
             </div>
           <% end %>
