@@ -38,4 +38,18 @@ class User < ApplicationRecord
   def owns?(club_id)
     club? && clubs.pluck(:id).include?(club_id)
   end
+
+  def send_onboarding_email
+    postmark_client = Postmark::ApiClient.new(Rails.application.credentials.dig(:postmark_api_token))
+    postmark_client.deliver_with_template(
+      from: 'contact@youclub.fr',
+      to: "etiennededi@hotmail.fr",
+      template_id: 'your-template-id',
+      template_model: {
+        'user_name' => self.name,
+        'product_name' => 'Your Product Name',
+        # ... other template variables
+      }
+    )
+  end
 end
