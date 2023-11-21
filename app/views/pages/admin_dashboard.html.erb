@@ -41,10 +41,8 @@
       <td class="border px-2"><%= club.activities.pluck(:name) %></td>
       <td class="border px-2">
         <% if !club.onboarding_mail_sent %>
-          <%= simple_form_for club, url: update_onboarding_mail_sent_club_path(club), method: :patch, html: { id: 'onboarding-mail-form' } do |f| %>
-            <div class="d-flex">
-              <%= f.input :onboarding_mail_sent, as: :boolean, input_html: { onchange: 'submitOnboardingMailForm()' } %>
-            </div>
+          <%= form_with url: update_onboarding_mail_sent_club_path(club), method: :patch, local: true do |form| %>
+            <%= form.check_box :onboarding_mail_sent, checked: club.called, onchange: 'this.form.submit();' %>
           <% end %>
         <% end %>
       </td>
