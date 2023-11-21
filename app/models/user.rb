@@ -43,13 +43,13 @@ class User < ApplicationRecord
     postmark_client = Postmark::ApiClient.new(Rails.application.credentials.dig(:postmark_api_token))
     postmark_client.deliver_with_template(
       from: 'contact@youclub.fr',
-      to: "etiennededi@hotmail.fr",
-      template_id: 'your-template-id',
+      to: self.email,
+      template_alias: 'Y-01-onboarding-credentials',
       template_model: {
-        'user_name' => self.name,
-        'product_name' => 'Your Product Name',
-        # ... other template variables
+        action_url: Rails.application.routes.url_helpers.new_user_session_url,
+        user_email: self.email,
       }
     )
   end
+
 end
