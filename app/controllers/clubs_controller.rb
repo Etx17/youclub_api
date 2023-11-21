@@ -111,7 +111,12 @@ class ClubsController < ApplicationController
   def update_onboarding_mail_sent
     club = Club.find(params[:id])
     user = club.user
-    user.send_onboarding_mail
+    if club.update(club_params)
+      user.send_onboarding_mail
+      redirect_to admin_dashboard_path, notice: 'updated successfully.'
+    else
+      redirect_to admin_dashboard_path, alert: 'Unable to save.'
+    end
   end
 
 
@@ -182,6 +187,7 @@ class ClubsController < ApplicationController
       :inscription_open_all_year, :inscription_start_date, :inscription_end_date,
       :comment,
       :logo,
+      :onboarding_mail_sent,
       :status, :photos, :google_review_client_id, :retrieved, :called,
       user_attributes: [:first_name, :last_name, :phone_number, :email, :password, :password_confirmation]
     )
