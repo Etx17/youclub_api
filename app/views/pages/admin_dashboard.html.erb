@@ -42,7 +42,7 @@
       <td class="border px-2">
         <% if !club.onboarding_mail_sent %>
           <%= form_with url: update_onboarding_mail_sent_club_path(club), method: :patch, local: true do |form| %>
-            <%= form.check_box :onboarding_mail_sent, checked: club.called, onchange: 'this.form.submit();' %>
+            <%= form.check_box :onboarding_mail_sent, checked: club.onboarding_mail_sent, onchange: 'this.form.submit();' %>
           <% end %>
         <% end %>
       </td>
