@@ -111,7 +111,7 @@ class ClubsController < ApplicationController
   def update_onboarding_mail_sent
     club = Club.find(params[:id])
     user = club.user
-    if club.update(club_params)
+    if club.update(onboarding_mail_sent: true)
       user.send_onboarding_mail
       redirect_to admin_dashboard_path, notice: 'updated successfully.'
     else
