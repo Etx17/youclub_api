@@ -3,7 +3,6 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   config.action_mailer.default_url_options = { host: "https://TODO_PUT_YOUR_DOMAIN_HERE" }
   # Settings specified here will take precedence over those in config/application.rb.
-  default_url_options[:host] = 'https://youclub-038022f0913c.herokuapp.com/'
   # Code is not reloaded between requests.
   config.cache_classes = true
 

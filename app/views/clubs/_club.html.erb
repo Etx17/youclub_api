@@ -83,6 +83,9 @@
           <% if club.activities.any?{|activity| activity.free_trial} %>
             <div><i class="fas fa-check text-success "></i> <small>Cours d'essai</small></div>
           <% end %>
+          <% if club.competitive %>
+            <div><i class="fas fa-trophy text-secondary small "></i> <small>Compétition</small></div>
+          <% end %>
       </div>
     </div>
   </div>
