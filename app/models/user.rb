@@ -41,7 +41,6 @@ class User < ApplicationRecord
 
   def send_onboarding_mail
     return if clubs.where(onboarding_mail_sent: true).any?
-
     postmark_client = Postmark::ApiClient.new(Rails.application.credentials.dig(:postmark_api_token))
     postmark_client.deliver_with_template(
       from: 'contact@youclub.fr',
