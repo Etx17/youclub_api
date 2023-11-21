@@ -39,9 +39,23 @@
       </td>
       <td class="border px-2"><%= club.actual_zipcode %></td>
       <td class="border px-2"><%= club.activities.pluck(:name) %></td>
-      <td class="border px-2">Bouton d'envoi</td>
+      <td class="border px-2">
+        <% if !club.onboarding_mail_sent %>
+          <%= simple_form_for club, url: update_onboarding_mail_sent_club_path(club), method: :patch, html: { id: 'onboarding-mail-form' } do |f| %>
+            <div class="d-flex">
+              <%= f.input :onboarding_mail_sent, as: :boolean, input_html: { onchange: 'submitOnboardingMailForm()' } %>
+            </div>
+          <% end %>
+        <% end %>
+      </td>
     </tr>
   <% end %>
 </table>
 <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
 </div>
+
+<script>
+  function submitOnboardingMailForm() {
+    document.getElementById('onboarding-mail-form').submit();
+  }
+</script>

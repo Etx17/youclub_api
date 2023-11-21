@@ -108,6 +108,12 @@ class ClubsController < ApplicationController
     end
   end
 
+  def update_onboarding_mail_sent
+    club = Club.find(params[:id])
+    user = club.user
+    user.send_onboarding_mail
+  end
+
 
   private
 

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'admin_dashboard', to: 'pages#admin_dashboard'
   patch '/clubs/:id/mark_as_called', to: 'clubs#mark_as_called', as: 'mark_as_called'
   patch '/clubs/:id/update_comment', to: 'clubs#update_comment', as: 'update_comment_club'
+  patch '/clubs/:id/update_onboarding_mail_sent', to: 'clubs#update_onboarding_mail_sent', as: 'update_onboarding_mail_sent_club'
 
   resources :activities do
     member do
