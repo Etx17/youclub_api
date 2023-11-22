@@ -105,23 +105,30 @@ class Club < ApplicationRecord
 
 
   def generate_slug
-    # Trim the club name to 30 characters
+    # Club.find_each do |club|
+    #   club.generate_slug
+    #   club.update_column(:slug, club.slug) # This updates the slug without triggering callbacks
+    # end
+    # Trim the club name to 25 characters
     slug_parts = [name[0...30]]
 
-    # Add the first two activities
-    activities.limit(2).each do |activity|
-      slug_parts << activity.name.parameterize
+    # Add the city if present and not already part of the club name
+    if city.present? && !name.downcase.include?(city.downcase)
+      slug_parts << city.parameterize
     end
 
-    # Add the city if present
-    slug_parts << city.parameterize if city.present?
-
     # Join the parts with hyphens and parameterize the entire string
-    self.slug = slug_parts.join('-').parameterize
+    base_slug = slug_parts.join('-').parameterize
 
-    # If the slug is already taken, add a random number to the end
-    self.slug += "-#{rand(1000)}" if Club.exists?(slug: slug)
+    # Check if the slug is already taken
+    if Club.exists?(slug: base_slug)
+      # If the slug is already taken, add a random number to the end
+      self.slug = "#{base_slug}-#{rand(1000)}"
+    else
+      self.slug = base_slug
+    end
   end
+
 
 
 
