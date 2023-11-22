@@ -3,20 +3,20 @@
 <% premium_style = club.premium? ? "box-shadow: 0 0 15px 8px rgba(218, 165, 32, 0.3);" : "box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);" %>
 <% background_image = club.photos.any? ? cl_image_path(club.photos.first.key, width: 'auto', crop: 'scale', responsive: true, quality: 'auto', fetch_format: 'auto', alt: "#{club.name} cover") : "https://source.unsplash.com/random/?#{club.default_image_keyword}/300/200" %>
 
-<div data-controller="club-card"
+<article data-controller="club-card"
   data-club-card-url-value="<%= club_path(club) %>"
   data-action="mouseover->club-card#hover mouseout->club-card#reset click->club-card#goToClub"
   class="card-container d-flex flex-grow-1 my-4"
   style="min-width: 280px; max-width: 600px; border-radius: 10px; background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 60%), url('<%= background_image %>'); background-size: cover; background-position: center; <%= premium_style %>">
 
-  <div class="d-flex shadow flex-column justify-content-between p-2  w-100" style="border-radius: 10px; height: 80vh;">
+  <header class="d-flex shadow flex-column justify-content-between p-2  w-100" style="border-radius: 10px; height: 80vh;">
     <p></p>
     <div class="d-flex flex-column px-2" style="color: #AAAAAA; border-radius: 10px;">
 
       <div class="d-flex justify-content-between align-items-start  w-100">
 
         <% if club.name.length > 30 %>
-          <h4 style="max-width: 74%;">
+          <h2 style="max-width: 74%; font-size: 20px;">
             <%= cl_image_tag(club.logo.key, width: 70, height: 70, crop: 'thumb', radius: 'max', alt: "#{club.name} logo") if club.logo.present? %>
             <%= link_to club.name, club_path(club), class:"text-decoration-none text-light" %>
             <% if club.premium? %>
@@ -35,22 +35,22 @@
 
 
         <%= link_to club_path(club), class: "text-decoration-none" do %>
-          <div class="btn btn-info py-0 px-1" style="border-radius: 30px">
+          <div class="btn btn-info py-0 px-1" style="border-radius: 10px">
             <span class='small'>
-              <i class="fas fa-eye small"></i>Détails
+              <i class="fas fa-eye small pe-2"></i>En savoir plus
             </span>
           </div>
         <% end %>
       </div>
 
-      <div class="d-flex flex-wrap gap-2 text-dark align-items-center small">
+      <nav class="d-flex flex-wrap gap-2 text-dark align-items-center small">
         <% club.activities&.first(3)&.each do |activity| %>
           <%= link_to activity.name, activity_path(activity.id), class: "btn btn-outline-info pill"  %>
         <% end %>
         <% if club.activities.count > 3 %>
-            <%= link_to "et #{club.activities.count - 3} autres ...", club_path(club.id), class: "btn text-info pill"  %>
+            <%= link_to "voir #{club.activities.count - 3} autre(s) activités ...", club_path(club.id), class: "btn text-info pill"  %>
         <% end %>
-      </div>
+      </nav>
 
       <div class="d-flex justify-content-between align-items-center small pt-0">
         <%= link_to "https://www.google.fr/maps/place/#{club.address.gsub(' ', '+')},+#{club.actual_zipcode}", target: "_blank", class:"text-light text-decoration-none" do %>
@@ -69,24 +69,40 @@
       <% else %>
         <p class="small text-secondary"><%= club.objet %></p>
       <% end %>
-        <div class="d-flex gap-2 justify-content-between">
-          <% if club.inscription_open_all_year %>
-            <div><i class="fas fa-check text-success "></i> <small>Inscriptions toute l'année</small></div>
-          <% else %>
-            <div><i class="fas fa-exclamation text-warning "></i> <small>Inscriptions sur période</small></div>
+      <footer class="d-flex gap-2 justify-content-between">
+        <% if club.inscription_open_all_year %>
+          <div><i class="fas fa-check text-success "></i> <small>Inscriptions toute l'année</small></div>
+        <% else %>
+          <div><i class="fas fa-exclamation text-warning "></i> <small>Inscriptions sur période</small></div>
+        <% end %>
+        <% if club.comments.any? %>
+          <%= link_to club_path(club), class:"text-decoration-none text-secondary" do %>
+            <div><i class="fas fa-comment text-secondary "></i> <small><%= club.comments.count %> </small></div>
           <% end %>
-          <% if club.comments.any? %>
-            <%= link_to club_path(club), class:"text-decoration-none text-secondary" do %>
-              <div><i class="fas fa-comment text-secondary "></i> <small><%= club.comments.count %> </small></div>
-            <% end %>
-          <% end %>
-          <% if club.activities.any?{|activity| activity.free_trial} %>
-            <div><i class="fas fa-check text-success "></i> <small>Cours d'essai</small></div>
-          <% end %>
-          <% if club.competitive %>
-            <div><i class="fas fa-trophy text-secondary small "></i> <small>Compétition</small></div>
-          <% end %>
-      </div>
+        <% end %>
+        <% if club.activities.any?{|activity| activity.free_trial} %>
+          <div><i class="fas fa-check text-success "></i> <small>Cours d'essai</small></div>
+        <% end %>
+        <% if club.competitive %>
+          <div><i class="fas fa-trophy text-secondary small "></i> <small>Compétition</small></div>
+        <% end %>
+      </footer>
     </div>
-  </div>
-</div>
+  </header>
+</article>
+
+<%# SEO %>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "SportsClub",
+  "name": "<%= club.name %>",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "<%= club.address %>",
+    "postalCode": "<%= club.actual_zipcode %>"
+  },
+  "url": "<%= club_path(club) %>",
+  "logo": "<%= cl_image_path(club.logo.key) if club.logo.present? %>"
+}
+</script>
