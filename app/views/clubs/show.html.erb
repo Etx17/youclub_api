@@ -1,3 +1,11 @@
+
+<%
+  set_meta_tags(
+    title: @club.name.downcase.capitalize,
+    description: @club.objet,
+    keywords: "Club de #{@club.activities.pluck(:name).join(', ')}, autour de moi, #{@club.city}"
+  )
+%>
 <div class="container-fluid">
     <!-- Row for your content -->
     <div class="row">
