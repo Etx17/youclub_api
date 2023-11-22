@@ -106,7 +106,7 @@ class Club < ApplicationRecord
 
   def generate_slug
     # Trim the club name to 30 characters
-    slug_parts = [name[0...20]]
+    slug_parts = [name[0...30]]
 
     # Add the first two activities
     activities.limit(2).each do |activity|
@@ -118,6 +118,9 @@ class Club < ApplicationRecord
 
     # Join the parts with hyphens and parameterize the entire string
     self.slug = slug_parts.join('-').parameterize
+
+    # If the slug is already taken, add a random number to the end
+    self.slug += "-#{rand(1000)}" if Club.exists?(slug: slug)
   end
 
 
