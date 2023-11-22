@@ -3,7 +3,8 @@
   set_meta_tags(
     title: @club.name.downcase.capitalize,
     description: @club.objet,
-    keywords: "Club de #{@club.activities.pluck(:name).join(', ')}, autour de moi, #{@club.city}"
+    keywords: "Club de #{@club.activities.pluck(:name).join(', ')}, autour de moi, #{@club.city}",
+    canonical: club_url(@club)
   )
 %>
 <div class="container-fluid">
