@@ -1,4 +1,9 @@
-
+<%
+  set_meta_tags(
+    noindex: true,
+    nofollow: true
+  )
+%>
 <div class="container">
 <%= form_with url: admin_dashboard_path, method: :get, local: true do |form| %>
   <%= form.label :actual_zipcode, 'Filter by Zipcode:' %>
