@@ -22,6 +22,9 @@
 #  is_premium         :boolean          default(FALSE)
 #
 class Club < ApplicationRecord
+  extend FriendlyId
+  friendly_id :slug, use: :slugged
+
   belongs_to :user, optional: true
   has_one :claim, dependent: :destroy
   has_many_attached :photos
@@ -29,8 +32,9 @@ class Club < ApplicationRecord
   has_many :activities, dependent: :destroy
   has_many :trainers, through: :activities
 
-  accepts_nested_attributes_for :user
+  has_many :comments, dependent: :destroy
   has_one_attached :kbis_document
+  accepts_nested_attributes_for :user
 
   validates :name, presence: true
   validates :actual_zipcode, presence: true
@@ -50,7 +54,6 @@ class Club < ApplicationRecord
     inactive: 3
   }
 
-  has_many :comments, dependent: :destroy
   after_update :calculate_score
 
   def calculate_score

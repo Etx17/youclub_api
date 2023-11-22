@@ -54,15 +54,15 @@ class ClubsController < ApplicationController
   end
 
   def show
-    @club = Club.find(params[:id])
+    @club = Club.friendly.find(params[:id])
   end
 
   def edit
-    @club = Club.find(params[:id])
+    @club = Club.friendly.find(params[:id])
   end
 
   def update
-    @club = Club.find(params[:id])
+    @club = Club.friendly.find(params[:id])
     if @club.update(club_params)
       redirect_to edit_club_path(@club), notice: 'Club was successfully updated.'
     else
@@ -94,13 +94,13 @@ class ClubsController < ApplicationController
   end
 
   def mark_as_called
-    club = Club.find(params[:id])
+    club = Club.friendly.find(params[:id])
     club.update(called: !club.called)
     redirect_to admin_dashboard_path, notice: "Club status updated."
   end
 
   def update_comment
-    club = Club.find(params[:id])
+    club = Club.friendly.find(params[:id])
     if club.update(club_params)
       redirect_to admin_dashboard_path, notice: 'Note updated successfully.'
     else
@@ -109,7 +109,7 @@ class ClubsController < ApplicationController
   end
 
   def update_onboarding_mail_sent
-    club = Club.find(params[:id])
+    club = Club.friendly.find(params[:id])
     user = club.user
     if club.update(onboarding_mail_sent: true)
       user.send_onboarding_mail
@@ -161,7 +161,7 @@ class ClubsController < ApplicationController
   end
 
   def remove_image
-    @club = Club.find(params[:id])
+    @club = Club.friendly.find(params[:id])
     if @club.photos.attached?
       @club.photos.first.purge
       redirect_to edit_club_path(@club), notice: 'Image was successfully removed.'
