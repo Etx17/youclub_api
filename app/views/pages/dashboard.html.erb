@@ -18,7 +18,7 @@
         <%= link_to edit_club_path(club), class: "text-decoration-none my-3" do %>
           <div class="d-flex align-items-center shadow gap-3 p-2">
             <!-- Image -->
-            <%= cl_image_tag(club.photos.first.key, class: "rounded-circle", width: 100, height: 100, crop: 'thumb', radius: 'max') if club.photos.any?%>
+            <%= cl_image_tag(club.photos.first.key, class: "rounded-circle", width: 100, height: 100, crop: 'thumb', radius: 'max', alt: "club image") if club.photos.any?%>
             <div class="d-flex flex-column justify-content-center w-100">
 
               <!-- Club Name -->

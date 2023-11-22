@@ -80,9 +80,9 @@ group :development do
   gem 'binding_of_caller'
   gem 'annotate'
   gem "letter_opener"
-
+  gem 'bullet'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
+  gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
