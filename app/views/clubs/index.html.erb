@@ -1,40 +1,44 @@
 <div class="container-fluid bg-light">
     <!-- Row for your content -->
-    <div class="row">
-
-      <div class="d-none d-sm-block col-sm-2 col-md-3 ">
-      </div>
-
-      <!-- Main Container -->
-      <div class="col-12 col-sm-8 col-md-6 d-flex flex-column justify-content-center align-items-center">
-        <div class="d-flex w-100 gap-1 mt-2" style="height: 40px; max-width: 600px">
-          <div class= 'w-50'>
-            <%= render "category_picker" %>
-          </div>
-
-          <div class= 'w-50'>
-            <%= render "subcategory_picker" %>
-          </div>
-        </div>
-
-        <% if @clubs.any? %>
-        <div class="align-self-center "id="clubs"></div>
-          <%= turbo_frame_tag "pagination", src: clubs_path(format: :turbo_stream), loading: :lazy %>
-        </div>
-
-        <% else %>
-          <div class="d-flex my-3 w-100 border justify-content-center align-items-center" style="height: 80vh; border-radius: 10px;">
-
-            <div class="d-flex flex-column align-items-center gap-3">
-              <div class="text-secondary">Aucun résultat... 🥲</div>
-            </div>
-
-          </div>
-        <% end %>
-
-      <div class="d-none d-sm-block col-sm-2 col-md-3 ">
-          <!-- Content for right side column -->
-      </div>
-
+  <div class="row">
+    <div class="d-none d-sm-block col-sm-2 col-md-3 ">
     </div>
+
+    <!-- Main Container -->
+    <main class="col-12 col-sm-8 col-md-6 d-flex flex-column justify-content-center align-items-center">
+      <h1 style="font-size: 25px;">Trouvez des clubs et des activités <%= session[:category] == 'Sports, activités de plein air' ? "sportives" : "" %> autour de vous</h1>
+      <section class="d-flex w-100 gap-1 mt-2" style="height: 40px; max-width: 600px">
+        <div class= 'w-50'>
+          <label for="category-picker" class="visually-hidden">Choisir une catégorie</label>
+          <%= render "category_picker" %>
+        </div>
+
+        <div class= 'w-50'>
+          <label for="subcategory-picker" class="visually-hidden">Choisir une sous-catégorie</label>
+          <%= render "subcategory_picker" %>
+        </div>
+      </section>
+
+      <% if @clubs.any? %>
+      <section class="align-self-center" id="clubs"></div>
+
+        <%= turbo_frame_tag "pagination", src: clubs_path(format: :turbo_stream), loading: :lazy %>
+      </section>
+
+      <% else %>
+        <section class="d-flex my-3 w-100 border justify-content-center align-items-center" style="height: 80vh; border-radius: 10px;">
+
+          <div class="d-flex flex-column align-items-center gap-3">
+            <div class="text-secondary">Aucun résultat... 🥲</div>
+          </div>
+
+        </section>
+      <% end %>
+    </main>
+
+    <div class="d-none d-sm-block col-sm-2 col-md-3 ">
+        <!-- Content for right side column -->
+    </div>
+
+  </div>
 </div>
