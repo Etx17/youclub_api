@@ -24,6 +24,9 @@
 #  phone_number             :string
 #
 class Activity < ApplicationRecord
+  extend FriendlyId
+  friendly_id :generate_activity_slug, use: :slugged
+
   belongs_to :club
   has_many :sub_groups, dependent: :destroy
   has_many :trainers, dependent: :destroy
@@ -57,6 +60,20 @@ class Activity < ApplicationRecord
       club.update(subcategories: updated_subcategories)
     end
   end
+
+  def generate_activity_slug
+    # Activity.all.each do |a|
+    #   a.update_column(:slug, a.generate_activity_slug)
+    # end
+    base_slug = "#{name}-#{club.city}-#{club.name.first(30)}".parameterize
+    if Activity.exists?(slug: base_slug)
+      # If the slug is already taken, add a random number to the end
+      "#{base_slug}-#{rand(1000)}"
+    else
+      base_slug
+    end
+  end
+
 
   private
 

@@ -8,7 +8,7 @@ class ActivitiesController < ApplicationController
   end
 
   def show
-    @activity = Activity.find(params[:id])
+    @activity = Activity.friendly.find(params[:id])
     @sub_groups = @activity.sub_groups
   end
 
@@ -26,14 +26,14 @@ class ActivitiesController < ApplicationController
   end
 
   def edit
-    @activity = Activity.find(params[:id])
+    @activity = Activity.friendly.find(params[:id])
     @category_options = ['Sports, activités de plein air','Culture, pratiques d’activités artistiques, culturelles']
     @activity.trainers.build if @activity.trainers.empty?
   end
 
   def update
 
-    @activity = Activity.find(params[:id])
+    @activity = Activity.friendly.find(params[:id])
 
     if params[:activity][:photos].present?
       @activity.photos.first.purge if @activity.photos.any?
