@@ -103,6 +103,25 @@ class Club < ApplicationRecord
     haversine(club_latitude, club_longitude, latitude, longitude)
   end
 
+
+  def generate_slug
+    # Trim the club name to 30 characters
+    slug_parts = [name[0...20]]
+
+    # Add the first two activities
+    activities.limit(2).each do |activity|
+      slug_parts << activity.name.parameterize
+    end
+
+    # Add the city if present
+    slug_parts << city.parameterize if city.present?
+
+    # Join the parts with hyphens and parameterize the entire string
+    self.slug = slug_parts.join('-').parameterize
+  end
+
+
+
   def category_images
     {
       "Sports, activités de plein air": {
