@@ -52,3 +52,16 @@
 
   </div>
 </div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsClub",
+  "name": "Clubs autour de moi",
+  "description": "Liste de clubs et activités autour de moi dans le #{session[:zipcode]}",
+  "url": "#{clubs_url}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "#{session[:zipcode]}"
+  }
+}
+</script>

@@ -16,134 +16,134 @@
       </div>
 
       <!-- Main Container -->
-      <div class="col-12 col-sm-8 col-md-6 col-xl-6">
-
+      <main class="col-12 col-sm-8 col-md-6 col-xl-6">
         <div class="d-flex flex-column justify-content-start shadow bg-white " style="border-radius: 15px;">
 
-        <div class="position-relative" style="display: block; border-radius: 15px;"> <!-- Positioning context for the button -->
-            <% if @club.photos.any? %>
-              <%= image_tag cl_image_path(@club.photos.first.key), class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; border-top-left-radius: 15px;  border-top-right-radius: 15px;", loading: 'lazy' %>
-            <% else %>
-              <%= image_tag "https://source.unsplash.com/random/?horse/300/200", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; border-top-left-radius: 15px;  border-top-right-radius: 15px;", loading: 'lazy' %>
-            <% end %>
-            <div class="d-flex justify-content-end align-items-center text-light w-100 px-2" style="position: absolute; bottom: 10px; "> <!-- Positioning the button relative to the image -->
-                <div class="btn py-2 px-4 gradient-button d-flex align-items-center gap-2" style="border-radius: 8px;">
-                    <i class="fas fa-edit "></i>
-                    <span class=""> S'inscrire</span>
-                </div>
-            </div>
-        </div>
-        <div class="d-flex align-items-center p-2">
-          <%= cl_image_tag(@club.logo&.key, width: 50, height: 50, crop: 'thumb', radius: 'max', alt: "Logo du club") if @club.logo.present?%>
-          <%= @club.name.length > 12 ?
-              content_tag(:h1, @club.name, class: 'text-dark px-2 mt-2') :
-              content_tag(:h1, @club.name, class: 'text-dark px-2 mt-2')
-          %>
-        </div>
-
-        <div class="d-flex flex-wrap gap-2 p-2 pb-3 border-bottom">
-          <% @club.activities.each do |activity| %>
-            <%= link_to activity_path(activity), class: "flex-grow-1 btn bg-light-white border" do %>
-              <span class="gradient-text" style="font-size: 1.5em" ><%= activity.name %><i class=" px-3 fas fa-chevron-right" style="color: #EEEEEE; font-size: 0.8em;"></i></span>
-
-            <% end %>
-          <% end %>
-        </div>
-
-        <div class="px-3 my-3 d-flex flex-column gap-3">
-          <%= link_to "https://www.google.fr/maps/place/#{@club.address.gsub(' ', '+')},+#{@club.actual_zipcode}", target: "_blank", class:"text-secondary text-decoration-none nav-link" do %>
-            <i class="fas fa-map-marker-alt"></i> <%= @club.address %>
-          <% end %>
-
-          <p class="mt-3 text-dark"><%= @club.objet %> </p>
-          <% if @club.trainers.any? %>
-            <div class="d-flex flex-column align-items-center bg-light-white ">
-              <small class="text-secondary">Entraîneurs</small>
-              <%# For each trainer, render them, flew wrap i guess because %>
-              <% @club.trainers.each do |trainer| %>
-                <div class="d-flex flex-column align-items-center bg-light-white ">
-                  <%= cl_image_tag(trainer.photo.key, class: "rounded-circle", width: 50, height: 50, crop: 'thumb', radius: 'max', alt: "entraîneur ou animateur") if trainer.photo.present?%>
-                  <div class="text-secondary" style="font-size: 1em"><%= trainer.name %></div>
-                </div>
+          <header class="position-relative" style="display: block; border-radius: 15px;"> <!-- Positioning context for the button -->
+              <% if @club.photos.any? %>
+                <%= image_tag cl_image_path(@club.photos.first.key), alt: "Photos du club", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; border-top-left-radius: 15px;  border-top-right-radius: 15px;", loading: 'lazy' %>
+              <% else %>
+                <%= image_tag "https://source.unsplash.com/random/?horse/300/200", alt: "Photos du club", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; border-top-left-radius: 15px;  border-top-right-radius: 15px;", loading: 'lazy' %>
               <% end %>
-            </div>
-          <% end %>
-          <% if @club.adherence_fee.present? %>
-            <div class="d-flex flex-column align-items-center bg-light-white ">
-              <small class="text-secondary">Frais d'adhésion</small>
-              <div class="text-secondary" style="font-size: 2em"><%= @club.adherence_fee %>€</div>
-            </div>
-          <% end %>
+              <div class="d-flex justify-content-end align-items-center text-light w-100 px-2" style="position: absolute; bottom: 10px; "> <!-- Positioning the button relative to the image -->
+                  <div class="btn py-2 px-4 gradient-button d-flex align-items-center gap-2" style="border-radius: 8px;">
+                      <i class="fas fa-edit "></i>
+                      <span class=""> S'inscrire</span>
+                  </div>
+              </div>
+          </header>
 
-          <% if @club.website.present? && @club.premium? %>
-            <%= link_to @club.website, class: "text-decoration-none", target: "_blank" do  %>
+          <section class="d-flex align-items-center p-2">
+            <%= cl_image_tag(@club.logo&.key, width: 50, height: 50, crop: 'thumb', radius: 'max', alt: "Logo du club") if @club.logo.present?%>
+            <%= @club.name.length > 12 ?
+                content_tag(:h1, @club.name, class: 'text-dark px-2 mt-2') :
+                content_tag(:h1, @club.name, class: 'text-dark px-2 mt-2')
+            %>
+          </section>
+
+          <nav class="d-flex flex-wrap gap-2 p-2 pb-3 border-bottom">
+            <% @club.activities.each do |activity| %>
+              <%= link_to activity_path(activity), class: "flex-grow-1 btn bg-light-white border" do %>
+                <span class="gradient-text" style="font-size: 1.5em" ><%= activity.name %><i class=" px-3 fas fa-chevron-right" style="color: #EEEEEE; font-size: 0.8em;"></i></span>
+
+              <% end %>
+            <% end %>
+          </nav>
+
+          <footer class="px-3 my-3 d-flex flex-column gap-3">
+            <%= link_to "https://www.google.fr/maps/place/#{@club.address.gsub(' ', '+')},+#{@club.actual_zipcode}", target: "_blank", class:"text-secondary text-decoration-none nav-link" do %>
+              <i class="fas fa-map-marker-alt"></i> <%= @club.address %>
+            <% end %>
+
+            <p class="mt-3 text-dark"><%= @club.objet %> </p>
+            <% if @club.trainers.any? %>
               <div class="d-flex flex-column align-items-center bg-light-white ">
-                <small class="text-secondary">Site web</small>
-                <div class="gradient-text" style="font-size: 1em"><%= @club.website %></div>
+                <small class="text-secondary">Entraîneurs</small>
+                <%# For each trainer, render them, flew wrap i guess because %>
+                <% @club.trainers.each do |trainer| %>
+                  <div class="d-flex flex-column align-items-center bg-light-white ">
+                    <%= cl_image_tag(trainer.photo.key, class: "rounded-circle", width: 50, height: 50, crop: 'thumb', radius: 'max', alt: "entraîneur ou animateur") if trainer.photo.present?%>
+                    <div class="text-secondary" style="font-size: 1em"><%= trainer.name %></div>
+                  </div>
+                <% end %>
               </div>
             <% end %>
-          <% end %>
+            <% if @club.adherence_fee.present? %>
+              <div class="d-flex flex-column align-items-center bg-light-white ">
+                <small class="text-secondary">Frais d'adhésion</small>
+                <div class="text-secondary" style="font-size: 2em"><%= @club.adherence_fee %>€</div>
+              </div>
+            <% end %>
 
-          <% if @club.phone_number.present? %>
-            <div class="d-flex flex-column align-items-center bg-light-white ">
-              <small class="text-secondary">Nous joindre</small>
-              <div class="text-secondary" style="font-size: 1em"><%= @club.phone_number %></div>
-            </div>
-          <% end %>
-
-          <% if @club.user.nil? && current_user.present? %>
-            <div class="d-flex flex-column align-items-center bg-light-white ">
-              <small class="text-secondary">C'est votre club ?</small>
-              <div class="text-secondary" style="font-size: 1em"><%= link_to "Récupérer votre profil", new_claims_path(club_id: @club.id, name: @club.name)%></div>
-            </div>
-          <% end %>
-
-          <% if user_signed_in? && @club.comments.none? { |comment| comment.user_id == current_user.id } %>
-            <div class="new-comment-form">
-             <%= simple_form_for(Comment.new, url: comments_path, method: :post) do |f| %>
-                <%= f.input :content, label: 'Votre commentaire', input_html: { class: 'form-control' } %>
-                <%= f.hidden_field :club_id, value: @club.id %>
-                <%= f.hidden_field :user_id, value: current_user.id %>
-                <%= f.button :submit, 'Ajouter un commentaire', class: 'btn btn-dark' %>
-              <% end %>
-            </div>
-          <% end %>
-
-          <% if @club.comments.any? %>
-            <div class="d-flex flex-column align-items-start bg-light-white px-3">
-              <small class="text-secondary align-self-center">Commentaires</small>
-              <% @club.comments.each do |comment| %>
-                <div id="comment-<%= comment.id %>" data-controller="inline-edit">
-                  <div data-inline-edit-target="display">
-                    <!-- Display Content -->
-                    <div class="text-secondary d-flex justify-content-between gap-3 align-items-center" style="font-size: 0.8em">
-                      <small><%= comment.user.email.split('@').first %>, le <%= comment.created_at.strftime("%Y-%m-%d") %></small>
-                      <% if user_signed_in? && comment.user == current_user %>
-                        <%= link_to '#', class: '', data: { action: "click->inline-edit#toggleEdit" } do %>
-                          <i class="fas fa-edit text-dark"></i>
-                        <% end %>
-                        <%= button_to comment_path(comment), class:"border", data: { confirm: "Êtes vous sûr?", turbo_confirm: "Are you sure?" }, method: :delete do %>
-                          <i class="fas fa-trash text-dark"></i>
-                        <% end %>
-                      <% end %>
-                    </div>
-                    <div class="text-dark" style="font-size: 1em"><%= comment.content %></div>
-                  </div>
-                  <div class="comment-edit" style="display: none;" data-inline-edit-target="edit">
-                    <!-- Edit Form -->
-                    <%= simple_form_for(comment, remote: true, authenticity_token: true) do |f| %>
-                      <%= f.input :content, label: false, input_html: { class: 'form-control' } %>
-                      <%= f.button :submit, 'Enregistrer', class: 'btn btn-dark' %>
-                      <%= link_to 'Annuler', '#', class: 'btn btn-outline-dark', data: { action: "click->inline-edit#toggleDisplay" } %>
-                    <% end %>
-                  </div>
+            <% if @club.website.present? && @club.premium? %>
+              <%= link_to @club.website, class: "text-decoration-none", target: "_blank" do  %>
+                <div class="d-flex flex-column align-items-center bg-light-white ">
+                  <small class="text-secondary">Site web</small>
+                  <div class="gradient-text" style="font-size: 1em"><%= @club.website %></div>
                 </div>
               <% end %>
-            </div>
-          <% end %>
+            <% end %>
 
-        </div>
-      </div>
+            <% if @club.phone_number.present? %>
+              <div class="d-flex flex-column align-items-center bg-light-white ">
+                <small class="text-secondary">Nous joindre</small>
+                <div class="text-secondary" style="font-size: 1em"><%= @club.phone_number %></div>
+              </div>
+            <% end %>
+
+            <% if @club.user.nil? && current_user.present? %>
+              <div class="d-flex flex-column align-items-center bg-light-white ">
+                <small class="text-secondary">C'est votre club ?</small>
+                <div class="text-secondary" style="font-size: 1em"><%= link_to "Récupérer votre profil", new_claims_path(club_id: @club.id, name: @club.name)%></div>
+              </div>
+            <% end %>
+
+            <% if user_signed_in? && @club.comments.none? { |comment| comment.user_id == current_user.id } %>
+              <div class="new-comment-form">
+              <%= simple_form_for(Comment.new, url: comments_path, method: :post) do |f| %>
+                  <%= f.input :content, label: 'Votre commentaire', input_html: { class: 'form-control' } %>
+                  <%= f.hidden_field :club_id, value: @club.id %>
+                  <%= f.hidden_field :user_id, value: current_user.id %>
+                  <%= f.button :submit, 'Ajouter un commentaire', class: 'btn btn-dark' %>
+                <% end %>
+              </div>
+            <% end %>
+
+            <% if @club.comments.any? %>
+              <div class="d-flex flex-column align-items-start bg-light-white px-3">
+                <small class="text-secondary align-self-center">Commentaires</small>
+                <% @club.comments.each do |comment| %>
+                  <div id="comment-<%= comment.id %>" data-controller="inline-edit">
+                    <div data-inline-edit-target="display">
+                      <!-- Display Content -->
+                      <div class="text-secondary d-flex justify-content-between gap-3 align-items-center" style="font-size: 0.8em">
+                        <small><%= comment.user.email.split('@').first %>, le <%= comment.created_at.strftime("%Y-%m-%d") %></small>
+                        <% if user_signed_in? && comment.user == current_user %>
+                          <%= link_to '#', class: '', data: { action: "click->inline-edit#toggleEdit" } do %>
+                            <i class="fas fa-edit text-dark"></i>
+                          <% end %>
+                          <%= button_to comment_path(comment), class:"border", data: { confirm: "Êtes vous sûr?", turbo_confirm: "Are you sure?" }, method: :delete do %>
+                            <i class="fas fa-trash text-dark"></i>
+                          <% end %>
+                        <% end %>
+                      </div>
+                      <div class="text-dark" style="font-size: 1em"><%= comment.content %></div>
+                    </div>
+                    <div class="comment-edit" style="display: none;" data-inline-edit-target="edit">
+                      <!-- Edit Form -->
+                      <%= simple_form_for(comment, remote: true, authenticity_token: true) do |f| %>
+                        <%= f.input :content, label: false, input_html: { class: 'form-control' } %>
+                        <%= f.button :submit, 'Enregistrer', class: 'btn btn-dark' %>
+                        <%= link_to 'Annuler', '#', class: 'btn btn-outline-dark', data: { action: "click->inline-edit#toggleDisplay" } %>
+                      <% end %>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+
+          </footer  >
+      </main>
 
       <div class="d-none d-sm-block col-sm-2 col-md-3 col-xl-3 ">
           <!-- Content for right side column -->
@@ -151,3 +151,34 @@
 
     </div>
 </div>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "SportsClub",
+  "name": "<%= @club.name %>",
+  "description": "<%= @club.objet %>",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "<%= @club.address %>",
+    "addressLocality": "<%= @club.city %>",
+    "postalCode": "<%= @club.actual_zipcode %>"
+  },
+  "telephone": "<%= @club.phone_number %>",
+  "url": "<%= club_url(@club) %>",
+  "event": <%= @club.activities.map { |activity|
+    {
+      "@type": "SportsEvent",
+      "name": activity.name
+    }
+  }.to_json.html_safe %>,
+  "review": <%= @club.comments.map { |comment|
+    {
+      "@type": "Review",
+      "reviewBody": comment.content,
+      "author": {
+        "@type": "Person",
+      }
+    }
+  }.to_json.html_safe %>
+}
+</script>

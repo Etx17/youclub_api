@@ -1,4 +1,12 @@
-<% content_for :title, "Youclub: #{@activity.name}" %>
+<%
+  set_meta_tags(
+    title: @activity.name,
+    description: @activity.short_description,
+    keywords: "#{@activity.name}, autour de moi, #{@activity.club.city}}",
+    canonical: activity_url(@activity)
+  )
+%>
+
 <div class="container-fluid">
     <!-- Row for your content -->
     <div class="row">
@@ -8,22 +16,25 @@
       </div>
 
       <!-- Main Container -->
-      <div class="col-12 col-sm-8 col-md-6 col-xl-6">
+      <main class="col-12 col-sm-8 col-md-6 col-xl-6">
 
         <div class="d-flex flex-column justify-content-start shadow bg-white " style="border-radius: 15px;">
+          <section id="activity-photo" aria-label="Activity photo">
+            <% if @activity.photos.attached? %>
+              <%= image_tag(cl_image_path(@activity.photos.first.key), alt: "Photo de l'activité", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; ", loading: 'lazy') %>
+            <% else %>
+              <%= image_tag "https://source.unsplash.com/random/?horse/300/200", alt: "Photo de remplacement d'un cheval", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; ", loading: 'lazy' %>
+            <% end %>
+          </section>
 
-          <% if @activity.photos.attached? %>
-          <%= image_tag(cl_image_path(@activity.photos.first.key), class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; ", loading: 'lazy') %>
-          <% else %>
-          <%= image_tag "https://source.unsplash.com/random/?horse/300/200", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; ", loading: 'lazy' %>
-          <% end %>
-          <div class="d-flex justify-content-between align-items-center text-light w-100 px-2">
-            <h1 class="gradient-title" style="max-width: 74%;"><%= @activity.name %></h1>
+          <header class="d-flex justify-content-between align-items-center text-light w-100 px-2">
+            <h1 class="gradient-title" style="max-width: 74%;"><%=  @activity.name%>
+            </h1>
             <% if current_user && @activity.club.user == current_user %>
               <%= link_to edit_activity_path(@activity), class:"text-decoration-none" do %>
-                <div class="btn py-2 px-4 btn-dark d-flex align-items-center gap-2" style="border-radius: 4px">
+                <div class="btn py-2  btn-dark d-flex align-items-center gap-2" style="border-radius: 4px">
                   <i class="fas fa-edit "></i>
-                  <span> Modifier</span>
+                  <span class="d-none d-sm-block px-4"> Modifier</span>
                 </div>
                 <% end %>
             <% else %>
@@ -32,31 +43,31 @@
               <span class=""> S'inscrire</span>
             </div>
             <% end %>
-          </div>
+          </header>
 
-          <div class="d-flex flex-wrap gap-2 p-2 pb-3 border-bottom">
+          <section class="d-flex flex-wrap gap-2 p-2 pb-3 border-bottom" aria-label="Groupes d'activité">
             <% @activity.sub_groups.each do |sub_group| %>
               <div class="btn bg-light-white border" style="border-radius: 8px;"><span class="gradient-text text-large" ><%= sub_group.name %></span></div>
             <% end %>
             <% if current_user && current_user.owns?(@activity.club.id) %>
               <%= link_to new_activity_sub_group_path(@activity), class: "btn btn-dark rounded" do %>
-                <i class="fas fa-plus"></i>Ajouter un sous-groupe
+                <div class="d-flex align-items-center "><i class="fas fa-plus pe-2"></i>Ajouter <span class="d-none d-sm-flex px-1"> un sous-groupe</span></div>
               <% end %>
             <% end %>
-          </div>
-          <div class="px-2 text-dark mt-3">Club: <%= link_to @activity.club.name, club_path(@activity.club), class:"text-decoration-none" %></div>
+          </section>
+          <nav class="px-2 text-dark mt-3">Club: <%= link_to @activity.club.name, club_path(@activity.club), class:"text-decoration-none" %></nav>
 
           <p class="px-2 mt-3 text-dark"><%= @activity.full_description %> </p>
 
-
-          <% @activity.sub_groups.each do |sub_group| %>
-            <%= render "sub_groups/sub_group" ,locals: { sub_group: sub_group } %>
-          <% end %>
+          <section id="sub-groups">
+            <% @activity.sub_groups.each do |sub_group| %>
+              <%= render "sub_groups/sub_group" ,locals: { sub_group: sub_group } %>
+            <% end %>
+          </section>
           <%# Sous groupes cartes (partiale, du modele sous groupe) %>
         </div>
 
-
-      </div>
+      </main>
 
       <div class="d-none d-sm-block col-sm-2 col-md-3 col-xl-3 ">
           <!-- Content for right side column -->
@@ -64,3 +75,27 @@
 
     </div>
 </div>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "<%= @activity.name %>",
+  "description": "<%= @activity.short_description %>",
+  "location": {
+    "@type": "Place",
+    "name": "<%= @activity.club.name %>",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "<%= @activity.club.address %>",
+      "addressLocality": "<%= @activity.club.city %>",
+      "postalCode": "<%= @activity.club.actual_zipcode %>"
+    }
+  },
+  "image": "<%= url_for(@activity.photos.first) if @activity.photos.attached? %>",
+  "offers": {
+    "@type": "Offer",
+    "name": "Inscription",
+    "url": "<%= activity_url(@activity) %>"
+  }
+}
+</script>

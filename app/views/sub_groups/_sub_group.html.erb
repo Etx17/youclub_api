@@ -2,10 +2,9 @@
 <% ordered_days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"] %>
 <% sorted_schedules = sub_group.schedules.sort_by { |sched| ordered_days.index(sched.day.capitalize) } %>
 
-<div class="d-flex p-3 rounded m-2 flex-column px-2 bg-light-white" style="border-radius: 20px">
-
+<article class="d-flex p-3 rounded m-2 flex-column px-2 bg-light-white" style="border-radius: 20px">
   <% if current_user && current_user.owns?(@activity.club.id) %>
-    <div class="d-flex justify-content-end gap-2">
+    <nav class="d-flex justify-content-end gap-2">
      <%= link_to edit_activity_sub_group_path(@activity, sub_group), class: 'btn btn-dark' do %>
         <i class="fas fa-edit"></i>
       <% end %>
@@ -13,37 +12,41 @@
       <%= link_to activity_sub_group_path(@activity, sub_group), data: { "turbo-method": :delete, turbo_confirm: "Êtes vous sûr?" }, class: 'btn btn-dark' do %>
         <i class="fas fa-times"></i>
       <% end %>
-    </div>
+    </nav>
   <% end %>
 
-  <h3 class="text-dark align-self-center"><%= sub_group.name %> </h3>
+  <h2 class="text-dark align-self-center"><%= sub_group.name %> </h2>
   <span class="align-self-center text-secondary"><%= sub_group&.class_type %> </span>
   <small class="align-self-center text-secondary position-relative" style="top: 20px;">À partir de </small>
   <div class="align-self-center mt-0"><span class="gradient-title"><%= sub_group&.min_price_cents %></span>€</div>
-  <small class="text-secondary border-top">Description</small>
-  <p class="align-self-center " ><%= sub_group.short_description %></p>
+
+   <section class="border-top"aria-label="Description">
+    <small class="text-secondary ">Description</small>
+    <p class="align-self-center " ><%= sub_group.short_description %></p>
+   </section>
 
   <% if sub_group.tarifications.any? %>
   <small class="text-secondary border-top">Tarifs</small>
   <div class="d-flex flex-wrap gap-2 justify-content-center mb-2 py-3">
     <% sub_group.tarifications&.each do |tarification|  %>
-      <div class=" py-0 pill bg-light btn-outline-secondary shadow-sm d-flex align-items-center">
+      <article class=" py-0 pill bg-light btn-outline-secondary shadow-sm d-flex align-items-center">
         <span style="font-size: 1.5em;"><%= tarification.amount %></span>
         <small class="text-secondary">€/<%= tarification.recurrence %></small>
-      </div>
+      </article>
     <% end %>
   </div>
   <% end %>
 
+
   <small class="text-secondary border-top">Horaires</small>
-  <div class="d-flex flex-wrap gap-2 justify-content-center mb-2">
+  <section class="d-flex flex-wrap gap-2 justify-content-center mb-2" aria-label="Horaires">
     <% if sub_group.schedules.empty? %>
     <p>Ce club n'a pas encore renseigné ses horaires</p>
     <% end %>
     <% sorted_schedules.each do |sched| %>
-      <div class="d-flex flex-column border p-2 " style="border-radius: 4px">
+      <article class="d-flex flex-column border p-2 " style="border-radius: 4px">
         <% if current_user && current_user.owns?(@activity.club.id) %>
-          <div class="d-flex justify-content-between w-100">
+          <nav class="d-flex justify-content-between w-100">
              <%= link_to edit_activity_sub_group_schedule_path(@activity, sub_group, sched), class: 'btn' do %>
               <i class="fas fa-edit"></i>
             <% end %>
@@ -51,7 +54,7 @@
             <%= link_to activity_sub_group_schedule_path(@activity, sub_group, sched), data: { "turbo-method": :delete, turbo_confirm: "Êtes vous sûr?" }, class: 'btn' do %>
               <i class="fas fa-times"></i>
             <% end %>
-          </div>
+          </nav>
         <% end %>
         <h4><%= sched.day.capitalize %></h4>
         <div class="d-flex flex-column align-items-center">
@@ -61,9 +64,9 @@
             </div>
           <% end %>
         </div>
-      </div>
+      </article>
     <% end %>
-  </div>
+  </section>
 
 
   <% if sub_group.schedules.count < 7 && current_user&.owns?(@activity.club_id) %>
@@ -71,4 +74,29 @@
       <i class="fas fa-plus"></i>Ajouter un jour
     <% end %>
   <% end %>
-</div>
+</article>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Event",
+  "name": "<%= sub_group.name %>",
+  "description": "<%= sub_group.short_description %>",
+  "eventAttendanceMode": "OfflineEventAttendanceMode",
+  "eventStatus": "EventScheduled",
+  "location": {
+    "@type": "Place",
+    "name": "<%= @activity.club.name %>",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "<%= @activity.club.address %>",
+      "addressLocality": "<%= @activity.club.city %>",
+      "postalCode": "<%= @activity.club.actual_zipcode %>"
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "<%= sub_group.min_price_cents %>",
+    "priceCurrency": "EUR"
+  }
+}
+</script>
