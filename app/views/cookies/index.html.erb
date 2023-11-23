@@ -1,0 +1,56 @@
+<%= turbo_frame_tag :cookie_consent do %>
+<!-- Button trigger modal -->
+<div class="footer">
+  <div class="card cookie-footer w-100">
+    <div class="card-body row">
+      <div class="col ">
+        <p class="text-center">
+          Ce site utilise des cookies
+        </p>
+      </div>
+      <div class="col">
+          <button type="button" class="btn btn-dark " data-bs-toggle="modal" data-bs-target="#exampleModal">
+            En savoir plus
+          </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Politique d'utilisation des cookies</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Ce site utilise des cookies. Vous pouvez en savoir plus sur l'utilisation de vos cookies en consultant notre politique de confidentialité <%= link_to 'ici', cookie_policy_path, target: '_blank' %>
+      </div>
+      <div class="modal-footer">
+        <%= button_to "Je refuse", cookie_consent_path(consent: false),
+          method: :post,
+          class: 'btn btn-outline-dark',
+          onclick: "hideModal()"
+         %>
+        <%= button_to "J'accepte", cookie_consent_path(consent: true),
+          method: :post,
+          class: 'btn btn-dark',
+          onclick: "hideModal()"
+        %>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function hideModal(){
+    let consentModal = document.getElementById('exampleModal')
+    if (consentModal) {
+      let modalToHide = bootstrap.Modal.getInstance(consentModal)
+      modalToHide.hide()
+    }
+  }
+</script>
+<% end %>

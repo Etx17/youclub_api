@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'cookies/index', to: 'cookies#index', as: 'cookies'
+  get 'cookies/policy', to: 'cookies#policy', as: 'cookie_policy'
+  post 'cookies/consent', to: 'cookies#consent', as: 'cookie_consent'
   resources :trainers
 
   get 'update_zipcode', to: 'clubs#update_zipcode'

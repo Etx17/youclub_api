@@ -25,12 +25,10 @@
     </script>
   </head>
 
-
-
-
   <body>
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
+    <%= turbo_frame_tag :cookie_consent, src: cookies_path if session[:cookie_consent].nil? %>
     <%= yield %>
     <%= render "shared/footer" %>
     <%= render "shared/location_modal" %>
