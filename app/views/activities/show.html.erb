@@ -44,7 +44,9 @@
             </div>
             <% end %>
           </header>
-
+          <% if @activity.sub_groups.empty? %>
+            <p class="px-2 mt-3 text-dark">Le club n'a pas encore renseigné les détails de cette activité...</p>
+          <% end %>
           <section class="d-flex flex-wrap gap-2 p-2 pb-3 border-bottom" aria-label="Groupes d'activité">
             <% @activity.sub_groups.each do |sub_group| %>
               <div class="btn bg-light-white border" style="border-radius: 8px;"><span class="gradient-text text-large" ><%= sub_group.name %></span></div>
