@@ -16,7 +16,7 @@ class ActivitiesController < ApplicationController
 
     @activity = Activity.new(activity_params)
     @activity.subcategories = "Non catégorisé" if @activity.subcategories == 'Autre'
-    @activity.club = Club.find(params[:activity][:club_id])
+    @activity.club = Club.friendly.find(params[:activity][:club_id])
 
     if @activity.save
       redirect_to activity_path(@activity)
