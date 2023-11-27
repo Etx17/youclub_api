@@ -1,14 +1,14 @@
 class SchedulesController < ApplicationController
 
   def new
-    @activity = Activity.find(params[:activity_id])
+    @activity = Activity.friendly.find(params[:activity_id])
     @sub_group = @activity.sub_groups.find(params[:sub_group_id])
     @schedule = @sub_group.schedules.new
     @schedule.time_slots.build # Build an initial time slot for the form
   end
 
   def create
-    @activity = Activity.find(params[:activity_id])
+    @activity = Activity.friendly.find(params[:activity_id])
     @sub_group = @activity.sub_groups.find(params[:sub_group_id])
     @schedule = @sub_group.schedules.new(schedule_params)
 
@@ -21,7 +21,7 @@ class SchedulesController < ApplicationController
 
 
   def edit
-    @activity = Activity.find(params[:activity_id])
+    @activity = Activity.friendly.find(params[:activity_id])
     @sub_group = @activity.sub_groups.find(params[:sub_group_id])
     @schedule = @sub_group.schedules.find(params[:id])
 
@@ -29,7 +29,7 @@ class SchedulesController < ApplicationController
   end
 
   def update
-    @activity = Activity.find(params[:activity_id])
+    @activity = Activity.friendly.find(params[:activity_id])
     @sub_group = @activity.sub_groups.find(params[:sub_group_id])
     @schedule = @sub_group.schedules.find(params[:id])
     if @schedule.update(schedule_params)
@@ -44,7 +44,7 @@ class SchedulesController < ApplicationController
   end
 
   def destroy
-    @activity = Activity.find(params[:activity_id])
+    @activity = Activity.friendly.find(params[:activity_id])
     @sub_group = @activity.sub_groups.find(params[:sub_group_id])
     @schedule = @sub_group.schedules.find(params[:id])
 

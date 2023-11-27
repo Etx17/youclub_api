@@ -1,14 +1,12 @@
 class SubGroupsController < ApplicationController
 
   def new
-    @activity = Activity.find(params[:activity_id])
+    @activity = Activity.friendly.find(params[:activity_id])
     @sub_group = @activity.sub_groups.new
-    # Si vous avez besoin d'initialiser des tarifications ici, ajoutez cette ligne :
-  # @sub_group.tarifications.build
   end
 
   def create
-    @activity = Activity.find(params[:activity_id])
+    @activity = Activity.friendly.find(params[:activity_id])
     @sub_group = @activity.sub_groups.new(sub_group_params)
     if @sub_group.save
       # En cas de succès, redirigez vers une page pertinente, par exemple la page de l'activité
@@ -37,7 +35,7 @@ class SubGroupsController < ApplicationController
   end
 
   def destroy
-    @activity = Activity.find(params[:activity_id])
+    @activity = Activity.friendly.find(params[:activity_id])
     @sub_group = @activity.sub_groups.find(params[:id])
     @sub_group.destroy
     redirect_to activity_path(@activity), status: :see_other
