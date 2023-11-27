@@ -20,8 +20,8 @@ class SubGroupsController < ApplicationController
   end
 
   def edit
-    @activity = Activity.find(params[:activity_id]) # Assurez-vous que l'ID de l'activity est passé correctement
-    @sub_group = @activity.sub_groups.find(params[:id]) # Réc
+    @sub_group = SubGroup.find(params[:id])
+    @activity = @sub_group.activity
   end
 
   def update
