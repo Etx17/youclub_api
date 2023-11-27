@@ -36,6 +36,8 @@ class User < ApplicationRecord
   end
 
   def owns?(club_id)
+    return true if admin?
+
     club? && clubs.pluck(:id).include?(club_id)
   end
 
@@ -52,5 +54,4 @@ class User < ApplicationRecord
       }
     )
   end
-
 end
