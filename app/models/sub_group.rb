@@ -35,7 +35,6 @@ class SubGroup < ApplicationRecord
   end
 
   def min_price=(value)
-    self.min_price_cents = (value.to_f * 100).round
   end
 
   # def max_price=(value)
