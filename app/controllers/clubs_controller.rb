@@ -1,4 +1,6 @@
 class ClubsController < ApplicationController
+  include Pundit
+
   before_action :set_zipcode, only: [:index]
   before_action :set_category, only: [:index]
   before_action :set_subcategories, only: [:index]
@@ -59,6 +61,7 @@ class ClubsController < ApplicationController
 
   def edit
     @club = Club.friendly.find(params[:id])
+    authorize @club
   end
 
   def update

@@ -63,7 +63,7 @@ gem "omniauth-rails_csrf_protection", '~> 1.0'
 gem 'postmark-rails'
 gem 'sidekiq'
 gem 'friendly_id', '~> 5.4.0'
-
+gem "pundit"
 # SEO
 gem 'meta-tags'
 gem 'sitemap_generator'

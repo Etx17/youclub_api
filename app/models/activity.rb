@@ -26,7 +26,6 @@
 class Activity < ApplicationRecord
   extend FriendlyId
   friendly_id :generate_activity_slug, use: :slugged
-
   belongs_to :club
   has_many :sub_groups, dependent: :destroy
   has_many :trainers, dependent: :destroy

@@ -1,4 +1,6 @@
 class ActivitiesController < ApplicationController
+  include Pundit
+
   def index
   end
 
@@ -13,7 +15,6 @@ class ActivitiesController < ApplicationController
   end
 
   def create
-
     @activity = Activity.new(activity_params)
     @activity.subcategories = "Non catégorisé" if @activity.subcategories == 'Autre'
     @activity.club = Club.friendly.find(params[:activity][:club_id])
@@ -27,6 +28,7 @@ class ActivitiesController < ApplicationController
 
   def edit
     @activity = Activity.friendly.find(params[:id])
+    authorize @activity
     @category_options = ['Sports, activités de plein air','Culture, pratiques d’activités artistiques, culturelles']
     @activity.trainers.build if @activity.trainers.empty?
   end
