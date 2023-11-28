@@ -23,7 +23,7 @@
               <% if @club.photos.any? %>
                 <%= image_tag cl_image_path(@club.photos.first.key), alt: "Photos du club", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; border-top-left-radius: 15px;  border-top-right-radius: 15px;", loading: 'lazy' %>
               <% else %>
-                <%= image_tag "https://source.unsplash.com/random/?horse/300/200", alt: "Photos du club", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; border-top-left-radius: 15px;  border-top-right-radius: 15px;", loading: 'lazy' %>
+                <%= image_tag "https://source.unsplash.com/random/?sport/300/200", alt: "Photos du club", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; border-top-left-radius: 15px;  border-top-right-radius: 15px;", loading: 'lazy' %>
               <% end %>
               <div class="d-flex justify-content-end align-items-center text-light w-100 px-2" style="position: absolute; bottom: 10px; "> <!-- Positioning the button relative to the image -->
                   <div class="btn py-2 px-4 gradient-button d-flex align-items-center gap-2" style="border-radius: 8px;">
