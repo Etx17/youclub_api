@@ -30,8 +30,13 @@
   <div class="d-flex flex-wrap gap-2 justify-content-center mb-2 py-3">
     <% sub_group.tarifications&.each do |tarification|  %>
       <article class=" py-0 pill bg-light btn-outline-secondary shadow-sm d-flex align-items-center">
-        <span style="font-size: 1.5em;"><%= tarification.amount %></span>
-        <small class="text-secondary">€/<%= tarification.recurrence %></small>
+        <div class="d-flex flex-column">
+          <small class="text-secondary"><%= tarification.label if tarification.label.present? %></small>
+          <div class="d-flex flex-row">
+            <span style="font-size: 1.5em;"><%= tarification.amount %></span>
+            <small class="text-secondary">€/<%= tarification.recurrence %></small>
+          </div>
+        </div>
       </article>
     <% end %>
   </div>
