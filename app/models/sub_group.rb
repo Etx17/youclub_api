@@ -20,7 +20,9 @@ class SubGroup < ApplicationRecord
   has_many :schedules, dependent: :destroy
   attribute :tarifications, array: true
   has_many :tarifications, dependent: :destroy
+
   accepts_nested_attributes_for :tarifications, allow_destroy: true
+  accepts_nested_attributes_for :schedules, allow_destroy: true
 
   def min_price
     min_price_cents / 100.0
