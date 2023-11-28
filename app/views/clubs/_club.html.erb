@@ -17,15 +17,15 @@
 
         <% if club.name.length > 30 %>
           <h2 style="max-width: 74%; font-size: 20px;">
-            <%= cl_image_tag(club.logo.key, width: 70, height: 70, crop: 'thumb', radius: 'max', alt: "#{club.name} logo") if club.logo.present? %>
-            <%= link_to club.name, club_path(club), class:"text-decoration-none text-light" %>
-            <% if club.premium? %>
-              <i class="fas fa-circle-check text-info ms-2"></i>
-            <% end %>
-          </h4>
+           <%= cl_image_tag(club.logo.key, class: "rounded-circle border", width: 70, height: 70, crop: 'thumb', radius: 'max', alt: "#{club.name} logo") if club.logo.present? %>
+          <%= link_to club.name, club_path(club), class:"text-decoration-none text-light" %>
+          <% if club.premium? %>
+            <i class="fas fa-circle-check text-info ms-2"></i>
+          <% end %>
+          </h2>
         <% else %>
           <h2 style="max-width: 74%;">
-            <%= cl_image_tag(club.logo.key, class:"rounded-circle", width: 50, height: 50, crop: 'thumb', radius: 'max', alt: "#{club.name} logo") if club.logo.present? %>
+            <%= cl_image_tag(club.logo.key, class:"rounded-circle border", width: 50, height: 50, crop: 'thumb', radius: 'max', alt: "#{club.name} logo") if club.logo.present? %>
             <%= link_to club.name, club_path(club), class:"text-decoration-none text-light" %>
             <% if club.premium? %>
               <i class="fas fa-circle-check text-info ms-2" style="font-size: 0.7em;"></i>
