@@ -29,7 +29,7 @@
           <%= f.input :address, label: "Adresse", required: true, input_html: { autofocus: !%w[create update].include?(params[:action]), data: { "places-target": "field", action: "keydown->places#keydown" } } %>
           <%= f.input :actual_zipcode, label: "Code postal", required: true, input_html: { readonly: true,  data: { "places-target": "zipcode" } }  %>
           <%= f.input :geo_point, hint: 'Ce champ se remplira tout seul', required: true, input_html: { readonly: true, data: { "places-target": "geoPoint" } }   %>
-        </div>
+         </div>
       </div>
 
       <div class="d-flex justify-content-center w-100">

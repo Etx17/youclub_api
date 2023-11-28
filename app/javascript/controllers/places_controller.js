@@ -199,7 +199,12 @@ export default class extends Controller {
     this.marker.setVisible(true)
 
     this.fieldTarget.value = place.name
-    this.cityTarget.value = place.address_components["2"]["long_name"]
+    if (this.hasCityTarget) {
+      const cityComponent = place.address_components.find(component => component.types.includes("locality"));
+      if (cityComponent) {
+        this.cityTarget.value = cityComponent.long_name;
+      }
+    }
     this.zipcodeTarget.value = place.address_components["6"]["long_name"]
     this.geoPointTarget.value = place.geometry.location.lat() + ", " + place.geometry.location.lng()
 
