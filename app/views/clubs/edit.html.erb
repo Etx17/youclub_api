@@ -43,6 +43,18 @@
         </div>
       </div>
 
+       <div class="row" data-controller="places" data-action="google-maps-callback@window->places#initMap">
+        <div class="d-flex flex-column">
+          <div data-places-target="map" style="width: 100%; height: 200px" class="rounded-lg"></div>
+          <%# turn off autocomplete to hide suggestions from browser that overwrite google places %>
+          <input autocomplete="false" name="hidden" type="text" style="display:none;">
+          <%= f.input :address, label: "Adresse", required: true, input_html: { autofocus: !%w[create update].include?(params[:action]), data: { "places-target": "field", action: "keydown->places#keydown" } } %>
+          <%= f.input :actual_zipcode, hint: 'Ce champ se remplira tout seul', label: "Code postal", required: true, input_html: { readonly: true,  data: { "places-target": "zipcode" } }  %>
+          <%= f.input :geo_point, hint: 'Ce champ se remplira tout seul', required: true, input_html: { readonly: true, data: { "places-target": "geoPoint" } }   %>
+          <%= f.input :city, hint: 'Ce champ se remplira tout seul', required: true, input_html: { readonly: true, data: { "places-target": "city" } }   %>
+        </div>
+      </div>
+
       <div class="d-flex justify-content-center w-100">
         <%= f.button :submit, "Enregistrer les modifications", class: "btn btn-dark mt-3 w-50" %>
       </div>

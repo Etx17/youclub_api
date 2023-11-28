@@ -34,9 +34,7 @@ class ActivitiesController < ApplicationController
   end
 
   def update
-
     @activity = Activity.friendly.find(params[:id])
-
     if params[:activity][:photos].present?
       @activity.photos.first.purge if @activity.photos.any?
       @activity.photos.attach(params[:activity][:photos])
@@ -74,6 +72,7 @@ class ActivitiesController < ApplicationController
       :category_number,
       :subcategory_number,
       :phone_number,
+      :geo_point,
       :photos,
       trainers_attributes: [:id, :_destroy, :name, :bio, :photo],
     )

@@ -190,6 +190,7 @@ class ClubsController < ApplicationController
       :inscription_open_all_year, :inscription_start_date, :inscription_end_date,
       :comment,
       :logo,
+      :city, :competitive, :slug, :score, 
       :onboarding_mail_sent,
       :status, :photos, :google_review_client_id, :retrieved, :called,
       user_attributes: [:first_name, :last_name, :phone_number, :email, :password, :password_confirmation]
