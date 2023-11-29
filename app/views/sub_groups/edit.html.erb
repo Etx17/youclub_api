@@ -4,8 +4,6 @@
     <%= simple_form_for([@activity, @sub_group], html: { class: 'form-horizontal', data: { controller: "tarifications" } }) do |f| %>
       <%= f.input :name, label: "Nom" %>
       <%= f.input :min_price_cents, label: "Prix Minimum" %>
-      <%= f.input :max_price_cents, label: "Prix Maximum" %>
-      <%= f.input :recurrence, label: "Récurrence" %>
       <%= f.input :class_type, label: "Type de Classe" %>
       <%= f.input :short_description, label: "Description Courte" %>
       <%= f.input :subscription_by_recurrence_price_cents, label: "Abonnement par Prix de Récurrence (cents)" %>
