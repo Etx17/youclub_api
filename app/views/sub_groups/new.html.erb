@@ -10,6 +10,16 @@
       <%= f.input :class_type, label: "Type de Classe", collection: ["Cours collectif", "Cours en petit groupe", "Stage", "Evènement"  ] %>
       <%= f.input :short_description, label: "Description Courte" %>
 
+      <div class="row" data-controller="places" data-action="google-maps-callback@window->places#initMap">
+        <div class="d-flex flex-column">
+          <div data-places-target="map" style="width: 100%; height: 200px" class="rounded-lg"></div>
+          <%# turn off autocomplete to hide suggestions from browser that overwrite google places %>
+          <input autocomplete="false" name="hidden" type="text" style="display:none;">
+          <%= f.input :address, label: "Adresse", required: true, input_html: { autofocus: !%w[create update].include?(params[:action]), data: { "places-target": "field", action: "keydown->places#keydown" } } %>
+          <%= f.input :zipcode, hint: 'Ce champ se remplira tout seul', label: "Code postal", required: true, input_html: { readonly: true,  data: { "places-target": "zipcode" } }  %>
+        </div>
+      </div>
+
       <h3>Tarifications</h3>
       <div data-tarifications-target="container">
         <!-- Placeholder for tarification fields -->

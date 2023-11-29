@@ -46,6 +46,7 @@ class SubGroupsController < ApplicationController
   def sub_group_params
     params.require(:sub_group).permit(
       :activity_id,
+      :address, :zipcode,
       :name, :min_price_cents, :max_price, :recurrence, :class_type, :short_description, :subscription_by_recurrence_price,
       tarifications_attributes: [:id, :_destroy, :amount, :recurrence, :label, :description]
     )

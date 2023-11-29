@@ -20,16 +20,18 @@
   <small class="align-self-center text-secondary position-relative" style="top: 20px;">À partir de </small>
   <div class="align-self-center mt-0"><span class="gradient-title"><%= sub_group&.min_price_cents %></span>€</div>
 
+  <% if sub_group.short_description.present? %>
    <section class="border-top"aria-label="Description">
     <small class="text-secondary ">Description</small>
     <p class="align-self-center " ><%= sub_group.short_description %></p>
    </section>
+  <% end %>
 
   <% if sub_group.tarifications.any? %>
   <small class="text-secondary border-top">Tarifs</small>
   <div class="d-flex flex-wrap gap-2 justify-content-center mb-2 py-3">
     <% sub_group.tarifications&.each do |tarification|  %>
-      <article class=" py-0 pill bg-light btn-outline-secondary shadow-sm d-flex align-items-center">
+      <article class=" p-2 pill bg-light btn-outline-secondary shadow-sm d-flex align-items-center">
         <div class="d-flex flex-column">
           <small class="text-secondary"><%= tarification.label if tarification.label.present? %></small>
           <div class="d-flex flex-row align-items-center">
@@ -40,6 +42,15 @@
       </article>
     <% end %>
   </div>
+  <% end %>
+
+  <% if sub_group.address.present? %>
+    <small class="text-secondary border-top">Addresse</small>
+    <div class="d-flex mb-2 py-3 justify-content-center">
+      <%= link_to "https://www.google.fr/maps/place/#{sub_group.address.gsub(' ', '+')},+#{sub_group.zipcode}", target: "_blank", class:"text-primary text-decoration-none" do %>
+        <i class="fas fa-map-marker-alt"></i> <%= sub_group.address+ "," + " " + sub_group.zipcode%>
+      <% end %>
+    </div>
   <% end %>
 
 
@@ -72,7 +83,6 @@
       </article>
     <% end %>
   </section>
-
 
   <% if sub_group.schedules.count < 7 && current_user&.owns?(@activity.club_id) %>
     <%= link_to new_activity_sub_group_schedule_path(@activity, sub_group), class: 'btn btn-dark' do %>
