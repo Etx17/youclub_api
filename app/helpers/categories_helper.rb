@@ -53,6 +53,24 @@ module CategoriesHelper
           { label: "📚 Bibliothèques, ludothèques, discothèques et vidéothèques", value: "bibliothèques, ludothèques, discothèques, vidéothèques" },
           { label: "🎨 Arts de la rue", value: "arts de la rue" }
       ],
+      "clubs de loisirs, relations": [
+        { label: "🤝 échanges locaux, réseaux d’échanges", value: "échanges locaux, réseaux d'échanges" },
+        { label: "🎉 activités festives (soirées…)", value: "activités festives (soirées…)" },
+        { label: "🧘 relaxation, sophrologie", value: "relaxation, sophrologie" },
+        { label: "🏞️ centres de loisirs, clubs de loisirs multiples", value: "centres de loisirs, clubs de loisirs multiples" },
+        { label: "♟️ bridge, jeux de cartes, échecs, dames, jeux de société...", value: "bridge, jeux de cartes, échecs, dames, jeux de société..." },
+        { label: "🍷 gastronomie, œnologie, confréries, gourmets", value: "gastronomie, œnologie, confréries, gourmets" },
+        { label: "🐾 animaux familiers, colombophilie, aquariophilie", value: "animaux familiers, colombophilie, aquariophilie" },
+        { label: "🌺 jardins ouvriers, floralies", value: "jardins ouvriers, floralies" },
+        { label: "🚗 collectionneurs de véhicules, clubs amateurs de voitures anciennes", value: "collectionneurs de véhicules, clubs amateurs de voitures anciennes" },
+        { label: "👥 cercles privés, fan-clubs", value: "cercles privés, fan-clubs" },
+        { label: "🐶 élevage canin, clubs de chiens de défense", value: "élevage canin, clubs de chiens de défense" },
+        { label: "🗞️ clubs de collectionneurs (hors sauvegarde, entretien du patrimoine), philatélie, numismatique", value: "clubs de collectionneurs (hors sauvegarde, entretien du patrimoine), philatélie, numismatique" },
+        { label: "🚁 modélisme", value: "modélisme" },
+        { label: "🎱 billard, quilles", value: "billard, quilles" },
+        { label: "✈️ aéroclubs", value: "aéroclubs" },
+        { label: "📻 radioamateurs", value: "radioamateurs" }
+      ]
     }
   end
 

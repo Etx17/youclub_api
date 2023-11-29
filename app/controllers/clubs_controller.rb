@@ -6,13 +6,13 @@ class ClubsController < ApplicationController
   before_action :set_subcategories, only: [:index]
 
   def index
+
     clubs = Club.where( actual_zipcode: session[:zipcode], category: session[:category]).where.not(status: 3)
     if session[:subcategories] != "Tous"
       clubs = clubs.where("? = ANY(subcategories)", session[:subcategories])
     end
 
     clubs = clubs.order(score: :desc)
-
     @pagy, @clubs = pagy_countless(clubs, items: 6)
     respond_to do |format|
       format.html
@@ -190,7 +190,7 @@ class ClubsController < ApplicationController
       :inscription_open_all_year, :inscription_start_date, :inscription_end_date,
       :comment,
       :logo,
-      :city, :competitive, :slug, :score, 
+      :city, :competitive, :slug, :score,
       :onboarding_mail_sent,
       :status, :photos, :google_review_client_id, :retrieved, :called,
       user_attributes: [:first_name, :last_name, :phone_number, :email, :password, :password_confirmation]

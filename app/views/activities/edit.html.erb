@@ -28,6 +28,16 @@
         </div>
       </div>
 
+      <%= f.input :subcategories, hint: "Choisissez la bonne sous-catégorie",
+        collection: mapped_subcategories(@activity.category),
+        selected: @activity.subcategories,
+        label: false,
+        input_html: {
+          class: ' w-100 overflow-hidden bg-white-light shadow-sm',
+          style: 'border-radius: 6px;',
+        }
+      %>
+
 
 
 

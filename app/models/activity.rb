@@ -33,6 +33,7 @@ class Activity < ApplicationRecord
 
   scope :by_zipcode, -> (zipcode) { where(actual_zipcode: zipcode) }
   after_create :add_subcategory_to_club
+  after_update :update_subcategories_of_club
   before_destroy :remove_subcategory_from_club
   after_update :update_club_score
 
@@ -40,6 +41,11 @@ class Activity < ApplicationRecord
 
 
   # callback ok?
+  def update_subcategories_of_club
+    add_subcategory_to_club
+    remove_subcategory_from_club
+  end
+
   def add_subcategory_to_club
     unless club.subcategories.include?(self.subcategories)
       new_subcategories = club.subcategories + [self.subcategories]

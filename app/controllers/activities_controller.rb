@@ -6,7 +6,7 @@ class ActivitiesController < ApplicationController
 
   def new
     @activity = Activity.new()
-    @category_options = ['Sports, activités de plein air','Culture, pratiques d’activités artistiques, culturelles']
+    @category_options = ['Sports, activités de plein air','Culture, pratiques d’activités artistiques, culturelles', 'clubs de loisirs, relations']
   end
 
   def show
@@ -34,12 +34,12 @@ class ActivitiesController < ApplicationController
   end
 
   def update
+
     @activity = Activity.friendly.find(params[:id])
     if params[:activity][:photos].present?
       @activity.photos.first.purge if @activity.photos.any?
       @activity.photos.attach(params[:activity][:photos])
     end
-
     if @activity.update(activity_params)
       redirect_to activity_path(@activity), notice: 'Activity was successfully updated.'
     else
