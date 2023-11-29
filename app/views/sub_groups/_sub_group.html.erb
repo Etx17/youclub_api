@@ -2,7 +2,7 @@
 <% ordered_days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"] %>
 <% sorted_schedules = sub_group.schedules.sort_by { |sched| ordered_days.index(sched.day.capitalize) } %>
 
-<article class="d-flex p-3 rounded m-2 flex-column px-2 bg-light-white" style="border-radius: 20px">
+<article class="d-flex p-3 rounded m-2 my-4 flex-column px-2 bg-light-white shadow border" style="border-radius: 20px">
   <% if current_user && current_user.owns?(@activity.club.id) %>
     <nav class="d-flex justify-content-end gap-2">
      <%= link_to edit_activity_sub_group_path(@activity, sub_group), class: 'btn btn-dark' do %>
