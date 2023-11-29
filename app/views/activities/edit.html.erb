@@ -1,6 +1,6 @@
 <div class="row justify-content-center">
   <div class="col-md-6 p-3 " data-controller="subcategory">
-    <h1>Modifier <%= @activity.name %></h1>
+    <h1>Modifier l'activité <%= @activity.name %></h1>
     <%= simple_form_for(@activity, method: :put) do |f| %>
       <% if @activity.photos.attached? %>
         <label>Image actuelle</label>
@@ -17,12 +17,14 @@
       <%= f.input :full_description, as: :text, label: "Description complète" %>
       <%= f.input :phone_number, label: "Numéro de téléphone" %>
 
+
+      <%# TODO Prefill this one with the acdress of the club, and ask to edit if different %>
       <div class="row" data-controller="places" data-action="google-maps-callback@window->places#initMap">
         <div class="d-flex flex-column">
           <div data-places-target="map" style="width: 100%; height: 200px" class="rounded-lg"></div>
           <%# turn off autocomplete to hide suggestions from browser that overwrite google places %>
           <input autocomplete="false" name="hidden" type="text" style="display:none;">
-          <%= f.input :address, label: "Adresse", required: true, input_html: { autofocus: !%w[create update].include?(params[:action]), data: { "places-target": "field", action: "keydown->places#keydown" } } %>
+          <%= f.input :address, value: @activity.address.present? ? @activity.address : @activity.club.address, label: "Adresse", required: true, input_html: { autofocus: !%w[create update].include?(params[:action]), data: { "places-target": "field", action: "keydown->places#keydown" } } %>
           <%= f.input :actual_zipcode, label: "Code postal", required: true, input_html: { readonly: true,  data: { "places-target": "zipcode" } }  %>
           <%= f.input :geo_point, hint: 'Ce champ se remplira tout seul', required: true, input_html: { readonly: true, data: { "places-target": "geoPoint" } }   %>
         </div>

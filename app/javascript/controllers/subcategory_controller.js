@@ -84,6 +84,17 @@ export default class extends Controller {
       },
       "Culture, pratiques d’activités artistiques, culturelles": {
         "Danse": "Danse",
+        "Musique, chant": "chant choral, musique",
+        "Promotion de l’art et des artistes": "promotion de l’art et des artistes",
+        "Théâtre, marionnettes, cirque, spectacles de variété": "théâtre, marionnettes, cirque, spectacles de variété",
+        "Danse": "danse",
+        "Loisirs scientifiques et techniques": "loisirs scientifiques et techniques",
+        "Artisanat, travaux manuels, bricolage et expositions": "artisanat, travaux manuels, bricolage, expositions",
+        "Photographie, cinéma (dont ciné-clubs)": "photographie, cinéma (dont ciné-clubs)",
+        "Expression écrite, littérature, poésie": "expression écrite, littérature, poésie",
+        "Arts graphiques, bande dessinée, peinture, sculpture, architecture": "arts graphiques, bande dessinée, peinture, sculpture, architecture",
+        "Arts de la rue": "arts de la rue",
+        "Autre": "Autre",
       }
     };
   this.updateSubcategories();

@@ -12,11 +12,11 @@
 
       <div class="row" data-controller="places" data-action="google-maps-callback@window->places#initMap">
         <div class="d-flex flex-column">
+          <h3>L'adresse est elle différente de celle de l'activité parente ?</h3>
           <div data-places-target="map" style="width: 100%; height: 200px" class="rounded-lg"></div>
-          <%# turn off autocomplete to hide suggestions from browser that overwrite google places %>
           <input autocomplete="false" name="hidden" type="text" style="display:none;">
-          <%= f.input :address, label: "Adresse", required: true, input_html: { autofocus: !%w[create update].include?(params[:action]), data: { "places-target": "field", action: "keydown->places#keydown" } } %>
-          <%= f.input :zipcode, hint: 'Ce champ se remplira tout seul', label: "Code postal", required: true, input_html: { readonly: true,  data: { "places-target": "zipcode" } }  %>
+          <%= f.input :address, hint: "Renseignez une autre addresse pour ce sous-groupe si besoin.", label: "Adresse", required: true, input_html: { value: @activity.address, autofocus: !%w[create update].include?(params[:action]), data: { "places-target": "field", action: "keydown->places#keydown" } } %>
+          <%= f.input :zipcode, hint: 'Ce champ se remplira tout seul', label: "Code postal", required: true, input_html: { value: @activity.actual_zipcode, readonly: true,  data: { "places-target": "zipcode" } }  %>
         </div>
       </div>
 
