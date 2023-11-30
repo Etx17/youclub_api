@@ -29,6 +29,8 @@
                 <% club.activities.each do |activity| %>
                   <%= link_to activity.name, activity_path(activity), class: "btn btn-outline-dark" %>
                 <% end %>
+                <%# Link to create an activity %>
+                <%= link_to " + Ajouter une activité", new_activity_path(club: club), class: "btn btn-dark" %>
               </div>
             </div>
 

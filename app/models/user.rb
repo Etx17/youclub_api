@@ -58,3 +58,8 @@ class User < ApplicationRecord
 end
 
 # 10172 est l'id a partir du quel si c'est en dessous j'envoie pas le mail.
+# User.all.each do |user|
+#   if user.id > 10172
+#     user.send_onboarding_mail
+#   end
+# end
