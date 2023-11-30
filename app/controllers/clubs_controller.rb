@@ -201,3 +201,14 @@ class ClubsController < ApplicationController
     params.require(:user).permit(:email, :first_name, :last_name, :phone_number, :password, :password_confirmation)
   end
 end
+
+
+emails_to_delete.each do |email|
+  user = User.find_by(email: email)
+  if user && user.clubs.any?
+    user.clubs.each do |club|
+      club.destroy
+    end
+    user.destroy
+  end
+end
