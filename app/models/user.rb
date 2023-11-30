@@ -56,3 +56,5 @@ class User < ApplicationRecord
     )
   end
 end
+
+# 10172 est l'id a partir du quel si c'est en dessous j'envoie pas le mail.
