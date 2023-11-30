@@ -1,5 +1,5 @@
 class ClubsController < ApplicationController
-  include Pundit
+  include Pundit::Authorization
 
   before_action :set_zipcode, only: [:index]
   before_action :set_category, only: [:index]

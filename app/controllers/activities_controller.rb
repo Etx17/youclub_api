@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-  include Pundit
+  include Pundit::Authorization
 
   def index
   end
