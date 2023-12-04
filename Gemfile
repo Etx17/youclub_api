@@ -67,6 +67,8 @@ gem "pundit"
 # SEO
 gem 'meta-tags'
 gem 'sitemap_generator'
+gem "breadcrumbs_on_rails"
+
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   before_action :authenticate_admin!, only: [:admin_dashboard]
+  before_action :set_breadcrumb
 
   def home
   end
@@ -21,6 +22,13 @@ class PagesController < ApplicationController
   end
 
   private
+
+  def set_breadcrumb
+    add_breadcrumb 'Accueil', :root_path
+    add_breadcrumb 'Mentions légales', :legal_path if action_name == 'legal'
+    add_breadcrumb 'Panneau administrateur', :admin_dashboard_path if action_name == 'admin_dashboard'
+    add_breadcrumb 'Tableau de bord', :pages_dashboard_path if action_name == 'dashboard'
+  end
 
   def authenticate_admin!
     authenticate_user!  # Devise's method to ensure the user is logged in

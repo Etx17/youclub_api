@@ -27,6 +27,7 @@
 
   <body>
     <%= render "shared/navbar" %>
+    <%= render_breadcrumbs :separator => ' / ' %>
     <%= render "shared/flashes" %>
     <%= turbo_frame_tag :cookie_consent, src: cookies_path if session[:cookie_consent].nil? %>
     <%= yield %>

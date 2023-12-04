@@ -1,5 +1,6 @@
 class ActivitiesController < ApplicationController
   include Pundit::Authorization
+  before_action :set_breadcrumb
 
   def index
   end
@@ -52,6 +53,21 @@ class ActivitiesController < ApplicationController
   end
 
   private
+
+  def set_breadcrumb
+    add_breadcrumb 'Accueil ', :root_path
+
+    case action_name
+    when 'new', 'create'
+      @club = Club.friendly.find(params[:club]) if params[:club]
+      add_breadcrumb 'Nouvelle activité', new_activity_path(club_id: @club&.id)
+    when 'show', 'edit', 'update'
+      @activity = Activity.friendly.find(params[:id])
+      add_breadcrumb @activity.name, activity_path(@activity)
+      add_breadcrumb 'Modifier', edit_activity_path(@activity) if %w[edit update].include?(action_name)
+    end
+  end
+
 
   def activity_params
     params.require(:activity).permit(

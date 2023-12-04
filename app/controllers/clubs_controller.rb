@@ -4,6 +4,8 @@ class ClubsController < ApplicationController
   before_action :set_zipcode, only: [:index]
   before_action :set_category, only: [:index]
   before_action :set_subcategories, only: [:index]
+  before_action :set_breadcrumb
+
 
   def index
 
@@ -124,6 +126,23 @@ class ClubsController < ApplicationController
 
 
   private
+
+  def set_breadcrumb
+    add_breadcrumb 'Accueil', :root_path
+    add_breadcrumb 'Clubs', clubs_path
+
+    case action_name
+    when 'new', 'create'
+      add_breadcrumb 'Nouveau club', new_club_path
+    when 'show'
+      @club = Club.friendly.find(params[:id])
+      add_breadcrumb @club.name, club_path(@club)
+    when 'edit', 'update'
+      @club = Club.friendly.find(params[:id])
+      add_breadcrumb @club.name, club_path(@club)
+      add_breadcrumb 'Modifier', edit_club_path(@club)
+    end
+  end
 
   def set_zipcode
 
