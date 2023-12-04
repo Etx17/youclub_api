@@ -17,7 +17,7 @@ class User < ApplicationRecord
   has_many :clubs
   has_many :notifications, as: :recipient, dependent: :destroy
 
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :trackable,
           :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
   enum role: { user: 0, club: 1, admin: 2}
   has_one :comment
