@@ -8,13 +8,13 @@ class ClubsController < ApplicationController
 
 
   def index
-
+    # TODO: add indexes on actual zipcode, category, subcategory. because clubs are looked for based on that.
     clubs = Club.where( actual_zipcode: session[:zipcode], category: session[:category]).where.not(status: 3)
     if session[:subcategories] != "Tous"
       clubs = clubs.where("? = ANY(subcategories)", session[:subcategories])
     end
-
     clubs = clubs.order(score: :desc)
+    
     @pagy, @clubs = pagy_countless(clubs, items: 6)
     respond_to do |format|
       format.html
