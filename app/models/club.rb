@@ -1,4 +1,3 @@
-
 class Club < ApplicationRecord
   extend FriendlyId
   friendly_id :slug, use: :slugged
@@ -155,7 +154,6 @@ class Club < ApplicationRecord
           "Escrime": ["fencing", "sword", "foil"],
           "Hockey sur glace, sports de glace": ["hockey", "skating", "ice"],
           "Haltérophilie": ["weightlifting", "powerlifting", "strength"],
-          "Non catégorisé": ["nature", "sport", "fun"]
       },
       "Culture, pratiques d’activités artistiques, culturelles": {
           "Chant choral, musique": ["choir", "music", "performance"],
