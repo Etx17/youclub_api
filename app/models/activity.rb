@@ -71,12 +71,12 @@ class Activity < ApplicationRecord
     #   a.update_column(:slug, a.generate_activity_slug)
     # end
     base_slug = "#{name}-#{club.city}-#{club.name.first(30)}".parameterize
-    if Activity.exists?(slug: base_slug)
-      # If the slug is already taken, add a random number to the end
-      "#{base_slug}-#{rand(1000)}"
-    else
-      base_slug
-    end
+    # if Activity.exists?(slug: base_slug)
+    #   # If the slug is already taken, add a random number to the end
+    #   "#{base_slug}-#{rand(1000)}"
+    # else
+    #   base_slug
+    # end
   end
 
 
