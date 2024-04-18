@@ -7,7 +7,7 @@ class Types::ActivityType < Types::BaseObject
   field :actualZipcode, String, null: true, method: :actual_zipcode
   field :freeTrial, Boolean, null: true, method: :free_trial
   field :isLookingForVolunteer, Boolean, null: true, method: :is_looking_for_volunteer
-  field :subcategories, String, null: false
+  field :subcategories, String, null: true
   field :recurrence, String, null: true
   field :subscriptionLink, String, null: true, method: :subscription_link
   field :shortDescription, String, null: true, method: :short_description
@@ -17,6 +17,11 @@ class Types::ActivityType < Types::BaseObject
   field :subGroups, [Types::SubGroupType], null: false, method: :sub_groups
   field :clubId, ID, null: false, method: :club_id
   field :phoneNumber, String, null: true, method: :phone_number
+  field :category_number, String, null: true
+  field :subcategory_number, String, null: true
+  field :other_subcategory, String, null: true
+  field :slug, String, null: false
+  field :structure_type, Integer, null: true
 
   def sub_groups
     object.sub_groups
@@ -27,7 +32,7 @@ class Types::ActivityType < Types::BaseObject
   end
 
   def subcategories
-    object.subcategories
+    object.subcategories || []
   end
 
 end

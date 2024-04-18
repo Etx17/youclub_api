@@ -9,4 +9,10 @@ class Types::SubGroupType < Types::BaseObject
   field :subscriptionByRecurrencePrice, Float, null: true, method: :subscription_by_recurrence_price
   field :schedules, [Types::ScheduleType], null: false
   field :tarifications, [String], null: true
+  field :min_price_cents, Integer, null: true, method: :min_price_cents
+  field :max_price_cents, Integer, null: true, method: :max_price_cents
+  field :subscription_by_recurrence_price_cents, Integer, null: true, method: :subscription_by_recurrence_price_cents
+  field :address, String, null: true
+  field :zipcode, String, null: true
+
 end
