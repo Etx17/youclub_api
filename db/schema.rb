@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_04_102009) do
+ActiveRecord::Schema[7.0].define(version: 2024_04_19_093716) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -179,7 +179,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_04_102009) do
     t.integer "subscription_by_recurrence_price_cents", comment: "Stored in cents"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "tarifications", default: [], array: true
     t.string "address"
     t.string "zipcode"
     t.index ["activity_id"], name: "index_sub_groups_on_activity_id"

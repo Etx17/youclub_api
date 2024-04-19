@@ -28,6 +28,8 @@ module Types
 
     field :sub_groups, [Types::SubGroupType], null: true
 
+    field :tarifications, [Types::TarificationType], null: true
+
     field :clubs, [Types::ClubType], null: true, description: "Returns a list of clubs in the database"
 
     field :schedules, [Types::ScheduleType], null: true, description: "Returns a list of schedules in the database"
@@ -70,6 +72,10 @@ module Types
 
     def time_slots
       object.time_slots
+    end
+
+    def tarifications
+      object.tarifications
     end
 
     def user_by_email_and_sub(email: nil, sub_id: nil)
