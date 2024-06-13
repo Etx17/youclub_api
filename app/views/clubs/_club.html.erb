@@ -1,7 +1,11 @@
 
 
 <% premium_style = club.premium? ? "box-shadow: 0 0 15px 8px rgba(218, 165, 32, 0.3);" : "box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);" %>
-<% background_image = club.photos.any? ? cl_image_path(club.photos.first.key, width: 'auto', crop: 'scale', responsive: true, quality: 'auto', fetch_format: 'auto', alt: "#{club.name} cover") : "https://source.unsplash.com/random/?#{club.default_image_keyword}/300/200" %>
+<% background_image = club.photos.any? ? cl_image_path(
+    club.photos.first.key, width: 'auto', crop: 'scale', responsive: true, quality: 'auto', fetch_format: 'auto', alt: "#{club.name} cover"
+  ) : "https://picsum.photos/400/300" %>
+   <!--#"https://source.unsplash.com/random/?#{club.default_image_keyword}/300/200"-->
+
 
 <article data-controller="club-card"
   data-club-card-url-value="<%= club_path(club) %>"
