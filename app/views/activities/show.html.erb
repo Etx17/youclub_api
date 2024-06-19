@@ -21,9 +21,9 @@
         <div class="d-flex flex-column justify-content-start shadow bg-white " style="border-radius: 15px;">
           <section id="activity-photo" aria-label="Activity photo">
             <% if @activity.photos.attached? %>
-              <%= image_tag(cl_image_path(@activity.photos.first.key), alt: "Photo de l'activité", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; ", loading: 'lazy') %>
+              <%= image_tag(cl_image_path(@activity.photos.first.key), alt: "Photo de l'activité", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 3 / 2; overflow: hidden; ", loading: 'lazy') %>
             <% else %>
-              <%= image_tag "https://source.unsplash.com/random/?sport/300/200", alt: "Photo de remplacement d'un sport", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 1 / 1; overflow: hidden; ", loading: 'lazy' %>
+              <%= image_tag "https://picsum.photos/400/300" , alt: "Photo de remplacement d'un sport", class: "img-fluid w-100", style: "object-fit: cover; aspect-ratio: 3 / 2; overflow: hidden; ", loading: 'lazy' %>
             <% end %>
           </section>
 
