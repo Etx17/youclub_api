@@ -6,7 +6,7 @@ class ClubsController < ApplicationController
   before_action :set_subcategories, only: [:index]
   before_action :set_breadcrumb
 
-
+ù
   def index
     # TODO: add indexes on actual zipcode, category, subcategory. because clubs are looked for based on that.
     clubs = Club.where( actual_zipcode: session[:zipcode], category: session[:category]).where.not(status: 3)
@@ -14,7 +14,27 @@ class ClubsController < ApplicationController
       clubs = clubs.where("? = ANY(subcategories)", session[:subcategories])
     end
     clubs = clubs.order(score: :desc)
-    
+
+    zipcode = session[:zipcode] || 75017
+
+    @subcategories_counts = Rails.cache.fetch("subcategories_counts_#{zipcode}", expires_in: 10.minutes) do
+      ActiveRecord::Base.connection.execute("
+        SELECT subcategory, COUNT(*)
+        FROM (
+          SELECT unnest(subcategories) AS subcategory
+          FROM clubs
+          WHERE actual_zipcode = '#{zipcode}' -- Filter by zipcode
+        ) AS subcategories_expanded
+        GROUP BY subcategory
+        ORDER BY subcategory
+      ").to_a
+    end
+
+    hash = {}
+    @subcategories_counts = @subcategories_counts.each_with_object({}) do |record, hash|
+      hash[record['subcategory']] = record['count']
+    end
+
     @pagy, @clubs = pagy_countless(clubs, items: 6)
     respond_to do |format|
       format.html
