@@ -1,6 +1,7 @@
+
 <%= simple_form_for :subcategories, url: update_subcategories_path, method: :get, html: { id: 'subcategories_form' } do |f| %>
   <%= f.input :subcategories,
-    collection: mapped_subcategories(session[:category]),
+    collection: @subcategories_counts.map { |subcategory, count| ["#{subcategory} (#{count})", subcategory] },
     selected: session[:subcategories],
     label: false,
     input_html: {
