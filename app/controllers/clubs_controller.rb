@@ -6,7 +6,6 @@ class ClubsController < ApplicationController
   before_action :set_subcategories, only: [:index]
   before_action :set_breadcrumb
 
-ù
   def index
     # TODO: add indexes on actual zipcode, category, subcategory. because clubs are looked for based on that.
     clubs = Club.where( actual_zipcode: session[:zipcode], category: session[:category]).where.not(status: 3)
