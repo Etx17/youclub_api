@@ -15,20 +15,22 @@ class ClubsController < ApplicationController
     clubs = clubs.order(score: :desc)
 
     zipcode = session[:zipcode] || 75017
+    category = session[:category] || "Sports, activités de plein air"
+    # Restore the name if zipcode or subcategory changed
 
-    @subcategories_counts = Rails.cache.fetch("subcategories_counts_#{zipcode}", expires_in: 10.minutes) do
+    @subcategories_counts = Rails.cache.fetch("subcategories_counts_#{zipcode}_#{category}_#{session[:subcategories]}", expires_in: 5.minutes) do
       ActiveRecord::Base.connection.execute("
         SELECT subcategory, COUNT(*)
         FROM (
           SELECT unnest(subcategories) AS subcategory
           FROM clubs
-          WHERE actual_zipcode = '#{zipcode}' -- Filter by zipcode
+          WHERE actual_zipcode = '#{zipcode}' AND category = '#{category}' -- Filter by zipcode
         ) AS subcategories_expanded
         GROUP BY subcategory
         ORDER BY subcategory
       ").to_a
     end
-
+    
     hash = {}
     @subcategories_counts = @subcategories_counts.each_with_object({}) do |record, hash|
       hash[record['subcategory']] = record['count']
@@ -185,7 +187,6 @@ class ClubsController < ApplicationController
   end
 
   def set_category
-
     if params[:category] # If the category is provided as a parameter, use it
       session[:category] = params[:category]
     else
