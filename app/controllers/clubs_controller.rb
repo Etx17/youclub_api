@@ -30,7 +30,6 @@ class ClubsController < ApplicationController
         ORDER BY subcategory
       ").to_a
     end
-    
     hash = {}
     @subcategories_counts = @subcategories_counts.each_with_object({}) do |record, hash|
       hash[record['subcategory']] = record['count']
