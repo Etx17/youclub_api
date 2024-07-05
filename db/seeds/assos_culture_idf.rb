@@ -1,3 +1,5 @@
+# ATTENTION: télécharger d'abord l'export JSON sur data.gouv, puis le ranger dans seeds. Il devrait s'appeller jo_associations.json
+# On ne le push pas sur github car ca ne sert a rien et c'est très volumineux
 require 'json/streamer'
 parser = Json::Streamer.parser(file_io: File.open('./db/seeds/jo_associations.json', 'r'))
 parser.get(nesting_level: 1) do |object|
