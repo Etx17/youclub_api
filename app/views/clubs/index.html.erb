@@ -16,7 +16,6 @@
 
     <!-- Main Container -->
     <main class="col-12 col-sm-8 col-md-6 d-flex flex-column justify-content-center align-items-center">
-      <%= session[:category] %> -  <%= session[:subcategories] %>
       <h1 style="font-size: 25px;">Trouvez des clubs et des activités <%= session[:category] == 'Sports, activités de plein air' ? "sportives" : "" %> autour de vous</h1>
       <section class="d-flex w-100 gap-1 mt-2" style="height: 40px; max-width: 600px">
         <div class= 'w-50'>
