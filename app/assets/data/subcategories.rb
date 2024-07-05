@@ -52,7 +52,7 @@ subcategories = {
       { label: "🎨 Arts graphiques, bande dessinée, peinture, sculpture, architecture", value: "arts graphiques, bande dessinée, peinture, sculpture, architecture" },
       { label: "🎨 Arts de la rue", value: "arts de la rue" }
   ],
-  "clubs de loisirs, relations" : [
+  "clubs de loisirs, relations": [
     { label: "🤝 échanges locaux, réseaux d’échanges", value: "échanges locaux, réseaux d'échanges" },
     { label: "🎉 activités festives (soirées…)", value: "activités festives (soirées…)" },
     { label: "🧘 relaxation, sophrologie", value: "relaxation, sophrologie" },
