@@ -19,6 +19,9 @@ etienne = User.create!(
 p "seeding assos from pass sport idf"
 require_relative 'seeds/assos_pass_sport_idf'
 
+p "seeding assos cultural from idf"
+require_relative 'seeds/assos_culture_idf'
+
 # p "seeding all parisian sports clubs from api datagouv "
 # require_relative 'seeds/assos_sport_paris'
 
