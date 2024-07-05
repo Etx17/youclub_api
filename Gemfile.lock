@@ -180,6 +180,9 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.6.3)
+    json-stream (1.0.0)
+    json-streamer (2.1.0)
+      json-stream
     jwt (2.7.1)
     launchy (2.5.2)
       addressable (~> 2.8)
@@ -418,6 +421,7 @@ DEPENDENCIES
   graphql
   importmap-rails
   jbuilder
+  json-streamer
   letter_opener
   meta-tags
   noticed (~> 1.6)

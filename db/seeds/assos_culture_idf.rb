@@ -1,16 +1,15 @@
-require 'json'
-File.open('./db/seeds/jo_associations.json', 'r') do |f|
-  data = JSON.parse(f.read)
-  data.each_with_index do |row, i|
-    category = row["domaine_activite_libelle_categorise"]
-    next if category.length > 1 # on next si il y a trop de choses dedans
+require 'json/streamer'
+parser = Json::Streamer.parser(file_io: File.open('./db/seeds/jo_associations.json', 'r'))
+parser.get(nesting_level: 1) do |object|
+    category = object["domaine_activite_libelle_categorise"]
+    next if category.length > 1
     next if category[0].split('/')[0] != "culture, pratiques d’activités artistiques, culturelles"
     next if category[0].split('/')[1].blank?
-    next if row["titre"].blank?
-    next if row["geo_point"].blank?
-    next if row["objet"].blank?
+    next if object["titre"].blank?
+    next if object["geo_point"].blank?
+    next if object["objet"].blank?
 
-    subcategories = row["domaine_activite_libelle_categorise"][0].split("/").drop(1).map{|x| x.chomp("/").capitalize}
+    subcategories = object["domaine_activite_libelle_categorise"][0].split("/").drop(1).map{|x| x.chomp("/").capitalize}
 
     p "creating club..."
     user = User.create!(
@@ -22,16 +21,15 @@ File.open('./db/seeds/jo_associations.json', 'r') do |f|
     Club.create(
       user: user,
       category: "Culture, pratiques d’activités artistiques, culturelles",
-      name: row['titre'],
-      rna_number: row['numero_rna'],
-      geo_point: "#{row['geo_point']["lat"]}, #{row['geo_point']["lon"]}",
+      name: object['titre'],
+      rna_number: object['numero_rna'],
+      geo_point: "#{object['geo_point']["lat"]}, #{object['geo_point']["lon"]}",
       subcategories: subcategories,
       structure_type: 0,
-      address: row['adresse_actuelle'],
-      actual_zipcode: row['codepostal_actuel'],
-      website: row['siteweb'],
-      objet: row['objet'].capitalize,
-      city: row['commune_actuelle']
+      address: object['adresse_actuelle'],
+      actual_zipcode: object['codepostal_actuel'],
+      website: object['siteweb'],
+      objet: object['objet'].capitalize,
+      city: object['commune_actuelle']
     )
-  end
 end
