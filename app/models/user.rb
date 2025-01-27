@@ -19,13 +19,9 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable, :trackable,
           :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
-  enum role: { user: 0, club: 1, admin: 2}
+  enum :role, { user: 0, club: 1, admin: 2}
   has_one :comment
-  enum feeling: {
-    neutre: 0,
-    satisfait: 1,
-    insatisfait: 2
-  }
+  enum :feeling, { neutre: 0, satisfait: 1, insatisfait: 2 }
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

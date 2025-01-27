@@ -19,12 +19,12 @@ class Club < ApplicationRecord
 
   # validates actual_zipcode: zipcode: { country_code: :fr }
 
-  enum structure_type: {
+  enum :structure_type, {
     association: 0,
     club: 1,
   }
 
-  enum status: {
+  enum :status, {
     standard: 0,
     premium: 1,
     pro: 2,
